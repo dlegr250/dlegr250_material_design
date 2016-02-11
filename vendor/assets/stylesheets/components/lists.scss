@@ -1,0 +1,250 @@
+//======================================================================
+// EXAMPLE:
+// <div class="list list-bordered list-hoverable rounded-corners constrained constrained-large">
+//   <div class="list-item" id="list-item-ID">
+//     <div class="list-item-icon">
+//       <i class="zmdi zmdi-star"></i>
+//     </div>
+//     <div class="list-item-primary">
+//       Primary text
+//       <div class="list-item-primary-subtext">
+//         Smaller text
+//       </div>
+//     </div>
+//     <div class="list-item-secondary">
+//       <%= link_to "", url, class: "button button-icon zmdi zmdi-star" %>
+//     </div>
+//   </div>
+// </div>
+//======================================================================
+
+// UL and OL lists
+//----------------------------------------------------------------------
+
+ul,
+ol {
+  margin: $spacing-normal 0;
+  padding-left: $spacing-normal;
+
+  li {
+    padding: 2px 0;
+  }
+}
+
+// Lists - header
+//----------------------------------------------------------------------
+
+.list-header {
+  color: color("list-header");
+  padding: $spacing-normal;
+}
+
+// Lists - base
+//----------------------------------------------------------------------
+
+.list {
+  background-color: color("white");
+  display: table;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
+}
+
+// Lists - hoverable
+//----------------------------------------------------------------------
+
+// Hover over rows
+.list-hoverable {
+  .list-item:hover {
+    background-color: color("hover");
+  }
+
+  .list-item:active {
+    .list-item-icon,
+    .list-item-primary,
+    .list-item-secondary {
+      background-color: darken(color("hover"), 5%);
+    }
+  }
+}
+
+// Lists - bordered (only on specific device dimensions)
+//----------------------------------------------------------------------
+
+// On large and beyond, show borders and corners
+@media (min-width: $large-width) {
+  .list.list-bordered {
+    border: 1px solid color("divider");
+  }
+
+  .list-rounded {
+    @include rounded-corners;
+
+    // Note that rounding the first and last elements assume
+    // that they are DIV elements.  Did not want to use a "*"
+    // wildcard as that is expensive for CSS.
+
+    // Round first element
+    .list-item:first-child {
+      div:first-child {
+        @include rounded-top-left-corner;
+      }
+
+      div:last-child {
+        @include rounded-top-right-corner;
+      }
+    }
+
+    // Round last element
+    .list-item:last-child {
+      div:first-child {
+        @include rounded-bottom-left-corner;
+      }
+
+      div:last-child {
+        @include rounded-bottom-right-corner;
+      }
+    }
+  }
+}
+
+// Lists - divided
+//----------------------------------------------------------------------
+
+.list-divided > .list-item > div {
+  border-bottom: 1px solid color("divider");
+}
+
+.list-item-border-top > div {
+  border-top: 1px solid color("divider");
+}
+
+.list-item-border-bottom > div {
+  border-bottom: 1px solid color("divider");
+}
+
+// Lists - list item
+//----------------------------------------------------------------------
+
+.list-item {
+  box-sizing: border-box;
+  color: color("text");
+  display: table-row;
+  font-size: $font-size-normal;
+  text-decoration: none;
+  @include transition(background-color 0.30s ease);
+}
+
+// Lists - list item - shared
+//----------------------------------------------------------------------
+
+.list-item-icon,
+.list-item-primary,
+.list-item-secondary {
+  box-sizing: border-box;
+  display: table-cell;
+  height: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: $spacing-normal 0;
+  vertical-align: middle;
+  @include transition(background-color 0.30s ease);
+
+  &.align-top {
+    padding-top: $spacing-normal;
+    vertical-align: top;
+  }
+}
+
+// Lists - list item - icon
+//----------------------------------------------------------------------
+
+.list-item-icon {
+  color: color("icon");
+  font-size: $font-size-icon;
+  padding: 0;
+  padding-left: $spacing-normal;
+  width: 72px - $spacing-normal * 2;
+}
+
+// Lists - list item - primary
+//----------------------------------------------------------------------
+
+.list-item-primary {
+  overflow: hidden;
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  a {
+    color: color("text");
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.list-item-primary-subtext {
+  color: color("hint");
+  padding-top: $spacing-xsmall;
+
+  a {
+    color: color("hint");
+  }
+}
+
+// Lists - list item - secondary
+//----------------------------------------------------------------------
+
+.list-item-secondary {
+  text-align: right;
+  width: $spacing-normal * 2 + $button-icon-height;
+  padding-right: $spacing-normal;
+
+  .icon {
+    font-size: $font-size-icon;
+  }
+}
+
+// Lists - sizes
+//----------------------------------------------------------------------
+
+.list-dense {
+  .list-item-icon,
+  .list-item-primary,
+  .list-item-secondary {
+    padding-bottom: $spacing-small;
+    padding-top: $spacing-small;
+  }
+}
+
+// Lists - nested (only 1 level down)
+//----------------------------------------------------------------------
+
+.list-item-nested {
+  div:first-child {
+    padding-left: $spacing-normal * 2;
+  }
+}
+
+// Lists - media queries
+//----------------------------------------------------------------------
+
+@media (min-width: $medium-width) {
+  .list-item-secondary {
+    &.one-icons {
+      width: $spacing-normal * 2 + $button-icon-height;
+    }
+
+    &.two-icons {
+      width: $spacing-normal * 2 + $button-icon-height * 2;
+    }
+
+    &.three-icons {
+      width: $spacing-normal * 2 + $button-icon-height * 3;
+    }
+  }
+}

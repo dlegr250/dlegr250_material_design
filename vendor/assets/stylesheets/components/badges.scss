@@ -1,0 +1,28 @@
+//======================================================================
+// EXAMPLE:
+// <div class="badge badge-blue">10</div>
+//======================================================================
+
+// Badges - base
+//----------------------------------------------------------------------
+
+.badge {
+  display: inline-block;
+  font-size: $font-size-small;
+  padding: 2px 6px;
+  @include rounded-corners;
+}
+
+// Badges - colors
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .badge-#{$color-name} {
+    background-color: $color;
+    @if $color-name == "white" {
+      color: color("black");
+    } @else {
+      color: color("white");
+    }
+  }
+}

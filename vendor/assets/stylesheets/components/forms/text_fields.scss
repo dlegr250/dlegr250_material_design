@@ -1,0 +1,34 @@
+// Text fields - base
+//----------------------------------------------------------------------
+
+#{$text-fields} {
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+  color: color("text");
+  font-size: $font-size-text-field;
+  padding: 0 $spacing-small;
+  min-height: $button-height;
+  outline: none;
+  vertical-align: middle;
+  // width: 100%;
+  @include box-shadow(none);
+  @include rounded-corners;
+  @include transition(all 0.2s ease);
+
+  &.dirty:not(:focus):invalid {
+    border-color: $text-field-invalid-color;
+  }
+
+  &.dirty:not(:focus):valid {
+    border-color: $text-field-valid-color;
+  }
+
+  &:focus {
+    border-color: $text-field-focus-color;
+    @include box-shadow(0 0 1px $text-field-focus-color);
+  }
+}
+
+textarea {
+  padding: $spacing-small;
+}

@@ -1,0 +1,90 @@
+//======================================================================
+// EXAMPLE:
+// <div class="sidebar" id="left-sidebar">
+//   <div class="sidebar-header">Header</div>
+//   Content for sidebar...
+//   <nav id="navigation">
+//     ...list component for navigation...
+//   </nav>
+// </div>
+//======================================================================
+
+// Sidebars - base
+//----------------------------------------------------------------------
+
+.sidebar {
+  background: color("white");
+  max-width: 98%;
+  overflow-y: auto;
+  top: 0;
+  width: $sidebar-width;
+  will-change: transform;
+  z-index: $sidebar-depth;
+}
+
+// Sidebars - header
+//----------------------------------------------------------------------
+
+.sidebar-header {
+  border-bottom: 1px solid color("divider");
+  color: color("icon");
+  font-size: $font-size-large;
+  height: $appbar-height;
+  line-height: $appbar-height;
+  padding: 0 $spacing-normal;
+}
+
+// Sidebars - left sidebar
+//----------------------------------------------------------------------
+
+#left-sidebar {
+  border: none;
+  @include transform(translateX(-100%));
+  @include box-shadow(1px 0 5px rgba(0, 0, 0, 0.2));
+
+  &.visible {
+    @include transform(translateX(0));
+  }
+}
+
+// Main navigation, usually in left sidebar
+#navigation {
+  font-weight: 600;
+  margin-top: $spacing-normal;
+}
+
+// Sidebars - right sidebar
+//----------------------------------------------------------------------
+
+#right-sidebar {
+  border: none;
+  left: auto;
+  right: 0;
+  @include transform(translateX(100%));
+  @include box-shadow(1px 0 5px rgba(0, 0, 0, 0.2));
+
+  &.visible {
+    @include transform(translateX(0));
+  }
+}
+
+// Sidebars - media queries
+//----------------------------------------------------------------------
+
+@media (min-width: $large-width) {
+  #left-sidebar {
+    border-right: 1px solid color("divider");
+    z-index: $layout-depth;
+    @include transform(translateX(0));
+    @include box-shadow(none);
+  }
+
+  #right-sidebar {
+    border-left: 1px solid color("divider");
+    left: auto;
+    right: 0;
+    z-index: $layout-depth;
+    @include transform(translateX(0));
+    @include box-shadow(none);
+  }
+}

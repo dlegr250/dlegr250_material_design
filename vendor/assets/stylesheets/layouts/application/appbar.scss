@@ -1,0 +1,92 @@
+//======================================================================
+// EXAMPLE:
+// <div class="appbar">
+//   <div class="appbar-nav-icon">
+//     <i class="zmdi zmdi-menu appbar-button" role="left-sidebar-toggle"></i>
+//   </div>
+//   <div class="appbar-title">
+//     Title...
+//   </div>
+//   <div class="appbar-actions">
+//     <i class="zmdi zmdi-menu appbar-button" role="right-sidebar-toggle"></i>
+//   </div>
+// </div>
+//======================================================================
+
+// appbar - base
+//----------------------------------------------------------------------
+
+.appbar {
+  background-color: $primary-color;
+  bottom: auto;
+  box-sizing: border-box;
+  color: $appbar-text-color;
+  height: $appbar-height;
+  padding: 0 $spacing-small;
+  width: 100%;
+  z-index: $layout-depth + 1;
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.30));
+  @include flex-parent-row();
+}
+
+// appbar - nav icon
+//----------------------------------------------------------------------
+
+.appbar-nav-icon {
+  width: $appbar-button-height;
+  margin-right: $spacing-small;
+}
+
+// appbar - title
+//----------------------------------------------------------------------
+
+.appbar-title {
+  flex: 1; // To fill empty gaps
+  font-size: $font-size-large;
+  margin-right: $spacing-small;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// appbar - actions
+//----------------------------------------------------------------------
+
+.appbar-actions {
+  text-align: right;
+
+  // Since standard buttons are not as tall as the appbar-button,
+  // there is leftover space and the button clings to the baseline.
+  .button {
+    margin-top: -10px;
+  }
+}
+
+// appbar - buttons
+//----------------------------------------------------------------------
+
+.appbar-button {
+  background-color: $primary-color;
+  box-sizing: border-box;
+  color: color("icon");
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-icon;
+  height: $appbar-button-height;
+  line-height: $appbar-button-height;
+  width: $appbar-button-height;
+  text-align: center;
+  text-decoration: none;
+
+  @include no-touch-highlight;
+  @include rounded-corners(250px);
+  @include transition(background 0.2s ease-in-out);
+
+  &:hover {
+    background-color: darken($primary-color, 7%);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 12%);
+  }
+}

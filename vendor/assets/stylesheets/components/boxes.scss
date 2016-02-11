@@ -1,0 +1,24 @@
+//======================================================================
+// EXAMPLE:
+// <div class="box box-red rounded-corners constrained constrained-large">
+//   Text
+// </div>
+//======================================================================
+
+// Boxes - base
+//----------------------------------------------------------------------
+
+.box {
+  box-sizing: border-box;
+  padding: $spacing-normal;
+}
+
+// Boxes - colored boxes
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .box-#{$color-name} {
+    background-color: $color;
+    color: lighten($color, 50%);
+  }
+}

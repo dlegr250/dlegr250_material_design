@@ -1,0 +1,47 @@
+// Base (load order is important)
+//----------------------------------------------------------------------
+
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+@import "base/global_classes";
+
+// Set defaults and merge them back into global variables for use later.
+@import "dlegr250_material_design_config";
+
+// Layouts
+//----------------------------------------------------------------------
+
+// When user is not logged in
+@import "layouts/authentication/base";
+
+// When user is logged in
+@import "layouts/application/base";
+@import "layouts/application/appbar";
+@import "layouts/application/sidebars";
+@import "layouts/application/main";
+
+// Components
+//----------------------------------------------------------------------
+
+@import "components/snackbarlight";
+@import "components/badges";
+@import "components/tabs";
+@import "components/blank_slates";
+@import "components/menus";
+@import "components/dividers";
+@import "components/boxes";
+@import "components/buttons";
+@import "components/forms/error_messages";
+@import "components/forms/fields";
+@import "components/forms/labels";
+@import "components/forms/text_fields";
+@import "components/forms/toggles";
+@import "components/forms/radios";
+@import "components/cards";
+@import "components/dialogs";
+@import "components/overlay";
+@import "components/lists";
+@import "components/tooltips";
+@import "components/spinners";

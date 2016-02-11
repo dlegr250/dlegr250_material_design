@@ -1,0 +1,70 @@
+//======================================================================
+// EXAMPLE:
+// <%= f.label :attribute, "Toggle Display Text" %>
+// <div class="toggle toggle-blue">
+//   <%= f.check_box :attribute %>
+//   <label for="model_attribute"></label>
+// </div>
+//======================================================================
+
+// Toggles - base
+//----------------------------------------------------------------------
+
+.toggle {
+  display: inline-block;
+
+  // Hide the actual checkbox
+  input {
+    display: none;
+  }
+
+  // Toggle bar
+  label {
+    background-color: color("toggle-bar");
+    cursor: pointer;
+    display: block;
+    height: 14px;
+    margin: 0 8px;
+    position: relative;
+    top: 2px;
+    width: 34px;
+    @include rounded-corners(250px);
+    @include transition(all 0.15s ease);
+    @include no-touch-highlight();
+
+    // Round button on toggle
+    &:after {
+      background-color: color("white");
+      content: "";
+      display: block;
+      height: 20px;
+      left: -4px;
+      position: absolute;
+      top: -3px;
+      width: 20px;
+      @include box-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
+      @include rounded-corners(250px);
+      @include transition(all 0.15s ease);
+    }
+  }
+
+  // Colored bar when active
+  input:checked ~ label:after {
+    left: 20px;
+  }
+}
+
+// Toggles - colored
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .toggle-#{$color-name} {
+    input:checked ~ label {
+      background-color: lighten($color, 25%);
+
+      &:after {
+        background-color: $color;
+      }
+    }
+  }
+}

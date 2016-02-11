@@ -1,0 +1,58 @@
+//======================================================================
+// EXAMPLE:
+// <div class="blank-slate-container">
+//   <div class="blank-slate">
+//     <div class="blank-slate-icon">
+//       <span class="zmdi-hc-stack">
+//         <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
+//         <i class="zmdi zmdi-comments zmdi-hc-stack-1x zmdi-hc-inverse"></i>
+//       </span>
+//     </div>
+//     <div class="blank-slate-title">
+//       Title
+//     </div>
+//     <div class="blank-slate-subtitle">
+//       Subtitle
+//     </div>
+//   </div>
+// </div>
+//======================================================================
+
+// Blank slates - base
+//----------------------------------------------------------------------
+
+.blank-slate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+}
+
+.blank-slate {
+  color: color("icon");
+  margin: auto;
+  text-align: center;
+}
+
+// Blank slates - icon
+//----------------------------------------------------------------------
+
+.blank-slate-icon {
+  font-size: 72px;
+}
+
+// Blank slates - title
+//----------------------------------------------------------------------
+
+.blank-slate-title {
+  font-size: $font-size-large;
+  font-weight: bold;
+  padding: $spacing-normal 0;
+}
+
+// Blank slates - subtitle
+//----------------------------------------------------------------------
+
+.blank-slate-subtitle {
+  font-size: $font-size-normal;
+}

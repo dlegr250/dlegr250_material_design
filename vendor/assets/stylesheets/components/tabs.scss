@@ -1,0 +1,63 @@
+// Tabs - base
+//----------------------------------------------------------------------
+
+.tabs {
+  border: 1px solid color("divider");
+  display: table;
+  height: $tab-height;
+  table-layout: fixed;
+  width: 100%;
+}
+
+// Tabs - tab
+//----------------------------------------------------------------------
+
+.tab {
+  border-bottom: 2px solid transparent;
+  color: color("icon");
+  cursor: pointer;
+  display: table-cell;
+  font-size: $font-size-normal;
+  font-weight: 600;
+  height: $tab-height - 2px; // Account for 2px bottom border on tab
+  max-width: 264px;
+  min-width: 72px;
+  padding: 0 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  @include transition(all 0.30s ease);
+
+  .icon {
+    color: color("icon");
+    font-size: $font-size-icon;
+  }
+
+  &:active {
+    background-color: color("hover");
+  }
+}
+
+// Tabs - colored
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .tabs-#{$color-name} {
+    .tab {
+      &:hover,
+      &:active {
+        border-color: lighten($color, 30%);
+      }
+
+      &.active {
+        border-color: $color;
+      }
+
+      &.active,
+      &.active .icon {
+        color: $color;
+      }
+    }
+  }
+}

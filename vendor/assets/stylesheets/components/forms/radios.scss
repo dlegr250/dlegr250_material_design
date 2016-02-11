@@ -1,0 +1,90 @@
+//======================================================================
+// EXAMPLE:
+// <div class="radio-group radio-blue">
+//   <div class="radio-group-item">
+//     <div class="radio-group-item-button">
+//       <%= f.radio_button :attribute, "value" %>
+//     </div>
+//     <div class="radio-group-item-label">
+//       <%= f.label :attribute_value, "Label display text" %>
+//     </div>
+//   </div>
+// </div>
+//======================================================================
+
+// Radios - base
+//----------------------------------------------------------------------
+
+.radio-group {
+  display: table;
+
+  input[type="radio"] {
+    border: 2px;
+    cursor: pointer;
+    width: $spacing-normal;
+    height: $spacing-normal;
+    position: relative;
+    top: 2px;
+
+    &:before {
+      background-color: color("white");
+      background-image: radial-gradient(circle, color("blue") 40%, color("white") 50%);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 0;
+      border-radius: 50%;
+      border: 2px solid color("blue");
+      content: "";
+      display: inline-block;
+      height: $spacing-normal;
+      left: -2px;
+      position: absolute;
+      top: -2px;
+      width: $spacing-normal;
+      will-change: background-size;
+      z-index: 2;
+      @include transition(all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1));
+    }
+
+    &:checked:before {
+      background-size: 14px 14px;
+    }
+
+    &:after {
+      background: color("white");
+      border-radius: 50%;
+      content: "";
+      height: $spacing-normal;
+      position: absolute;
+      @include transition(all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1));
+      width: $spacing-normal;
+    }
+  }
+}
+
+.radio-group-item {
+  display: table-row;
+}
+
+.radio-group-item-button,
+.radio-group-item-label {
+  display: table-cell;
+  height: $input-height;
+  vertical-align: middle;
+}
+
+.radio-group-item-button {
+  padding: 0 $spacing-normal 0 $spacing-small;
+}
+
+// Radios - colored
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .radio-#{$color-name} {
+    input[type="radio"]:before {
+      background-image: radial-gradient(circle, $color 40%, color("white") 50%);
+      border: 2px solid $color;
+    }
+  }
+}

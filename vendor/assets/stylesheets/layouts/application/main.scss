@@ -1,0 +1,33 @@
+// Main - base
+//----------------------------------------------------------------------
+
+#main {
+  left: 0;
+  overflow-y: auto;
+  padding: 0;
+  top: $main-top;
+  z-index: $layout-depth;
+}
+
+// On large (desktop) size, add padding to main area.
+@media (min-width: $large-width) {
+  #main {
+    left: $main-left;
+    padding: $spacing-normal;
+  }
+
+  // If you have a right sidebar to show on large, you have to
+  // make #main leave a gap for the right sidebar.
+  body.has-right-sidebar {
+    #main {
+      right: $main-left;
+    }
+  }
+}
+
+// Main - spinner when loading content
+//----------------------------------------------------------------------
+
+#main-spinner {
+  margin: 100px auto;
+}

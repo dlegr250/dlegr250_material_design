@@ -1,0 +1,150 @@
+// Dimensions - application
+//----------------------------------------------------------------------
+
+$application-container-min-width: 300px;
+
+// Dimensions - appbar
+//----------------------------------------------------------------------
+
+$appbar-height: 64px;
+$appbar-button-height: 46px;
+
+// Dimensions - sidebars
+//----------------------------------------------------------------------
+
+$sidebar-width: 300px;
+
+// Dimensions - main
+//----------------------------------------------------------------------
+
+$main-top: $appbar-height;
+$main-left: $sidebar-width + 1; // Allows for 1px border
+
+// Dimensions - cards
+//----------------------------------------------------------------------
+
+$card-width-xsmall: 180px;
+$card-width-small: 220px;
+$card-width: 280px;
+$card-width-large: 360px;
+$card-width-xlarge: 420px;
+
+// Dimensions - menus
+//----------------------------------------------------------------------
+
+$menu-width: 56px;
+$menu-width-factors: 1, 2, 3, 4, 5, 6, 7;
+
+// Dimensions - tabs
+//----------------------------------------------------------------------
+
+$tab-height: 48px;
+
+// Dimensions - buttons
+//----------------------------------------------------------------------
+
+$button-height: 36px;
+$button-height-large: 56px;
+$button-icon-height: 40px;
+$button-fab-height: 56px;
+$button-fab-mini-height: 40px;
+
+// Dimensions - inputs (text-fields, etc...)
+//----------------------------------------------------------------------
+
+$input-height: 40px;
+
+// Font sizes
+//----------------------------------------------------------------------
+
+$font-size-xsmall: 10px;
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-large: 20px;
+$font-size-xlarge: 34px;
+
+$font-size-text-field: 16px;
+
+$font-size-icon: 24px;
+
+// Spacing
+//----------------------------------------------------------------------
+
+$spacing-xsmall: 4px;
+$spacing-small: 8px;
+$spacing-normal: 16px;
+$spacing-large: 24px;
+$spacing-xlarge: 32px;
+
+// Depth (z-index)
+//----------------------------------------------------------------------
+
+$layout-depth: 10;
+$menu-depth: 20;
+$overlay-depth: 30;
+$sidebar-depth: 40;
+$dialog-depth: 50;
+
+// Device breakpoints
+//----------------------------------------------------------------------
+
+$small-width: 400px;
+$medium-width: 750px;
+$large-width: 1000px;
+
+// Convenience variables
+//----------------------------------------------------------------------
+
+$text-fields: "input[type='email'],
+  input[type='number'],
+  input[type='search'],
+  input[type='text'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='password'],
+  textarea";
+
+// Color variables
+// See: http://www.google.com/design/spec/style/color.html
+//----------------------------------------------------------------------
+
+$colors: (
+  "red"        : #db4437,
+  "blue"       : #2196f3,
+  "dark-blue"  : darken(#2196f3, 10%),
+  "grey"       : #9e9e9e,
+  "black"      : #000000,
+  "white"      : #ffffff,
+  "pink"       : #e91e63,
+  "purple"     : #9c27b0,
+  "deep-purple": #673ab7,
+  "indigo"     : #3f51b5,
+  "light-blue" : #03a9f4,
+  "cyan"       : #00bcd4,
+  "teal"       : #009688,
+  "green"      : #4caf50,
+  "light-green": #8bc34a,
+  "lime"       : #cddc39,
+  "yellow"     : #ffeb3b,
+  "highlight"  : #ffffcc,
+  "amber"      : #ffc107,
+  "orange"     : #ff9800,
+  "dark-orange": #ef6c00,
+  "deep-orange": #ff5722,
+  "brown"      : #795548,
+  "blue-grey"  : #607d8b,
+  "hint"       : rgba(0, 0, 0, 0.54),
+  "light-grey" : #eee,
+  "text"       : rgb(51, 51, 51),
+  "divider"    : rgba(0, 0, 0, 0.12),
+  "hover"      : rgba(0, 0, 0, 0.06),
+  "icon"       : rgba(0, 0, 0, 0.5),
+  "toggle-bar" : #898989,
+  "snackbar"   : #323232,
+  "list-header": #616161
+);
+
+// Easier way to reference $colors map
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

@@ -1,0 +1,235 @@
+//======================================================================
+// EXAMPLE:
+// <div class="button button-blue-raised">Text</div>
+// <div class="button button-blue-flat">Text</div>
+// <div class="button button-icon zmdi zmdi-star"></div>
+// <div class="button button-blue-icon zmdi zmdi-star"></div>
+//======================================================================
+
+// Buttons - base
+//----------------------------------------------------------------------
+
+$buttons: "button,
+  .button,
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button']";
+
+#{$buttons} {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-normal;
+  font-weight: 600;
+  height: $button-height;
+  line-height: $button-height;
+  letter-spacing: 0.5px;
+  min-width: 88px;
+  outline: none;
+  padding: 0 $spacing-normal;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include no-touch-highlight;
+  @include rounded-corners;
+  @include transition(all 0.2s ease-in-out);
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &.large {
+    height: $button-height-large;
+    line-height: $button-height-large;
+  }
+}
+
+// Buttons - icon buttons
+// .button.button-icon
+//----------------------------------------------------------------------
+
+// Basic icon without any coloring
+.button-icon {
+  color: color("icon");
+  font-size: $font-size-icon;
+  font-weight: 400;
+  width: $button-icon-height;
+  height: $button-icon-height;
+  line-height: $button-icon-height;
+  min-width: $button-icon-height;
+  padding: 0;
+  @include rounded-corners(250px);
+
+  &:hover,
+  &.hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active,
+  &.active {
+    background-color: rgba(0, 0, 0, 0.18);
+  }
+}
+
+// Will always be colored
+// .button.button-<color>-icon
+@each $color-name, $color in $colors {
+  .button-#{$color-name}-icon {
+    @extend .button-icon;
+    background-color: $color;
+    color: color("white");
+
+    &:hover,
+    &.hover {
+      // background-color: rgba(0, 0, 0, 0.1);
+      background-color: lighten($color, 10%);
+    }
+
+    &:active,
+    &.active {
+      // background-color: rgba(0, 0, 0, 0.18);
+      background: darken($color, 10%);
+      color: color("white");
+    }
+  }
+}
+
+// Buttons - raised colored
+// .button.button-<color>-raised
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .button-#{$color-name}-raised {
+    background-color: $color;
+    @if $color-name == "white" {
+      color: color("black");
+    } @else {
+      color: color("white");
+    }
+    @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.4));
+
+    &:hover,
+    &.hover {
+      background-color: lighten($color, 10%);
+    }
+
+    &:active,
+    &.active {
+      background: darken($color, 5%);
+      @include box-shadow(0 3px 12px 0 rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+// Buttons - flat colored
+// .button.button-<color>-flat
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .button-#{$color-name}-flat {
+    background-color: transparent;
+    color: $color;
+
+    &:hover,
+    &.hover {
+      @if $color-name == "grey" {
+        background-color: rgba(0, 0, 0, 0.1);
+      } @else {
+        background-color: lighten($color, 40%);
+      }
+    }
+
+    &:active,
+    &.active {
+      @if $color-name == "grey" {
+        background-color: rgba(0, 0, 0, 0.18);
+      } @else {
+        background-color: lighten($color, 30%);
+      }
+    }
+  }
+}
+
+// Buttons - outline colored
+// .button.button-<color>-outline
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .button-#{$color-name}-outline {
+    background-color: transparent;
+    border-color: $color;
+    color: $color;
+
+    &:hover,
+    &.hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &:active,
+    &.active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// Buttons - override text color
+// .button.color-<color>
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .button.color-#{$color-name} {
+    color: $color;
+  }
+}
+
+// Buttons - Colored Floating Action Buttons (FAB)
+// .fab.button-<color>-fab
+//----------------------------------------------------------------------
+
+.fab {
+  bottom: $spacing-large;
+  position: fixed !important;
+  right: $spacing-large;
+  z-index: $layout-depth + 1;
+}
+
+@each $color-name, $color in $colors {
+  .button-#{$color-name}-fab {
+    background-color: $color;
+    @if $color-name == "white" {
+      color: color("black");
+    } @else {
+      color: color("white");
+    }
+
+    font-size: $font-size-icon;
+    height: $button-fab-height;
+    line-height: $button-fab-height;
+    min-width: 0;
+    padding: 0;
+    width: $button-fab-height;
+
+    @include box-shadow(0 3px 7px 0 rgba(0, 0, 0, 0.4));
+    @include rounded-corners(250px);
+    @include text-shadow(0 -1px 0 color("icon"));
+
+    &:hover,
+    &.hover {
+      background-color: lighten($color, 5%);
+      @include box-shadow(0 6px 12px 0 rgba(0, 0, 0, 0.5));
+    }
+
+    &:active,
+    &.active {
+      background: darken($color, 10%);
+    }
+
+    &.mini {
+      height: $button-fab-mini-height;
+      width: $button-fab-mini-height;
+    }
+  }
+}

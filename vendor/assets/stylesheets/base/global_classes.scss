@@ -1,0 +1,244 @@
+//======================================================================
+// Global CSS classes for use on any element
+//======================================================================
+
+// Alignments
+//----------------------------------------------------------------------
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.full-width {
+  @include full-width;
+}
+
+// Constrained to max size to center content
+//----------------------------------------------------------------------
+
+.constrained {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100% !important;
+}
+
+.constrained-small {
+  max-width: $small-width;
+}
+
+.constrained-medium {
+  max-width: $medium-width;
+}
+
+.constrained-large {
+  max-width: $large-width;
+}
+
+// Padding
+//----------------------------------------------------------------------
+
+.padding-xsmall {
+  padding: $spacing-xsmall;
+}
+
+.padding-small {
+  padding: $spacing-small;
+}
+
+.padding-normal {
+  padding: $spacing-normal;
+}
+
+.padding-large {
+  padding: $spacing-large;
+}
+
+.padding-xlarge {
+  padding: $spacing-xlarge;
+}
+
+// Margins
+//----------------------------------------------------------------------
+
+.margin-bottom-normal {
+  margin-bottom: $spacing-normal;
+}
+
+.margin-top-normal {
+  margin-top: $spacing-normal;
+}
+
+// Hint text
+//----------------------------------------------------------------------
+
+.hint {
+  color: color("hint");
+}
+
+// Highlight
+//----------------------------------------------------------------------
+
+.highlight {
+  background-color: color("highlight");
+}
+
+// Bold text
+//----------------------------------------------------------------------
+
+.bold,
+.strong {
+  font-weight: bold;
+}
+
+// Rounded corners
+//----------------------------------------------------------------------
+
+.rounded,
+.rounded-corners {
+  @include rounded-corners;
+}
+
+.rounded-top-corners {
+  @include rounded-top-corners;
+}
+
+.rounded-bottom-corners {
+  @include rounded-bottom-corners;
+}
+
+// Visibility
+//----------------------------------------------------------------------
+
+.hidden {
+  display: none;
+}
+
+// Disabled elements
+//----------------------------------------------------------------------
+
+:disabled,
+.disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  @include transparency(0.6);
+  @include box-shadow(none);
+}
+
+// Color classes
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .color-#{$color-name} {
+    color: $color;
+  }
+}
+
+// Global media query classes
+//----------------------------------------------------------------------
+
+.small-only {
+  display: block;
+}
+
+.small-only-inline {
+  display: inline-block;
+}
+
+.small-and-medium-only {
+  display: block;
+}
+
+.small-and-medium-only-inline {
+  display: inline-block;
+}
+
+.medium-only,
+.medium-only-inline {
+  display: none;
+}
+
+.medium-and-large-only,
+.medium-and-large-only-inline {
+  display: none;
+}
+
+.large-only,
+.large-only-inline {
+  display: none;
+}
+
+@media (min-width: $medium-width) {
+  .small-only,
+  .small-only-inline {
+    display: none !important;
+  }
+
+  .medium-only {
+    display: block !important;
+  }
+
+  .medium-only-inline {
+    display: inline-block !important;
+  }
+
+  .medium-and-large-only {
+    display: block !important;
+  }
+
+  .medium-and-large-only-inline {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: $large-width) {
+  .small-only,
+  .small-only-inline,
+  .small-and-medium-only,
+  .small-and-medium-only-inline,
+  .medium-only,
+  .medium-only-inline {
+    display: none !important;
+  }
+
+  .medium-and-large-only,
+  .large-only {
+    display: block !important;
+  }
+
+  .medium-and-large-only-inline,
+  .large-only-inline {
+    display: inline-block !important;
+  }
+}
+
+// Media queries
+// Note: The best way to structure the use of media queries is to create the queries
+// near the relevant code. For example, if you wanted to change the styles for buttons
+// on small devices, paste the mobile query code up in the buttons section and style it
+// there.
+//----------------------------------------------------------------------
+
+// Larger than mobile
+@media (min-width: $small-width) {}
+
+// Larger than medium
+@media (min-width: $medium-width) {}
+
+// Larger than large
+@media (min-width: $large-width) {}

@@ -1,0 +1,162 @@
+//======================================================================
+// EXAMPLE:
+// <div class="menu-container">
+//   <i class="zmdi zmdi-more-vert button button-icon" role="menu-trigger" data-menu-id="menu-ID"></i>
+//   <div class="menu menu-width-3" data-position="bottom-right">
+//     <div class="menu-item">
+//       <div class="menu-item-icon">
+//         <i class="zmdi zmdi-star"></i>
+//       </div>
+//       <div class="menu-item-primary">
+//         Primary Text
+//       </div>
+//       <div class="menu-item-secondary">
+//         <%= link_to "", url, class: "zmdi zmdi-star" %>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//======================================================================
+
+// Menus - triggers
+//----------------------------------------------------------------------
+
+[role="menu-trigger"] {
+  cursor: pointer;
+}
+
+// Menus - base
+//----------------------------------------------------------------------
+
+.menu-container {
+  display: inline-block;
+  position: relative;
+}
+
+.menu {
+  background: color("white");
+  line-height: normal;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  text-transform: none;
+  top: 0;
+  transform-origin: 100% 0;
+  visibility: hidden;
+  will-change: scale;
+  z-index: $menu-depth;
+  @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.26));
+  @include rounded-corners;
+  @include transition(all 0.10s ease);
+  @include transform(scale(0.5));
+  @include transparency(0);
+
+  &.visible {
+    visibility: visible;
+    @include transform(scale(1));
+    @include transparency(1);
+  }
+}
+
+// Add padding at top/bottom on large
+@media (min-width: $large-width) {
+  .menu {
+    padding: $spacing-small 0;
+  }
+}
+
+// Menus - menu item
+//----------------------------------------------------------------------
+
+.menu-item {
+  box-sizing: border-box;
+  color: color("text");
+  cursor: pointer;
+  display: table-row;
+  font-size: $font-size-normal;
+
+  &:hover {
+    background-color: color("hover");
+  }
+}
+
+.menu-item:active {
+  .menu-item-icon,
+  .menu-item-primary,
+  .menu-item-secondary {
+    background-color: darken(color("hover"), 5%);
+  }
+}
+
+// Menus - menu item - shared
+//----------------------------------------------------------------------
+
+.menu-item-icon,
+.menu-item-primary,
+.menu-item-secondary {
+  box-sizing: border-box;
+  display: table-cell;
+  height: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: $spacing-normal 0;
+  vertical-align: middle;
+  @include transition(background-color 0.25s ease);
+}
+
+// Make large menus slightly smaller
+@media (min-width: $large-width) {
+  .menu-item-icon,
+  .menu-item-primary,
+  .menu-item-secondary {
+    height: 36px;
+    min-height: 36px;
+    padding-bottom: $spacing-xsmall;
+    padding-top: $spacing-xsmall;
+  }
+}
+
+
+// Menus - menu item - icon
+//----------------------------------------------------------------------
+
+.menu-item-icon {
+  color: color("icon");
+  font-size: $font-size-icon;
+  padding: 0;
+  padding-left: $spacing-normal;
+  width: 72px - $spacing-normal * 2;
+}
+
+// Menus - menu item - primary
+//----------------------------------------------------------------------
+
+.menu-item-primary {
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
+  min-width: $menu-width;
+}
+
+// Menus - menu item - secondary
+//----------------------------------------------------------------------
+
+.menu-item-secondary {
+  color: color("icon");
+  padding-right: $spacing-normal;
+  text-align: right;
+
+  .icon {
+    font-size: $font-size-icon;
+  }
+}
+
+// Menus - sizes
+//----------------------------------------------------------------------
+
+@each $factor in $menu-width-factors {
+  .menu-width-#{$factor} .menu-item-primary {
+    min-width: $menu-width * $factor;
+  }
+}

@@ -1,0 +1,57 @@
+// Dialogs - base
+//----------------------------------------------------------------------
+
+.dialog {
+  background: color("white");
+  cursor: default;
+  margin: auto;
+  max-width: 90%;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+  width: $card-width;
+  will-change: scale, transparency;
+  z-index: $dialog-depth;
+  @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
+  @include rounded-corners;
+  @include transition(all 0.10s ease);
+  @include transform(scale(1.15));
+  @include transparency(0);
+
+  &.visible {
+    pointer-events: auto;
+    visibility: visible;
+    @include transform(scale(1.0));
+    @include transparency(1);
+    @include transition(all 0.30s ease);
+  }
+}
+
+// Dialogs - header
+//----------------------------------------------------------------------
+
+.dialog header {
+  padding: $spacing-large;
+  padding-bottom: 20px;
+
+  .dialog-title {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+}
+
+// Dialogs - content
+//----------------------------------------------------------------------
+
+.dialog-content {
+  padding: $spacing-large;
+  padding-top: 0;
+}
+
+// Dialogs - actions
+//----------------------------------------------------------------------
+
+.dialog-actions {
+  padding: $spacing-normal;
+  padding-top: 0;
+}

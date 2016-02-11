@@ -1,0 +1,18 @@
+// Dividers - base
+//----------------------------------------------------------------------
+
+hr {
+  height: 1px;
+
+  margin: $spacing-small 0;
+
+  &.divider {
+    border-color: color("divider");
+    margin: $spacing-normal 0;
+  }
+
+  &.spacer {
+    border: none;
+    margin: $spacing-normal 0;
+  }
+}

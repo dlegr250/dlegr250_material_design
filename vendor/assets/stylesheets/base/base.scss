@@ -1,0 +1,69 @@
+//======================================================================
+// Base HTML elements
+//======================================================================
+
+// Typography
+//----------------------------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css");
+
+// HTML/body
+//----------------------------------------------------------------------
+
+html,
+body {
+  background-color: color("light-grey");
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: color("text");
+  font-family: "Open Sans", sans-serif;
+  font-size: $font-size-normal;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+// Bold
+//----------------------------------------------------------------------
+
+b,
+strong {
+  font-weight: 700;
+}
+
+// Paragraphs
+//----------------------------------------------------------------------
+
+p {
+  margin: $spacing-normal 0;
+}
+
+// HRs used as spacers with lines
+//----------------------------------------------------------------------
+
+hr {
+  border: none;
+  border-bottom: 1px solid color("divider");
+  height: 1px;
+  margin: $spacing-xsmall 0;
+  padding: 0;
+}
+
+// Links
+//----------------------------------------------------------------------
+
+a {
+  color: color("blue");
+  text-decoration: none;
+}
+
+// Images
+//----------------------------------------------------------------------
+
+img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,101 @@
+//======================================================================
+// EXAMPLE:
+// <div class="card">
+//   <header>
+//     <div class="card-title">Title</div>
+//     <div class="card-subtitle">Subtitle</div>
+//   </header>
+//   <div class="card-content">
+//     content...
+//   </div>
+//   <div class="card-actions">
+//
+//   </div>
+// </div>
+//======================================================================
+
+// Card - base
+//----------------------------------------------------------------------
+
+.card {
+  background-color: color("white");
+  width: $card-width;
+  @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+  @include rounded-corners;
+
+  &.normal {
+    width: $card-width;
+  }
+
+  &.large {
+    width: $card-width * 2;
+  }
+
+  &.xlarge {
+    width: $card-width * 3;
+  }
+}
+
+// Card - header
+//----------------------------------------------------------------------
+
+.card header {
+  border-bottom: 1px solid color("divider");
+  padding: $spacing-normal;
+
+  &.no-border {
+    border-bottom: none;
+  }
+
+  .card-title {
+    font-size: $font-size-large;
+    font-weight: bold;
+  }
+
+  .card-subtitle {
+    color: color("hint");
+    padding-top: $spacing-small;
+  }
+}
+
+// Card - rich media
+//----------------------------------------------------------------------
+
+.card-rich-media {
+  img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// Card - content
+//----------------------------------------------------------------------
+
+.card-content {
+  padding: $spacing-normal;
+}
+
+// Card - actions
+//----------------------------------------------------------------------
+
+.card-actions {
+  border-top: 1px solid color("divider");
+  padding: $spacing-normal;
+
+  &.no-border {
+    border-top: none;
+  }
+}
+
+// Card - image header
+// Using an image at top instead of header text
+//----------------------------------------------------------------------
+
+.card-image {
+  img {
+    max-width: 100%;
+    width: 100%;
+    @include rounded-top-corners;
+  }
+}

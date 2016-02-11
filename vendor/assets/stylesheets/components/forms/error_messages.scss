@@ -1,0 +1,17 @@
+// Error messages - base
+//----------------------------------------------------------------------
+
+.error-messages {
+  color: color("red");
+  // display: none;
+  font-size: $font-size-small;
+  line-height: 1.4;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+
+  .error-message {
+    padding-top: $spacing-xsmall;
+  }
+}

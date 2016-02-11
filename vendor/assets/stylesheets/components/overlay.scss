@@ -1,0 +1,23 @@
+// Overlay - base
+//----------------------------------------------------------------------
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  height: 100%;
+  display: none;
+  left: 0;
+  opacity: 1;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: $overlay-depth;
+  @include no-touch-highlight;
+
+  &.visible {
+    display: block;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,43 @@
+// Fields - base
+//----------------------------------------------------------------------
+
+.field {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  padding: $spacing-small 0;
+  position: relative;
+  width: 100%;
+}
+
+.field-bordered-top {
+  border-top: 1px solid color("divider");
+  margin-top: $spacing-small;
+}
+
+.field-bordered-bottom {
+  border-bottom: 1px solid color("divider");
+  margin-bottom: $spacing-small;
+}
+
+
+.field-first {
+  padding-top: 0;
+}
+
+.field-last {
+  padding-bottom: 0;
+}
+
+// Actions
+//----------------------------------------------------------------------
+
+.actions {
+  padding-top: $spacing-normal;
+}
+
+.actions-bordered {
+  border-top: 1px solid color("divider");
+  margin-top: $spacing-normal;
+}
