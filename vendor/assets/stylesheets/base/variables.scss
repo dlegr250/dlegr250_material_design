@@ -1,3 +1,7 @@
+//======================================================================
+// SCSS variables accessible in every SCSS file imported after this one.
+//======================================================================
+
 // Dimensions - application
 //----------------------------------------------------------------------
 
@@ -95,14 +99,7 @@ $large-width: 1000px;
 // Convenience variables
 //----------------------------------------------------------------------
 
-$text-fields: "input[type='email'],
-  input[type='number'],
-  input[type='search'],
-  input[type='text'],
-  input[type='tel'],
-  input[type='url'],
-  input[type='password'],
-  textarea";
+$text-fields: "input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea";
 
 // Color variables
 // See: http://www.google.com/design/spec/style/color.html
@@ -148,3 +145,24 @@ $colors: (
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
+
+// Defaults - Application colors (user can override)
+//----------------------------------------------------------------------
+
+// appbar and any colored component
+$primary-color: color("blue") !default;
+$secondary-color: color("red") !default;
+$appbar-text-color: color("white") !default;
+
+// Text fields
+$text-field-focus-color: $primary-color !default;
+$text-field-invalid-color: color("red") !default;
+$text-field-valid-color: color("green") !default;
+
+// Merge defaults back into globals to use in colored components.
+// Having this here allows access to the color helpers already created
+// in the $colors global so you can do color("primary") instead of #fff.
+//----------------------------------------------------------------------
+
+$app-config: ("primary": $primary-color, "secondary": $secondary-color);
+$colors: map-merge(($colors), ($app-config));

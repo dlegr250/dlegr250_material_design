@@ -1,17 +1,19 @@
 #======================================================================
 # Code executed always for entire application.
+# Filename is namespaced to avoid conflict with application naming.
 #======================================================================
+
+# Leaving a current page
+#----------------------------------------------------------------------
+
 $(document).on "page:fetch", ->
   $("#main").html("<div class='spinner' id='main-spinner'></div>")
 
+# New page is loaded
+#----------------------------------------------------------------------
+
 $(document).on "ready page:load", ->
-  # Galleria slider
-  if $(".galleria").length
-    $(".galleria").galleria({
-      idleMode: false,
-      showInfo: false,
-      swipe: "enforced"
-    })
+  # TODO use a global App variable instead of window
 
   # Attach to global window object
   window.layout = new Layout()

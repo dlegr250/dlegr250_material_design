@@ -1,5 +1,6 @@
 //======================================================================
-// Global CSS classes for use on any element
+// Global CSS classes for use on any element.
+// Default element styles are defined in the base.scss file.
 //======================================================================
 
 // Alignments
@@ -25,6 +26,7 @@
   float: right;
 }
 
+// Expand entire width and take element padding into consideration.
 .full-width {
   @include full-width;
 }
@@ -76,15 +78,9 @@
 // Margins
 //----------------------------------------------------------------------
 
-.margin-bottom-normal {
-  margin-bottom: $spacing-normal;
-}
+// TODO need classes for this???
 
-.margin-top-normal {
-  margin-top: $spacing-normal;
-}
-
-// Hint text
+// Hint text is subtle text to give extra minor details
 //----------------------------------------------------------------------
 
 .hint {
@@ -103,13 +99,12 @@
 
 .bold,
 .strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 // Rounded corners
 //----------------------------------------------------------------------
 
-.rounded,
 .rounded-corners {
   @include rounded-corners;
 }
@@ -118,15 +113,29 @@
   @include rounded-top-corners;
 }
 
+.rounded-right-corners {
+  @include rounded-right-corners;
+}
+
 .rounded-bottom-corners {
   @include rounded-bottom-corners;
+}
+
+.rounded-left-corners {
+  @include rounded-left-corners;
 }
 
 // Visibility
 //----------------------------------------------------------------------
 
+// Remove from DOM rendering completely
 .hidden {
   display: none;
+}
+
+// Remain in DOM flow but make invisible
+.invisible {
+  visibility: hidden;
 }
 
 // Disabled elements
@@ -140,7 +149,7 @@
   @include box-shadow(none);
 }
 
-// Color classes
+// Colored text
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
@@ -149,7 +158,7 @@
   }
 }
 
-// Global media query classes
+// Media query classes for various device sizes
 //----------------------------------------------------------------------
 
 .small-only {

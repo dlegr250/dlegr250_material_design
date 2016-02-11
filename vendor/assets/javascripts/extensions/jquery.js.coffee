@@ -1,8 +1,11 @@
 #======================================================================
-# Extend jQuery core.
+# Extensions to jQuery core.
 # See: http://stackoverflow.com/a/5638717/667772
 # See: http://jsfiddle.net/giobongio/RyFje/1/
 #======================================================================
+
+# Center an absolute element horizontally and vertically
+#----------------------------------------------------------------------
 jQuery.extend jQuery.fn,
   absoluteCenter: ->
     @each ->

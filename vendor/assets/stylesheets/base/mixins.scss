@@ -1,3 +1,8 @@
+//======================================================================
+// SCSS mixins accessible in every SCSS file imported after this one.
+// Mixins abstract browser-specific vendor prefixes when applicable.
+//======================================================================
+
 // Default values for mixins
 //----------------------------------------------------------------------
 
@@ -7,65 +12,65 @@ $default-rounded-corners-radius: 3px;
 //----------------------------------------------------------------------
 
 @mixin rounded-corners($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         $radius;
-  -moz-border-radius:    $radius;
+  behavior: url(border-radius.htc);
+  border-radius: $radius;
+  -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
 }
 
 @mixin rounded-top-corners($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         $radius $radius 0 0;
-  -moz-border-radius:    $radius $radius 0 0;
+  behavior: url(border-radius.htc);
+  border-radius: $radius $radius 0 0;
+  -moz-border-radius: $radius $radius 0 0;
   -webkit-border-radius: $radius $radius 0 0;
 }
 
 @mixin rounded-right-corners($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         0 $radius $radius 0;
-  -moz-border-radius:    0 $radius $radius 0;
+  behavior: url(border-radius.htc);
+  border-radius: 0 $radius $radius 0;
+  -moz-border-radius: 0 $radius $radius 0;
   -webkit-border-radius: 0 $radius $radius 0;
 }
 
 @mixin rounded-bottom-corners($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         0 0 $radius $radius;
-  -moz-border-radius:    0 0 $radius $radius;
+  behavior: url(border-radius.htc);
+  border-radius: 0 0 $radius $radius;
+  -moz-border-radius: 0 0 $radius $radius;
   -webkit-border-radius: 0 0 $radius $radius;
 }
 
 @mixin rounded-left-corners($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         $radius 0 0 $radius;
-  -moz-border-radius:    $radius 0 0 $radius;
+  behavior: url(border-radius.htc);
+  border-radius: $radius 0 0 $radius;
+  -moz-border-radius: $radius 0 0 $radius;
   -webkit-border-radius: $radius 0 0 $radius;
 }
 
 @mixin rounded-top-left-corner($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         $radius 0 0 0;
-  -moz-border-radius:    $radius 0 0 0;
+  behavior: url(border-radius.htc);
+  border-radius: $radius 0 0 0;
+  -moz-border-radius: $radius 0 0 0;
   -webkit-border-radius: $radius 0 0 0;
 }
 
 @mixin rounded-top-right-corner($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         0 $radius 0 0;
-  -moz-border-radius:    0 $radius 0 0;
+  behavior: url(border-radius.htc);
+  border-radius: 0 $radius 0 0;
+  -moz-border-radius: 0 $radius 0 0;
   -webkit-border-radius: 0 $radius 0 0;
 }
 
 @mixin rounded-bottom-left-corner($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         0 0 0 $radius;
-  -moz-border-radius:    0 0 0 $radius;
+  behavior: url(border-radius.htc);
+  border-radius: 0 0 0 $radius;
+  -moz-border-radius: 0 0 0 $radius;
   -webkit-border-radius: 0 0 0 $radius;
 }
 
 @mixin rounded-bottom-right-corner($radius: $default-rounded-corners-radius) {
-  behavior:              url(border-radius.htc);
-  border-radius:         0 0 $radius 0;
-  -moz-border-radius:    0 0 $radius 0;
+  behavior: url(border-radius.htc);
+  border-radius: 0 0 $radius 0;
+  -moz-border-radius: 0 0 $radius 0;
   -webkit-border-radius: 0 0 $radius 0;
 }
 
@@ -86,37 +91,37 @@ $default-rounded-corners-radius: 3px;
 
 @mixin transition($effect...) {
   @if length($effect) == 0 {
-    $effect: all 200ms ease;
+    $effect: all 0.20s ease;
   }
 
-  transition:         $effect;
-  -moz-transition:    $effect;
-  -o-transition:      $effect;
+  transition: $effect;
+  -moz-transition: $effect;
+  -o-transition: $effect;
   -webkit-transition: $effect;
 }
 
 @mixin transform($text...) {
   -webkit-transform: $text;
-  -moz-transform:    $text;
-  -ms-transform:     $text;
-  transform:         $text;
+  -moz-transform: $text;
+  -ms-transform: $text;
+  transform: $text;
 }
 
 // Visibility
 //----------------------------------------------------------------------
 
 @mixin visibility($text) {
-  visibility:                  $text;
+  visibility: $text;
   -webkit-backface-visibility: $text;
-  -moz-backface-visibility:    $text;
-  backface-visibility:         $text;
+  -moz-backface-visibility: $text;
+  backface-visibility: $text;
 }
 
 // See: css-tricks.com/css-transparency-settings-for-all-broswers
 @mixin transparency($value: 0.5) {
-  filter:  alpha(opacity=($value * 100));
+  filter: alpha(opacity=($value * 100));
   opacity: $value;
-  zoom:    1;
+  zoom: 1;
 }
 
 // Shadows
@@ -127,20 +132,21 @@ $default-rounded-corners-radius: 3px;
     $text: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
   }
 
-  box-shadow:         $text;
-  -moz-box-shadow:    $text;
+  box-shadow: $text;
+  -moz-box-shadow: $text;
   -webkit-box-shadow: $text;
 }
 
 @mixin text-shadow($text) {
-  text-shadow:         $text;
-  -moz-text-shadow:    $text;
+  text-shadow: $text;
+  -moz-text-shadow: $text;
   -webkit-text-shadow: $text;
 }
 
 // Flexbox
 //----------------------------------------------------------------------
 
+// For a row of flex elements, such as the appbar.
 @mixin flex-parent-row() {
   align-items: center;
   -ms-flex-align: center;
@@ -153,13 +159,15 @@ $default-rounded-corners-radius: 3px;
   flex-wrap: nowrap;
 }
 
+// TODO any other flex items needed???
+
 // Boxes
 //----------------------------------------------------------------------
 
-// Box-sizing takes element padding into consideration
+// Using border-box takes element's padding into consideration
 @mixin full-width() {
-  box-sizing:         border-box !important;
-  -moz-box-sizing:    border-box !important;
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
   -webkit-box-sizing: border-box !important;
   width: 100% !important;
 }
@@ -175,6 +183,6 @@ $default-rounded-corners-radius: 3px;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }

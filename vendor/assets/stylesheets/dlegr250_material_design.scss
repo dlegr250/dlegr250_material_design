@@ -7,16 +7,12 @@
 @import "base/base";
 @import "base/global_classes";
 
-// Set defaults and merge them back into global variables for use later.
-@import "dlegr250_material_design_config";
-
 // Layouts
 //----------------------------------------------------------------------
 
-// When user is not logged in
+// For authentication pages like login/signup/password_reset...
 @import "layouts/authentication/base";
 
-// When user is logged in
 @import "layouts/application/base";
 @import "layouts/application/appbar";
 @import "layouts/application/sidebars";
