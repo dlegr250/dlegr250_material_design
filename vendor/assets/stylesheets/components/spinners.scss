@@ -1,13 +1,57 @@
+// Variables
+//----------------------------------------------------------------------
+
+$spinner-height: 24px;
+
 // Spinners - base
 //----------------------------------------------------------------------
 
 .spinner {
   animation: rotate 0.8s infinite linear;
-  border: 6px solid color("divider");
-  border-right-color: transparent;
-  height: 28px;
-  width: 28px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: color("divider");
+  border-right-color: transparent !important;
+  display: inline-block;
+  height: $spinner-height;
+  line-height: $spinner-height;
+  vertical-align: middle;
+  width: $spinner-height;
   @include rounded-corners(50%);
+
+  &.spinner-xsmall {
+    height: $spinner-height * 0.5;
+    width: $spinner-height * 0.5;
+  }
+
+  &.spinner-small {
+    height: $spinner-height * 0.8;
+    width: $spinner-height * 0.8;
+  }
+
+  &.spinner-normal {
+    height: $spinner-height;
+    width: $spinner-height;
+  }
+
+  &.spinner-large {
+    height: $spinner-height * 1.5;
+    width: $spinner-height * 1.5;
+  }
+
+  &.spinner-xlarge {
+    height: $spinner-height * 2;
+    width: $spinner-height * 2;
+  }
+}
+
+// Spinners - colors
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .spinner-#{$color-name} {
+    border-color: $color;
+  }
 }
 
 @keyframes rotate {

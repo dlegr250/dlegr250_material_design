@@ -31,14 +31,6 @@ ol {
   }
 }
 
-// Lists - header
-//----------------------------------------------------------------------
-
-.list-header {
-  color: color("list-header");
-  padding: $spacing-normal;
-}
-
 // Lists - base
 //----------------------------------------------------------------------
 
@@ -160,11 +152,11 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-icon {
-  color: color("icon");
+  color: color("hint");
   font-size: $font-size-icon;
   padding: 0;
   padding-left: $spacing-normal;
-  width: 72px - $spacing-normal * 2;
+  width: 56px; // 72px(width) - 16px(padding-left)
 }
 
 // Lists - list item - primary

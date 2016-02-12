@@ -55,6 +55,7 @@
 .appbar-actions {
   text-align: right;
 
+  // TODO test this in multiple browsers to see if it works everywhere...
   // Since standard buttons are not as tall as the appbar-button,
   // there is leftover space and the button clings to the baseline.
   .button {
@@ -68,7 +69,7 @@
 .appbar-button {
   background-color: $primary-color;
   box-sizing: border-box;
-  color: color("icon");
+  color: $appbar-button-color;
   cursor: pointer;
   display: inline-block;
   font-size: $font-size-icon;

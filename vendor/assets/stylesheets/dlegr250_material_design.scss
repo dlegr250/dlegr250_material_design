@@ -1,6 +1,8 @@
 // Base (load order is important)
 //----------------------------------------------------------------------
 
+@import "fonts/material_design_iconic_font";
+
 @import "base/normalize";
 @import "base/variables";
 @import "base/mixins";

@@ -6,16 +6,16 @@
 // Typography
 //----------------------------------------------------------------------
 
-// TODO extract into local copy instead of downloading from internet
+// Note: Material Design Iconic Font is hosted locally
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css");
 
 // HTML/body
 //----------------------------------------------------------------------
 
 html,
 body {
-  background-color: color("light-grey");
+  background-color: #eee;
   height: 100%;
   width: 100%;
 }

@@ -99,7 +99,7 @@ $large-width: 1000px;
 // Convenience variables
 //----------------------------------------------------------------------
 
-$text-fields: "input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea";
+
 
 // Color variables
 // See: http://www.google.com/design/spec/style/color.html
@@ -131,14 +131,10 @@ $colors: (
   "brown"      : #795548,
   "blue-grey"  : #607d8b,
   "hint"       : rgba(0, 0, 0, 0.54),
-  "light-grey" : #eee,
   "text"       : rgb(51, 51, 51),
   "divider"    : rgba(0, 0, 0, 0.12),
   "hover"      : rgba(0, 0, 0, 0.06),
-  "icon"       : rgba(0, 0, 0, 0.5),
-  "toggle-bar" : #898989,
-  "snackbar"   : #323232,
-  "list-header": #616161
+  "snackbar"   : #323232
 );
 
 // Easier way to reference $colors map
@@ -153,11 +149,7 @@ $colors: (
 $primary-color: color("blue") !default;
 $secondary-color: color("red") !default;
 $appbar-text-color: color("white") !default;
-
-// Text fields
-$text-field-focus-color: $primary-color !default;
-$text-field-invalid-color: color("red") !default;
-$text-field-valid-color: color("green") !default;
+$appbar-button-color: color("hint") !default;
 
 // Merge defaults back into globals to use in colored components.
 // Having this here allows access to the color helpers already created

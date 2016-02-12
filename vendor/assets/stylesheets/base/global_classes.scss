@@ -154,7 +154,7 @@
 
 @each $color-name, $color in $colors {
   .color-#{$color-name} {
-    color: $color;
+    color: $color !important; // Assume if you're specifying this you want it to override
   }
 }
 
