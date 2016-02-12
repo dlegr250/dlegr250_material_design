@@ -14,4 +14,5 @@
 //= require components/dialog
 //= require components/tabs
 //= require components/forms
+//= require components/snackbar
 //= require components/utility
