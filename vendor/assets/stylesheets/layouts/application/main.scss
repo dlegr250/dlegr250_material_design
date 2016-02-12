@@ -28,7 +28,6 @@
 // Main - spinner when loading content
 //----------------------------------------------------------------------
 
-#main-spinner {
-  display: block;
-  margin: 100px auto;
+#main-spinner-container {
+  @include flex-center();
 }

@@ -4,13 +4,13 @@
 # themselves, whereas class methods can operate on all elements utilizing
 # jQueries live "on" method.
 #======================================================================
-class @Menus
+class Dlegr250MaterialDesign.Menus
   constructor: () ->
-    Menus.setEvents()
+    @setEvents()
 
-  @setEvents: () ->
-    $("body").on "click", "[role='menu-trigger']", ->
-      Menus.hideMenus()
+  setEvents: () ->
+    $(document).on "click", "[role='menu-trigger']", ->
+      Dlegr250MaterialDesign.Menus.hideMenus()
 
       # Assume menu comes right after target if not specified
       if $(this).data("menu-id")
@@ -18,21 +18,24 @@ class @Menus
       else
         menu = $($(this).next(".menu"))
 
-      Menus.showMenu(menu)
+      Dlegr250MaterialDesign.Menus.showMenu(menu)
       false
 
     $(window).on "click", ->
-      Menus.hideMenus()
+      Dlegr250MaterialDesign.Menus.hideMenus()
+
+  # Class methods
+  #----------------------------------------------------------------------
 
   @hideMenus: () ->
     $(".menu").removeClass("visible")
 
   @showMenu: (menu) ->
-    Menus.changeMenuPositionToFitInsideVisibleWindow(menu)
+    Dlegr250MaterialDesign.Menus.fitMenuInsideVisibleWindow(menu)
     menu.addClass("visible")
 
   # Force menu position inside the constraints of the visible window
-  @changeMenuPositionToFitInsideVisibleWindow: (menu) ->
+  @fitMenuInsideVisibleWindow: (menu) ->
     # Calculate what the menu position needs to be
     topOrBottom = (menu.data("position") || "top-right").split("-")[0]
     leftOrRight = (menu.data("position") || "top-right").split("-")[1]

@@ -3,7 +3,7 @@
 # Does NOT handle maintaining active class between page refreshes
 # as it has no way of knowing which tab should be active.
 #======================================================================
-class @Tabs
+class Dlegr250MaterialDesign.Tabs
   constructor: () ->
     @setEvents()
 

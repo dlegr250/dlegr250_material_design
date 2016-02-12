@@ -1,7 +1,7 @@
 #======================================================================
 # Mark changed input elements as "dirty" for validation checks.
 #======================================================================
-class @FormOperations
+class Dlegr250MaterialDesign.Forms
   constructor: () ->
     @setEvents()
 
