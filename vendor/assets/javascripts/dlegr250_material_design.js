@@ -14,5 +14,4 @@
 //= require components/dialog
 //= require components/tabs
 //= require components/forms
-//= require components/main_loader
 //= require components/utility
