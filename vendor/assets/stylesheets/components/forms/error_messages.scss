@@ -3,15 +3,13 @@
 
 .error-messages {
   color: color("red");
-  // display: none;
+  display: inline-block;
   font-size: $font-size-small;
+  font-weight: normal;
   line-height: 1.4;
   min-height: 24px;
   overflow: hidden;
+  padding-top: $spacing-xsmall;
   position: relative;
   vertical-align: middle;
-
-  .error-message {
-    padding-top: $spacing-xsmall;
-  }
 }
