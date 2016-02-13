@@ -7,9 +7,21 @@
   font-size: $font-size-small;
   font-weight: normal;
   line-height: 1.4;
-  // min-height: 24px;
   overflow: hidden;
   padding-top: $spacing-xsmall;
   position: relative;
-  // vertical-align: middle;
+}
+
+// Wrapper for inputs with errors
+//----------------------------------------------------------------------
+
+.field-with-errors {
+  label {
+    color: color("red");
+  }
+
+  input {
+    border-color: color("red");
+    @include box-shadow(0 0 1px color("red"));
+  }
 }
