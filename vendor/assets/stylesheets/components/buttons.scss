@@ -58,7 +58,7 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
 // Basic icon without any coloring
 .button-icon {
   border: none;
-  color: color("hint");
+  color: color("icon");
   font-size: $font-size-icon;
   font-weight: 400;
   width: $button-icon-height;
@@ -71,11 +71,13 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
   &:hover,
   &.hover {
     background-color: rgba(0, 0, 0, 0.1);
+    background-color: color("hover");
   }
 
   &:active,
   &.active {
     background-color: rgba(0, 0, 0, 0.18);
+    background-color: darken(color("hover"), 5%);
   }
 }
 

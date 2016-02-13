@@ -80,11 +80,16 @@
 
 // TODO need classes for this???
 
-// Hint text is subtle text to give extra minor details
+// Helper text is subtle text to give extra minor details
 //----------------------------------------------------------------------
 
 .hint {
   color: color("hint");
+}
+
+.helper-text {
+  color: color("helper");
+  font-size: $font-size-small;
 }
 
 // Highlight

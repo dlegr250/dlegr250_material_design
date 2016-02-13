@@ -133,6 +133,7 @@ $colors: (
   "deep-orange": #ff5722,
   "brown"      : #795548,
   "blue-grey"  : #607d8b,
+  "icon"       : #737373,
   "helper"     : rgba(0, 0, 0, 0.54),
   "hint"       : rgba(0, 0, 0, 0.54),
   "text"       : rgb(51, 51, 51),
@@ -149,9 +150,13 @@ $colors: (
 // Defaults - Application colors (user can override)
 //----------------------------------------------------------------------
 
+$body-background-color: #eee !default;
+
 // appbar and any colored component
 $primary-color: color("blue") !default;
 $secondary-color: color("red") !default;
+
+// Appbar only
 $appbar-text-color: color("white") !default;
 $appbar-button-color: color("hint") !default;
 
