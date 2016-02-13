@@ -19,8 +19,9 @@
 
 .card {
   background-color: color("white");
+  border: 1px solid color("divider");
   width: $card-width;
-  @include box-shadow(0 1px 4px 0 rgba(0, 0, 0, 0.14));
+  @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.14));
   @include rounded-corners;
 
   &.normal {

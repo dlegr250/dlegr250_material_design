@@ -1,0 +1,13 @@
+//======================================================================
+// Modifying base HTML element instead of class, but putting as a
+// component because it is used like one.
+//======================================================================
+
+// Code - base
+//----------------------------------------------------------------------
+
+code {
+  background-color: #eee;
+  line-height: 1.5;
+  padding: $spacing-xsmall;
+}

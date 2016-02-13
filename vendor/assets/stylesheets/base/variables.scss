@@ -47,11 +47,14 @@ $tab-height: 48px;
 // Dimensions - buttons
 //----------------------------------------------------------------------
 
+$button-height-dense: 32px;
 $button-height: 36px;
 $button-height-large: 56px;
+
 $button-icon-height: 40px;
+
+$button-fab-mini-height: $button-icon-height;
 $button-fab-height: 56px;
-$button-fab-mini-height: 40px;
 
 // Dimensions - inputs (text-fields, etc...)
 //----------------------------------------------------------------------

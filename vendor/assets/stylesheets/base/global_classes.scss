@@ -149,12 +149,16 @@
   @include box-shadow(none);
 }
 
-// Colored text
+// Colored background or text
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
   .color-#{$color-name} {
     color: $color !important; // Assume if you're specifying this you want it to override
+  }
+
+  .background-color-#{$color-name} {
+    background-color: $color !important;
   }
 }
 

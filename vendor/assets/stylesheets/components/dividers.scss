@@ -3,16 +3,33 @@
 
 hr {
   height: 1px;
-
   margin: $spacing-small 0;
 
+  // Has a line
   &.divider {
     border-color: color("divider");
     margin: $spacing-normal 0;
   }
 
+  // Does not have a line
   &.spacer {
     border: none;
     margin: $spacing-normal 0;
+  }
+
+  &.spacer-xsmall {
+    margin: $spacing-xsmall 0;
+  }
+
+  &.spacer-small {
+    margin: $spacing-small 0;
+  }
+
+  &.spacer-large {
+    margin: $spacing-large 0;
+  }
+
+  &.spacer-xlarge {
+    margin: $spacing-xlarge 0;
   }
 }

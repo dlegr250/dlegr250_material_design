@@ -9,6 +9,7 @@
 //----------------------------------------------------------------------
 
 .box {
+  border: 1px solid transparent;
   box-sizing: border-box;
   padding: $spacing-normal;
 }
@@ -19,6 +20,15 @@
 @each $color-name, $color in $colors {
   .box-#{$color-name} {
     background-color: $color;
-    color: lighten($color, 50%);
+
+    @if $color-name == "hover" {
+      color: color("text");
+    } @else {
+      color: color("white");
+    }
+
+    &.box-bordered {
+      border-color: darken($color, 20%);
+    }
   }
 }

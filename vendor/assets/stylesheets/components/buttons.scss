@@ -40,9 +40,15 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
     text-decoration: none !important;
   }
 
-  &.large {
-    height: $button-height-large;
-    line-height: $button-height-large;
+  &.button-dense {
+    font-size: $font-size-small;
+    height: $button-height-dense !important;
+    line-height: $button-height-dense !important;
+  }
+
+  &.button-large {
+    height: $button-height-large !important;
+    line-height: $button-height-large !important;
   }
 }
 

@@ -1,0 +1,28 @@
+<%= content_for(:left_sidebar) do %>
+  <div class="list list-hoverable" id="navigation">
+    <%= link_to "#buttons", class: "list-item" do %>
+      <div class="list-item-primary">Buttons</div>
+    <% end %>
+      <%= link_to "#buttons-raised", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Raised</div>
+      <% end %>
+      <%= link_to "#buttons-flat", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Flat</div>
+      <% end %>
+      <%= link_to "#buttons-outline", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Outline</div>
+      <% end %>
+      <%= link_to "#buttons-icon", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Icon</div>
+      <% end %>
+    <%= link_to "#menus", class: "list-item" do %>
+      <div class="list-item-primary">Menus</div>
+    <% end %>
+      <%= link_to "#menus-position", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Position</div>
+      <% end %>
+      <%= link_to "#menus-widths", class: "list-item list-item-nested" do %>
+        <div class="list-item-primary">Widths</div>
+      <% end %>
+  </div>
+<% end %>
