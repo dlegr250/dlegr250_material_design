@@ -1,49 +1,46 @@
 #======================================================================
-# Single class to manipulate menus for DOM elements. Using class methods
-# instead of objects because dynamic elements always have to initialize
-# themselves, whereas class methods can operate on all elements utilizing
-# jQueries live "on" method.
+# Manage menu components.
 #======================================================================
-class Dlegr250MaterialDesign.Menus
-  constructor: () ->
+class App.MD.Menus
+  @init: () ->
+    @setVariables()
     @setEvents()
 
-  setEvents: () ->
-    $(document).on "click", "[role='menu-trigger']", ->
-      Dlegr250MaterialDesign.Menus.hideMenus()
+  @setVariables: () ->
+
+  @setEvents: () ->
+    $("body").on "click", "[role='menu-trigger']", (event) =>
+      @.hideMenus()
+      $trigger = $(event.target)
 
       # Assume menu comes right after target if not specified
-      if $(this).data("menu-id")
-        menu = $("##{$(this).data("menu-id")}")
+      if $trigger.data("menu-id")
+        $menu = $("##{$trigger.data('menu-id')}")
       else
-        menu = $($(this).next(".menu"))
+        $menu = $($trigger.next(".menu"))
 
-      Dlegr250MaterialDesign.Menus.showMenu(menu)
+      @.showMenu($menu)
       false
 
-    $(window).on "click", ->
-      Dlegr250MaterialDesign.Menus.hideMenus()
-
-  # Class methods
-  #----------------------------------------------------------------------
+    $("body").on "click", =>
+      @.hideMenus()
 
   @hideMenus: () ->
     $(".menu").removeClass("visible")
 
-  @showMenu: (menu) ->
-    Dlegr250MaterialDesign.Menus.fitMenuInsideVisibleWindow(menu)
-    menu.addClass("visible")
+  @showMenu: ($menu) ->
+    @.fitMenuInsideVisibleWindow($menu)
+    $menu.addClass("visible")
 
-  # Force menu position inside the constraints of the visible window
-  @fitMenuInsideVisibleWindow: (menu) ->
+  @fitMenuInsideVisibleWindow: ($menu) ->
     # Calculate what the menu position needs to be
-    topOrBottom = (menu.data("position") || "top-right").split("-")[0]
-    leftOrRight = (menu.data("position") || "top-right").split("-")[1]
+    topOrBottom = ($menu.data("position") || "top-right").split("-")[0]
+    leftOrRight = ($menu.data("position") || "top-right").split("-")[1]
 
     windowBottom = $(window).height()
     windowRight = $(window).width()
-    menuBottom = menu.offset().top + menu.outerHeight()
-    menuRight = menu.offset().left + menu.outerWidth()
+    menuBottom = $menu.offset().top + $menu.outerHeight()
+    menuRight = $menu.offset().left + $menu.outerWidth()
 
     if menuBottom > windowBottom
       topOrBottom = "bottom"
@@ -87,4 +84,4 @@ class Dlegr250MaterialDesign.Menus
           "transform-origin": "100% 100%"
         }
 
-    menu.css(styles)
+    $menu.css(styles)

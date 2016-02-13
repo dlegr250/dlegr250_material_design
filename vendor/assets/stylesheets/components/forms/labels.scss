@@ -2,11 +2,14 @@
 //----------------------------------------------------------------------
 
 label {
-  color: color("text");
+  color: color("helper");
   cursor: pointer;
   font-size: $font-size-normal;
   font-weight: 600;
 }
+
+// Labels - top aligned
+//----------------------------------------------------------------------
 
 label.top {
   display: block;

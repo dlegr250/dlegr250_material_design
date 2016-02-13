@@ -1,13 +1,17 @@
 #======================================================================
 # Mark changed input elements as "dirty" for validation checks.
 #======================================================================
-class Dlegr250MaterialDesign.Forms
-  constructor: () ->
+class App.MD.Forms
+  @init: () ->
+    @setVariables()
     @setEvents()
 
-  setEvents: () ->
+  @setVariables: () ->
+
+  @setEvents: () ->
     $(".auto-focus").focus()
 
     # Mark changed inputs as dirty
-    $("input").on "change invalid valid", ->
-      $(this).addClass("dirty")
+    $("body").on "change invalid valid", "input", (event) =>
+      $trigger = $(event.target)
+      $trigger.addClass("dirty")

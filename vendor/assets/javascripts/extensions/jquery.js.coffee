@@ -4,12 +4,27 @@
 # See: http://jsfiddle.net/giobongio/RyFje/1/
 #======================================================================
 
-# Center an absolute element horizontally and vertically
+# Center an absolute element horizontally and vertically in window
 #----------------------------------------------------------------------
+
 jQuery.extend jQuery.fn,
   absoluteCenter: ->
     @each ->
       element = $(this)
       element.css("left", ($(document).width() - element.width()) / 2)
       element.css("top", ($(document).height() - element.height()) / 2)
+      element
+
+# Change content of element to be centered spinner
+#----------------------------------------------------------------------
+
+jQuery.extend jQuery.fn,
+  replaceWithSpinner: (options) ->
+    color = options["color"] || "primary"
+    size = options["size"] || "normal"
+
+    @each ->
+      element = $(this)
+      spinner = $("<div class='spinner-container'><div class='spinner spinner-#{color} spinner-#{size}'></div></div>")
+      element.html(spinner)
       element

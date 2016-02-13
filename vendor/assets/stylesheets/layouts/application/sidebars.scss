@@ -31,6 +31,7 @@
   font-size: $font-size-large;
   height: $appbar-height;
   line-height: $appbar-height;
+  margin-bottom: $spacing-normal;
   padding: 0 $spacing-normal;
 }
 
@@ -45,12 +46,6 @@
   &.visible {
     @include transform(translateX(0));
   }
-}
-
-// Main navigation, usually in left sidebar
-#navigation {
-  font-weight: 600;
-  margin-top: $spacing-normal;
 }
 
 // Sidebars - right sidebar

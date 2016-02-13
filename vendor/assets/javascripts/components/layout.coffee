@@ -1,46 +1,55 @@
 #======================================================================
-# Manipulate structural elements with regards to the main layout.
-# Sidebars, overlay, and notifications.
+# Manage layout elements (sidebars, overlay, notifications).
 #======================================================================
-class Dlegr250MaterialDesign.Layout
-  constructor: () ->
+class App.MD.Layout
+  @init: () ->
+    @setVariables()
     @setEvents()
 
-  setEvents: () ->
-    $("body").on "click", "[role='left-sidebar-toggle']", ->
-      Dlegr250MaterialDesign.Layout.showLeftSidebar()
+  @setVariables: () ->
+    @$overlay = $("#overlay")
+    @$leftSidebar = $("#left-sidebar")
+    @$rightSidebar = $("#right-sidebar")
+    @$sidebars = $(".sidebar")
 
-    $("body").on "click", "[role='right-sidebar-toggle']", ->
-      Dlegr250MaterialDesign.Layout.showRightSidebar()
+  @setEvents: () ->
+    $(document).on "page:fetch", =>
+      @.hideOverlay()
 
-    $(".sidebar-header").on "click", ->
-      Dlegr250MaterialDesign.Layout.hideOverlay()
+    $("body").on "click", "[role='left-sidebar-toggle']", =>
+      @.showLeftSidebar()
 
-    $("#overlay").on "click", (event) ->
-      if event.target.id == $("#overlay").attr("id")
-        Dlegr250MaterialDesign.Layout.hideOverlay()
+    $("body").on "click", "[role='right-sidebar-toggle']", =>
+      @.showRightSidebar()
+
+    $(".sidebar-header").on "click", =>
+      @.hideOverlay()
+
+    @$overlay.on "click", (event) =>
+      if event.target.id == @$overlay.attr("id")
+        @.hideOverlay()
 
   @showLeftSidebar: () ->
-    Dlegr250MaterialDesign.Layout.showOverlay()
-    $("#left-sidebar").addClass("visible")
+    @.showOverlay()
+    @$leftSidebar.addClass("visible")
 
   @hideLeftSidebar: () ->
-    $("#left-sidebar").removeClass("visible")
+    @$leftSidebar.removeClass("visible")
 
   @showRightSidebar: () ->
-    Dlegr250MaterialDesign.Layout.showOverlay()
-    $("#right-sidebar").addClass("visible")
+    @.showOverlay()
+    @$rightSidebar.addClass("visible")
 
   @hideRightSidebar: () ->
-    $("#right-sidebar").removeClass("visible")
+    @$rightSidebar.removeClass("visible")
 
   @showOverlay: () ->
-    $("#overlay").addClass("visible")
+    @$overlay.addClass("visible")
 
   @hideOverlay: () ->
-    $(".sidebar").removeClass("visible")
-    $("#overlay").removeClass("visible")
-    Dlegr250MaterialDesign.Dialog.hideDialog()
+    @$sidebars.removeClass("visible")
+    @$overlay.removeClass("visible")
+    App.MD.Dialog.hideDialog()
 
   @isOverlayVisible: () ->
-    $("#overlay").hasClass("visible")
+    @$overlay.hasClass("visible")

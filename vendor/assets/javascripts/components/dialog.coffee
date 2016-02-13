@@ -1,40 +1,54 @@
 #======================================================================
 # Manage dialogs (aka modals). Builds upon Layout class.
+# Clones original link and removes data-custom-confirm attribute
+# and sets the original URL as the action for the "confirm" action
+# of the dialog.
 #======================================================================
-class Dlegr250MaterialDesign.Dialog
-  constructor: () ->
+class App.MD.Dialog
+  @init: () ->
+    @setVariables()
     @setEvents()
 
-  setEvents: () ->
-    $("body").on "click", "a[data-custom-confirm]", ->
-      triggerLinkClone = $(this).clone().removeAttr("data-custom-confirm")
-      triggerLinkClone.attr("id", "dialog-trigger-original-link")
-      templateHtml = $("##{$(this).data('custom-confirm')['template']}").html()
-      $("#dialog").html(templateHtml)
-      $("#dialog").find(".dialog-actions").append(triggerLinkClone.hide())
-      Dlegr250MaterialDesign.Dialog.showDialog()
+  @setVariables: () ->
+    @$dialog = $("#dialog")
+
+  @setEvents: () ->
+    $("body").on "click", "a[data-custom-confirm]", (event) =>
+      $trigger = $(event.target).closest("a[data-custom-confirm]")
+      $triggerTemplateId = $trigger.data("custom-confirm")["template"]
+      $triggerLinkClone = $trigger.clone().removeAttr("data-custom-confirm")
+      $triggerLinkClone.attr("id", "dialog-trigger-original-link")
+
+      # Replace dialog content with trigger template
+      $templateHtml = $("##{$triggerTemplateId}").html()
+      @$dialog.html($templateHtml)
+
+      # Copy over original link to dialog
+      @$dialog.find(".dialog-actions").append($triggerLinkClone.hide())
+
+      @.showDialog()
       false
 
-    $("#dialog").on "click", "[role='cancel']", ->
-      Dlegr250MaterialDesign.Dialog.hideDialog()
+    @$dialog.on "click", "[role='cancel']", =>
+      @.hideDialog()
       false
 
-    $("#dialog").on "click", "[role='confirm']", ->
-      $("#dialog").find("#dialog-trigger-original-link").click()
-      Dlegr250MaterialDesign.Dialog.hideDialog()
+    @$dialog.on "click", "[role='confirm']", =>
+      @$dialog.find("#dialog-trigger-original-link").click()
+      @.hideDialog()
 
-    $(window).on "resize", ->
-      $("#dialog").absoluteCenter()
+    $(window).on "resize", =>
+      @$dialog.absoluteCenter()
 
   @isVisible: () ->
-    $("#dialog").hasClass("visible")
+    @$dialog.hasClass("visible")
 
   @showDialog: () ->
-    Dlegr250MaterialDesign.Layout.showOverlay()
-    Dlegr250MaterialDesign.Menus.hideMenus()
-    $("#dialog").absoluteCenter().addClass("visible")
+    App.MD.Layout.showOverlay()
+    App.MD.Menus.hideMenus()
+    @$dialog.absoluteCenter().addClass("visible")
 
   @hideDialog: () ->
-    $("#dialog").removeClass("visible")
-    if Dlegr250MaterialDesign.Layout.isOverlayVisible()
-      Dlegr250MaterialDesign.Layout.hideOverlay()
+    @$dialog.removeClass("visible")
+    if App.MD.Layout.isOverlayVisible()
+      App.MD.Layout.hideOverlay()

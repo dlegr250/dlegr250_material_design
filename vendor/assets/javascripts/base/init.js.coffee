@@ -1,13 +1,14 @@
 #======================================================================
-# Sets global App module used throughout application.
+# Setup and initialize global modules.
 #======================================================================
 
-window.Dlegr250MaterialDesign ||= {}
+window.App ||= {}
+window.App.MD || = {}
 
 $(document).on "ready page:load", ->
-  new Dlegr250MaterialDesign.Layout()
-  new Dlegr250MaterialDesign.Menus()
-  new Dlegr250MaterialDesign.Dialog()
-  new Dlegr250MaterialDesign.Tabs()
-  new Dlegr250MaterialDesign.Forms()
-  new Dlegr250MaterialDesign.SnackbarHandler()
+  App.MD.Layout.init()
+  App.MD.Menus.init()
+  App.MD.Dialog.init()
+  App.MD.Tabs.init()
+  App.MD.Forms.init()
+  App.MD.SnackbarHandler.init()

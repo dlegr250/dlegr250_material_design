@@ -3,6 +3,13 @@
 
 $spinner-height: 24px;
 
+// Spinner container absolutely centers spinner
+//----------------------------------------------------------------------
+
+.spinner-container {
+  @include flex-center();
+}
+
 // Spinners - base
 //----------------------------------------------------------------------
 

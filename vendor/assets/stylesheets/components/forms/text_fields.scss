@@ -25,7 +25,12 @@ $text-fields: "input[type='email'], input[type='number'], input[type='search'], 
 
   &:focus {
     border-color: $primary-color;
-    @include box-shadow(0 0 1px $primary-color);
+    // @include box-shadow(0 0 1px $primary-color);
+  }
+
+  &.large {
+    font-size: $font-size-large;
+    min-height: $button-height * 1.5;
   }
 }
 
