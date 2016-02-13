@@ -23,6 +23,5 @@
 
   input {
     border-color: color("red");
-    @include box-shadow(0 0 1px color("red"));
   }
 }
