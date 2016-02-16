@@ -124,6 +124,7 @@ ol {
   display: table-row;
   font-size: $font-size-normal;
   text-decoration: none;
+  @include no-touch-highlight;
   @include transition(background-color 0.30s ease);
 }
 

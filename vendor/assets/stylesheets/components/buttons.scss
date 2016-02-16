@@ -186,13 +186,6 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
 // Buttons - Colored Floating Action Buttons (FAB)
 //----------------------------------------------------------------------
 
-.fab {
-  bottom: $spacing-large;
-  position: fixed !important;
-  right: $spacing-large;
-  z-index: $layout-depth + 1;
-}
-
 @each $color-name, $color in $colors {
   .fab-#{$color-name} {
     background-color: $color;
