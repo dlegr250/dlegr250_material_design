@@ -150,11 +150,15 @@ $colors: (
 // Defaults - Application colors (user can override)
 //----------------------------------------------------------------------
 
+// Body
 $body-background-color: #eee !default;
 
 // appbar and any colored component
 $primary-color: color("blue") !default;
 $secondary-color: color("red") !default;
+
+// Hover color for lists, menus, etc...
+$hover-color: color("hover") !default;
 
 // Appbar only
 $appbar-text-color: color("white") !default;
@@ -165,5 +169,9 @@ $appbar-button-color: color("hint") !default;
 // in the $colors global so you can do color("primary") instead of #fff.
 //----------------------------------------------------------------------
 
-$app-config: ("primary": $primary-color, "secondary": $secondary-color);
+$app-config: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "hover": $hover-color
+);
 $colors: map-merge(($colors), ($app-config));

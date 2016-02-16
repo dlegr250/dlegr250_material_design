@@ -24,8 +24,7 @@ $text-fields: "input[type='email'], input[type='number'], input[type='search'], 
   @include transition(border-color 0.2s ease);
 
   &:focus {
-    border-color: $primary-color;
-    // @include box-shadow(0 0 1px $primary-color);
+    border-color: color("primary");
   }
 
   &.large {

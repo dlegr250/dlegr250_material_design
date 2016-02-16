@@ -35,9 +35,8 @@
 //----------------------------------------------------------------------
 
 .constrained {
-  box-sizing: border-box;
   margin: auto;
-  width: 100% !important;
+  @include full-width;
 }
 
 .constrained-small {
