@@ -32,21 +32,23 @@ class App.MD.Layout
 
     # Touch interaction require a #main area to trigger the actions.
     if @$main.length > 0
+      console.log "main exist"
       if @$leftSidebar.length > 0
-        @$main.hammer({}).bind("swiperight", ->
+        console.log "left-sidebar exist"
+        @$main.hammer({}).bind("swiperight", =>
           @.showLeftSidebar()
         )
 
-        @$leftSidebar.hammer({}).bind("swipeleft", ->
+        @$leftSidebar.hammer({}).bind("swipeleft", =>
           @.hideOverlay()
         )
 
       if @$rightSidebar.length > 0
-        @$main.hammer({}).bind("swipeleft", ->
+        @$main.hammer({}).bind("swipeleft", =>
           @.showRightSidebar()
         )
 
-        @$rightSidebar.hammer({}).bind("swiperight", ->
+        @$rightSidebar.hammer({}).bind("swiperight", =>
           @.hideOverlay()
         )
 
