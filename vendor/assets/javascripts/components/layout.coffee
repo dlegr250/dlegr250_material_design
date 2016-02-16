@@ -7,6 +7,7 @@ class App.MD.Layout
     @setEvents()
 
   @setVariables: () ->
+    @$main = $("#main")
     @$overlay = $("#overlay")
     @$leftSidebar = $("#left-sidebar")
     @$rightSidebar = $("#right-sidebar")
@@ -28,6 +29,26 @@ class App.MD.Layout
     @$overlay.on "click", (event) =>
       if event.target.id == @$overlay.attr("id")
         @.hideOverlay()
+
+    # Touch interaction require a #main area to trigger the actions.
+    if @$main.length > 0
+      if @$leftSidebar.length > 0
+        @$main.hammer({}).bind("swiperight", ->
+          @.showLeftSidebar()
+        )
+
+        @$leftSidebar.hammer({}).bind("swipeleft", ->
+          @.hideOverlay()
+        )
+
+      if @$rightSidebar.length > 0
+        @$main.hammer({}).bind("swipeleft", ->
+          @.showRightSidebar()
+        )
+
+        @$rightSidebar.hammer({}).bind("swiperight", ->
+          @.hideOverlay()
+        )
 
   @showLeftSidebar: () ->
     @.showOverlay()
