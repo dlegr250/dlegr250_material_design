@@ -71,6 +71,10 @@ Note that you can always override an element's color or background color using t
 
 * Finalize components that will be implemented
 * Test in major browser versions and mobile devices
+* Styleguide to demo usage and components
+* Optimize file sizes
+* Create custom Snackbar component instead of using third-party
+* Remove handlebars templating library (should not be a UI element, should be added to an individual application if needed)
 * Update JS/CoffeeScript to use ES6 when that becomes mainstream, and IF the Rails Core is going to adopt ES6 as a standard; this gem is more about building Rails applications than using a specific JavaScript implementation
 
 ## Development
