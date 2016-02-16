@@ -13,17 +13,22 @@ $(document).on "ready page:load", ->
   App.MD.Forms.init()
   App.MD.SnackbarHandler.init()
 
-  if $("#overlay").length > 0
-    $("#overlay").hammer({}).bind("swipeleft", ->
-      App.MD.Layout.hideOverlay()
-    )
+  # Touch interaction require a #main area to trigger the actions.
+  if $("#main").length > 0
+    if $("#left-sidebar").length > 0
+      $("#main").hammer({}).bind("swiperight", ->
+        App.MD.Layout.showLeftSidebar()
+      )
 
-  if $("#left-sidebar").length > 0
-    $("#main").hammer({}).bind("swiperight", ->
-      App.MD.Layout.showLeftSidebar()
-    )
+      $("#left-sidebar").hammer({}).bind("swipeleft", ->
+        App.MD.Layout.hideOverlay()
+      )
 
-  if $("#right-sidebar").length > 0
-    $("#main").hammer({}).bind("swipeleft", ->
-      App.MD.Layout.showRightSidebar()
-    )
+    if $("#right-sidebar").length > 0
+      $("#main").hammer({}).bind("swipeleft", ->
+        App.MD.Layout.showRightSidebar()
+      )
+
+      $("#right-sidebar").hammer({}).bind("swiperight", ->
+        App.MD.Layout.hideOverlay()
+      )
