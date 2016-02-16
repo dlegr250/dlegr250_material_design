@@ -13,6 +13,11 @@ class App.MD.Layout
     @$rightSidebar = $("#right-sidebar")
     @$sidebars = $(".sidebar")
 
+    # Used for media query device breakpoints
+    @$smallWidth = 400
+    @$mediumWidth = 750
+    @$largeWidth = 1000
+
   @setEvents: () ->
     $(document).on "page:fetch", =>
       @.hideOverlay()
@@ -34,7 +39,8 @@ class App.MD.Layout
     if @$main.length > 0
       if @$leftSidebar.length > 0
         @$main.hammer({}).bind("swiperight", =>
-          @.showLeftSidebar()
+          if $(window).width() <= @$mediumWidth
+            @.showLeftSidebar()
         )
 
         @$leftSidebar.hammer({}).bind("swipeleft", =>
@@ -43,7 +49,8 @@ class App.MD.Layout
 
       if @$rightSidebar.length > 0
         @$main.hammer({}).bind("swipeleft", =>
-          @.showRightSidebar()
+          if $(window).width() <= @$mediumWidth
+            @.showRightSidebar()
         )
 
         @$rightSidebar.hammer({}).bind("swiperight", =>
