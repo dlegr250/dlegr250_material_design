@@ -39,7 +39,7 @@ class App.MD.Layout
     if @$main.length > 0
       if @$leftSidebar.length > 0
         @$main.hammer({}).bind("swiperight", =>
-          if $(window).width() <= @$mediumWidth
+          if $(window).width() <= @$largeWidth
             @.showLeftSidebar()
         )
 
@@ -49,7 +49,7 @@ class App.MD.Layout
 
       if @$rightSidebar.length > 0
         @$main.hammer({}).bind("swipeleft", =>
-          if $(window).width() <= @$mediumWidth
+          if $(window).width() <= @$largeWidth
             @.showRightSidebar()
         )
 
