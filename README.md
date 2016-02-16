@@ -46,12 +46,30 @@ Using the `.scss` extension lets you control the order in which files are loaded
 
 If you aren't using `.scss` extensions on all your stylesheets, you're doing it wrong ;)p
 
+## Application Default Variables
+
+The gem uses `SASS` variables to set standard defaults for your application. This allows you to change major colors by simply changing a single variable.
+
+In your `application.scss` file, *before* you import the library, set your variables. This mechanism relies upon [SASS default variables](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_) that fall back to standard defaults if you do not specify them.
+
+```css
+$body-background-color: #eee;
+$primary-color: blue;
+$secondary-color:  red;
+$hover-color: grey;
+$appbar-text-color: #fff;
+$appbar-button-color: darkblue;
+
+@import "dlegr250_material_design";
+```
+
+This changes the defaults for major layout elements or colored components by changing the `color("primary")` SASS map value.
+
+Note that you can always override an element's color or background color using the `color-{COLOR}` or `background-color-{COLOR}` CSS classes that override whatever other defaults the element has.
+
 ## Todo
 
 * Finalize components that will be implemented
-* Cleanup all stylesheets and remove unused styles
-* Cleanup all JS/Coffee and use a global `App` object instead of `window`
-* Implement simple way to config application-specific default values for styles
 * Test in major browser versions and mobile devices
 * Update JS/CoffeeScript to use ES6 when that becomes mainstream, and IF the Rails Core is going to adopt ES6 as a standard; this gem is more about building Rails applications than using a specific JavaScript implementation
 
