@@ -36,11 +36,13 @@ class App.MD.Layout
         @.hideOverlay()
 
     # Touch interaction require a #main area to trigger the actions.
+    # Tries to ensure swipe only happens from parent element.
     if @$main.length > 0
       if @$leftSidebar.length > 0
-        @$main.hammer({}).bind("swiperight", =>
-          if $(window).width() < @$largeWidth
-            @.showLeftSidebar()
+        @$main.hammer({}).bind("swiperight", (event) =>
+          if $(event.gesture.target).attr("id") == @$main.attr("id")
+            if $(window).width() < @$largeWidth
+              @.showLeftSidebar()
         )
 
         @$leftSidebar.hammer({}).bind("swipeleft", =>
@@ -49,8 +51,9 @@ class App.MD.Layout
 
       if @$rightSidebar.length > 0
         @$main.hammer({}).bind("swipeleft", =>
-          if $(window).width() < @$largeWidth
-            @.showRightSidebar()
+          if $(event.gesture.target).attr("id") == @$main.attr("id")
+            if $(window).width() < @$largeWidth
+              @.showRightSidebar()
         )
 
         @$rightSidebar.hammer({}).bind("swiperight", =>
