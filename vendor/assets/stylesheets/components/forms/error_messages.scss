@@ -1,17 +1,13 @@
-// Error messages - base
-//----------------------------------------------------------------------
-
-.error-messages {
-  color: color("red");
-  display: inline-block;
-  font-size: $font-size-small;
-  font-weight: normal;
-  line-height: 1.4;
-  overflow: hidden;
-  padding-top: $spacing-xsmall;
-  position: relative;
-  vertical-align: middle;
-}
+//======================================================================
+// Helper or error msgs related to an input element.
+// EXAMPLE:
+// <div class="field">
+//   <label for="attribute" class="top">Text</label>
+//   <input type="text" name="attribute" id="attribute" class="full-width" />
+//   <span class="helper-text helper-text-bottom">Helper text</span>
+//   <span class="helper-text helper-text-bottom error-messages">Red error msgs...</span>
+// </div>
+//======================================================================
 
 // Wrapper for inputs with errors
 //----------------------------------------------------------------------
@@ -23,5 +19,27 @@
 
   input {
     border-color: color("red");
+  }
+}
+
+// Helper text - base
+//----------------------------------------------------------------------
+
+.helper-text {
+  color: color("helper");
+  font-size: $font-size-small;
+  font-weight: normal;
+
+  &.helper-text-bottom {
+    display: inline-block;
+    line-height: 1.4;
+    overflow: hidden;
+    padding-top: $spacing-xsmall;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &.error-messages {
+    color: color("red") !important;
   }
 }

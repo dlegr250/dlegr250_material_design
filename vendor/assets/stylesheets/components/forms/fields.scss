@@ -1,4 +1,11 @@
-// Fields header
+//======================================================================
+// Fields act as wrappers for input elements and labels and provide space
+// between inputs. Act as container for label placement (left/top).
+//======================================================================
+
+// Fields header - base
+// Large text used to separate logical sections in a form, similar to a
+// fieldset but did not want to use that element.
 //----------------------------------------------------------------------
 
 .fields-header {

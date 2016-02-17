@@ -13,7 +13,7 @@
 
 .tab {
   border-bottom: 2px solid transparent;
-  color: color("hint");
+  color: color("helper");
   cursor: pointer;
   display: table-cell;
   font-size: $font-size-normal;
@@ -29,7 +29,7 @@
   @include transition(all 0.30s ease);
 
   .icon {
-    color: color("hint");
+    color: color("helper");
     font-size: $font-size-icon;
   }
 

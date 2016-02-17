@@ -204,7 +204,7 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
 
     @include box-shadow(0 3px 7px 0 rgba(0, 0, 0, 0.4));
     @include rounded-corners(250px);
-    @include text-shadow(0 -1px 0 color("hint"));
+    @include text-shadow(0 -1px 0 color("helper"));
 
     &:hover,
     &.hover {
