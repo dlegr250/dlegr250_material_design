@@ -9,8 +9,6 @@
 //= require base/init
 //= require third_party/handlebars.latest
 //= require third_party/snackbarlight
-//= require third_party/hammer.min
-//= require third_party/jquery.hammer
 //= require components/layout
 //= require components/menus
 //= require components/dialog
