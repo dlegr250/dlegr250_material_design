@@ -4,5 +4,5 @@
 class App.MD.SnackbarHandler
   @init: () ->
     snackbarText = $("body").data("snackbar")
-    if snackbarText.length > 0
+    if snackbarText && snackbarText.length > 0
       new Snackbar(snackbarText)
