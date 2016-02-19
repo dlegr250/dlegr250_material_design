@@ -16,9 +16,11 @@
     padding: $spacing-normal;
   }
 
-  // If you have a right sidebar to show on large, you have to
-  // make #main leave a gap for the right sidebar.
   body.has-right-sidebar {
+    overflow-x: auto;
+
+    // If showing right-sidebar on large screens, need to move
+    // main over to compensate.
     #main {
       right: $main-left;
     }

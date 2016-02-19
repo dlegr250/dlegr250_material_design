@@ -50,6 +50,19 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
     height: $button-height-large !important;
     line-height: $button-height-large !important;
   }
+
+  // Must mark icon element with class "icon"
+  &.with-left-icon {
+    .icon {
+      margin-right: 4px;
+    }
+  }
+
+  &.with-right-icon {
+    .icon {
+      margin-left: 4px;
+    }
+  }
 }
 
 // Buttons - icon buttons
