@@ -9,18 +9,17 @@
   z-index: $layout-depth;
 }
 
-// On large (desktop) size, add padding to main area.
+// On large (desktop) size, show sidebars by default
 @media (min-width: $large-width) {
-  #main {
-    left: $main-left;
-    padding: $spacing-normal;
+  body.has-left-sidebar {
+    #main {
+      left: $main-left;
+    }
   }
 
   body.has-right-sidebar {
     overflow-x: auto;
 
-    // If showing right-sidebar on large screens, need to move
-    // main over to compensate.
     #main {
       right: $main-left;
     }
