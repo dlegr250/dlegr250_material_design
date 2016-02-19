@@ -52,13 +52,13 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
   }
 
   // Must mark icon element with class "icon"
-  &.with-left-icon {
+  &.has-left-icon {
     .icon {
       margin-right: 4px;
     }
   }
 
-  &.with-right-icon {
+  &.has-right-icon {
     .icon {
       margin-left: 4px;
     }
