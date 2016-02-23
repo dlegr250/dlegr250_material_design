@@ -1,0 +1,82 @@
+//======================================================================
+// EXAMPLE: Input must come before label.
+// <div class="segmented-control-container segmented-control-blue">
+//   <div class="segmented-control">
+//     <%= radio_button_tag :full_name, "first" %>
+//     <%= label_tag :full_name_first, "First" %>
+//   </div>
+// </div>
+//======================================================================
+
+// Segmented control - base
+//----------------------------------------------------------------------
+
+.segmented-control-container {
+  // First element
+  .segmented-control:first-child {
+    margin-left: 0;
+
+    label {
+      @include rounded-left-corners;
+    }
+  }
+
+  // Last element
+  .segmented-control:last-child {
+    label {
+      @include rounded-right-corners;
+    }
+  }
+}
+
+// Segment control - individual element
+//----------------------------------------------------------------------
+
+.segmented-control {
+  display: inline-block;
+  float: left;
+  height: $button-height;
+  margin-left: -1px;
+
+  // Hide actual radio button
+  input {
+    display: none;
+  }
+
+  label {
+    border: 1px solid color("divider");
+    box-sizing: border-box;
+    color: color("helper");
+    display: inline-block;
+    font-weight: normal;
+    height: $button-height;
+    line-height: $button-height;
+    padding: 0 $spacing-normal;
+  }
+
+  // Default colors
+  input:checked ~ label {
+    background-color: color("primary");
+    color: color("white");
+  }
+}
+
+// Segment control - colored elements
+//----------------------------------------------------------------------
+
+@each $color-name, $color in $colors {
+  .segmented-control-#{$color-name} {
+    // To color borders and text
+    // .segmented-control {
+    //   label {
+    //     border-color: $color;
+    //     color: $color;
+    //   }
+    // }
+
+    input:checked ~ label {
+      background-color: $color;
+      color: color("white");
+    }
+  }
+}
