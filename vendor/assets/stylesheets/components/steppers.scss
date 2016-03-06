@@ -1,0 +1,60 @@
+//======================================================================
+// EXAMPLE:
+//======================================================================
+
+// Steps - step item
+//----------------------------------------------------------------------
+
+.step-item {
+  display: block;
+  padding: $spacing-normal 0;
+}
+
+// Steps - step item circle
+//----------------------------------------------------------------------
+
+.step-item-circle {
+  background-color: color("grey");
+  color: color("white");
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  margin-left: 24px;
+  text-align: center;
+  width: 24px;
+  @include rounded-corners(50%);
+}
+
+// Steps - step item primary
+//----------------------------------------------------------------------
+
+.step-item-primary {
+  color: color("helper");
+  display: inline-block;
+  padding-left: 8px;
+}
+
+// Steps - finished step
+//----------------------------------------------------------------------
+
+.step-item.finished {
+  .step-item-circle {
+    background-color: color("green");
+  }
+}
+
+// Steps - active step
+//----------------------------------------------------------------------
+
+.step-item.active {
+  background-color: color("hover");
+
+  .step-item-circle {
+    background-color: color("primary");
+  }
+
+  .step-item-primary {
+    color: color("text");
+    font-weight: bold;
+  }
+}

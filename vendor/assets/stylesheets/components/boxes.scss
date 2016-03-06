@@ -21,14 +21,24 @@
   .box-#{$color-name} {
     background-color: $color;
 
-    @if $color-name == "hover" {
+    @if ($color-name == "hover") or ($color-name == "white") or ($color-name == "highlight") {
       color: color("text");
     } @else {
       color: color("white");
     }
 
     &.box-bordered {
-      border-color: darken($color, 20%);
+      border-color: darken($color, 5%);
     }
   }
+}
+
+// Boxes - custom styles
+//----------------------------------------------------------------------
+
+.box-warning {
+  color: color("text");
+  background-color: color("highlight");
+  border: 1px solid color("dark-highlight");
+  @include rounded-corners;
 }

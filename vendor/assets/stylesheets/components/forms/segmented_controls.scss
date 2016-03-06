@@ -12,6 +12,9 @@
 //----------------------------------------------------------------------
 
 .segmented-control-container {
+  display: inline-block;
+  font-size: 0; // To remove extra spacing from inline-block
+
   // First element
   .segmented-control:first-child {
     margin-left: 0;
@@ -24,6 +27,7 @@
   // Last element
   .segmented-control:last-child {
     label {
+      border-right: 1px solid color("divider");
       @include rounded-right-corners;
     }
   }
@@ -34,9 +38,7 @@
 
 .segmented-control {
   display: inline-block;
-  float: left;
   height: $button-height;
-  margin-left: -1px;
 
   // Hide actual radio button
   input {
@@ -45,13 +47,21 @@
 
   label {
     border: 1px solid color("divider");
+    border-right: none;
     box-sizing: border-box;
     color: color("helper");
     display: inline-block;
     font-weight: normal;
     height: $button-height;
     line-height: $button-height;
-    padding: 0 $spacing-normal;
+    padding: 0 ($spacing-normal * 0.75);
+    @include transition(background-color 0.30s ease);
+  }
+
+  @media (min-width: $medium-width) {
+    label {
+      padding: 0 $spacing-normal;
+    }
   }
 
   // Default colors

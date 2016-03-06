@@ -18,36 +18,61 @@
     padding-bottom: $spacing-small;
   }
 }
+
+// Fields - titles and subtitles
+// Used to visually separate logical sections on a form.
+//----------------------------------------------------------------------
+
+.field-title {
+  font-size: $font-size-large;
+  font-weight: bold;
+  margin-bottom: $spacing-small;
+}
+
+.field-subtitle {
+  color: color("helper");
+  font-size: $font-size-normal;
+  font-weight: normal;
+  padding-top: $spacing-xsmall;
+}
+
 // Fields - base
 //----------------------------------------------------------------------
 
 .field {
   box-sizing: border-box;
   display: inline-block;
-  margin: 0;
+  margin: 1px 0;
   max-width: 100%;
-  padding: $spacing-small 0;
+  padding: $spacing-normal $spacing-small;
   position: relative;
   width: 100%;
 }
 
-.field-bordered-top {
-  border-top: 1px solid color("divider");
-  margin-top: $spacing-small;
+// Fields - sizes
+//----------------------------------------------------------------------
+
+.field-xsmall {
+  padding: $spacing-xsmall $spacing-small;
 }
 
-.field-bordered-bottom {
-  border-bottom: 1px solid color("divider");
-  margin-bottom: $spacing-small;
+.field-small {
+  padding: $spacing-small;
 }
 
-
-.field-first {
-  padding-top: 0;
+.field-large {
+  padding: $spacing-large $spacing-small;
 }
 
-.field-last {
-  padding-bottom: 0;
+.field-xlarge {
+  padding: $spacing-xlarge $spacing-small;
+}
+
+// Fields - has errors
+//----------------------------------------------------------------------
+
+.field.has-errors {
+  background-color: color("light-red");
 }
 
 // Actions

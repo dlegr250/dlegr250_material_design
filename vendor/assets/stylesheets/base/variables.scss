@@ -110,6 +110,7 @@ $large-width: 1000px;
 
 $colors: (
   "red"        : #db4437,
+  "light-red"  : #ffebee,
   "blue"       : #2196f3,
   "dark-blue"  : darken(#2196f3, 10%),
   "grey"       : #9e9e9e,
@@ -127,6 +128,7 @@ $colors: (
   "lime"       : #cddc39,
   "yellow"     : #ffeb3b,
   "highlight"  : #ffffcc,
+  "dark-highlight": #fcde87,
   "amber"      : #ffc107,
   "orange"     : #ff9800,
   "dark-orange": #ef6c00,

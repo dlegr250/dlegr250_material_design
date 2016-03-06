@@ -9,7 +9,8 @@
 // Variables
 //----------------------------------------------------------------------
 
-$buttons: "button, .button, input[type='submit'], input[type='reset'], input[type='button']";
+// $buttons: "button, .button, input[type='submit'], input[type='reset'], input[type='button']";
+$buttons: ".button";
 
 // Buttons - base
 //----------------------------------------------------------------------
@@ -51,17 +52,13 @@ $buttons: "button, .button, input[type='submit'], input[type='reset'], input[typ
     line-height: $button-height-large !important;
   }
 
-  // Must mark icon element with class "icon"
-  &.has-left-icon {
-    .icon {
-      margin-right: 4px;
-    }
+  // Icons within button
+  .icon-left {
+    margin-right: $spacing-xsmall;
   }
-
-  &.has-right-icon {
-    .icon {
-      margin-left: 4px;
-    }
+  
+  .icon-right {
+    margin-left: $spacing-xsmall;
   }
 }
 

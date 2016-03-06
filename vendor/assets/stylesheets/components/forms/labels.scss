@@ -15,3 +15,34 @@ label.top {
   display: block;
   padding-bottom: $spacing-xsmall;
 }
+
+// Labels - marking as required; can be applied to any element, not
+// just label elements.
+//----------------------------------------------------------------------
+
+.required:before {
+  color: color("red");
+  content: "* ";
+}
+
+// Fields - responsive label placement
+//----------------------------------------------------------------------
+
+.field {
+  label.responsive-label {
+    display: block;
+    margin-top: $spacing-xsmall;
+    padding-bottom: $spacing-xsmall;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .field {
+    label.responsive-label {
+      display: inline-block;
+      margin-right: $spacing-normal;
+      text-align: right;
+      width: 160px;
+    }
+  }
+}

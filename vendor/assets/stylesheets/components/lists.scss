@@ -31,6 +31,17 @@ ol {
   }
 }
 
+// Lists - subheader to breakup lists
+//----------------------------------------------------------------------
+
+.list-subheader {
+  color: color("helper");
+  font-weight: 600;
+  height: $tab-height;
+  line-height: $tab-height;
+  padding-left: $spacing-normal;
+}
+
 // Lists - base
 //----------------------------------------------------------------------
 
@@ -159,6 +170,10 @@ ol {
   width: 56px; // 72px(width) - 16px(padding-left)
 }
 
+.list-dense .list-item-icon {
+  font-size: $font-size-large;
+}
+
 // Lists - list item - primary
 //----------------------------------------------------------------------
 
@@ -179,6 +194,13 @@ ol {
   }
 }
 
+// For instances where you do not want list text to be hidden
+.list-show-overflow .list-item-primary {
+  overflow: auto;
+  text-overflow: inherit;
+  white-space: normal;
+}
+
 .list-item-primary-subtext {
   color: color("helper");
   padding-top: $spacing-xsmall;
@@ -193,7 +215,7 @@ ol {
 
 .list-item-secondary {
   text-align: right;
-  width: $spacing-normal * 2 + $button-icon-height;
+  min-width: $spacing-normal * 2 + $button-icon-height;
   padding-right: $spacing-normal;
 
   .icon {
@@ -208,8 +230,14 @@ ol {
   .list-item-icon,
   .list-item-primary,
   .list-item-secondary {
+    height: 36px;
+    min-height: 36px;
     padding-bottom: $spacing-small;
     padding-top: $spacing-small;
+  }
+
+  .list-item-icon {
+    font-size: 18px;
   }
 }
 
@@ -217,26 +245,44 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-nested {
-  div:first-child {
-    padding-left: $spacing-normal * 2;
+  div:first-child.list-item-icon {
+    text-align: right;
+  }
+
+  div:first-child.list-item-icon ~ .list-item-primary {
+    padding-left: $spacing-xlarge;
   }
 }
 
 // Lists - media queries
 //----------------------------------------------------------------------
 
-@media (min-width: $medium-width) {
-  .list-item-secondary {
-    &.one-icons {
-      width: $spacing-normal * 2 + $button-icon-height;
-    }
+.list-item-secondary {
+  &.one-icons {
+    width: $spacing-normal * 2 + $button-icon-height;
+  }
 
-    &.two-icons {
-      width: $spacing-normal * 2 + $button-icon-height * 2;
-    }
+  &.two-icons {
+    width: $spacing-normal * 2 + $button-icon-height * 2;
+  }
 
-    &.three-icons {
-      width: $spacing-normal * 2 + $button-icon-height * 3;
-    }
+  &.three-icons {
+    width: $spacing-normal * 2 + $button-icon-height * 3;
   }
 }
+
+// @media (min-width: $medium-width) {
+//   .list-item-secondary {
+//     &.one-icons {
+//       width: $spacing-normal * 2 + $button-icon-height;
+//     }
+//
+//     &.two-icons {
+//       width: $spacing-normal * 2 + $button-icon-height * 2;
+//     }
+//
+//     &.three-icons {
+//       width: $spacing-normal * 2 + $button-icon-height * 3;
+//     }
+//   }
+// }
