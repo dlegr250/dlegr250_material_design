@@ -1,25 +1,57 @@
 //======================================================================
 // EXAMPLE:
+// <div class="steps">
+//   <div class="step-item active">
+//     <div class="step-item-icon">
+//       <div class="step-item-icon-circle">1</div>
+//     </div>
+//     <div class="step-item-primary">
+//       Primary Text
+//       <div class="step-item-primary-subtext">
+//         Subtext
+//       </div>
+//     </div>
+//   </div>
+// </div>
 //======================================================================
+
+// Steps - base
+//----------------------------------------------------------------------
+
+.steps {}
 
 // Steps - step item
 //----------------------------------------------------------------------
 
 .step-item {
-  display: block;
-  padding: $spacing-normal 0;
+  @include flex-parent-row();
+  @include transition(background-color 0.30s ease);
+}
+
+// Steps - step item children
+//----------------------------------------------------------------------
+
+.step-item-icon,
+.step-item-primary {
+  box-sizing: border-box;
+  padding-bottom: $spacing-normal;
+  padding-top: $spacing-normal;
 }
 
 // Steps - step item circle
 //----------------------------------------------------------------------
 
-.step-item-circle {
+.step-item-icon {
+  padding: $spacing-normal;
+  text-align: center;
+}
+
+.step-item-icon-circle {
   background-color: color("grey");
   color: color("white");
   display: inline-block;
   height: 24px;
   line-height: 24px;
-  margin-left: 24px;
   text-align: center;
   width: 24px;
   @include rounded-corners(50%);
@@ -29,18 +61,18 @@
 //----------------------------------------------------------------------
 
 .step-item-primary {
-  color: color("helper");
-  display: inline-block;
-  padding-left: 8px;
+  color: color("text");
+  flex: 1;
+  font-size: $font-size-normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-// Steps - finished step
-//----------------------------------------------------------------------
-
-.step-item.finished {
-  .step-item-circle {
-    background-color: color("green");
-  }
+.step-item-primary-subtext {
+  color: color("helper");
+  font-size: $font-size-small;
+  padding-top: $spacing-xsmall;
 }
 
 // Steps - active step
@@ -49,12 +81,20 @@
 .step-item.active {
   background-color: color("hover");
 
-  .step-item-circle {
+  .step-item-icon-circle {
     background-color: color("primary");
   }
 
   .step-item-primary {
-    color: color("text");
     font-weight: bold;
+  }
+}
+
+// Steps - finished step (shoulder override active step)
+//----------------------------------------------------------------------
+
+.step-item.finished {
+  .step-item-icon-circle {
+    background-color: color("green");
   }
 }

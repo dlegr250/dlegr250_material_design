@@ -57,13 +57,25 @@
   }
 
   .card-title {
-    font-size: $font-size-large;
+    font-size: $font-size-normal;
     font-weight: bold;
   }
 
   .card-subtitle {
     color: color("helper");
     padding-top: $spacing-small;
+  }
+
+  .button {
+    margin-top: -6px;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .card header {
+    .card-title {
+      font-size: $font-size-large;
+    }
   }
 }
 

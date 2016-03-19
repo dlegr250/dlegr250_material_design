@@ -25,24 +25,21 @@ label.top {
   content: "* ";
 }
 
-// Fields - responsive label placement
-//----------------------------------------------------------------------
-
-.field {
-  label.responsive-label {
-    display: block;
-    margin-top: $spacing-xsmall;
-    padding-bottom: $spacing-xsmall;
-  }
-}
-
-@media (min-width: $medium-width) {
-  .field {
-    label.responsive-label {
-      display: inline-block;
-      margin-right: $spacing-normal;
-      text-align: right;
-      width: 160px;
-    }
-  }
-}
+// .field {
+//   label.responsive-label {
+//     display: block;
+//     margin-top: $spacing-xsmall;
+//     padding-bottom: $spacing-xsmall;
+//   }
+// }
+//
+// @media (min-width: $medium-width) {
+//   .field {
+//     label.responsive-label {
+//       display: inline-block;
+//       margin-right: $spacing-normal;
+//       text-align: right;
+//       width: 160px;
+//     }
+//   }
+// }

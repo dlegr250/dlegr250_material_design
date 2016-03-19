@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.tabs-bordered {
+  // border-bottom: 2px solid color("divider");
+  @include box-shadow(0 1px color("divider"));
+}
+
 // Tabs - tab
 //----------------------------------------------------------------------
 
@@ -37,6 +42,8 @@
     background-color: color("hover");
   }
 }
+
+
 
 // Tabs - colored
 //----------------------------------------------------------------------

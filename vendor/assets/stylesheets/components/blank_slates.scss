@@ -22,10 +22,8 @@
 //----------------------------------------------------------------------
 
 .blank-slate-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80%;
+  padding: $spacing-normal;
+  text-align: center;
 }
 
 .blank-slate {
@@ -38,7 +36,8 @@
 //----------------------------------------------------------------------
 
 .blank-slate-icon {
-  font-size: 72px;
+  color: color("divider");
+  font-size: 48px;
 }
 
 // Blank slates - title
@@ -47,12 +46,13 @@
 .blank-slate-title {
   font-size: $font-size-large;
   font-weight: bold;
-  padding: $spacing-normal 0;
 }
 
 // Blank slates - subtitle
 //----------------------------------------------------------------------
 
 .blank-slate-subtitle {
+  color: color("helper");
   font-size: $font-size-normal;
+  padding-top: $spacing-xsmall;
 }

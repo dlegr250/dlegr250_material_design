@@ -77,7 +77,25 @@
 // Margins
 //----------------------------------------------------------------------
 
-// TODO need classes for this???
+.margin-xsmall {
+  margin: $spacing-xsmall 0;
+}
+
+.margin-small {
+  margin: $spacing-small 0;
+}
+
+.margin-normal {
+  margin: $spacing-normal 0;
+}
+
+.margin-large {
+  margin: $spacing-large 0;
+}
+
+.margin-xlarge {
+  margin: $spacing-xlarge 0;
+}
 
 // Highlight (yellowish background)
 //----------------------------------------------------------------------
@@ -122,12 +140,12 @@
 
 // Remove from DOM rendering completely
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 // Remain in DOM flow but make invisible
 .invisible {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 // Disabled elements

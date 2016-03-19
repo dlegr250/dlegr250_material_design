@@ -24,7 +24,7 @@
 //----------------------------------------------------------------------
 
 .field-title {
-  font-size: $font-size-large;
+  font-size: $font-size-large * 0.8;
   font-weight: bold;
   margin-bottom: $spacing-small;
 }
@@ -85,4 +85,72 @@
 .actions-bordered {
   border-top: 1px solid color("divider");
   margin-top: $spacing-normal;
+}
+
+// Fields - responsive label placement
+//----------------------------------------------------------------------
+
+.field-responsive {
+  margin-bottom: $spacing-small;
+
+  .field-label {
+    display: block;
+    float: none;
+    margin-top: $spacing-xsmall;
+    padding-bottom: $spacing-xsmall;
+
+    .helper-text {
+      display: inline-block;
+      padding-top: 0;
+    }
+  }
+
+  .field-element {
+    float: none;
+
+    .helper-text {
+      display: block;
+      overflow: hidden;
+      padding-top: $spacing-xsmall;
+      position: relative;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (min-width: $medium-width) {
+  .field-responsive {
+    margin-bottom: $spacing-xsmall;
+    width: 100%;
+    @include flex-parent-row-align-top();
+
+    .field-label {
+      display: inline-block;
+      // float: left;
+      margin-top: 0;
+      margin-right: $spacing-normal;
+      padding: 0;
+      padding-top: 10px;
+      text-align: right;
+      width: 160px;
+
+      .helper-text {
+        display: block;
+      }
+    }
+
+    .field-element {
+      // float: left;
+      flex: 1;
+
+      .helper-text {
+        display: inline-block;
+
+        &.helper-text-bottom {
+          display: block;
+          padding-top: $spacing-xsmall;
+        }
+      }
+    }
+  }
 }

@@ -9,6 +9,7 @@
 //= require base/init
 //= require third_party/handlebars.latest
 //= require third_party/snackbarlight
+//= require third_party/jquery.inputmask.min.3.2.8-11
 //= require components/layout
 //= require components/menus
 //= require components/dialog

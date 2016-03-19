@@ -1,0 +1,40 @@
+//======================================================================
+// For key-value lists with more content than just text.
+//======================================================================
+
+.panel-list.panel-description-align-right {
+  .panel-description {
+    text-align: right;
+  }
+}
+
+// Panels
+//----------------------------------------------------------------------
+
+.panel {
+  display: block;
+  text-align: left;
+  width: 100%;
+  @include flex-parent-row-align-top();
+}
+
+.panel-description,
+.panel-content {
+  padding: $spacing-small;
+}
+
+.panel-description {
+  width: 25%;
+
+  .panel-title {
+    font-weight: bold;
+  }
+
+  .panel-subtitle {
+    @extend .helper-text;
+  }
+}
+
+.panel-content {
+  flex: 1; // To fill empty gaps
+}

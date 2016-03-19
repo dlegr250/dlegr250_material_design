@@ -43,3 +43,18 @@
     color: color("red") !important;
   }
 }
+
+// Error msgs
+//----------------------------------------------------------------------
+
+.error-messages {
+  color: color("red");
+  display: block;
+  font-size: $font-size-small;
+  font-weight: normal;
+  line-height: 1.4;
+  overflow: hidden;
+  padding-top: $spacing-xsmall;
+  position: relative;
+  vertical-align: middle;
+}

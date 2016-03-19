@@ -14,6 +14,7 @@
     background: color("snackbar");
     color: color("white");
     content: attr(data-tooltip);
+    font-family: "Roboto", sans-serif;
     font-size: $font-size-small;
     left: 50%;
     line-height: normal;

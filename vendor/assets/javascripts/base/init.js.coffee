@@ -11,4 +11,5 @@ $(document).on "ready page:load", ->
   App.MD.Dialog.init()
   App.MD.Tabs.init()
   App.MD.Forms.init()
+  # App.MD.InputMasks.init()
   App.MD.SnackbarHandler.init()

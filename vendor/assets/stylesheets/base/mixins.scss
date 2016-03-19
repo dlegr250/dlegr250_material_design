@@ -157,6 +157,7 @@ $default-rounded-corners-radius: 3px;
   display: -webkit-flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
 @mixin flex-parent-row-align-top() {

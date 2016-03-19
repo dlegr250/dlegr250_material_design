@@ -8,7 +8,7 @@
 //     <div class="list-item-primary">
 //       Primary text
 //       <div class="list-item-primary-subtext">
-//         Smaller text
+//         Subtext
 //       </div>
 //     </div>
 //     <div class="list-item-secondary">
@@ -42,247 +42,143 @@ ol {
   padding-left: $spacing-normal;
 }
 
+// Lists - header
+//----------------------------------------------------------------------
+
+.list-header {
+  background-color: #f2f2f2;
+  min-height: 48px;
+  @include flex-parent-row();
+
+  .list-header-title,
+  .list-header-secondary {
+    box-sizing: border-box;
+    padding: $spacing-small $spacing-normal;
+  }
+
+  .list-header-title {
+    flex: 1;
+    font-size: $font-size-large;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list-header-secondary {
+    text-align: right;
+  }
+}
+
 // Lists - base
 //----------------------------------------------------------------------
 
 .list {
   background-color: color("white");
-  display: table;
-  table-layout: fixed;
-  text-align: left;
-  width: 100%;
-}
 
-// Lists - hoverable
-//----------------------------------------------------------------------
-
-// Hover over rows
-.list-hoverable {
-  .list-item:hover {
-    background-color: color("hover");
-  }
-
-  .list-item:active {
-    .list-item-icon,
-    .list-item-primary,
-    .list-item-secondary {
-      background-color: darken(color("hover"), 5%);
-    }
-  }
-}
-
-// Lists - bordered (only on specific device dimensions)
-//----------------------------------------------------------------------
-
-// On large and beyond, show borders and corners
-@media (min-width: $large-width) {
-  .list.list-bordered {
+  &.bordered {
     border: 1px solid color("divider");
   }
 
-  .list-rounded {
-    @include rounded-corners;
-
-    // Note that rounding the first and last elements assume
-    // that they are DIV elements.  Did not want to use a "*"
-    // wildcard as that is expensive for CSS.
-
-    // Round first element
-    .list-item:first-child {
-      div:first-child {
-        @include rounded-top-left-corner;
-      }
-
-      div:last-child {
-        @include rounded-top-right-corner;
-      }
+  &.divided {
+    .list-header,
+    .list-item {
+      border-bottom: 1px solid color("divider");
     }
 
-    // Round last element
     .list-item:last-child {
-      div:first-child {
-        @include rounded-bottom-left-corner;
-      }
-
-      div:last-child {
-        @include rounded-bottom-right-corner;
-      }
+      border-bottom: none;
     }
   }
-}
-
-// Lists - divided
-//----------------------------------------------------------------------
-
-.list-divided > .list-item > div {
-  border-bottom: 1px solid color("divider");
-}
-
-.list-item-border-top > div {
-  border-top: 1px solid color("divider");
-}
-
-.list-item-border-bottom > div {
-  border-bottom: 1px solid color("divider");
 }
 
 // Lists - list item
 //----------------------------------------------------------------------
 
 .list-item {
-  box-sizing: border-box;
   color: color("text");
-  display: table-row;
-  font-size: $font-size-normal;
-  text-decoration: none;
+  @include flex-parent-row();
   @include transition(background-color 0.30s ease);
 }
 
-// Lists - list item - shared
+// Lists - list item children
 //----------------------------------------------------------------------
 
 .list-item-icon,
 .list-item-primary,
 .list-item-secondary {
   box-sizing: border-box;
-  display: table-cell;
-  height: 48px;
-  min-height: 48px;
-  margin: 0;
-  padding: $spacing-normal 0;
-  vertical-align: middle;
-  @include transition(background-color 0.30s ease);
-
-  &.align-top {
-    padding-top: $spacing-normal;
-    vertical-align: top;
-  }
+  padding-bottom: $spacing-small;
+  padding-top: $spacing-small;
 }
 
-// Lists - list item - icon
+// Lists - list item icon
 //----------------------------------------------------------------------
 
 .list-item-icon {
   color: color("icon");
   font-size: $font-size-icon;
-  padding: 0;
-  padding-left: $spacing-normal;
-  width: 56px; // 72px(width) - 16px(padding-left)
+  padding: $spacing-normal;
+  text-align: center;
+  width: 56px;
 }
 
-.list-dense .list-item-icon {
-  font-size: $font-size-large;
-}
-
-// Lists - list item - primary
+// Lists - list item primary
 //----------------------------------------------------------------------
 
 .list-item-primary {
+  flex: 1;
   overflow: hidden;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  a {
-    color: color("text");
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-// For instances where you do not want list text to be hidden
-.list-show-overflow .list-item-primary {
-  overflow: auto;
-  text-overflow: inherit;
-  white-space: normal;
-}
-
-.list-item-primary-subtext {
-  color: color("helper");
-  padding-top: $spacing-xsmall;
-
-  a {
+  .list-item-primary-subtext {
     color: color("helper");
+    padding-top: $spacing-xsmall;
   }
 }
 
-// Lists - list item - secondary
+// Lists - list item secondary
 //----------------------------------------------------------------------
 
 .list-item-secondary {
-  text-align: right;
-  min-width: $spacing-normal * 2 + $button-icon-height;
+  padding-left: $spacing-normal;
   padding-right: $spacing-normal;
-
-  .icon {
-    font-size: $font-size-icon;
-  }
+  text-align: right;
 }
 
 // Lists - sizes
 //----------------------------------------------------------------------
 
-.list-dense {
-  .list-item-icon,
-  .list-item-primary,
-  .list-item-secondary {
-    height: 36px;
-    min-height: 36px;
-    padding-bottom: $spacing-small;
-    padding-top: $spacing-small;
-  }
+.list {
+  &.dense {
+    .list-header {
+      min-height: 40px;
 
-  .list-item-icon {
-    font-size: 18px;
+      .list-header-title,
+      .list-header-secondary {
+        padding-bottom: $spacing-xsmall;
+        padding-top: $spacing-xsmall;
+      }
+    }
+
+    .list-item {
+      .list-item-icon,
+      .list-item-primary,
+      .list-item-secondary {
+        padding-bottom: $spacing-xsmall;
+        padding-top: $spacing-xsmall;
+      }
+    }
   }
 }
 
-// Lists - nested (only 1 level down)
+// Lists - hoverable
 //----------------------------------------------------------------------
 
-.list-item-nested {
-  div:first-child.list-item-icon {
-    text-align: right;
-  }
-
-  div:first-child.list-item-icon ~ .list-item-primary {
-    padding-left: $spacing-xlarge;
+.list.hoverable .list-item {
+  &:hover,
+  :active {
+    background-color: color("hover");
   }
 }
-
-// Lists - media queries
-//----------------------------------------------------------------------
-
-.list-item-secondary {
-  &.one-icons {
-    width: $spacing-normal * 2 + $button-icon-height;
-  }
-
-  &.two-icons {
-    width: $spacing-normal * 2 + $button-icon-height * 2;
-  }
-
-  &.three-icons {
-    width: $spacing-normal * 2 + $button-icon-height * 3;
-  }
-}
-
-// @media (min-width: $medium-width) {
-//   .list-item-secondary {
-//     &.one-icons {
-//       width: $spacing-normal * 2 + $button-icon-height;
-//     }
-//
-//     &.two-icons {
-//       width: $spacing-normal * 2 + $button-icon-height * 2;
-//     }
-//
-//     &.three-icons {
-//       width: $spacing-normal * 2 + $button-icon-height * 3;
-//     }
-//   }
-// }

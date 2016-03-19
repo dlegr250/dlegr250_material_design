@@ -36,9 +36,30 @@
 // Boxes - custom styles
 //----------------------------------------------------------------------
 
+.box-success {
+  background-color: #dff0d8;
+  border: 1px solid color("green");
+  color: color("green");
+  @include rounded-corners;
+}
+
+.box-info {
+  background-color: #d9edf7;
+  border: 1px solid color("blue");
+  color: color("blue");
+  @include rounded-corners;
+}
+
 .box-warning {
-  color: color("text");
   background-color: color("highlight");
   border: 1px solid color("dark-highlight");
+  color: color("text");
+  @include rounded-corners;
+}
+
+.box-error {
+  background-color: color("light-red");
+  border: 1px solid color("red");
+  color: color("red");
   @include rounded-corners;
 }
