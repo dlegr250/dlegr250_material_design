@@ -27,4 +27,4 @@ class App.MD.Forms
         $field.removeClass("has-errors")
         $field.find(".error-messages").hide() #css("visibility", "hidden")
 
-    $("input.invalid").closest(".field-with-validations").addClass("has-errors")
+    $("select.invalid, input.invalid").closest(".field-with-validations").addClass("has-errors")

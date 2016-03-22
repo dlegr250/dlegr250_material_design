@@ -8,8 +8,7 @@
   width: 100%;
 }
 
-.tabs-bordered {
-  // border-bottom: 2px solid color("divider");
+.tabs.bordered {
   @include box-shadow(0 1px color("divider"));
 }
 
@@ -49,7 +48,7 @@
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
-  .tabs-#{$color-name} {
+  .tabs.color-#{$color-name} {
     .tab {
       &:hover,
       &:active {
