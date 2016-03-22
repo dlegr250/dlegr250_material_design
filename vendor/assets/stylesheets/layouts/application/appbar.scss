@@ -42,7 +42,7 @@
 
 .appbar-title {
   flex: 1; // To fill empty gaps
-  font-size: $font-size-large;
+  font-size: $font-size-large * 0.8;
   margin-right: $spacing-small;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -50,6 +50,12 @@
 
   a {
     color: $appbar-text-color;
+  }
+}
+
+@media (min-width: $medium-width) {
+  .appbar-title {
+    font-size: $font-size-large;
   }
 }
 

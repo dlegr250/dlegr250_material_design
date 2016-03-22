@@ -34,7 +34,9 @@
 // Constrained to max size to center content
 //----------------------------------------------------------------------
 
-.constrained {
+.constrained-small,
+.constrained-medium,
+.constrained-large {
   margin: auto;
   @include full-width;
 }

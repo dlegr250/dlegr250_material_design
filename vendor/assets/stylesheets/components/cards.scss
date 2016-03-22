@@ -57,7 +57,7 @@
   }
 
   .card-title {
-    font-size: $font-size-normal;
+    font-size: $font-size-large * 0.8;
     font-weight: bold;
   }
 
@@ -94,7 +94,13 @@
 //----------------------------------------------------------------------
 
 .card-content {
-  padding: $spacing-normal;
+  padding: $spacing-small;
+}
+
+@media (min-width: $medium-width) {
+  .card-content {
+    padding: $spacing-normal;
+  }
 }
 
 // Card - actions

@@ -54,7 +54,7 @@
     font-weight: normal;
     height: $button-height;
     line-height: $button-height;
-    padding: 0 ($spacing-normal * 0.75);
+    padding: 0 $spacing-small;
     @include transition(background-color 0.30s ease);
   }
 

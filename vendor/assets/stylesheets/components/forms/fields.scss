@@ -95,7 +95,6 @@
 
   .field-label {
     display: block;
-    float: none;
     margin-top: $spacing-xsmall;
     padding-bottom: $spacing-xsmall;
 
@@ -106,7 +105,10 @@
   }
 
   .field-element {
-    float: none;
+    input.responsive,
+    select.responsive {
+      width: 100%;
+    }
 
     .helper-text {
       display: block;
@@ -126,7 +128,6 @@
 
     .field-label {
       display: inline-block;
-      // float: left;
       margin-top: 0;
       margin-right: $spacing-normal;
       padding: 0;
@@ -140,8 +141,12 @@
     }
 
     .field-element {
-      // float: left;
       flex: 1;
+
+      input.responsive,
+      select.responsive {
+        width: inherit;
+      }
 
       .helper-text {
         display: inline-block;
