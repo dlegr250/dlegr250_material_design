@@ -108,8 +108,8 @@ ol {
 .list-item-primary,
 .list-item-secondary {
   box-sizing: border-box;
-  padding-bottom: $spacing-small;
-  padding-top: $spacing-small;
+  padding-bottom: $spacing-normal;
+  padding-top: $spacing-normal;
 }
 
 // Lists - list item icon
@@ -129,6 +129,8 @@ ol {
 .list-item-primary {
   flex: 1;
   overflow: hidden;
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -142,7 +144,6 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-secondary {
-  padding-left: $spacing-normal;
   padding-right: $spacing-normal;
   text-align: right;
 }
@@ -157,8 +158,8 @@ ol {
 
       .list-header-title,
       .list-header-secondary {
-        padding-bottom: $spacing-xsmall;
-        padding-top: $spacing-xsmall;
+        padding-bottom: $spacing-small;
+        padding-top: $spacing-small;
       }
     }
 
@@ -166,8 +167,8 @@ ol {
       .list-item-icon,
       .list-item-primary,
       .list-item-secondary {
-        padding-bottom: $spacing-xsmall;
-        padding-top: $spacing-xsmall;
+        padding-bottom: $spacing-small;
+        padding-top: $spacing-small;
       }
     }
   }
