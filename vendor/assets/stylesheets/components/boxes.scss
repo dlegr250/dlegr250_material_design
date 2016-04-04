@@ -11,14 +11,36 @@
 .box {
   border: 1px solid transparent;
   box-sizing: border-box;
+  text-align: left;
+  @include flex-parent-row();
+}
+
+.box-icon,
+.box-primary {
+  box-sizing: border-box;
+  padding-bottom: $spacing-normal;
+  padding-top: $spacing-normal;
+}
+
+.box-icon {
+  font-size: $font-size-icon;
   padding: $spacing-normal;
+  text-align: center;
+  width: 56px;
+}
+
+.box-primary {
+  flex: 1;
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
+
 }
 
 // Boxes - colored boxes
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
-  .box-#{$color-name} {
+  .box-background-#{$color-name} {
     background-color: $color;
 
     @if ($color-name == "hover") or ($color-name == "white") or ($color-name == "highlight") {
@@ -27,7 +49,7 @@
       color: color("white");
     }
 
-    &.box-bordered {
+    &.bordered {
       border-color: darken($color, 5%);
     }
   }
