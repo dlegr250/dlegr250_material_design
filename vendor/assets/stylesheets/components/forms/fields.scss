@@ -52,12 +52,24 @@
 // Fields - sizes
 //----------------------------------------------------------------------
 
+.field-xsmall,
+.field-small,
+.field-normal,
+.field-large,
+.field-xlarge {
+  @extend .field;
+}
+
 .field-xsmall {
   padding: $spacing-xsmall $spacing-small;
 }
 
 .field-small {
   padding: $spacing-small;
+}
+
+.field-normal {
+  padding: $spacing-normal $spacing-small;
 }
 
 .field-large {
@@ -90,6 +102,7 @@
 // Fields - responsive label placement
 //----------------------------------------------------------------------
 
+.field.responsive,
 .field-responsive {
   margin-bottom: $spacing-small;
 
@@ -121,6 +134,7 @@
 }
 
 @media (min-width: $medium-width) {
+  .field.responsive,
   .field-responsive {
     margin-bottom: $spacing-xsmall;
     width: 100%;

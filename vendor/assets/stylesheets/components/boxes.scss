@@ -13,6 +13,7 @@
   box-sizing: border-box;
   text-align: left;
   @include flex-parent-row();
+  @include rounded-corners();
 }
 
 .box-icon,
@@ -42,6 +43,7 @@
 @each $color-name, $color in $colors {
   .box-background-#{$color-name} {
     background-color: $color;
+    border-color: darken($color, 5%);
 
     @if ($color-name == "hover") or ($color-name == "white") or ($color-name == "highlight") {
       color: color("text");
