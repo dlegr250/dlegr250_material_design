@@ -33,6 +33,12 @@ $card-width: 280px;
 $card-width-large: 360px;
 $card-width-xlarge: 420px;
 
+// Dimensions - lists
+//----------------------------------------------------------------------
+
+// 72px is the specification, but minus 32px for 16px left/right padding.
+$list-item-icon-width: 72px - 32px;
+
 // Dimensions - menus
 //----------------------------------------------------------------------
 
