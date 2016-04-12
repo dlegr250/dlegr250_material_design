@@ -157,7 +157,7 @@
 .disabled {
   cursor: not-allowed !important;
   pointer-events: none !important;
-  @include transparency(0.6);
+  @include transparency(0.4);
   @include box-shadow(none);
 }
 
