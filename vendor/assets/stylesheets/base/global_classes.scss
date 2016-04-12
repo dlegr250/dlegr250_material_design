@@ -155,8 +155,8 @@
 
 :disabled,
 .disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.26);
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.26) !important;
   cursor: not-allowed !important;
   pointer-events: none !important;
   @include box-shadow(none !important);
