@@ -85,10 +85,11 @@ ol {
     .list-item {
       border-bottom: 1px solid color("divider");
     }
+  }
 
-    .list-item:last-child {
-      border-bottom: none;
-    }
+  // Don't have double lines on last item for bordered and divided
+  &.bordered .list-item:last-child {
+    border-bottom: none;
   }
 }
 
