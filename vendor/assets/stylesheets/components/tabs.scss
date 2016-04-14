@@ -42,8 +42,6 @@
   }
 }
 
-
-
 // Tabs - colored
 //----------------------------------------------------------------------
 
@@ -65,4 +63,14 @@
       }
     }
   }
+}
+
+// Tabs - disabled
+//----------------------------------------------------------------------
+
+.tab:disabled,
+.tab.disabled {
+  color: color("disabled");
+  cursor: default;
+  pointer-events: none;
 }
