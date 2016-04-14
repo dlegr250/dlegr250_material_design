@@ -1,6 +1,6 @@
 //======================================================================
 // EXAMPLE:
-// <div class="box box-red rounded-corners constrained constrained-large">
+// <div class="box box-background-<color>">
 //   Text
 // </div>
 //======================================================================
@@ -50,30 +50,29 @@
     } @else {
       color: color("white");
     }
-
-    &.bordered {
-      border-color: darken($color, 5%);
-    }
   }
 }
 
 // Boxes - custom styles
 //----------------------------------------------------------------------
 
+// Green box
 .box-success {
-  background-color: #dff0d8;
-  border: 1px solid color("green");
+  background-color: lighten(color("green"), 30%);
+  border: 1px solid lighten(color("green"), 10%);
   color: color("green");
   @include rounded-corners;
 }
 
+// Blue box
 .box-info {
-  background-color: #d9edf7;
-  border: 1px solid color("blue");
-  color: color("blue");
+  background-color: #e6f6fc;
+  border: 1px solid #b8e5f7;
+  color: #008fc6;
   @include rounded-corners;
 }
 
+// Yellow box
 .box-warning {
   background-color: color("highlight");
   border: 1px solid color("dark-highlight");
@@ -81,9 +80,10 @@
   @include rounded-corners;
 }
 
+// Red box
 .box-error {
-  background-color: color("light-red");
-  border: 1px solid color("red");
-  color: color("red");
+  background-color: #FDF2EC;
+  border: 1px solid #F8DACA;
+  color: #E36B2B;
   @include rounded-corners;
 }
