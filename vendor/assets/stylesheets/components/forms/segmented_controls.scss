@@ -42,7 +42,9 @@
 
   // Hide actual radio button
   input {
-    display: none;
+    // If you use 'display: none', TAB-ing will not work.
+    position: absolute;
+    left: -9999px;
   }
 
   label {
@@ -66,7 +68,13 @@
     }
   }
 
-  // Default colors
+  // Mark focused element for visual aid with keyboard TAB nav
+  input:focus ~ label {
+    border-color: darken(color("primary"), 10%);
+      @include box-shadow(0 0 10px color("primary"));
+  }
+
+  // Mark selected label
   input:checked ~ label {
     background-color: color("primary");
     color: color("white");
@@ -85,6 +93,12 @@
     //     color: $color;
     //   }
     // }
+
+    // Mark focused element for visual aid with keyboard TAB nav
+    input:focus ~ label {
+      border-color: darken($color, 10%);
+      @include box-shadow(0 0 10px $color);
+    }
 
     input:checked ~ label {
       background-color: $color;
