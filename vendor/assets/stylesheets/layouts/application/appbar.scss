@@ -59,6 +59,19 @@
   }
 }
 
+// appbar - subtitle
+//----------------------------------------------------------------------
+
+.appbar-subtitle {
+  font-size: $font-size-normal * 0.9;
+}
+
+@media (min-width: $medium-width) {
+  .appbar-subtitle {
+    font-size: $font-size-normal;
+  }
+}
+
 // appbar - actions
 //----------------------------------------------------------------------
 
