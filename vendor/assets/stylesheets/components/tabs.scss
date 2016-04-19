@@ -48,19 +48,25 @@
 @each $color-name, $color in $colors {
   .tabs.color-#{$color-name} {
     .tab {
+      // Hover and click tab
       &:hover,
       &:active {
         border-color: lighten($color, 30%);
       }
 
-      &.active {
-        border-color: $color;
+      // Clicking tab
+      &:active {
         background-color: lighten($color, 40%);
       }
 
-      &.active,
-      &.active .icon {
+      // Persistent active tab
+      &.active {
+        border-color: $color;
         color: $color;
+
+        .icon {
+          color: $color;
+        }
       }
     }
   }
