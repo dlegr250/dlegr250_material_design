@@ -55,6 +55,7 @@
 
       &.active {
         border-color: $color;
+        background-color: lighten($color, 40%);
       }
 
       &.active,
