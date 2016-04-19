@@ -95,7 +95,8 @@
 //----------------------------------------------------------------------
 
 .card-content {
-  padding: $spacing-small;
+  // padding: $spacing-small;
+  padding: $spacing-normal;
 }
 
 @media (min-width: $medium-width) {
