@@ -114,6 +114,17 @@
   font-weight: 700;
 }
 
+// Text cases
+//----------------------------------------------------------------------
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
 // Rounded corners
 //----------------------------------------------------------------------
 
@@ -165,6 +176,25 @@
   .border-color-#{$color-name} {
     border-color: $color !important;
   }
+}
+
+// Borders
+//----------------------------------------------------------------------
+
+.border-bottom {
+  border-bottom: 1px solid color("divider");
+}
+
+.border-left {
+  border-left: 1px solid color("divider");
+}
+
+.border-right {
+  border-right: 1px solid color("divider");
+}
+
+.border-top {
+  border-top: 1px solid color("divider");
 }
 
 // Media query classes for various device sizes
