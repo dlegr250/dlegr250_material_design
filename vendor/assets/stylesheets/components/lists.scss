@@ -149,6 +149,29 @@ ol {
   text-align: right;
 }
 
+// Lists - list item action
+// For list items that are links/actions
+//----------------------------------------------------------------------
+
+.list-item-action {
+  color: color("primary");
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  .list-item-icon {
+    color: color("primary");
+  }
+
+  &:hover {
+    background-color: color("hover");
+  }
+
+  &:active {
+    background-color: darken(color("hover"), 10%);
+  }
+}
+
 // Lists - sizes
 //----------------------------------------------------------------------
 

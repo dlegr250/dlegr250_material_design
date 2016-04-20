@@ -22,7 +22,7 @@
 //----------------------------------------------------------------------
 
 .blank-slate-container {
-  padding: $spacing-normal;
+  // padding: $spacing-normal;
   text-align: center;
 }
 
@@ -44,7 +44,7 @@
 //----------------------------------------------------------------------
 
 .blank-slate-title {
-  font-size: $font-size-large;
+  font-size: $font-size-normal;
   font-weight: bold;
 }
 
@@ -55,4 +55,11 @@
   color: color("helper");
   font-size: $font-size-normal;
   padding-top: $spacing-xsmall;
+}
+
+// Blank slates - actions
+//----------------------------------------------------------------------
+
+.blank-slate-actions {
+  padding-top: $spacing-small;
 }
