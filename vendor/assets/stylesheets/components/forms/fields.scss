@@ -49,6 +49,14 @@
   width: 100%;
 }
 
+.field-first {
+  padding-top: 0;
+}
+
+.field-last {
+  padding-bottom: 0;
+}
+
 // Fields - sizes
 //----------------------------------------------------------------------
 
@@ -91,7 +99,7 @@
 //----------------------------------------------------------------------
 
 .actions {
-  padding-top: $spacing-normal;
+  padding: $spacing-normal $spacing-small 0 $spacing-small;
 }
 
 .actions-bordered {
