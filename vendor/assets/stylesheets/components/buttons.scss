@@ -129,7 +129,7 @@ $buttons: ".button";
 
     &:active,
     &.active {
-      background: darken($color, 5%);
+      background-color: darken($color, 5%);
       @include box-shadow(0 3px 12px 0 rgba(0, 0, 0, 0.5));
     }
   }
@@ -244,4 +244,17 @@ $buttons: ".button";
   cursor: not-allowed;
   pointer-events: none;
   @include box-shadow(none);
+}
+
+// Buttons - responsive
+//----------------------------------------------------------------------
+
+.button.responsive {
+  width: 100%;
+}
+
+@media (min-width: $small-width) {
+  .button.responsive {
+    width: inherit;
+  }
 }
