@@ -44,7 +44,8 @@
   display: inline-block;
   margin: 1px 0;
   max-width: 100%;
-  padding: $spacing-normal $spacing-small;
+  // padding: $spacing-normal $spacing-small;
+  padding: $spacing-normal 0;
   position: relative;
   width: 100%;
 }
@@ -69,23 +70,28 @@
 }
 
 .field-xsmall {
-  padding: $spacing-xsmall $spacing-small;
+  // padding: $spacing-xsmall $spacing-small;
+  padding: $spacing-xsmall 0;
 }
 
 .field-small {
-  padding: $spacing-small;
+  // padding: $spacing-small;
+  padding: $spacing-small 0;
 }
 
 .field-normal {
-  padding: $spacing-normal $spacing-small;
+  // padding: $spacing-normal $spacing-small;
+  padding: $spacing-normal 0;
 }
 
 .field-large {
-  padding: $spacing-large $spacing-small;
+  // padding: $spacing-large $spacing-small;
+  padding: $spacing-large 0;
 }
 
 .field-xlarge {
-  padding: $spacing-xlarge $spacing-small;
+  // padding: $spacing-xlarge $spacing-small;
+  padding: $spacing-xlarge 0;
 }
 
 // Fields - has errors
@@ -99,7 +105,9 @@
 //----------------------------------------------------------------------
 
 .actions {
-  padding: $spacing-normal $spacing-small 0 $spacing-small;
+  // padding: $spacing-normal $spacing-small 0 $spacing-small;
+  padding: 0;
+  padding-top: $spacing-normal;
 }
 
 .actions-bordered {
