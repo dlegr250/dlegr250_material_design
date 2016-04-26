@@ -44,10 +44,16 @@
   display: inline-block;
   margin: 1px 0;
   max-width: 100%;
-  // padding: $spacing-normal $spacing-small;
-  padding: $spacing-normal 0;
+  padding: $spacing-normal $spacing-small;
   position: relative;
   width: 100%;
+}
+
+@media (min-width: $medium-width) {
+  .field {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .field-first {
@@ -61,13 +67,13 @@
 // Fields - sizes
 //----------------------------------------------------------------------
 
-.field-xsmall,
-.field-small,
-.field-normal,
-.field-large,
-.field-xlarge {
-  @extend .field;
-}
+// .field-xsmall,
+// .field-small,
+// .field-normal,
+// .field-large,
+// .field-xlarge {
+//   @extend .field;
+// }
 
 .field-xsmall {
   // padding: $spacing-xsmall $spacing-small;
