@@ -118,7 +118,6 @@
 // Fields - responsive label placement
 //----------------------------------------------------------------------
 
-.field.responsive,
 .field-responsive {
   margin-bottom: $spacing-small;
 
@@ -134,23 +133,17 @@
   }
 
   .field-element {
-    input.responsive,
-    select.responsive {
-      width: 100%;
-    }
-
     .helper-text {
       display: block;
-      overflow: hidden;
+      // overflow: hidden;
       padding-top: $spacing-xsmall;
-      position: relative;
-      vertical-align: middle;
+      // position: relative;
+      // vertical-align: middle;
     }
   }
 }
 
 @media (min-width: $medium-width) {
-  .field.responsive,
   .field-responsive {
     margin-bottom: $spacing-xsmall;
     width: 100%;
@@ -172,11 +165,6 @@
 
     .field-element {
       flex: 1;
-
-      input.responsive,
-      select.responsive {
-        width: inherit;
-      }
 
       .helper-text {
         display: inline-block;

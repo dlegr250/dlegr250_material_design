@@ -36,3 +36,17 @@ $text-fields: "input[type='email'], input[type='number'], input[type='search'], 
 textarea {
   padding: $spacing-small;
 }
+
+// text fields - responsive full width
+// On smaller screens, expand to entire width
+//----------------------------------------------------------------------
+
+.input-responsive {
+  width: 100%;
+}
+
+@media (min-width: $medium-width) {
+  .input-responsive {
+    width: inherit;
+  }
+}
