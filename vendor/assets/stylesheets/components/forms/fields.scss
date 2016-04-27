@@ -77,27 +77,32 @@
 
 .field-xsmall {
   // padding: $spacing-xsmall $spacing-small;
-  padding: $spacing-xsmall 0;
+  padding-bottom: $spacing-xsmall;
+  padding-top: $spacing-xsmall;
 }
 
 .field-small {
   // padding: $spacing-small;
-  padding: $spacing-small 0;
+  padding-bottom: $spacing-small;
+  padding-top: $spacing-small;
 }
 
 .field-normal {
   // padding: $spacing-normal $spacing-small;
-  padding: $spacing-normal 0;
+  padding-bottom: $spacing-normal;
+  padding-top: $spacing-normal;
 }
 
 .field-large {
   // padding: $spacing-large $spacing-small;
-  padding: $spacing-large 0;
+  padding-bottom: $spacing-large;
+  padding-top: $spacing-large;
 }
 
 .field-xlarge {
   // padding: $spacing-xlarge $spacing-small;
-  padding: $spacing-xlarge 0;
+  padding-bottom: $spacing-xlarge;
+  padding-top: $spacing-xlarge;
 }
 
 // Fields - has errors
