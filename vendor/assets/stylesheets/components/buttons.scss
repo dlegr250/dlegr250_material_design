@@ -45,6 +45,8 @@ $buttons: ".button";
     font-size: $font-size-small;
     height: $button-height-dense !important;
     line-height: $button-height-dense !important;
+    min-width: $button-height * 0.8;
+    padding: 0 $spacing-small;
   }
 
   &.button-large {
