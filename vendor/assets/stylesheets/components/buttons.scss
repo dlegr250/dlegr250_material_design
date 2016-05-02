@@ -176,12 +176,14 @@ $buttons: ".button";
 
     &:hover,
     &.hover {
-      background-color: rgba(0, 0, 0, 0.05);
+      // background-color: rgba(0, 0, 0, 0.05);
+      background-color: lighten($color, 40%);
     }
 
     &:active,
     &.active {
-      background-color: rgba(0, 0, 0, 0.1);
+      // background-color: rgba(0, 0, 0, 0.1);
+      background-color: lighten($color, 20%);
     }
   }
 }
