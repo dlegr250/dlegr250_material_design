@@ -1,3 +1,3 @@
 module Dlegr250MaterialDesign
-  VERSION = "0.1.55"
+  VERSION = "0.1.57"
 end

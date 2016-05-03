@@ -1,86 +1,86 @@
-// Tabs - base
-//----------------------------------------------------------------------
-
-.tabs {
-  // display: table;
-  display: inline-block;
-  height: $tab-height;
-  // table-layout: fixed;
-  width: 100%;
-}
-
-.tabs.bordered {
-  @include box-shadow(0 1px color("divider"));
-}
-
-// Tabs - tab
-//----------------------------------------------------------------------
-
-.tab {
-  border-bottom: 2px solid transparent;
-  color: color("helper");
-  cursor: pointer;
-  // display: table-cell;
-  display: inline-block;
-  float: left;
-  font-size: $font-size-normal;
-  font-weight: 600;
-  height: $tab-height - 2px; // Account for 2px bottom border on tab
-  max-width: 264px;
-  min-width: 72px;
-  padding: 0 $spacing-small;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  vertical-align: middle;
-  @include transition(all 0.30s ease);
-
-  .icon {
-    color: color("helper");
-    font-size: $font-size-icon;
-  }
-
-  &:active {
-    background-color: color("hover");
-  }
-}
-
-// Tabs - colored
-//----------------------------------------------------------------------
-
-@each $color-name, $color in $colors {
-  .tabs.color-#{$color-name} {
-    .tab {
-      // Hover and click tab
-      &:hover,
-      &:active {
-        border-color: lighten($color, 30%);
-      }
-
-      // Clicking tab
-      &:active {
-        background-color: lighten($color, 40%);
-      }
-
-      // Persistent active tab
-      &.active {
-        border-color: $color;
-        color: $color;
-
-        .icon {
-          color: $color;
-        }
-      }
-    }
-  }
-}
-
-// Tabs - disabled
-//----------------------------------------------------------------------
-
-.tab:disabled,
-.tab.disabled {
-  color: color("disabled");
-  cursor: default;
-  pointer-events: none;
-}
+// // Tabs - base
+// //----------------------------------------------------------------------
+//
+// .tabs {
+//   @include flex-parent-row();
+//   height: $tab-height;
+//   width: 100%;
+//   // display: table;
+//   // height: $tab-height;
+//   // table-layout: fixed;
+//   // width: 100%;
+// }
+//
+// .tabs.bordered {
+//   @include box-shadow(0 1px color("divider"));
+// }
+//
+// // Tabs - tab
+// //----------------------------------------------------------------------
+//
+// .tab {
+//   border-bottom: 2px solid transparent;
+//   color: color("helper");
+//   cursor: pointer;
+//   // display: table-cell;
+//   font-size: $font-size-normal;
+//   font-weight: 600;
+//   // height: $tab-height - 2px; // Account for 2px bottom border on tab
+//   max-width: 264px;
+//   min-width: 72px;
+//   padding: $spacing-normal $spacing-small;
+//   text-align: center;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   vertical-align: middle;
+//   @include transition(all 0.30s ease);
+//
+//   .icon {
+//     color: color("helper");
+//     font-size: $font-size-icon;
+//   }
+//
+//   &:active {
+//     background-color: color("hover");
+//   }
+// }
+//
+// // Tabs - colored
+// //----------------------------------------------------------------------
+//
+// @each $color-name, $color in $colors {
+//   .tabs.color-#{$color-name} {
+//     .tab {
+//       // Hover and click tab
+//       &:hover,
+//       &:active {
+//         border-color: lighten($color, 30%);
+//       }
+//
+//       // Clicking tab
+//       &:active {
+//         background-color: lighten($color, 40%);
+//       }
+//
+//       // Persistent active tab
+//       &.active {
+//         border-color: $color;
+//         color: $color;
+//
+//         .icon {
+//           color: $color;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// // Tabs - disabled
+// //----------------------------------------------------------------------
+//
+// .tab:disabled,
+// .tab.disabled {
+//   color: color("disabled");
+//   cursor: default;
+//   pointer-events: none;
+// }

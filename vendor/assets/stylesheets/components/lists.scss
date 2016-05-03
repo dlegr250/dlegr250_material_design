@@ -31,17 +31,6 @@ ol {
   }
 }
 
-// Lists - subheader to breakup lists
-//----------------------------------------------------------------------
-
-.list-subheader {
-  color: color("helper");
-  font-weight: 600;
-  height: $tab-height;
-  line-height: $tab-height;
-  padding-left: $spacing-normal;
-}
-
 // Lists - header
 //----------------------------------------------------------------------
 
@@ -68,6 +57,17 @@ ol {
   .list-header-secondary {
     text-align: right;
   }
+}
+
+// Lists - subheader to breakup lists
+//----------------------------------------------------------------------
+
+.list-subheader {
+  color: color("helper");
+  font-weight: 600;
+  height: $tab-height;
+  line-height: $tab-height;
+  padding-left: $spacing-normal;
 }
 
 // Lists - base
