@@ -2,9 +2,10 @@
 //----------------------------------------------------------------------
 
 .tabs {
-  display: table;
+  // display: table;
+  display: inline-block;
   height: $tab-height;
-  table-layout: fixed;
+  // table-layout: fixed;
   width: 100%;
 }
 
@@ -19,12 +20,14 @@
   border-bottom: 2px solid transparent;
   color: color("helper");
   cursor: pointer;
-  display: table-cell;
+  // display: table-cell;
+  display: inline-block;
+  float: left;
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
-  // max-width: 264px;
-  // min-width: 72px;
+  max-width: 264px;
+  min-width: 72px;
   padding: 0 $spacing-small;
   text-align: center;
   text-decoration: none;
