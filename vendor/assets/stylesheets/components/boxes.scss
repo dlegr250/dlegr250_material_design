@@ -17,7 +17,8 @@
 }
 
 .box-icon,
-.box-primary {
+.box-primary,
+.box-primary-subtext {
   box-sizing: border-box;
   padding-bottom: $spacing-normal;
   padding-top: $spacing-normal;
@@ -34,7 +35,10 @@
   flex: 1;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
+}
 
+.box-primary-subtext {
+  padding-top: $spacing-xsmall;
 }
 
 // Boxes - colored boxes

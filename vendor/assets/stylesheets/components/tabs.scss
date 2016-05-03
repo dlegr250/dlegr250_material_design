@@ -23,9 +23,9 @@
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
-  max-width: 264px;
-  min-width: 72px;
-  padding: 0 12px;
+  // max-width: 264px;
+  // min-width: 72px;
+  padding: 0 $spacing-small;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
