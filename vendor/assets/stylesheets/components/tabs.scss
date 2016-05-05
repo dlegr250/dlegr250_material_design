@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.tabs.bordered {
+.tabs-bordered {
   @include box-shadow(0 1px color("divider"));
 }
 
@@ -23,8 +23,8 @@
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
-  max-width: 264px;
-  min-width: 72px;
+  // max-width: 264px;
+  // min-width: 72px;
   padding: 0 $spacing-small;
   text-align: center;
   text-decoration: none;
@@ -32,7 +32,7 @@
   vertical-align: middle;
   @include transition(all 0.30s ease);
 
-  .icon {
+  .tab-icon {
     color: color("helper");
     font-size: $font-size-icon;
   }
@@ -46,7 +46,7 @@
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
-  .tabs.color-#{$color-name} {
+  .tabs-color-#{$color-name} {
     .tab {
       // Hover and click tab
       &:hover,
@@ -64,7 +64,7 @@
         border-color: $color;
         color: $color;
 
-        .icon {
+        .tab-icon {
           color: $color;
         }
       }
@@ -75,6 +75,7 @@
 // Tabs - disabled
 //----------------------------------------------------------------------
 
+.tabs.disabled .tab,
 .tab:disabled,
 .tab.disabled {
   color: color("disabled");

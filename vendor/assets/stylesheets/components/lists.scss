@@ -124,6 +124,18 @@ ol {
   width: $list-item-icon-width;
 }
 
+.list-item-icon-circle {
+  background-color: color("grey");
+  color: color("white");
+  display: inline-block;
+  font-size: $font-size-normal;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  width: 24px;
+  @include rounded-corners(50%);
+}
+
 // Lists - list item primary
 //----------------------------------------------------------------------
 
