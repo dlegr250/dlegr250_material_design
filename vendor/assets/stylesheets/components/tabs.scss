@@ -77,7 +77,8 @@
 
 .tabs.disabled .tab,
 .tab:disabled,
-.tab.disabled {
+.tab.disabled,
+.tab.disabled .tab-icon {
   color: color("disabled");
   cursor: default;
   pointer-events: none;

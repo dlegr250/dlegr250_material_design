@@ -9,6 +9,12 @@ class App.MD.Forms
   @setVariables: () ->
 
   @setEvents: () ->
+    # Autosubmit a parent form when a field changes
+    # (applied to individual fields)
+    $("body").on "change", ":input[data-auto-submit-on-change='true']", =>
+      $(this).parents("form").submit()
+
+    # Focus cursor
     $(".auto-focus").focus()
 
     # Mark changed inputs as dirty
@@ -27,4 +33,5 @@ class App.MD.Forms
         $field.removeClass("has-errors")
         $field.find(".error-messages").hide() #css("visibility", "hidden")
 
+    # Add class to style invalid inputs
     $("select.invalid, input.invalid").closest(".field-with-validations").addClass("has-errors")

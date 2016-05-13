@@ -1,6 +1,6 @@
 //======================================================================
 // EXAMPLE:
-// <div class="list list-bordered list-hoverable rounded-corners constrained constrained-large">
+// <div class="list list-bordered list-divided list-hoverable rounded-corners">
 //   <div class="list-item" id="list-item-ID">
 //     <div class="list-item-icon">
 //       <i class="zmdi zmdi-star"></i>
@@ -75,22 +75,22 @@ ol {
 
 .list {
   background-color: color("white");
+}
 
-  &.bordered {
-    border: 1px solid color("divider");
-  }
+.list-bordered {
+  border: 1px solid color("divider");
+}
 
-  &.divided {
-    .list-header,
-    .list-item {
-      border-bottom: 1px solid color("divider");
-    }
+.list-divided {
+  .list-header,
+  .list-item {
+    border-bottom: 1px solid color("divider");
   }
+}
 
-  // Don't have double lines on last item for bordered and divided
-  &.bordered .list-item:last-child {
-    border-bottom: none;
-  }
+// Don't have double lines on last item for bordered and divided
+.list-bordered .list-item:last-child {
+  border-bottom: none;
 }
 
 // Lists - list item
@@ -162,59 +162,33 @@ ol {
   text-align: right;
 }
 
-// Lists - list item action
-// For list items that are links/actions
-//----------------------------------------------------------------------
-
-.list-item-action {
-  color: color("primary");
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-
-  .list-item-icon {
-    color: color("primary");
-  }
-
-  &:hover {
-    background-color: color("hover");
-  }
-
-  &:active {
-    background-color: darken(color("hover"), 10%);
-  }
-}
-
 // Lists - sizes
 //----------------------------------------------------------------------
 
-.list {
-  &.dense {
-    .list-header {
-      min-height: 40px;
+.list-dense {
+  .list-header {
+    min-height: 40px;
 
-      .list-header-title,
-      .list-header-secondary {
-        padding-bottom: $spacing-small;
-        padding-top: $spacing-small;
-      }
+    .list-header-title,
+    .list-header-secondary {
+      padding-bottom: $spacing-small;
+      padding-top: $spacing-small;
     }
+  }
 
-    .list-item {
-      .list-item-icon,
-      .list-item-primary,
-      .list-item-secondary {
-        padding-bottom: $spacing-small;
-        padding-top: $spacing-small;
-      }
+  .list-item {
+    .list-item-icon,
+    .list-item-primary,
+    .list-item-secondary {
+      padding-bottom: $spacing-small;
+      padding-top: $spacing-small;
     }
   }
 }
-
 // Lists - hoverable
 //----------------------------------------------------------------------
 
-.list.hoverable .list-item {
+.list-hoverable .list-item {
   &:hover,
   :active {
     background-color: color("hover");

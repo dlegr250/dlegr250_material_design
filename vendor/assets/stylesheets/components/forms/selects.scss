@@ -3,7 +3,7 @@
 
 select {
   border: 1px solid rgba(0, 0, 0, .12);
-  height: $input-height - 4;
+  height: $input-height;
   min-height: $button-height;
   outline: none;
   @include rounded-corners;

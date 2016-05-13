@@ -15,5 +15,7 @@
 //= require components/dialog
 //= require components/tabs
 //= require components/forms
+//= require components/input_masks
+//= require components/toggles
 //= require components/snackbar_handler
 //= require components/utility
