@@ -11,8 +11,8 @@ class App.MD.Forms
   @setEvents: () ->
     # Autosubmit a parent form when a field changes
     # (applied to individual fields)
-    $("body").on "change", ":input[data-auto-submit-on-change='true']", =>
-      $(this).parents("form").submit()
+    $("body").on "change", ":input[data-auto-submit-on-change='true']", (event) =>
+      $(event.target).parents("form").submit()
 
     # Focus cursor
     $(".auto-focus").focus()
