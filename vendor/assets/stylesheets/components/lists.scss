@@ -74,7 +74,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list {
-  background-color: color("white");
+  // background-color: color("white");
 }
 
 .list-bordered {
@@ -152,6 +152,13 @@ ol {
     font-size: $font-size-small;
     padding-top: $spacing-xsmall;
   }
+}
+
+// Force list-item to wrap text
+.list.force-text-wrap .list-item-primary {
+  overflow: inherit;
+  text-overflow: inherit;
+  white-space: normal;
 }
 
 // Lists - list item secondary
