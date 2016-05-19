@@ -18,8 +18,10 @@
   overflow-y: auto;
   top: 0;
   width: $sidebar-width;
-  will-change: left, right;
+  will-change: transform;
   z-index: $sidebar-depth;
+  // transition: transform 0.2s cubic-bezier(0, 0, 0.3, 1);
+  @include transition("transform 0.2s cubic-bezier(0, 0, 0.3, 1)");
 }
 
 // Sidebars - header
@@ -44,7 +46,8 @@
   @include box-shadow(1px 0 5px rgba(0, 0, 0, 0.2));
 
   &.visible {
-    @include transform(translateX(0));
+    // @include transform(translateX(0));
+    @include transform(none);
   }
 }
 
@@ -55,10 +58,11 @@
   border: none;
   left: auto;
   @include transform(translateX(100%));
-  @include box-shadow(1px 0 5px rgba(0, 0, 0, 0.2));
+  @include box-shadow(-1px 0 5px rgba(0, 0, 0, 0.2));
 
   &.visible {
-    @include transform(translateX(0));
+    // @include transform(translateX(0));
+    @include transform(none);
   }
 }
 
