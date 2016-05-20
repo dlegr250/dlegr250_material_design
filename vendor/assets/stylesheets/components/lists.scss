@@ -99,7 +99,7 @@ ol {
 
 .list-item {
   color: color("text");
-  @include flex-parent-row-align-top();
+  @include flex-parent-row();
   @include transition(background-color 0.30s ease);
 }
 
