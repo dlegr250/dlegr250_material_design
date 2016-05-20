@@ -198,7 +198,8 @@ ol {
 
 .list-hoverable .list-item {
   &:hover,
-  :active {
+  &:active,
+  &.active {
     background-color: color("hover");
   }
 }
