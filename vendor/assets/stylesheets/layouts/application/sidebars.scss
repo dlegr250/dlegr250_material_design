@@ -16,6 +16,7 @@
   background: color("white");
   max-width: 98%;
   overflow-y: auto;
+  pointer-events: none;
   top: 0;
   width: $sidebar-width;
   will-change: transform;
@@ -46,7 +47,7 @@
   @include box-shadow(1px 0 5px rgba(0, 0, 0, 0.2));
 
   &.visible {
-    // @include transform(translateX(0));
+    pointer-events: auto;
     @include transform(none);
   }
 }
@@ -61,7 +62,7 @@
   @include box-shadow(-1px 0 5px rgba(0, 0, 0, 0.2));
 
   &.visible {
-    // @include transform(translateX(0));
+    pointer-events: auto;
     @include transform(none);
   }
 }
@@ -72,16 +73,18 @@
 @media (min-width: $large-width) {
   #left-sidebar {
     border-right: 1px solid color("divider");
+    pointer-events: auto;
     z-index: $layout-depth;
-    @include transform(translateX(0));
+    @include transform(none);
     @include box-shadow(none);
   }
 
   #right-sidebar {
     border-left: 1px solid color("divider");
     left: auto;
+    pointer-events: auto;
     z-index: $layout-depth;
-    @include transform(translateX(0));
+    @include transform(none);
     @include box-shadow(none);
   }
 }
