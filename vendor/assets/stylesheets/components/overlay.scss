@@ -5,25 +5,19 @@
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   height: 100%;
-  // display: none;
   left: 0;
-  // opacity: 1;
-  // overflow-y: scroll;
   position: fixed;
   pointer-events: none;
   top: 0;
-  // visibility: hidden;
   width: 100%;
   will-change: opacity;
   z-index: $overlay-depth;
   @include no-touch-highlight;
-  @include transparency(0.5);
+  @include transparency(0);
   @include transition(opacity 0.3s cubic-bezier(0, 0, 0.3, 1));
 
   &.visible {
-    // display: block;
     pointer-events: auto;
-    // visibility: visible;
     @include transparency(1.0);
   }
 }
