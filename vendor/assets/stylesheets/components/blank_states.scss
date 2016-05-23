@@ -1,65 +1,65 @@
 //======================================================================
 // EXAMPLE:
-// <div class="blank-slate-container">
-//   <div class="blank-slate">
-//     <div class="blank-slate-icon">
+// <div class="blank-state-container">
+//   <div class="blank-state">
+//     <div class="blank-state-icon">
 //       <span class="zmdi-hc-stack">
 //         <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
 //         <i class="zmdi zmdi-comments zmdi-hc-stack-1x zmdi-hc-inverse"></i>
 //       </span>
 //     </div>
-//     <div class="blank-slate-title">
+//     <div class="blank-state-title">
 //       Title
 //     </div>
-//     <div class="blank-slate-subtitle">
+//     <div class="blank-state-subtitle">
 //       Subtitle
 //     </div>
 //   </div>
 // </div>
 //======================================================================
 
-// Blank slates - base
+// Blank states - base
 //----------------------------------------------------------------------
 
-.blank-slate-container {
+.blank-state-container {
   // padding: $spacing-normal;
   text-align: center;
 }
 
-.blank-slate {
+.blank-state {
   color: color("helper");
   margin: auto;
   text-align: center;
 }
 
-// Blank slates - icon
+// Blank states - icon
 //----------------------------------------------------------------------
 
-.blank-slate-icon {
+.blank-state-icon {
   color: color("divider");
   font-size: 36px;
 }
 
-// Blank slates - title
+// Blank states - title
 //----------------------------------------------------------------------
 
-.blank-slate-title {
+.blank-state-title {
   font-size: $font-size-large;
   font-weight: bold;
 }
 
-// Blank slates - subtitle
+// Blank states - subtitle
 //----------------------------------------------------------------------
 
-.blank-slate-subtitle {
+.blank-state-subtitle {
   color: color("helper");
   font-size: $font-size-normal;
   padding-top: $spacing-xsmall;
 }
 
-// Blank slates - actions
+// Blank states - actions
 //----------------------------------------------------------------------
 
-.blank-slate-actions {
+.blank-state-actions {
   padding-top: $spacing-small;
 }
