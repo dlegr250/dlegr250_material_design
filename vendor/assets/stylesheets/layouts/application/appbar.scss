@@ -76,6 +76,7 @@
 //----------------------------------------------------------------------
 
 .appbar-actions {
+  @include flex-parent-row(); // To line up dividers and buttons properly
   text-align: right;
 
   // TODO test this in multiple browsers to see if it works everywhere...
@@ -113,4 +114,17 @@
   &:active {
     background-color: darken($primary-color, 12%);
   }
+}
+
+// appbar - dividers
+//----------------------------------------------------------------------
+
+.appbar-divider {
+  content: "";
+  display: inline-block;
+  height: $appbar-button-height - $spacing-normal;
+  line-height: $appbar-button-height - $spacing-normal;
+  margin: 0 $spacing-small;
+  background-color: darken($primary-color, 10%);
+  width: 1px;
 }
