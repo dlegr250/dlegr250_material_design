@@ -45,9 +45,8 @@
   }
 }
 
-.card-flat {
+.card-no-shadow {
   @include box-shadow(none);
-  @include rounded-corners(0);
 }
 
 // Card - header
