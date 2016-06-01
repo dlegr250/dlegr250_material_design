@@ -1,0 +1,31 @@
+//======================================================================
+// EXAMPLE:
+// <div class="grid-row">
+//   <div class="grid-row-element">...</div>
+//   <div class="grid-row-element">...</div>
+// </div>
+//======================================================================
+
+// Grid - row
+//----------------------------------------------------------------------
+
+.grid-row {
+
+}
+
+// Grid - row - element
+//----------------------------------------------------------------------
+
+.grid-row-element {
+  padding: $spacing-xsmall;
+}
+
+@media (min-width: $medium-width) {
+  .grid-row {
+    @include flex-parent-row-align-top();
+  }
+
+  .grid-row-element {
+    flex: 1;
+  }
+}

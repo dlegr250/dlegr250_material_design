@@ -1,0 +1,42 @@
+//======================================================================
+// EXAMPLE:
+//======================================================================
+
+// Definition list
+//----------------------------------------------------------------------
+
+.definition-list {
+  width: 100%;
+
+  caption {
+    border-bottom: 2px solid color("text");
+    font-weight: bold;
+    padding: $spacing-xsmall 0;
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: 1px solid color("divider");
+  }
+}
+
+// Definition list - children
+//----------------------------------------------------------------------
+
+.definition-list-term,
+.definition-list-description {
+  padding: $spacing-xsmall 0;
+}
+
+// Definition list - term
+//----------------------------------------------------------------------
+
+.definition-list-term {
+  color: color("helper");
+}
+
+// Definition list - description
+//----------------------------------------------------------------------
+
+.definition-list-description {
+}

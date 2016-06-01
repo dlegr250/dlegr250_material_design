@@ -1,13 +1,12 @@
 //======================================================================
-// Modifying base HTML element instead of class, but putting as a
-// component because it is used like one.
+// EXAMPLE:
 //======================================================================
 
-// Code - base
+// Striped rows
 //----------------------------------------------------------------------
 
-code {
-  background-color: #eee;
-  line-height: 1.5;
-  padding: $spacing-xsmall;
+.table-striped-rows {
+  tr:nth-child(even) {
+    background-color: lighten(color("hover"), 3%);
+  }
 }
