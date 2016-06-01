@@ -46,7 +46,7 @@
 }
 
 .card-flat {
-  @include box-shadow("none");
+  @include box-shadow(none);
   @include rounded-corners(0);
 }
 
@@ -99,7 +99,6 @@
 //----------------------------------------------------------------------
 
 .card-content {
-  // padding: $spacing-small;
   padding: $spacing-normal;
 }
 
