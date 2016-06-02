@@ -4,12 +4,13 @@
 .dialog {
   background: color("white");
   cursor: default;
+  display: inline-block;
   margin: auto;
   max-width: 90%;
   pointer-events: none;
   position: absolute;
   visibility: hidden;
-  width: $card-width;
+  // width: $card-width;
   will-change: scale, transparency;
   z-index: $dialog-depth;
   @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));

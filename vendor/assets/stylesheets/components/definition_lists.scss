@@ -26,6 +26,7 @@
 .definition-list-term,
 .definition-list-description {
   padding: $spacing-xsmall 0;
+  vertical-align: top;
 }
 
 // Definition list - term
@@ -33,6 +34,7 @@
 
 .definition-list-term {
   color: color("helper");
+  padding-right: $spacing-small;
 }
 
 // Definition list - description
