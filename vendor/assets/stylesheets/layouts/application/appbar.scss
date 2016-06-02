@@ -119,7 +119,8 @@
 // appbar - dividers
 //----------------------------------------------------------------------
 
-.appbar-divider {
+.appbar-divider,
+.appbar-spacer {
   content: "";
   display: inline-block;
   height: $appbar-button-height - $spacing-normal;
@@ -127,4 +128,8 @@
   margin: 0 $spacing-small;
   background-color: darken($primary-color, 10%);
   width: 1px;
+}
+
+.appbar-spacer {
+  background-color: transparent;
 }
