@@ -37,7 +37,7 @@ $card-width-xlarge: 420px;
 //----------------------------------------------------------------------
 
 // 72px is the specification, but minus 32px for 16px left/right padding.
-$list-item-icon-width: 72px - 32px;
+$list-item-icon-width: 40px;
 
 // Dimensions - menus
 //----------------------------------------------------------------------
@@ -102,7 +102,7 @@ $dialog-depth: 50;
 //----------------------------------------------------------------------
 
 $small-width: 400px;
-$medium-width: 750px;
+$medium-width: 760px;
 $large-width: 1000px;
 
 // Convenience variables
