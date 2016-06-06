@@ -31,6 +31,21 @@
   @include full-width;
 }
 
+// Flex sizes for rows with items of different widths
+//----------------------------------------------------------------------
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+.flex-2 {
+  flex: 2 !important;
+}
+
+.flex-3 {
+  flex: 3 !important;
+}
+
 // Constrained to max size to center content
 //----------------------------------------------------------------------
 

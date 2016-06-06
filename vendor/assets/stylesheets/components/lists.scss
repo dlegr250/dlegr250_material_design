@@ -193,13 +193,18 @@ ol {
     }
   }
 }
+
 // Lists - hoverable
 //----------------------------------------------------------------------
 
-.list-hoverable .list-item {
-  &:hover,
-  &:active,
-  &.active {
-    background-color: color("hover");
+.list-hoverable {
+  .list-item {
+    &:hover {
+      background-color: color("hover");
+    }
+
+    &:active {
+      background-color: darken(color("hover"), 5%);
+    }
   }
 }
