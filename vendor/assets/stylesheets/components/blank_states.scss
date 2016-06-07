@@ -1,65 +1,61 @@
 //======================================================================
 // EXAMPLE:
-// <div class="blank-state-container">
-//   <div class="blank-state">
-//     <div class="blank-state-icon">
-//       <span class="zmdi-hc-stack">
-//         <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
-//         <i class="zmdi zmdi-comments zmdi-hc-stack-1x zmdi-hc-inverse"></i>
-//       </span>
-//     </div>
-//     <div class="blank-state-title">
-//       Title
-//     </div>
-//     <div class="blank-state-subtitle">
-//       Subtitle
+// <div class="blank-state">
+//   <div class="blank-state-icon">
+//     <span class="zmdi-hc-stack">
+//       <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
+//       <i class="zmdi zmdi-comments zmdi-hc-stack-1x zmdi-hc-inverse"></i>
+//     </span>
+//   </div>
+//   <div class="blank-state-primary">
+//     Primary text
+//     <div class="blank-state-primary-subtext">
+//       Primary subtext
 //     </div>
 //   </div>
 // </div>
 //======================================================================
 
-// Blank states - base
+// Blank state - base
 //----------------------------------------------------------------------
-
-.blank-state-container {
-  // padding: $spacing-normal;
-  text-align: center;
-}
 
 .blank-state {
   color: color("helper");
   margin: auto;
+  padding: $spacing-xlarge;
   text-align: center;
 }
 
-// Blank states - icon
+// Blank state - icon
 //----------------------------------------------------------------------
 
 .blank-state-icon {
   color: color("divider");
-  font-size: 36px;
+  font-size: 120px;
 }
 
-// Blank states - title
+// Blank state - primary
 //----------------------------------------------------------------------
 
-.blank-state-title {
+.blank-state-primary {
+  color: color("text");
   font-size: $font-size-large;
   font-weight: bold;
 }
 
-// Blank states - subtitle
+// Blank state - primary - subtext
 //----------------------------------------------------------------------
 
-.blank-state-subtitle {
+.blank-state-primary-subtext {
   color: color("helper");
   font-size: $font-size-normal;
-  padding-top: $spacing-xsmall;
+  font-weight: normal;
+  padding-top: $spacing-small;
 }
 
-// Blank states - actions
+// Blank state - actions
 //----------------------------------------------------------------------
 
 .blank-state-actions {
-  padding-top: $spacing-small;
+  padding-top: $spacing-normal;
 }
