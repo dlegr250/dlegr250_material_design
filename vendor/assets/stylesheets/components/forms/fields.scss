@@ -134,13 +134,16 @@
 // Fields - responsive label placement
 //----------------------------------------------------------------------
 
+.field-label {
+  padding-bottom: $spacing-xsmall;
+}
+
 .field-responsive {
   margin-bottom: $spacing-small;
 
   .field-label {
     display: block;
     margin-top: $spacing-xsmall;
-    padding-bottom: $spacing-xsmall;
 
     .helper-text {
       display: inline-block;
