@@ -75,9 +75,22 @@
   }
 }
 
+.card-primary {
+  font-size: $font-size-large * 0.8;
+  font-weight: bold;
+}
+
+.card-primary-subtext {
+  color: color("helper");
+  font-size: $font-size-normal;
+  font-weight: normal;
+  padding-top: $spacing-small;
+}
+
 @media (min-width: $medium-width) {
   .card header {
-    .card-title {
+    .card-title,
+    .card-primary {
       font-size: $font-size-large;
     }
   }
