@@ -56,3 +56,21 @@ class App.MD.InputMasks
       dGroup: "3",
       aPad: false # Pad decimals with 0's
     })
+
+    # Format: "1.234"
+    $(":input[data-format='percentage']").autoNumeric("init", {
+      vMin: "0",
+      vMax: "99.999",
+      aSign: " %",
+      pSign: "s", # Place % as suffix
+      aPad: true,
+      wEmpty: "sign" # Keep % when empty
+    })
+
+    # $(":input[data-format='percentage']").inputmask("99.999", {
+    #   rightAlign: true,
+    #   greedy: false,
+    #   placeholder: "_.___",
+    #   allowPlus: false,
+    #   allowMinus: false
+    # })
