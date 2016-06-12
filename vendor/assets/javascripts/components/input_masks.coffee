@@ -14,45 +14,45 @@ class App.MD.InputMasks
       showMaskOnHover: false
     })
 
-    $(":input").inputmask()
-
     # Format: "[1-99]"
-    $(":input[data-mask='years']").inputmask("9[9]", {
-      placeholder: "",
-      greedy: false
+    $(":input[data-format='years']").autoNumeric("init", {
+      vMin: "0",
+      vMax: "99"
     })
 
     # Format: "[1-11]"
     # Do not let user put in 12 months because that is 1 year
-    $(":input[data-mask='months']").inputmask("Regex", {
-      regex: "[1-9]|1[0-1]"
+    $(":input[data-format='months']").autoNumeric("init", {
+      vMin: "0",
+      vMax: "11"
     })
 
     # Format: "[1-168]" (24 hrs * 7 days = 168 max hours)
-    $(":input[data-mask='hours']").inputmask("Regex", {
-      regex: "[0-9][0-9]|1[0-5][0-9]|16[0-8]"
+    $(":input[data-format='weekly-hours']").autoNumeric("init", {
+      vMin: "0",
+      vMax: "168",
     })
 
     # Format: "123 - 45 - 6789"
-    $(":input[data-mask='ssn']").inputmask("999 - 99 - 9999")
+    $(":input[data-format='ssn']").inputmask("999 - 99 - 9999")
 
     # Format: "(123) 456 - 7890"
-    $(":input[data-mask='phone']").inputmask("(999) 999 - 9999")
+    $(":input[data-format='phone']").inputmask("(999) 999 - 9999")
 
     # Format: "12/1975"
-    $(":input[data-mask='date-my']").inputmask("mm/yyyy", { placeholder: "__/____" })
+    $(":input[data-format='date-my']").inputmask("mm/yyyy", { placeholder: "__/____" })
 
     # Format: "01/25/1947"
-    $(":input[data-mask='date-mdy']").inputmask("mm/dd/yyyy", { placeholder: "__/__/____" })
+    $(":input[data-format='date-mdy']").inputmask("mm/dd/yyyy", { placeholder: "__/__/____" })
 
-    # Format: "$ 123,456"
-    $(":input[data-mask='currency']").inputmask("currency", {
-      rightAlign: false,
-      greedy: true,
-      placeholder: "",
-      digits: 0,
-      allowPlus: false,
-      allowMinus: false,
-      prefix: "$ ",
-      min: 0
+    # Format: "$ 999,999,999.99"
+    $(":input[data-format='currency']").autoNumeric("init", {
+      aSign: "$ ",
+      wEmpty: "sign", # Keep $ when empty
+      aSep: ",",
+      aDec: ".",
+      vMin: "0",
+      vMax: "999999999.99",
+      dGroup: "3",
+      aPad: false # Pad decimals with 0's
     })
