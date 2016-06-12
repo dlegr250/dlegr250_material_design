@@ -54,7 +54,7 @@ class App.MD.InputMasks
       vMin: "0",
       vMax: "999999999.99",
       dGroup: "3",
-      aPad: false # Pad decimals with 0's
+      aPad: true # Pad decimals with 0's
     })
 
     # Format: "1.234"
