@@ -21,90 +21,41 @@
   background-color: color("white");
   border: 1px solid color("divider");
   width: $card-width;
-  @include box-shadow(0 1px 0 color("divider"));
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.2));
   @include rounded-corners;
-
-  &.xsmall {
-    width: $card-width * 0.33;
-  }
-
-  &.small {
-    width: $card-width * 0.5;
-  }
-
-  &.normal {
-    width: $card-width;
-  }
-
-  &.large {
-    width: $card-width * 2;
-  }
-
-  &.xlarge {
-    width: $card-width * 3;
-  }
 }
 
-.card-no-shadow {
+.card-flat {
   @include box-shadow(none);
 }
 
 // Card - header
 //----------------------------------------------------------------------
 
-.card header {
+.card-header {
   border-bottom: 1px solid color("divider");
   padding: $spacing-normal;
 
-  &.no-border {
-    border-bottom: none;
-  }
-
-  .card-title {
-    font-size: $font-size-large * 0.8;
-    font-weight: bold;
-  }
-
-  .card-subtitle {
-    color: color("helper");
-    padding-top: $spacing-small;
-  }
-
+  // Still need this???
   .button {
     margin-top: -6px;
   }
 }
 
-.card-primary {
+.card-header-no-border {
+  border-bottom: none;
+}
+
+.card-header-title {
   font-size: $font-size-large * 0.8;
   font-weight: bold;
 }
 
-.card-primary-subtext {
+.card-header-title-subtext {
   color: color("helper");
   font-size: $font-size-normal;
   font-weight: normal;
   padding-top: $spacing-small;
-}
-
-@media (min-width: $medium-width) {
-  .card header {
-    .card-title,
-    .card-primary {
-      font-size: $font-size-large;
-    }
-  }
-}
-
-// Card - rich media
-//----------------------------------------------------------------------
-
-.card-rich-media {
-  img {
-    height: auto;
-    max-width: 100%;
-    width: 100%;
-  }
 }
 
 // Card - content
@@ -114,22 +65,16 @@
   padding: $spacing-normal;
 }
 
-@media (min-width: $medium-width) {
-  .card-content {
-    padding: $spacing-normal;
-  }
-}
-
 // Card - actions
 //----------------------------------------------------------------------
 
 .card-actions {
   border-top: 1px solid color("divider");
-  padding: $spacing-normal;
+  padding: $spacing-small;
+}
 
-  &.no-border {
-    border-top: none;
-  }
+.card-actions-no-border {
+  border-top: none;
 }
 
 // Card - image header
@@ -138,6 +83,7 @@
 
 .card-image {
   img {
+    height: auto;
     max-width: 100%;
     width: 100%;
     @include rounded-top-corners;

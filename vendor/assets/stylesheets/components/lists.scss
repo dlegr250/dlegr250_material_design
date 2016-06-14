@@ -39,13 +39,13 @@ ol {
   min-height: 48px;
   @include flex-parent-row();
 
-  .list-header-title,
+  .list-header-primary,
   .list-header-secondary {
     box-sizing: border-box;
     padding: $spacing-small $spacing-normal;
   }
 
-  .list-header-title {
+  .list-header-primary {
     flex: 1;
     font-size: $font-size-normal;
     font-weight: bold;
@@ -57,18 +57,6 @@ ol {
   .list-header-secondary {
     text-align: right;
   }
-}
-
-// Lists - subheader to breakup lists
-//----------------------------------------------------------------------
-
-.list-subheader {
-  color: color("helper");
-  font-size: $font-size-small;
-  font-weight: 600;
-  height: $tab-height;
-  line-height: $tab-height;
-  padding-left: $spacing-normal;
 }
 
 // Lists - base
@@ -87,7 +75,12 @@ ol {
   .list-item {
     border-bottom: 1px solid color("divider");
   }
+
+  .list-item:last-child {
+    border-bottom: none;
+  }
 }
+
 
 // Don't have double lines on last item for bordered and divided
 .list-bordered .list-item:last-child {
