@@ -56,24 +56,8 @@
   }
 }
 
-.field-first {
-  padding-top: 0;
-}
-
-.field-last {
-  padding-bottom: 0;
-}
-
 // Fields - sizes
 //----------------------------------------------------------------------
-
-// .field-xsmall,
-// .field-small,
-// .field-normal,
-// .field-large,
-// .field-xlarge {
-//   @extend .field;
-// }
 
 .field-xsmall {
   // padding: $spacing-xsmall $spacing-small;
@@ -104,6 +88,10 @@
   padding-bottom: $spacing-xlarge;
   padding-top: $spacing-xlarge;
 }
+
+// Remove padding on first/last elements
+.field-first { padding-top: 0; }
+.field-last { padding-bottom: 0; }
 
 // Fields - has errors
 //----------------------------------------------------------------------
