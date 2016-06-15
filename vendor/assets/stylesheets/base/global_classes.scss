@@ -216,6 +216,17 @@
   font-size: $font-size-xlarge !important;
 }
 
+// Truncating text
+//----------------------------------------------------------------------
+
+.truncate-text {
+  @include truncate-text();
+}
+
+.force-text-wrap {
+  @include force-text-wrap();
+}
+
 // Borders
 //----------------------------------------------------------------------
 

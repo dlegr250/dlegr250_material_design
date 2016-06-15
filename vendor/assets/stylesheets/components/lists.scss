@@ -136,11 +136,9 @@ ol {
 
 .list-item-primary {
   flex: 1;
-  overflow: hidden;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @include truncate-text();
 
   .list-item-primary-subtext {
     color: color("helper");
@@ -151,9 +149,7 @@ ol {
 
 // Force list-item to wrap text
 .list.force-text-wrap .list-item-primary {
-  overflow: inherit;
-  text-overflow: inherit;
-  white-space: normal;
+  @include force-text-wrap();
 }
 
 // Lists - list item secondary

@@ -222,3 +222,18 @@ $default-rounded-corners-radius: 3px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
+
+// Truncating text
+//----------------------------------------------------------------------
+
+@mixin truncate-text() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin force-text-wrap() {
+  overflow: inherit;
+  text-overflow: inherit;
+  white-space: normal;
+}
