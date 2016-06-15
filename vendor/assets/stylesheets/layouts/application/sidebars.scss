@@ -35,6 +35,7 @@
   line-height: $appbar-height;
   margin-bottom: $spacing-normal;
   padding: 0 $spacing-normal;
+  @include truncate-text();
 }
 
 // Sidebars - left sidebar
