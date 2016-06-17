@@ -52,6 +52,13 @@ ol {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    .list-header-primary-subtext {
+      color: color("helper");
+      font-size: $font-size-small;
+      font-weight: normal;
+      padding-top: $spacing-xsmall;
+    }
   }
 
   .list-header-secondary {
