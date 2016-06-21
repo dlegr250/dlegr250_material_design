@@ -39,10 +39,12 @@
 
 @media (min-width: $medium-width) {
   #snackbar {
-    margin: auto;
+    left: 20px;
+    margin-bottom: 20px;
     max-width: 568px;
     min-width: 288px;
     right: auto;
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.24));
     @include rounded-corners();
   }
 
