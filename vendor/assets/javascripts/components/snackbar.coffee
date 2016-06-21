@@ -11,11 +11,11 @@ class App.MD.Snackbar
     $("body").on "click", "#snackbar", =>
       @hide()
 
-    # if $("body").data("snackbar").length > 0
-    #   App.MD.Snackbar.create($("body").data("snackbar"))
-    #
-    # if $("body").data("snackbar-error").length > 0
-    #   App.MD.Snackbar.create($("body").data("snackbar-error"), { css_class: "snackbar-error" })
+    if $("body").data("snackbar").length > 0
+      App.MD.Snackbar.create($("body").data("snackbar"))
+
+    if $("body").data("snackbar-error").length > 0
+      App.MD.Snackbar.create($("body").data("snackbar-error"), { css_class: "snackbar-error" })
 
   @create: (text, options = {}) ->
     @text = text
@@ -44,8 +44,10 @@ class App.MD.Snackbar
 
   @show: () ->
     @element().html(@text)
-    @element().addClass(@css_class).addClass("visible")
-    $(".fab").addClass("move-with-snackbar")
+    setTimeout (=>
+      @element().addClass(@css_class).addClass("visible")
+      $(".fab").addClass("move-with-snackbar")
+    ), 50
 
   @hide: () ->
     clearTimeout(@timeout)
