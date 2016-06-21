@@ -22,7 +22,7 @@ class App.MD.Snackbar
 
     # Set options to override defaults
     @duration = options["duration"] || 5000
-    @delay = options["delay"] || 500
+    @delay = options["delay"] || 250
     @css_class = options["css_class"] || ""
 
     if @visible
