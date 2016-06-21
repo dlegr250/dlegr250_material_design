@@ -15,6 +15,18 @@ jQuery.extend jQuery.fn,
       element.css("top", ($(document).height() - element.height()) / 2)
       element
 
+  horizontalCenter: ->
+    @each ->
+      element = $(this)
+      element.css("left", ($(document).width() - element.width()) / 2)
+      element
+
+  verticalCenter: ->
+    @each ->
+      element = $(this)
+      element.css("top", ($(document).height() - element.height()) / 2)
+      element
+
 # Change content of element to be centered spinner
 #----------------------------------------------------------------------
 
