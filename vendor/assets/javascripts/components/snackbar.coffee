@@ -38,13 +38,13 @@ class App.MD.Snackbar
     @element().html(@text)
     # @element().css("display", "block")
     @element().addClass("visible")
-    $(".fab").addClass("with-snackbar")
+    $(".fab").addClass("move-with-snackbar")
 
   @hide: () ->
     clearTimeout(@timeout)
     @element().removeClass("visible")
     # @element().css("display", "none")
-    $(".fab").removeClass("with-snackbar")
+    $(".fab").removeClass("move-with-snackbar")
 
   @element: () ->
     $("#snackbar")
