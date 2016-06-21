@@ -1,0 +1,44 @@
+//======================================================================
+// Google Material Design Snackbar in-app notifications.
+//======================================================================
+
+// Snackbar - base
+//----------------------------------------------------------------------
+
+#snackbar {
+  background-color: #323232;
+  bottom: 0;
+  color: color("white");
+  cursor: pointer;
+  left: 0;
+  overflow: hidden;
+  padding: $spacing-normal;
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  will-change: transform;
+  z-index: $layout-depth + 1;
+  @include transform(translateY(200%));
+  @include transition(transform 0.15s cubic-bezier(0, 0, 0.3, 1));
+
+  &.visible {
+    pointer-events: auto;
+    @include transform(none);
+  }
+}
+
+@media (min-width: $medium-width) {
+  #snackbar {
+    left: 20px !important;
+    margin-bottom: 20px;
+    max-width: 568px;
+    min-width: 288px;
+    right: auto;
+    width: auto;
+    @include rounded-corners();
+  }
+}
+
+.fab.with-snackbar {
+  @include transform(translateY(-48px));
+}
