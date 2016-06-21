@@ -27,6 +27,10 @@
   }
 }
 
+.move-with-snackbar {
+  @include transform(translateY(-48px));
+}
+
 @media (min-width: $medium-width) {
   #snackbar {
     left: 20px !important;
@@ -37,8 +41,8 @@
     width: auto;
     @include rounded-corners();
   }
-}
 
-.fab.with-snackbar {
-  @include transform(translateY(-48px));
+  .move-with-snackbar {
+    @include transform(none);
+  }
 }
