@@ -8,7 +8,7 @@ class App.MD.Snackbar
     @setEvents()
 
   @setEvents: () ->
-    $("body").on "click", @element(), =>
+    $("body").on "click", "#snackbar", =>
       @hide()
 
   @create: (text, options = {}) ->
