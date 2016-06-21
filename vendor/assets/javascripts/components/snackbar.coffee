@@ -11,12 +11,19 @@ class App.MD.Snackbar
     $("body").on "click", "#snackbar", =>
       @hide()
 
+    if $("body").data("snackbar").length > 0
+      App.MD.Snackbar.create($("body").data("snackbar"))
+
+    if $("body").data("snackbar-error").length > 0
+      App.MD.Snackbar.create($("body").data("snackbar-error"), { css_class: "snackbar-error" })
+
   @create: (text, options = {}) ->
     @text = text
 
     # Set options to override defaults
     @duration = options["duration"] || 5000
     @delay = options["delay"] || 500
+    @css_class = options["css_class"] || ""
 
     if @visible
       # Force hide current one via animation
@@ -37,7 +44,7 @@ class App.MD.Snackbar
 
   @show: () ->
     @element().html(@text)
-    @element().addClass("visible")
+    @element().addClass(@css_class).addClass("visible")
     $(".fab").addClass("move-with-snackbar")
 
   @hide: () ->
