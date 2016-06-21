@@ -16,6 +16,7 @@ class App.MD.Snackbar
 
     # Set options to override defaults
     @duration = options["duration"] || 5000
+    @delay = options["delay"] || 500
 
     if @visible
       # Force hide current one via animation
@@ -24,7 +25,7 @@ class App.MD.Snackbar
       # Show new one via animation
       setTimeout (=>
         @show()
-      ), 250
+      ), @delay
     else
       @visible = true
       @show()
@@ -36,14 +37,12 @@ class App.MD.Snackbar
 
   @show: () ->
     @element().html(@text)
-    # @element().css("display", "block")
     @element().addClass("visible")
     $(".fab").addClass("move-with-snackbar")
 
   @hide: () ->
     clearTimeout(@timeout)
     @element().removeClass("visible")
-    # @element().css("display", "none")
     $(".fab").removeClass("move-with-snackbar")
 
   @element: () ->
