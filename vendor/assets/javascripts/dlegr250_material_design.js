@@ -19,4 +19,5 @@
 //= require components/input_masks
 //= require components/toggles
 //= require components/snackbar_handler
+//= require components/snackbar
 //= require components/utility
