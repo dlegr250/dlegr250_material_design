@@ -68,4 +68,4 @@ class App.MD.Snackbar
     $("#snackbar")
 
   @parent: () ->
-    @element.parent()
+    @element().parent()
