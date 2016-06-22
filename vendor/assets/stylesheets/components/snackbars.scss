@@ -7,28 +7,28 @@
 
 #snackbar {
   background-color: #323232;
+  box-sizing: border-box;
   bottom: 0;
   color: color("white");
   cursor: pointer;
   left: 0;
-  height: 0;
   overflow: hidden;
-  padding: 0;
-  position: absolute;
+  max-height: 80px;
+  min-height: 48px;
+  padding: $spacing-normal;
+  position: fixed;
   pointer-events: none;
   right: 0;
   will-change: transform;
   z-index: $layout-depth + 1;
   @include transform(translateY(200%));
-  @include transition(transform 0.15s cubic-bezier(0, 0, 0.3, 1));
+  @include transition(transform 0.10s cubic-bezier(0, 0, 0.3, 1));
 
   &.snackbar-error {
     color: color("red") !important;
   }
 
   &.visible {
-    height: auto;
-    padding: $spacing-normal;
     pointer-events: auto;
     @include transform(none);
   }
@@ -47,12 +47,13 @@
 
 @media (min-width: $medium-width) {
   #snackbar {
-    left: 20px !important;
-    margin-bottom: 20px;
+    left: 24px !important;
+    margin-bottom: 24px !important;
+    display: inline-block;
     max-width: 568px;
     min-width: 288px;
     right: auto;
-    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.24));
+    @include box-shadow(0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.2));
     @include rounded-corners();
   }
 
