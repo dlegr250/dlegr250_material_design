@@ -44,15 +44,28 @@ class App.MD.Snackbar
 
   @show: () ->
     @element().html(@text)
+    @parent().addClass("has-animating-snackbar")
     setTimeout (=>
       @element().addClass(@css_class).addClass("visible")
       $(".fab").addClass("move-with-snackbar")
     ), 50
 
+    setTimeout (=>
+      @parent().removeClass("has-animating-snackbar")
+    ), 50
+
   @hide: () ->
     clearTimeout(@timeout)
+    @parent().addClass("has-animating-snackbar")
     @element().removeClass("visible")
     $(".fab").removeClass("move-with-snackbar")
 
+    setTimeout (=>
+      @parent().removeClass("has-animating-snackbar")
+    ), 50
+
   @element: () ->
     $("#snackbar")
+
+  @parent: () ->
+    @element.parent()
