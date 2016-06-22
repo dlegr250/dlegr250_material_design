@@ -38,6 +38,10 @@
   @include transform(translateY(-48px));
 }
 
+.has-animating-snackbar {
+  overflow: hidden !important;
+}
+
 // Snackbar - media queries
 //----------------------------------------------------------------------
 
