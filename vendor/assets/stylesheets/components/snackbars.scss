@@ -45,7 +45,6 @@
     max-width: 568px;
     min-width: 288px;
     right: auto;
-    width: auto;
     @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.24));
     @include rounded-corners();
   }
