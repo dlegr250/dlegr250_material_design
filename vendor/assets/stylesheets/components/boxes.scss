@@ -1,89 +1,138 @@
 //======================================================================
-// EXAMPLE:
-// <div class="box box-background-<color>">
-//   Text
-// </div>
+// Extends .list and .list-item in order to keep code DRY.
 //======================================================================
 
-// Boxes - base
-//----------------------------------------------------------------------
-
 .box {
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  text-align: left;
-  @include flex-parent-row();
-  @include rounded-corners();
-}
-
-.box-icon,
-.box-primary,
-.box-primary-subtext {
-  box-sizing: border-box;
-  padding-bottom: $spacing-normal;
-  padding-top: $spacing-normal;
+  border: 1px solid color("divider");
+  @extend .list-item;
+  @include rounded-corners;
 }
 
 .box-icon {
-  font-size: $font-size-icon;
-  padding: $spacing-normal;
-  text-align: center;
-  width: $list-item-icon-width;
+  @extend .list-item-icon;
 }
 
 .box-primary {
-  flex: 1;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
+  @extend .list-item-primary;
 }
 
 .box-primary-subtext {
-  padding-top: $spacing-xsmall;
+  @extend .list-item-primary-subtext;
 }
 
-// Boxes - colored boxes
-//----------------------------------------------------------------------
-
-@each $color-name, $color in $colors {
-  .box-background-#{$color-name} {
-    background-color: $color;
-    border-color: darken($color, 10%);
-
-    @if ($color-name == "hover") or ($color-name == "white") or ($color-name == "highlight") {
-      color: color("text");
-    } @else {
-      color: color("white");
-    }
-  }
-}
-
-// Boxes - custom styles
-//----------------------------------------------------------------------
-
-.box-success {
-  background-color: color("white");
-  border-color: color("divider");
-  border-left: 4px solid color("green");
-  color: color("text");
-}
-
-// Blue box
 .box-info {
-  background-color: #e6f6fc;
-  border: 1px solid #b8e5f7;
-  color: #008fc6;
+  border-left: 4px solid color("primary");
 }
 
-// Yellow box
 .box-warning {
-  background-color: color("highlight");
-  border: 1px solid color("dark-highlight");
-  color: color("text");
+  border-left: 4px solid color("amber");
 }
 
-// Red box
 .box-error {
-  background-color: #fdf2ec;
-  border: 1px solid #f8daca;
-  color: #e36b2b;
+  border-left: 4px solid color("red");
 }
+
+// DEPRECATED 2016-06-24 / dan.legrand@gmail.com
+
+// //======================================================================
+// // EXAMPLE:
+// // <div class="box box-background-<color>">
+// //   Text
+// // </div>
+// //======================================================================
+//
+// // Boxes - base
+// //----------------------------------------------------------------------
+//
+// .box {
+//   border: 1px solid transparent;
+//   box-sizing: border-box;
+//   text-align: left;
+//   @include flex-parent-row();
+//   @include rounded-corners();
+// }
+//
+// .box-icon,
+// .box-primary {
+//   box-sizing: border-box;
+//   padding-bottom: $spacing-normal;
+//   padding-top: $spacing-normal;
+// }
+//
+// .box-icon {
+//   font-size: $font-size-icon;
+//   padding: $spacing-normal;
+//   text-align: center;
+//   width: $list-item-icon-width;
+// }
+//
+// .box-icon-circle {
+//   background-color: color("grey");
+//   color: color("white");
+//   display: inline-block;
+//   font-size: $font-size-normal;
+//   height: 24px;
+//   line-height: 24px;
+//   text-align: center;
+//   width: 24px;
+//   @include rounded-corners(50%);
+// }
+//
+// .box-primary {
+//   flex: 1;
+//   padding-left: $spacing-normal;
+//   padding-right: $spacing-normal;
+// }
+//
+// .box-primary-subtext {
+//   color: color("helper");
+//   font-size: $font-size-small;
+//   padding-top: $spacing-xsmall;
+// }
+//
+// // Boxes - colored boxes
+// //----------------------------------------------------------------------
+//
+// @each $color-name, $color in $colors {
+//   .box-background-#{$color-name} {
+//     background-color: $color;
+//     border-color: darken($color, 10%);
+//
+//     @if ($color-name == "hover") or ($color-name == "white") or ($color-name == "highlight") {
+//       color: color("text");
+//     } @else {
+//       color: color("white");
+//     }
+//   }
+// }
+//
+// // Boxes - custom styles
+// //----------------------------------------------------------------------
+//
+// .box-success {
+//   background-color: color("white");
+//   border-color: color("divider");
+//   border-left: 4px solid color("green");
+//   color: color("text");
+// }
+//
+// // Blue box
+// .box-info {
+//   background-color: #e6f6fc;
+//   border: 1px solid #b8e5f7;
+//   color: #008fc6;
+// }
+//
+// // Yellow box
+// .box-warning {
+//   background-color: color("highlight");
+//   border: 1px solid color("dark-highlight");
+//   color: color("text");
+// }
+//
+// // Red box
+// .box-error {
+//   background-color: #fdf2ec;
+//   border: 1px solid #f8daca;
+//   color: #e36b2b;
+// }
