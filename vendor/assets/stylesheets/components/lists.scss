@@ -121,21 +121,26 @@ ol {
 .list-item-icon {
   color: color("icon");
   font-size: $font-size-icon;
-  padding: $spacing-normal;
+  height: $list-item-icon-width;
+  line-height: $list-item-icon-width;
+  margin-left: $spacing-normal;
+  padding: 0;
   text-align: center;
   width: $list-item-icon-width;
+
+  .icon {
+    color: color("icon");
+    font-size: $font-size-icon;
+  }
 }
 
 .list-item-icon-circle {
-  background-color: color("grey");
-  color: color("white");
-  display: inline-block;
-  font-size: $font-size-normal;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  width: 24px;
+  background-color: color("icon");
   @include rounded-corners(50%);
+
+  .icon {
+    color: color("white");
+  }
 }
 
 // Lists - list item primary
