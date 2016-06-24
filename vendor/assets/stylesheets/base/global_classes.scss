@@ -114,6 +114,12 @@
   margin: $spacing-xlarge 0;
 }
 
+// If lists or other elements need extra room at bottom
+// or else the FAB overlaps them.
+.allow-room-for-fab-at-bottom {
+  margin-bottom: $button-fab-height * 2;
+}
+
 // Highlight (yellowish background)
 //----------------------------------------------------------------------
 
