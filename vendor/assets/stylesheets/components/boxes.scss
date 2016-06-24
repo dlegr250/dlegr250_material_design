@@ -7,7 +7,7 @@
 
 .box {
   border: 1px solid color("divider");
-  padding: $spacing-small;
+  min-height: 56px;
   @extend .list-item;
   @include rounded-corners;
 }
