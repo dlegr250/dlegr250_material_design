@@ -108,10 +108,9 @@ ol {
 // Lists - list item children
 //----------------------------------------------------------------------
 
-.list-item-icon,
 .list-item-primary,
 .list-item-secondary {
-  box-sizing: border-box;
+  // box-sizing: border-box;
   padding-bottom: 12px;
   padding-top: 12px;
 }
@@ -189,7 +188,6 @@ ol {
   }
 
   .list-item {
-    .list-item-icon,
     .list-item-primary,
     .list-item-secondary {
       padding-bottom: $spacing-small;
