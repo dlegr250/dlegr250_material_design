@@ -61,16 +61,15 @@ class App.MD.InputMasks
     $(":input[data-format='percentage']").autoNumeric("init", {
       vMin: "0",
       vMax: "99.999",
-      aSign: " %",
-      pSign: "s", # Place % as suffix
-      aPad: true,
-      wEmpty: "sign" # Keep % when empty
+      aPad: true
     })
 
-    # $(":input[data-format='percentage']").inputmask("99.999", {
-    #   rightAlign: true,
-    #   greedy: false,
-    #   placeholder: "_.___",
-    #   allowPlus: false,
-    #   allowMinus: false
+    # Caused some JS console errors when setting "$"...
+    # $(":input[data-format='percentage']").autoNumeric("init", {
+    #   vMin: "0",
+    #   vMax: "99.999",
+    #   aSign: " %",
+    #   pSign: "s", # Place % as suffix
+    #   aPad: true,
+    #   wEmpty: "sign" # Keep % when empty
     # })
