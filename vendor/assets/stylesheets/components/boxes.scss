@@ -28,6 +28,7 @@
 
 .box-primary {
   @extend .list-item-primary;
+  @include force-text-wrap();
 }
 
 .box-primary-subtext {
