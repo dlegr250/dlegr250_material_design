@@ -65,13 +65,3 @@ class App.MD.InputMasks
       vMax: "99.999",
       aPad: true
     })
-
-    # Caused some JS console errors when setting "$"...
-    # $(":input[data-format='percentage']").autoNumeric("init", {
-    #   vMin: "0",
-    #   vMax: "99.999",
-    #   aSign: " %",
-    #   pSign: "s", # Place % as suffix
-    #   aPad: true,
-    #   wEmpty: "sign" # Keep % when empty
-    # })
