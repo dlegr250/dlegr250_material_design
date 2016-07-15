@@ -13,6 +13,9 @@
 //       Primary subtext
 //     </div>
 //   </div>
+//   <div class="blank-state-actions">
+//     ...
+//   </div>
 // </div>
 //======================================================================
 
@@ -32,6 +35,7 @@
   color: color("divider");
   display: inline-block;
   height: 80px;
+  margin-bottom: $spacing-normal;
   width: 80px;
   text-align: center;
 
