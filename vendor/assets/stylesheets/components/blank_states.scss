@@ -39,8 +39,9 @@
 
 .blank-state-primary {
   color: color("text");
-  font-size: $font-size-large;
+  font-size: $font-size-large * 0.8;
   font-weight: bold;
+  margin-bottom: $spacing-small;
 }
 
 // Blank state - primary - subtext
@@ -50,7 +51,7 @@
   color: color("helper");
   font-size: $font-size-normal;
   font-weight: normal;
-  padding-top: $spacing-small;
+  padding-top: $spacing-xsmall;
 }
 
 // Blank state - actions

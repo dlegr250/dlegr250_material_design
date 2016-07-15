@@ -48,7 +48,6 @@ class App.MD.InputMasks
     # Format: "$ 999,999,999.99"
     $(":input[data-format='currency']").autoNumeric("init", {
       aSign: "$ ",
-      wEmpty: "sign", # Keep $ when empty
       aSep: ",",
       aDec: ".",
       vMin: "0",
@@ -56,6 +55,9 @@ class App.MD.InputMasks
       dGroup: "3",
       aPad: true # Pad decimals with 0's
     })
+
+    # Default "$" placeholder for currency fields if no placeholder specified
+  $(":input[data-format='currency']").not("[placeholder]").attr("placeholder", "$")
 
     # Format: "1.234"
     $(":input[data-format='percentage']").autoNumeric("init", {
