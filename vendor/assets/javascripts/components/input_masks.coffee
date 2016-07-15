@@ -57,7 +57,7 @@ class App.MD.InputMasks
     })
 
     # Default "$" placeholder for currency fields if no placeholder specified
-  $(":input[data-format='currency']").not("[placeholder]").attr("placeholder", "$")
+    $(":input[data-format='currency']").not("[placeholder]").attr("placeholder", "$")
 
     # Format: "1.234"
     $(":input[data-format='percentage']").autoNumeric("init", {
