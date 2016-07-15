@@ -16,8 +16,7 @@ label.top {
   padding-bottom: $spacing-xsmall;
 }
 
-// Labels - marking as required; can be applied to any element, not
-// just label elements.
+// Labels - marking as required (*) or optional
 //----------------------------------------------------------------------
 
 .required:before {
@@ -25,21 +24,10 @@ label.top {
   content: "* ";
 }
 
-// .field {
-//   label.responsive-label {
-//     display: block;
-//     margin-top: $spacing-xsmall;
-//     padding-bottom: $spacing-xsmall;
-//   }
-// }
-//
-// @media (min-width: $medium-width) {
-//   .field {
-//     label.responsive-label {
-//       display: inline-block;
-//       margin-right: $spacing-normal;
-//       text-align: right;
-//       width: 160px;
-//     }
-//   }
-// }
+.optional:after {
+  color: color("helper");
+  content: " - (Optional)";
+  font-size: $font-size-small;
+  font-style: italic;
+  font-weight: normal;
+}
