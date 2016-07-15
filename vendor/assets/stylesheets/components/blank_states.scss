@@ -20,9 +20,8 @@
 //----------------------------------------------------------------------
 
 .blank-state {
-  color: color("helper");
-  margin: auto;
-  padding: $spacing-xlarge;
+  margin: $spacing-large auto;
+  max-width: $small-width - ($spacing-normal * 2);
   text-align: center;
 }
 
@@ -31,7 +30,25 @@
 
 .blank-state-icon {
   color: color("divider");
-  font-size: 120px;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+
+  .icon {
+    color: color("divider");
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+.blank-state-icon-circle {
+  background-color: color("divider");
+  @include rounded-corners(50%);
+
+  .icon {
+    color: color("helper");
+  }
 }
 
 // Blank state - primary
@@ -39,9 +56,9 @@
 
 .blank-state-primary {
   color: color("text");
-  font-size: $font-size-large * 0.8;
+  font-size: $font-size-large;
   font-weight: bold;
-  margin-bottom: $spacing-small;
+  line-height: 1.5;
 }
 
 // Blank state - primary - subtext
@@ -58,5 +75,5 @@
 //----------------------------------------------------------------------
 
 .blank-state-actions {
-  padding-top: $spacing-normal;
+  margin-top: $spacing-small;
 }
