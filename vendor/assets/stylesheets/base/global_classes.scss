@@ -135,6 +135,12 @@
   font-weight: 700;
 }
 
+// Used to override labels or other elements that use bold
+// but may not want to in all cases.
+.unbold {
+  font-weight: normal !important;
+}
+
 // Text cases
 //----------------------------------------------------------------------
 

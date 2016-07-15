@@ -7,8 +7,9 @@
 
 .box {
   border: 1px solid color("divider");
-  @extend .list-item;
-  min-height: 56px !important;
+  color: color("text");
+  min-height: 56px;
+  @include flex-parent-row();
   @include rounded-corners;
 }
 
@@ -16,23 +17,43 @@
 //----------------------------------------------------------------------
 
 .box-icon {
-  @extend .list-item-icon;
+  color: color("icon");
+  font-size: $font-size-icon;
+  height: $list-item-icon-width;
+  line-height: $list-item-icon-width;
+  margin-left: $spacing-normal;
+  padding: 0;
+  text-align: center;
+  width: $list-item-icon-width;
+
+  .icon {
+    color: color("icon");
+    font-size: $font-size-icon;
+  }
 }
 
 .box-icon-circle {
-  @extend .list-item-icon-circle;
+  background-color: color("icon");
+  @include rounded-corners(50%);
+
+  .icon {
+    color: color("white");
+  }
 }
 
 // Box - primary
 //----------------------------------------------------------------------
 
 .box-primary {
-  @extend .list-item-primary;
-  @include force-text-wrap();
+  flex: 1;
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
 }
 
 .box-primary-subtext {
-  @extend .list-item-primary-subtext;
+  color: color("helper");
+  font-size: $font-size-small;
+  padding-top: $spacing-xsmall;
 }
 
 // Box - custom boxes

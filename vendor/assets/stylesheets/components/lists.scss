@@ -101,7 +101,6 @@ ol {
   color: color("text");
   min-height: 48px;
   @include flex-parent-row();
-  @include no-touch-highlight();
   @include transition(background-color 0.30s ease);
 }
 
@@ -150,13 +149,12 @@ ol {
   flex: 1;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
-  @include truncate-text();
+}
 
-  .list-item-primary-subtext {
-    color: color("helper");
-    font-size: $font-size-small;
-    padding-top: $spacing-xsmall;
-  }
+.list-item-primary-subtext {
+  color: color("helper");
+  font-size: $font-size-small;
+  padding-top: $spacing-xsmall;
 }
 
 // Force list-item to wrap text
@@ -164,13 +162,29 @@ ol {
   @include force-text-wrap();
 }
 
+.list.truncate-overflow-text .list-item-primary {
+  @include truncate-text();
+}
+
 // Lists - list item secondary
 //----------------------------------------------------------------------
 
 .list-item-secondary {
   color: color("helper");
+  // color: color("icon");
+  font-size: $font-size-icon;
+  height: $list-item-icon-width;
+  line-height: $list-item-icon-width;
+  // margin-left: $spacing-normal;
+  padding: 0;
   padding-right: $spacing-normal;
   text-align: right;
+  width: $list-item-icon-width;
+
+  .icon {
+    color: color("icon");
+    font-size: $font-size-icon;
+  }
 }
 
 // Lists - sizes
@@ -188,8 +202,7 @@ ol {
   }
 
   .list-item {
-    .list-item-primary,
-    .list-item-secondary {
+    .list-item-primary {
       padding-bottom: $spacing-small;
       padding-top: $spacing-small;
     }
