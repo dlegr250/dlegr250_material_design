@@ -127,7 +127,7 @@
   background-color: color("highlight");
 }
 
-// Bold text
+// Decorate text
 //----------------------------------------------------------------------
 
 .bold,
@@ -141,8 +141,9 @@
   font-weight: normal !important;
 }
 
-// Text cases
-//----------------------------------------------------------------------
+.italic {
+  font-style: italic;
+}
 
 .uppercase {
   text-transform: uppercase;
