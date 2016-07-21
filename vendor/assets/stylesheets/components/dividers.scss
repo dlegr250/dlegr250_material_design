@@ -1,3 +1,9 @@
+//======================================================================
+// EXAMPLE:
+// <hr class="divider large" />
+// <hr class="spacer large" />
+//======================================================================
+
 // Dividers - base
 //----------------------------------------------------------------------
 
@@ -32,4 +38,31 @@ hr {
   &.xlarge {
     margin: $spacing-xlarge 0;
   }
+}
+
+// Label dividers
+//----------------------------------------------------------------------
+
+.label-divider {
+  border-top: 1px solid #ccc;
+  height: 0;
+  margin: $spacing-large 0;
+  position: relative;
+  text-align: center;
+}
+
+.label-divider-text {
+  $label-divider-text-width: 30px;
+
+  background-color: #fff;
+  color: #999;
+  display: inline-block;
+  height: $label-divider-text-width;
+  line-height: $label-divider-text-width;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  top: -16px;
+  width: $label-divider-text-width;
+  @include rounded-corners(50%);
 }
