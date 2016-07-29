@@ -42,7 +42,7 @@
 
 .appbar-title {
   flex: 1; // To fill empty gaps
-  font-size: $font-size-large * 0.9;
+  font-size: $font-size-large;
   margin-right: $spacing-small;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -53,23 +53,11 @@
   }
 }
 
-@media (min-width: $medium-width) {
-  .appbar-title {
-    font-size: $font-size-large;
-  }
-}
-
 // appbar - subtitle
 //----------------------------------------------------------------------
 
 .appbar-subtitle {
-  font-size: $font-size-normal * 0.9;
-}
-
-@media (min-width: $medium-width) {
-  .appbar-subtitle {
-    font-size: $font-size-normal;
-  }
+  font-size: $font-size-normal;
 }
 
 // appbar - actions
@@ -78,13 +66,6 @@
 .appbar-actions {
   @include flex-parent-row(); // To line up dividers and buttons properly
   text-align: right;
-
-  // TODO test this in multiple browsers to see if it works everywhere...
-  // Since standard buttons are not as tall as the appbar-button,
-  // there is leftover space and the button clings to the baseline.
-  // .button {
-  //  margin-top: -10px;
-  // }
 }
 
 // appbar - buttons
