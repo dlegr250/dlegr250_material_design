@@ -69,10 +69,6 @@ ol {
 // Lists - base
 //----------------------------------------------------------------------
 
-.list {
-  // background-color: color("white");
-}
-
 .list-bordered {
   border: 1px solid color("divider");
 }
@@ -111,48 +107,21 @@ ol {
   min-height: 88px;
 }
 
-// Lists - list item children
-//----------------------------------------------------------------------
-
-.list-item-primary,
-.list-item-secondary {
-  // box-sizing: border-box;
-  // padding-bottom: 12px;
-  // padding-top: 12px;
-}
-
 // Lists - list item icon
 //----------------------------------------------------------------------
 
 .list-item-icon {
-  // color: color("icon");
-  // font-size: $font-size-icon;
-  // height: $list-item-icon-width;
-  // line-height: $list-item-icon-width;
+  color: color("icon");
   padding-left: $spacing-normal;
-  // padding: 0;
   text-align: center;
   width: 40px; // .list-item-primary already has 16px padding on left
-
-  // .icon {
-  //   color: color("icon");
-  //   font-size: $font-size-icon;
-  // }
-}
-
-.list-item-icon-circle {
-  background-color: color("icon");
-  @include rounded-corners(50%);
-
-  .icon {
-    color: color("white");
-  }
 }
 
 // Lists - list item primary
 //----------------------------------------------------------------------
 
 .list-item-primary {
+  color: color("text");
   flex: 1;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
@@ -177,6 +146,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-secondary {
+  color: color("icon");
   margin-right: $spacing-normal;
   text-align: right;
 }
@@ -184,24 +154,7 @@ ol {
 // Lists - sizes
 //----------------------------------------------------------------------
 
-.list-dense {
-  .list-header {
-    min-height: 40px;
-
-    .list-header-title,
-    .list-header-secondary {
-      padding-bottom: $spacing-small;
-      padding-top: $spacing-small;
-    }
-  }
-
-  .list-item {
-    .list-item-primary {
-      padding-bottom: $spacing-small;
-      padding-top: $spacing-small;
-    }
-  }
-}
+// TODO...
 
 // Lists - hoverable
 //----------------------------------------------------------------------
