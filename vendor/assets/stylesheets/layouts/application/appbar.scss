@@ -66,6 +66,10 @@
 .appbar-actions {
   @include flex-parent-row(); // To line up dividers and buttons properly
   text-align: right;
+
+  .button {
+    margin-right: $spacing-xsmall;
+  }
 }
 
 // appbar - buttons

@@ -11,7 +11,8 @@
 //----------------------------------------------------------------------
 
 .switch {
-  display: inline-block;
+  // display: inline-block;
+  display: inline-flex;
 
   // Hide the actual checkbox
   input {
