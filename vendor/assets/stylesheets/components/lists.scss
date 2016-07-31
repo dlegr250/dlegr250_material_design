@@ -94,10 +94,21 @@ ol {
   }
 }
 
-
 // Don't have double lines on last item for bordered and divided
 .list-bordered .list-item:last-child {
   border-bottom: none;
+}
+
+.list-one-lines .list-item {
+  min-height: 48px;
+}
+
+.list-two-lines .list-item {
+  min-height: 72px;
+}
+
+.list-three-lines .list-item {
+  min-height: 88px;
 }
 
 // Lists - list item
