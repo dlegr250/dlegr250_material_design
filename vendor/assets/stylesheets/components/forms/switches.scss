@@ -1,7 +1,7 @@
 //======================================================================
-// EXAMPLE:
-// <%= f.label :attribute, "Toggle Display Text" %>
-// <div class="toggle toggle-blue">
+// EXAMPLE (element order is important):
+// <%= f.label :attribute, "Switch Display Text" %>
+// <div class="switch switch-blue">
 //   <%= f.check_box :attribute %>
 //   <label for="model_attribute"></label>
 // </div>
@@ -10,7 +10,7 @@
 // Toggles - base
 //----------------------------------------------------------------------
 
-.toggle {
+.switch {
   display: inline-block;
 
   // Hide the actual checkbox
@@ -32,7 +32,7 @@
     @include transition(all 0.15s ease);
     @include no-touch-highlight();
 
-    // Round button on toggle
+    // Round button on switch
     &:after {
       background-color: color("white");
       content: "";
@@ -58,7 +58,7 @@
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
-  .toggle-#{$color-name} {
+  .switch-#{$color-name} {
     input:checked ~ label {
       background-color: lighten($color, 25%);
 
