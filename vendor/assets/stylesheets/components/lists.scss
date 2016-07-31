@@ -99,11 +99,17 @@ ol {
 
 .list-item {
   color: color("text");
-  min-height: 48px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  min-height: 56px;
   @include flex-parent-row();
   @include transition(background-color 0.30s ease);
+}
+
+.list-item.two-lines {
+  min-height: 72px;
+}
+
+.list-item.three-lines {
+  min-height: 72px;
 }
 
 // Lists - list item children
@@ -124,10 +130,10 @@ ol {
   // font-size: $font-size-icon;
   // height: $list-item-icon-width;
   // line-height: $list-item-icon-width;
-  margin-left: $spacing-normal;
+  padding-left: $spacing-normal;
   // padding: 0;
-  // text-align: center;
-  width: 40px;
+  text-align: center;
+  width: 48px; // .list-item-primary already has 16px padding on left
 
   // .icon {
   //   color: color("icon");
