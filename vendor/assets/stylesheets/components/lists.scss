@@ -94,9 +94,13 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item {
-  min-height: 56px;
+  min-height: 48px;
   @include flex-parent-row();
   @include transition(background-color 0.30s ease);
+}
+
+.list-item.one-lines {
+  min-height: 48px;
 }
 
 .list-item.two-lines {
