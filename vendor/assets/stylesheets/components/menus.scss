@@ -71,12 +71,14 @@
 //----------------------------------------------------------------------
 
 .menu-item {
-  box-sizing: border-box;
-  color: color("text");
-  cursor: pointer;
-  display: table-row;
-  font-size: $font-size-normal;
-  @include no-touch-highlight;
+  min-height: 48px;
+  @include flex-parent-row();
+  // box-sizing: border-box;
+  // color: color("text");
+  // cursor: pointer;
+  // display: table-row;
+  // font-size: $font-size-normal;
+  // @include no-touch-highlight;
   @include transition(background-color 0.30s ease);
 
   &:hover {
@@ -84,10 +86,12 @@
   }
 }
 
-.menu-item:active {
-  .menu-item-icon,
-  .menu-item-primary,
-  .menu-item-secondary {
+.menu-item {
+  &:hover {
+    background-color: color("hover");
+  }
+
+  &:active {
     background-color: darken(color("hover"), 5%);
   }
 }
@@ -95,63 +99,67 @@
 // Menus - menu item - shared
 //----------------------------------------------------------------------
 
-.menu-item-icon,
-.menu-item-primary,
-.menu-item-secondary {
-  box-sizing: border-box;
-  display: table-cell;
-  height: 48px;
-  min-height: 48px;
-  margin: 0;
-  padding: $spacing-normal 0;
-  vertical-align: middle;
-  @include transition(background-color 0.30s ease);
-}
-
-// Make large menus slightly smaller
-@media (min-width: $large-width) {
-  .menu-item-icon,
-  .menu-item-primary,
-  .menu-item-secondary {
-    height: 36px;
-    min-height: 36px;
-    padding-bottom: $spacing-xsmall;
-    padding-top: $spacing-xsmall;
-  }
-}
+// .menu-item-icon,
+// .menu-item-primary,
+// .menu-item-secondary {
+//   box-sizing: border-box;
+//   display: table-cell;
+//   height: 48px;
+//   min-height: 48px;
+//   margin: 0;
+//   padding: $spacing-normal 0;
+//   vertical-align: middle;
+//   @include transition(background-color 0.30s ease);
+// }
+//
+// // Make large menus slightly smaller
+// @media (min-width: $large-width) {
+//   .menu-item-icon,
+//   .menu-item-primary,
+//   .menu-item-secondary {
+//     height: 36px;
+//     min-height: 36px;
+//     padding-bottom: $spacing-xsmall;
+//     padding-top: $spacing-xsmall;
+//   }
+// }
 
 
 // Menus - menu item - icon
 //----------------------------------------------------------------------
 
 .menu-item-icon {
-  color: color("helper");
-  font-size: $font-size-icon;
-  padding: 0;
+  color: color("icon");
   padding-left: $spacing-normal;
-  width: 72px - $spacing-normal * 2;
+  text-align: center;
+  width: 40px;
+  // color: color("helper");
+  // font-size: $font-size-icon;
+  // padding: 0;
+  // padding-left: $spacing-normal;
+  // width: 72px - $spacing-normal * 2;
 }
 
 // Menus - menu item - primary
 //----------------------------------------------------------------------
 
 .menu-item-primary {
+  color: color("text");
+  flex: 1;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
-  min-width: $menu-width;
+  // padding-left: $spacing-normal;
+  // padding-right: $spacing-normal;
+  // min-width: $menu-width;
 }
 
 // Menus - menu item - secondary
 //----------------------------------------------------------------------
 
 .menu-item-secondary {
-  color: color("helper");
-  padding-right: $spacing-normal;
+  color: color("icon");
+  margin-right: $spacing-normal;
   text-align: right;
-
-  .icon {
-    font-size: $font-size-icon;
-  }
 }
 
 // Menus - sizes
