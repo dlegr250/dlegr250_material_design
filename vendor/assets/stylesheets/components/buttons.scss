@@ -246,6 +246,11 @@ $buttons: ".button";
   z-index: $layout-depth + 1;
 }
 
+// If using Google Material Design icon font
+[role="fab"] .material-icons {
+  line-height: 56px;
+}
+
 // Buttons - disabled
 //----------------------------------------------------------------------
 

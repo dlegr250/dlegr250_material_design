@@ -31,6 +31,16 @@ ol {
   }
 }
 
+// Lists - subheader
+//----------------------------------------------------------------------
+
+.list-subheader {
+  color: color("helper");
+  height: 48px;
+  line-height: 48px;
+  padding: 0 $spacing-normal;
+}
+
 // Lists - header
 //----------------------------------------------------------------------
 
