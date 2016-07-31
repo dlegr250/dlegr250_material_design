@@ -13,6 +13,7 @@
 .switch {
   // display: inline-block;
   display: inline-flex;
+  min-height: $input-height;
 
   // Hide the actual checkbox
   input {
