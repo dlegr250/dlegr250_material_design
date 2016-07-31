@@ -61,7 +61,8 @@
 
 [data-tooltip-position="bottom-right"] {
   &:after {
-    left: 110%;
+    left: inherit;
+    right: 0;
     top: 110%;
     @include transform(translateX(-50%) translateY(10%));
   }
