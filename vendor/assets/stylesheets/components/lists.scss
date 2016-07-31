@@ -98,7 +98,6 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item {
-  color: color("text");
   min-height: 56px;
   @include flex-parent-row();
   @include transition(background-color 0.30s ease);
@@ -109,7 +108,7 @@ ol {
 }
 
 .list-item.three-lines {
-  min-height: 72px;
+  min-height: 88px;
 }
 
 // Lists - list item children
@@ -133,7 +132,7 @@ ol {
   padding-left: $spacing-normal;
   // padding: 0;
   text-align: center;
-  width: 48px; // .list-item-primary already has 16px padding on left
+  width: 40px; // .list-item-primary already has 16px padding on left
 
   // .icon {
   //   color: color("icon");
