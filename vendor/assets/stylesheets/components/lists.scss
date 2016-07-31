@@ -100,6 +100,8 @@ ol {
 .list-item {
   color: color("text");
   min-height: 48px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   @include flex-parent-row();
   @include transition(background-color 0.30s ease);
 }
@@ -110,27 +112,27 @@ ol {
 .list-item-primary,
 .list-item-secondary {
   // box-sizing: border-box;
-  padding-bottom: 12px;
-  padding-top: 12px;
+  // padding-bottom: 12px;
+  // padding-top: 12px;
 }
 
 // Lists - list item icon
 //----------------------------------------------------------------------
 
 .list-item-icon {
-  color: color("icon");
-  font-size: $font-size-icon;
-  height: $list-item-icon-width;
-  line-height: $list-item-icon-width;
+  // color: color("icon");
+  // font-size: $font-size-icon;
+  // height: $list-item-icon-width;
+  // line-height: $list-item-icon-width;
   margin-left: $spacing-normal;
-  padding: 0;
-  text-align: center;
-  width: $list-item-icon-width;
+  // padding: 0;
+  // text-align: center;
+  width: 40px;
 
-  .icon {
-    color: color("icon");
-    font-size: $font-size-icon;
-  }
+  // .icon {
+  //   color: color("icon");
+  //   font-size: $font-size-icon;
+  // }
 }
 
 .list-item-icon-circle {
@@ -170,18 +172,8 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-secondary {
-  color: color("icon");
-  font-size: $font-size-icon;
-  height: $list-item-icon-width;
-  line-height: $list-item-icon-width;
   margin-right: $spacing-normal;
-  padding: 0;
   text-align: right;
-
-  .icon {
-    color: color("icon");
-    font-size: $font-size-icon;
-  }
 }
 
 // Lists - sizes
