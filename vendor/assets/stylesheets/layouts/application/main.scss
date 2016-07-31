@@ -9,7 +9,18 @@
   z-index: $layout-depth;
 }
 
+// Padding on main area on larger screens
+//----------------------------------------------------------------------
+
+@media (min-width: $medium-width) {
+  #main {
+    padding: $spacing-normal;
+  }
+}
+
 // On large (desktop) size, show sidebars by default
+//----------------------------------------------------------------------
+
 @media (min-width: $large-width) {
   body.has-left-sidebar {
     #main {
