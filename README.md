@@ -1,6 +1,6 @@
-# BIG WARNING: as of 2016-02-11 15:00
+# BIG WARNING: as of 2016-08-02 17:30
 
-This is Alpha code that will change rapidly throughout 2016 as I work on it.  Do not use this in a production system until it has reached a stable 1.0.0 version (sometime later in 2016).
+This is Alpha code that will change rapidly throughout 2016 as I work on it.  Do not use this in a production system until it has reached a stable 1.0.0 version (sometime near the end of 2016).
 
 # Dlegr250MaterialDesign
 
@@ -74,10 +74,13 @@ Note that you can always override an element's color or background color using t
 * Styleguide to demo usage and components
 * Optimize file sizes
 * Create custom Snackbar component instead of using third-party
-* Remove handlebars templating library (should not be a UI element, should be added to an individual application if needed)
 * Update JS/CoffeeScript to use ES6 when that becomes mainstream, and IF the Rails Core is going to adopt ES6 as a standard; this gem is more about building Rails applications than using a specific JavaScript implementation
+* Remove jQuery dependency (requires updating any 3rd-party plugins that depend on jQuery, so may take a while)
 
 ## Development
+
+Note that there are no specs for this UI library yet, and I'm
+not entirely sure how I would write "specs" for a UI...I think the styleguide will mostly be my "spec" checker.
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 

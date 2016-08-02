@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dan.legrand@gmail.com"]
 
   spec.summary       = %q{Customized implementation of Google Material Design User Interface.}
-  spec.description   = %q{WARNING: ALPHA CODE, NOT PRODUCTION READY. ACTIVELY UNDER DEVELOPMENT AS OF MAY 2016. Implement Google Material Design spec with modern browsers in mind (aka, do not worry about older IE browers...).}
+  spec.description   = %q{WARNING: ALPHA CODE, NOT PRODUCTION READY. ACTIVELY UNDER DEVELOPMENT AS OF AUG 2016. Implement Google Material Design spec with modern browsers in mind (aka, do not worry about older IE browers...).}
   spec.homepage      = "http://www.github.com/dlegr250/dlegr250_material_design"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
