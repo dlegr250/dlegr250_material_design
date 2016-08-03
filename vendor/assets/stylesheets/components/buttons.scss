@@ -73,9 +73,11 @@ $buttons: ".button";
   color: color("icon");
   width: $button-icon-height;
   height: $button-icon-height;
-  padding: 0;
+  padding: $spacing-small;
   text-align: center;
-  @include rounded-corners(250px);
+  @include no-touch-highlight;
+  @include rounded-corners(50%);
+  @include transition(background-color 0.30s ease, color 0.30s ease);
 
   &:hover,
   &.hover {
