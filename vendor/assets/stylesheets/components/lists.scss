@@ -94,6 +94,12 @@ ol {
   }
 }
 
+.list-divided-on-last {
+  .list-item:last-child {
+    border-bottom: 1px solid color("divider");
+  }
+}
+
 // Don't have double lines on last item for bordered and divided
 .list-bordered .list-item:last-child {
   border-bottom: none;

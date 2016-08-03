@@ -71,24 +71,20 @@ $buttons: ".button";
 .button-icon {
   border: none;
   color: color("icon");
-  font-size: $font-size-icon;
-  font-weight: 400;
   width: $button-icon-height;
   height: $button-icon-height;
-  line-height: $button-icon-height;
-  min-width: $button-icon-height;
   padding: 0;
+  text-align: center;
   @include rounded-corners(250px);
 
   &:hover,
   &.hover {
-    background-color: rgba(0, 0, 0, 0.1);
     background-color: color("hover");
+    color: color("black");
   }
 
   &:active,
   &.active {
-    background-color: rgba(0, 0, 0, 0.18);
     background-color: darken(color("hover"), 5%);
   }
 }

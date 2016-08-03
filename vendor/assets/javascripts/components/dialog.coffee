@@ -37,8 +37,8 @@ class App.MD.Dialog
       @$dialog.find("#dialog-trigger-original-link").click()
       @.hideDialog()
 
-    $(window).on "resize", =>
-      @$dialog.absoluteCenter()
+    # $(window).on "resize", =>
+    #   @$dialog.absoluteCenter()
 
   @isVisible: () ->
     @$dialog.hasClass("visible")
