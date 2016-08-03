@@ -71,10 +71,10 @@ $buttons: ".button";
 .button-icon {
   border: none;
   color: color("icon");
-  width: $button-icon-height;
   height: $button-icon-height;
-  padding: $spacing-small;
+  line-height: $button-icon-height;
   text-align: center;
+  width: $button-icon-height;
   @include no-touch-highlight;
   @include rounded-corners(50%);
   @include transition(background-color 0.30s ease, color 0.30s ease);

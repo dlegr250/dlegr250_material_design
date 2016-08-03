@@ -46,7 +46,7 @@ class App.MD.Dialog
   @showDialog: () ->
     App.MD.Layout.showOverlay()
     App.MD.Menus.hideMenus()
-    @$dialog.absoluteCenter().addClass("visible")
+    @$dialog.addClass("visible")
 
   @hideDialog: () ->
     @$dialog.removeClass("visible")

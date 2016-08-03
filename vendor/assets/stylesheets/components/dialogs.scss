@@ -8,7 +8,7 @@
   margin: auto;
   max-width: 90%;
   pointer-events: none;
-  position: absolute;
+  position: relative;
   visibility: hidden;
   will-change: scale, transparency;
   z-index: $dialog-depth;

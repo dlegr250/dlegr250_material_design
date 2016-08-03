@@ -12,6 +12,7 @@
   width: 100%;
   will-change: opacity;
   z-index: $overlay-depth;
+  @include flex-center();
   @include no-touch-highlight;
   @include transparency(0);
   @include transition(opacity 0.3s cubic-bezier(0, 0, 0.3, 1));
