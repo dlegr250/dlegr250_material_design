@@ -1,12 +1,6 @@
 //======================================================================
 // EXAMPLE:
 // <div class="blank-state">
-//   <div class="blank-state-icon">
-//     <span class="zmdi-hc-stack">
-//       <i class="zmdi zmdi-circle zmdi-hc-stack-2x"></i>
-//       <i class="zmdi zmdi-comments zmdi-hc-stack-1x zmdi-hc-inverse"></i>
-//     </span>
-//   </div>
 //   <div class="blank-state-primary">
 //     Primary text
 //     <div class="blank-state-primary-subtext">
@@ -35,33 +29,6 @@
   margin: $spacing-large auto;
   max-width: $small-width - ($spacing-normal * 2);
   text-align: center;
-}
-
-// Blank state - icon
-//----------------------------------------------------------------------
-
-.blank-state-icon {
-  color: color("divider");
-  display: inline-block;
-  height: 80px;
-  margin-bottom: $spacing-normal;
-  width: 80px;
-  text-align: center;
-
-  .icon {
-    color: color("divider");
-    font-size: 60px;
-    line-height: 80px;
-  }
-}
-
-.blank-state-icon-circle {
-  background-color: color("divider");
-  @include rounded-corners(50%);
-
-  .icon {
-    color: color("helper");
-  }
 }
 
 // Blank state - primary

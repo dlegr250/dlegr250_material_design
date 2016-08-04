@@ -19,7 +19,8 @@ $buttons: ".button";
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  // display: inline-block;
+  display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 500;
   height: $button-height;
@@ -37,6 +38,10 @@ $buttons: ".button";
   @include rounded-corners;
   @include transition(all 0.2s ease-in-out);
 
+  .material-icons {
+    line-height: $button-height;
+  }
+
   &:hover {
     text-decoration: none !important;
   }
@@ -53,14 +58,26 @@ $buttons: ".button";
     height: $button-height-large !important;
     line-height: $button-height-large !important;
   }
+}
 
-  // Icons within button
-  .icon-left {
-    margin-right: $spacing-xsmall;
+// Icons inside button
+.button .material-icons {
+  line-height: 40px;
+}
+
+.button.icon-left {
+  padding-left: $spacing-normal - 8px;
+
+  .material-icons {
+    padding-right: 4px;
   }
+}
 
-  .icon-right {
-    margin-left: $spacing-xsmall;
+.button.icon-right {
+  padding-right: $spacing-normal - 8px;
+
+  .material-icons {
+    padding-left: 4px;
   }
 }
 
