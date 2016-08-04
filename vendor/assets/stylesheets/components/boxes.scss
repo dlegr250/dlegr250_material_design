@@ -9,7 +9,7 @@
   border: 1px solid color("divider");
   color: color("text");
   min-height: 0;
-  padding: $spacing-normal;
+  padding: $spacing-normal 0; // box-primary has padding on L/R already
   @include flex-parent-row();
   @include rounded-corners;
 }
