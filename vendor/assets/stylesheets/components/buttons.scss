@@ -82,7 +82,8 @@ $buttons: ".button";
 }
 
 // Special case: submit.button with display: inline-flex would align left.
-input[type="submit"].button {
+input[type="submit"].button,
+.fab {
   display: inline-block;
 }
 
