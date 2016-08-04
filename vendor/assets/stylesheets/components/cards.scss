@@ -63,6 +63,7 @@
 
 .card-content {
   padding: $spacing-normal;
+  @include force-text-wrap();
 }
 
 // Card - actions
