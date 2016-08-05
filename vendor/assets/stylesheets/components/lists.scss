@@ -200,4 +200,15 @@ ol {
       background-color: darken(color("hover"), 5%);
     }
   }
+
+  // Slightly darker than list-item:hover
+  .button-icon {
+    &:hover {
+      background-color: darken(color("hover"), 5%);
+    }
+
+    &:active {
+      background-color: darken(color("hover"), 15%);
+    }
+  }
 }

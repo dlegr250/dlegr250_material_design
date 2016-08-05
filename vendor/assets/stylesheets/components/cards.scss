@@ -35,27 +35,30 @@
 .card-header {
   border-bottom: 1px solid color("divider");
   padding: $spacing-normal;
-
-  // Still need this???
-  .button {
-    margin-top: -6px;
-  }
+  @include flex-parent-row();
 }
 
 .card-header-no-border {
   border-bottom: none;
 }
 
-.card-header-title {
+.card-header-primary {
+  color: color("text");
   font-size: $font-size-large;
   font-weight: bold;
+  flex: 1;
 }
 
-.card-header-subtitle {
+.card-header-primary-subtext {
   color: color("helper");
   font-size: $font-size-normal;
   font-weight: normal;
   padding-top: $spacing-xsmall;
+}
+
+.card-header-secondary {
+  color: color("icon");
+  text-align: right;
 }
 
 // Card - content
