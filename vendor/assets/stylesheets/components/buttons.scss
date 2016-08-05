@@ -114,6 +114,24 @@ input[type="submit"].button,
   }
 }
 
+// Button icon - sizes
+//----------------------------------------------------------------------
+
+.button-icon-small {
+  height: $button-icon-height * 0.8;
+  line-height: $button-icon-height * 0.8;
+  width: $button-icon-height * 0.8;
+}
+
+.button-icon-large {
+  height: $button-icon-height * 1.2;
+  line-height: $button-icon-height * 1.2;
+  width: $button-icon-height * 1.2;
+}
+
+// Button icon - colors
+//----------------------------------------------------------------------
+
 @each $color-name, $color in $colors {
   .button-icon-#{$color-name} {
     background-color: $color;

@@ -44,9 +44,9 @@
   flex: 1; // To fill empty gaps
   font-size: $font-size-large;
   margin-right: $spacing-small;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  // white-space: nowrap;
 
   a {
     color: $appbar-text-color;
