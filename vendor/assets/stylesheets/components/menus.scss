@@ -71,6 +71,7 @@
 //----------------------------------------------------------------------
 
 .menu-item {
+  font-size: $font-size-normal;
   min-height: 48px;
   @include flex-parent-row();
   // box-sizing: border-box;

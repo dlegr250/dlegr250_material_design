@@ -259,6 +259,31 @@
   border-top: 1px solid color("divider");
 }
 
+.no-border-bottom {
+  border-bottom: 0 !important;
+}
+
+.no-border-left {
+  border-left: 0 !important;
+}
+
+.no-border-right {
+  border-right: 0 !important;
+}
+
+.no-border-top {
+  border-top: 0 !important;
+}
+
+// disabled
+//----------------------------------------------------------------------
+
+.disabled,
+:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 // Widths
 //----------------------------------------------------------------------
 
