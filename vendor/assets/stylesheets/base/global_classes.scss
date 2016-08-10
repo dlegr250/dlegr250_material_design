@@ -236,7 +236,7 @@
 $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 @each $size in $font-sizes {
   .font-size-#{$size} {
-    font-size: $size !important;
+    font-size: #{$size}px !important;
   }
 }
 
