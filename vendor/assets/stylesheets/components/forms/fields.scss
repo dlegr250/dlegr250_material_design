@@ -96,8 +96,24 @@
 // Fields - has errors
 //----------------------------------------------------------------------
 
-.field.has-errors {
-  background-color: color("light-red");
+// .field.has-errors {
+//   background-color: color("light-red");
+// }
+
+.has-errors {
+  input.invalid {
+    border-color: color("red") !important;
+  }
+
+  &.text-field-underline-container {
+    input.invalid {
+      @include box-shadow(0 1px 0 color("red"));
+
+      &:focus {
+        @include box-shadow(0 1px 0 color("red"));
+      }
+    }
+  }
 }
 
 // Actions
