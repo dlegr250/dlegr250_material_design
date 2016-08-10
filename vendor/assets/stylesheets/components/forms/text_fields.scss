@@ -37,6 +37,23 @@ textarea {
   padding: $spacing-small;
 }
 
+// Underline text fields
+//----------------------------------------------------------------------
+
+.text-field-underline-container {
+  #{$text-fields} {
+    border: none;
+    border-bottom: 1px solid color("divider");
+    padding: $spacing-small 0;
+    @include rounded-corners(0);
+
+    &:focus {
+      border-color: color("primary");
+      @include box-shadow(0 1px 0 color("primary"));
+    }
+  }
+}
+
 // text fields - responsive full width
 // On smaller screens, expand to entire width
 //----------------------------------------------------------------------
