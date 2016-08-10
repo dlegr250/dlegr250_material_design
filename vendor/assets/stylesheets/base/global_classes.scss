@@ -46,6 +46,10 @@
   flex: 3 !important;
 }
 
+.flex-parent-row {
+  @include flex-parent-row();
+}
+
 // Constrained to max size to center content
 //----------------------------------------------------------------------
 
@@ -227,6 +231,13 @@
 
 .font-size-xlarge {
   font-size: $font-size-xlarge !important;
+}
+
+$font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
+@each $size in $font-sizes {
+  .font-size-#{$size} {
+    font-size: $size !important;
+  }
 }
 
 // Truncating text
