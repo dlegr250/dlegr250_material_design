@@ -44,17 +44,17 @@
   display: inline-block;
   margin: 1px 0;
   max-width: 100%;
-  padding: $spacing-normal $spacing-small;
+  padding: $spacing-normal 0;
   position: relative;
   width: 100%;
 }
 
-@media (min-width: $medium-width) {
-  .field {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+// @media (min-width: $medium-width) {
+//   .field {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
 
 // Fields - sizes
 //----------------------------------------------------------------------
