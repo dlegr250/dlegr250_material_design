@@ -19,8 +19,8 @@ $buttons: ".button";
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  // display: inline-block;
-  display: inline-flex;
+  display: inline-block;
+  // display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 500;
   height: $button-height;
@@ -82,10 +82,10 @@ $buttons: ".button";
 }
 
 // Special case: submit.button with display: inline-flex would align left.
-input[type="submit"].button,
-.fab {
-  display: inline-block;
-}
+// input[type="submit"].button,
+// .fab {
+//   display: inline-block;
+// }
 
 // Buttons - icon buttons
 //----------------------------------------------------------------------
