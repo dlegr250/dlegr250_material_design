@@ -255,19 +255,19 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 //----------------------------------------------------------------------
 
 .border-bottom {
-  border-bottom: 1px solid color("divider");
+  border-bottom: 1px solid color("divider") !important;
 }
 
 .border-left {
-  border-left: 1px solid color("divider");
+  border-left: 1px solid color("divider") !important;
 }
 
 .border-right {
-  border-right: 1px solid color("divider");
+  border-right: 1px solid color("divider") !important;
 }
 
 .border-top {
-  border-top: 1px solid color("divider");
+  border-top: 1px solid color("divider") !important;
 }
 
 .no-border-bottom {
