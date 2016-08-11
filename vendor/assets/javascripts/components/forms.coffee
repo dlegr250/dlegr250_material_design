@@ -18,7 +18,7 @@ class App.MD.Forms
     $(".auto-focus").focus()
 
     # Mark changed inputs as dirty
-    $("body").on "change invalid valid", "input, select", (event) =>
+    $("body").on "change invalid valid", "input, select, textarea", (event) =>
       $input = $(event.target)
       $input.addClass("dirty")
 
