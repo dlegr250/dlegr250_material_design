@@ -144,7 +144,7 @@ ol {
 .list-item-icon {
   color: color("icon");
   padding-left: $spacing-normal;
-  text-align: center;
+  text-align: left;
   width: 40px; // .list-item-primary already has 16px padding on left
 }
 
@@ -178,7 +178,7 @@ ol {
 
 .list-item-secondary {
   color: color("icon");
-  margin-right: $spacing-normal;
+  padding-right: $spacing-normal;
   text-align: right;
 }
 
