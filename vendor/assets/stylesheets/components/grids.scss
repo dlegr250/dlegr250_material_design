@@ -22,7 +22,7 @@
 
 @media (min-width: $medium-width) {
   .grid-row {
-    @include flex-parent-row();
+    @include flex-parent-row-align-top();
     justify-content: space-around;
   }
 
