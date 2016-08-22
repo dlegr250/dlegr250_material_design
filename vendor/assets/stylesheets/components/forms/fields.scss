@@ -49,13 +49,6 @@
   width: 100%;
 }
 
-// @media (min-width: $medium-width) {
-//   .field {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-// }
-
 // Fields - sizes
 //----------------------------------------------------------------------
 
@@ -96,22 +89,21 @@
 // Fields - has errors
 //----------------------------------------------------------------------
 
-// .field.has-errors {
-//   background-color: color("light-red");
-// }
+.field.has-errors {
+  background-color: transparent;
 
-.has-errors {
   input.invalid {
-    border-color: color("red") !important;
+    background-color: color("light-red");
+    border: 1px solid color("red");
   }
+}
 
-  &.text-field-underline-container {
-    input.invalid {
+.has-errors.text-field-underline-container {
+  input.invalid {
+    @include box-shadow(0 1px 0 color("red"));
+
+    &:focus {
       @include box-shadow(0 1px 0 color("red"));
-
-      &:focus {
-        @include box-shadow(0 1px 0 color("red"));
-      }
     }
   }
 }
