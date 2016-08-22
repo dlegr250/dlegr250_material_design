@@ -16,16 +16,26 @@
 // Grid - row - element
 //----------------------------------------------------------------------
 
-.grid-row-element {
-  padding: $spacing-xsmall;
-}
+.grid-container {}
+
+.grid-row {}
 
 @media (min-width: $medium-width) {
   .grid-row {
-    @include flex-parent-row-align-top();
+    @include flex-parent-row();
+    justify-content: space-around;
   }
 
   .grid-row-element {
     flex: 1;
+    margin: 0 $spacing-small;
+  }
+
+  .grid-row-element:first-child {
+    margin-left: 0;
+  }
+
+  .grid-row-element:last-child {
+    margin-right: 0;
   }
 }
