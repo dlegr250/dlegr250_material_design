@@ -88,17 +88,7 @@ ol {
   .list-item {
     border-bottom: 1px solid color("divider");
   }
-
-  // .list-item:last-child {
-  //   border-bottom: none;
-  // }
 }
-
-// .list-divided-on-last {
-//   .list-item:last-child {
-//     border-bottom: 1px solid color("divider");
-//   }
-// }
 
 // Don't have double lines on last item for bordered and divided
 .list-bordered .list-item:last-child {
@@ -149,11 +139,13 @@ ol {
 }
 
 .list-item-icon-circle {
+  background-color: color("divider");
   font-size: 16px;
   height: 30px;
   line-height: 30px;
   text-align: center;
   width: 30px;
+  @include rounded-corners(50%);
 }
 
 // Lists - list item primary

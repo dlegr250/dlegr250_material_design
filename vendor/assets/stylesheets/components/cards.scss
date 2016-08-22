@@ -93,3 +93,19 @@
     @include rounded-top-corners;
   }
 }
+
+// Inner cards - cards inside cards
+//----------------------------------------------------------------------
+
+.card-inner {
+  @include box-shadow(none);
+  @include full-width();
+
+  .card-header {
+    background-color: color("hover");
+  }
+
+  .card-header-primary {
+    font-size: $font-size-normal;
+  }
+}
