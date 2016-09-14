@@ -197,10 +197,10 @@ ol {
     &:hover {
       background-color: color("hover");
     }
+  }
 
-    &:active {
-      background-color: darken(color("hover"), 5%);
-    }
+  a.list-item:active {
+    background-color: darken(color("hover"), 5%);
   }
 
   // Slightly darker than list-item:hover
