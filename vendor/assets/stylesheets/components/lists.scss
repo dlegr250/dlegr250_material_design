@@ -214,3 +214,23 @@ ol {
     }
   }
 }
+
+// Links in list items
+//----------------------------------------------------------------------
+
+.list-item-primary-link {
+  color: color("text");
+  font-weight: bold;
+
+  &:hover {
+    color: color("primary");
+  }
+}
+
+.list-item-primary-subtext-link {
+  color: color("text");
+
+  &:hover {
+    color: color("primary");
+  }
+}

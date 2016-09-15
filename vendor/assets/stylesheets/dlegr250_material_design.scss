@@ -44,7 +44,8 @@
 @import "components/overlay";
 @import "components/panels";
 @import "components/lists";
-@import "components/definition_lists";
+@import "components/definition_lists"; // DEPRECATE SOON
+@import "components/description_lists";
 @import "components/tooltips";
 @import "components/grids";
 @import "components/tables";

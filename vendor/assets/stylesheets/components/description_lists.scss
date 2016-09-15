@@ -1,0 +1,64 @@
+//======================================================================
+// EXAMPLE:
+// <div class="dl dl-responsive">
+//   <div class="dl-row">
+//     <div class="dl-dt">Term</div>
+//     <div class="dl-dd">Description...</div>
+//   </div>
+// </div>
+//======================================================================
+
+// Description lists using custom DIV elements
+// Note that native DL/DD/DT elements have forced browser styles
+//----------------------------------------------------------------------
+
+.dl-title {
+  border-bottom: 1px solid color("divider");
+  font-weight: bold;
+  margin-bottom: $spacing-xsmall;
+  padding-bottom: $spacing-xsmall;
+}
+
+.dl-row {
+  padding: $spacing-small 0;
+}
+
+.dl .dl-row:first-child {
+  padding-top: 0;
+}
+
+.dl .dl-row:last-child {
+  padding-bottom: 0;
+}
+
+.dl-dt {
+  color: color("helper");
+  display: block;
+
+  &:after {
+    content: ": ";
+  }
+}
+
+.dl-dd {
+  display: block;
+  padding-top: $spacing-xsmall;
+}
+
+@media (min-width: $medium-width) {
+  .dl-responsive {
+    .dl-row {
+      padding: 2px 0;
+    }
+
+    .dl-dt {
+      display: inline-block;
+      padding-right: $spacing-small;
+      width: 150px;
+    }
+
+    .dl-dd {
+      display: inline-block;
+    }
+  }
+}
