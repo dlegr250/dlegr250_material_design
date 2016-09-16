@@ -48,32 +48,39 @@ ol {
   background-color: #f2f2f2;
   min-height: 48px;
   @include flex-parent-row();
+}
 
-  .list-header-primary,
-  .list-header-secondary {
-    box-sizing: border-box;
-    padding: $spacing-small $spacing-normal;
-  }
+.list-header-icon {
+  color: color("icon");
+  padding-left: $spacing-normal;
+  text-align: left;
+  width: 30px;
+}
 
-  .list-header-primary {
-    flex: 1;
-    font-size: $font-size-normal;
-    font-weight: bold;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.list-header-primary,
+.list-header-secondary {
+  box-sizing: border-box;
+  padding: $spacing-small $spacing-normal;
+}
 
-    .list-header-primary-subtext {
-      color: color("helper");
-      font-size: $font-size-small;
-      font-weight: normal;
-      padding-top: $spacing-xsmall;
-    }
-  }
+.list-header-primary {
+  flex: 1;
+  font-size: $font-size-normal;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-  .list-header-secondary {
-    text-align: right;
-  }
+.list-header-primary-subtext {
+  color: color("helper");
+  font-size: $font-size-small;
+  font-weight: normal;
+  padding-top: $spacing-xsmall;
+}
+
+.list-header-secondary {
+  text-align: right;
 }
 
 // Lists - base
