@@ -20,20 +20,14 @@
 }
 
 .dl-row {
-  padding: $spacing-small 0;
-}
-
-.dl .dl-row:first-child {
-  padding-top: 0;
-}
-
-.dl .dl-row:last-child {
-  padding-bottom: 0;
+  padding: $spacing-xsmall 0;
 }
 
 .dl-dt {
   color: color("helper");
-  display: block;
+  display: inline-block;
+  padding-top: $spacing-xsmall;
+  width: 150px;
 
   &:after {
     content: ": ";
@@ -41,16 +35,23 @@
 }
 
 .dl-dd {
-  display: block;
+  display: inline-block;
   padding-top: $spacing-xsmall;
+}
+
+.dl-responsive {
+  .dl-dt {
+    display: block;
+    width: auto;
+  }
+
+  .dl-dd {
+    display: block;
+  }
 }
 
 @media (min-width: $medium-width) {
   .dl-responsive {
-    .dl-row {
-      padding: 2px 0;
-    }
-
     .dl-dt {
       display: inline-block;
       padding-right: $spacing-small;
