@@ -223,6 +223,11 @@ $default-rounded-corners-radius: 3px;
   -webkit-tap-highlight-color: transparent;
 }
 
+@mixin no-touch-highlight-color() {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
 // Truncating text
 //----------------------------------------------------------------------
 

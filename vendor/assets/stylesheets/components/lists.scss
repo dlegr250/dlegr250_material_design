@@ -199,14 +199,16 @@ ol {
 // Lists - hoverable
 //----------------------------------------------------------------------
 
-.list-hoverable {
-  .list-item {
-    &:hover {
+@media(hover: hover) {
+  .list-hoverable {
+    .list-item:hover {
       background-color: color("hover");
     }
   }
+}
 
-  a.list-item:active {
+.list-hoverable {
+  .list-item:active {
     background-color: darken(color("hover"), 5%);
   }
 
@@ -220,6 +222,11 @@ ol {
       background-color: darken(color("hover"), 15%);
     }
   }
+}
+
+// Remove blue background on touch
+.list-hoverable .list-item {
+  @include no-touch-highlight-color();
 }
 
 // Links in list items
