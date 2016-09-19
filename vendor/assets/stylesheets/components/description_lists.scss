@@ -19,24 +19,29 @@
   padding-bottom: $spacing-xsmall;
 }
 
+.dl {
+  display: table;
+  width: 100%;
+}
+
 .dl-row {
+  display: table-row;
+  padding: $spacing-xsmall 0;
+}
+
+.dl-dt,
+.dl-dd {
+  display: table-cell;
   padding: $spacing-xsmall 0;
 }
 
 .dl-dt {
   color: color("helper");
-  display: inline-block;
-  padding-top: $spacing-xsmall;
   width: 150px;
 
   &:after {
     content: ": ";
   }
-}
-
-.dl-dd {
-  display: inline-block;
-  padding-top: $spacing-xsmall;
 }
 
 .dl-responsive {
@@ -50,16 +55,19 @@
   }
 }
 
+// Media queries for responsive lists
+//----------------------------------------------------------------------
+
 @media (min-width: $medium-width) {
   .dl-responsive {
     .dl-dt {
-      display: inline-block;
-      padding-right: $spacing-small;
+      display: table-cell;
+      padding: $spacing-xsmall 0;
       width: 150px;
     }
 
     .dl-dd {
-      display: inline-block;
+      display: table-cell;
     }
   }
 }
