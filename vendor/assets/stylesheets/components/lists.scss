@@ -189,6 +189,14 @@ ol {
   text-align: right;
 }
 
+.list-item-misc {
+  color: color("helper");
+  font-size: $font-size-small;
+  align-self: flex-start;
+  padding: $spacing-normal;
+  text-align: right;
+}
+
 // Lists - sizes
 //----------------------------------------------------------------------
 
