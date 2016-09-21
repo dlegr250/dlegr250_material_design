@@ -9,7 +9,6 @@
 //----------------------------------------------------------------------
 [data-tooltip] {
   position: relative;
-  transition-delay: 1s;
 
   &:after {
     background: color("snackbar");
