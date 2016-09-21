@@ -22,6 +22,7 @@
     position: absolute;
     text-transform: none;
     top: 100%;
+    transition-delay: 0.8s;
     visibility: hidden;
     white-space: nowrap;
     z-index: 2;
@@ -47,7 +48,7 @@
   &:after {
     left: 50%;
     top: 0;
-    @include transform(translateX(-50%) translateY(-10%));
+    @include transform(translateX(-50%) translateY(-15%));
   }
 }
 
@@ -63,7 +64,7 @@
   &:after {
     left: 0;
     top: 110%;
-    @include transform(translateX(0) translateY(10%));
+    @include transform(translateX(0) translateY(15%));
   }
 }
 
@@ -72,7 +73,7 @@
   &:after {
     left: 50%;
     top: 100%;
-    @include transform(translateX(-50%) translateY(10%));
+    @include transform(translateX(-50%) translateY(15%));
   }
 }
 
@@ -81,7 +82,7 @@
     left: inherit;
     right: 0;
     top: 110%;
-    @include transform(translateX(0) translateY(10%));
+    @include transform(translateX(0) translateY(15%));
   }
 }
 
