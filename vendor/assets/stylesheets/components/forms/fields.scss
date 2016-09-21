@@ -112,14 +112,7 @@
 //----------------------------------------------------------------------
 
 .actions {
-  padding: $spacing-normal $spacing-small 0 $spacing-small;
-}
-
-@media (min-width: $medium-width) {
-  .actions {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  padding-top: $spacing-normal;
 }
 
 .actions-bordered {
