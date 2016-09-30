@@ -302,6 +302,19 @@ $buttons: ".button";
   @include box-shadow(none);
 }
 
+// Buttons - with chevron icons
+//----------------------------------------------------------------------
+
+.button-with-chevron-left {
+  display: inline-flex;
+  padding-left: $spacing-small;
+}
+
+.button-with-chevron-right {
+  display: inline-flex;
+  padding-right: $spacing-small;
+}
+
 // Buttons - responsive
 //----------------------------------------------------------------------
 
