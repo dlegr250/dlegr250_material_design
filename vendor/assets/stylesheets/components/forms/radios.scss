@@ -86,7 +86,7 @@
 //----------------------------------------------------------------------
 
 @each $color-name, $color in $colors {
-  .radio-#{$color-name} {
+  .radio-group-#{$color-name} {
     input[type="radio"]:checked:before {
       background-image: radial-gradient(circle, $color 40%, color("white") 50%);
       border: 2px solid $color;
