@@ -28,12 +28,12 @@
 
     &:before {
       background-color: color("white");
-      background-image: radial-gradient(circle, color("blue") 40%, color("white") 50%);
+      background-image: radial-gradient(circle, color("helper") 40%, color("white") 50%);
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 0;
       border-radius: 50%;
-      border: 2px solid color("blue");
+      border: 2px solid color("helper");
       content: "";
       display: inline-block;
       height: $spacing-normal;
@@ -62,19 +62,24 @@
   }
 }
 
-.radio-group-item {
-  display: table-row;
-}
+// .radio-group-item {
+//   display: table-row;
+// }
+//
+// .radio-group-item-button,
+// .radio-group-item-label {
+//   display: table-cell;
+//   height: $input-height;
+//   vertical-align: middle;
+// }
+//
+// .radio-group-item-button {
+//   padding: 0 $spacing-normal 0 $spacing-small;
+// }
 
-.radio-group-item-button,
-.radio-group-item-label {
-  display: table-cell;
-  height: $input-height;
-  vertical-align: middle;
-}
-
-.radio-group-item-button {
-  padding: 0 $spacing-normal 0 $spacing-small;
+.radio-group-item label {
+  color: color("text");
+  font-weight: normal;
 }
 
 // Radios - colored
@@ -82,7 +87,7 @@
 
 @each $color-name, $color in $colors {
   .radio-#{$color-name} {
-    input[type="radio"]:before {
+    input[type="radio"]:checked:before {
       background-image: radial-gradient(circle, $color 40%, color("white") 50%);
       border: 2px solid $color;
     }
