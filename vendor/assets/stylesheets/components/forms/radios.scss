@@ -62,24 +62,15 @@
   }
 }
 
-// .radio-group-item {
-//   display: table-row;
-// }
-//
-// .radio-group-item-button,
-// .radio-group-item-label {
-//   display: table-cell;
-//   height: $input-height;
-//   vertical-align: middle;
-// }
-//
-// .radio-group-item-button {
-//   padding: 0 $spacing-normal 0 $spacing-small;
-// }
+.radio-group-item {
+  padding: $spacing-small 0;
+  @include flex-parent-row();
 
-.radio-group-item label {
-  color: color("text");
-  font-weight: normal;
+  label {
+    color: color("text");
+    font-weight: normal;
+    padding-left: $spacing-normal;
+  }
 }
 
 // Radios - colored
