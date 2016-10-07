@@ -1,13 +1,9 @@
 //======================================================================
 // EXAMPLE:
-// <div class="radio-group radio-blue">
+// <div class="radio-group radio-group-<color>">
 //   <div class="radio-group-item">
-//     <div class="radio-group-item-button">
-//       <%= f.radio_button :attribute, "value" %>
-//     </div>
-//     <div class="radio-group-item-label">
-//       <%= f.label :attribute_value, "Label display text" %>
-//     </div>
+//     <%= f.radio_button :attribute, "value" %>
+//     <%= f.label :attribute_value, "Label display text" %>
 //   </div>
 // </div>
 //======================================================================
@@ -16,8 +12,6 @@
 //----------------------------------------------------------------------
 
 .radio-group {
-  display: table;
-
   input[type="radio"] {
     border: 2px;
     cursor: pointer;
