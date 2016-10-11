@@ -10,4 +10,4 @@ class App.MD.ExpansionPanels
 
   @setEvents: () ->
     $("body").on "click", ".expansion-panel-summary", (event) =>
-      $(event.target).parent(".expansion-panel").toggleClass("open")
+      $(event.target).closest(".expansion-panel").toggleClass("open")
