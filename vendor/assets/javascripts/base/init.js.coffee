@@ -9,6 +9,7 @@ $(document).on "ready page:load", ->
   App.MD.Layout.init()
   App.MD.Menus.init()
   App.MD.Dialog.init()
+  App.MD.ExpansionPanels.init()
   App.MD.Tabs.init()
   App.MD.Forms.init()
   App.MD.InputMasks.init()

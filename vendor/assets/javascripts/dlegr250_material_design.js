@@ -13,6 +13,7 @@
 //= require components/layout
 //= require components/menus
 //= require components/dialog
+//= require components/expansion_panels
 //= require components/tabs
 //= require components/forms
 //= require components/input_masks
