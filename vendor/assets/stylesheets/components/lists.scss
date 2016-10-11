@@ -256,3 +256,18 @@ ol {
     color: color("primary");
   }
 }
+
+// Nested list items
+//----------------------------------------------------------------------
+
+.list-item-nested-1 {
+  padding-left: $spacing-normal;
+}
+
+.list-item-nested-2 {
+  padding-left: $spacing-normal * 2;
+}
+
+.list-item-nested-2 {
+  padding-left: $spacing-normal * 3;
+}
