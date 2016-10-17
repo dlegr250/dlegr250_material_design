@@ -60,6 +60,7 @@
   cursor: pointer;
   padding: $spacing-small $spacing-normal;
   @include flex-parent-row();
+  @include transition(background-color 0.30s ease);
 
   label {
     color: color("text");
