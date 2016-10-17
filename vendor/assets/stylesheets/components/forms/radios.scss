@@ -18,7 +18,7 @@
     width: $spacing-normal;
     height: $spacing-normal;
     position: relative;
-    top: 2px;
+    // top: 2px;
 
     &:before {
       background-color: color("white");
@@ -57,13 +57,22 @@
 }
 
 .radio-group-item {
-  padding: $spacing-small 0;
+  cursor: pointer;
+  padding: $spacing-small $spacing-normal;
   @include flex-parent-row();
 
   label {
     color: color("text");
     font-weight: normal;
     padding-left: $spacing-normal;
+  }
+
+  &:hover {
+    background-color: color("hover");
+  }
+
+  &:active {
+    background-color: darken(color("hover"), 5%);
   }
 }
 
