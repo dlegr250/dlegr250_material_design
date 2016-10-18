@@ -31,6 +31,14 @@
   text-align: center;
 }
 
+// Blank state - icon
+//----------------------------------------------------------------------
+
+.blank-state-icon .material-icons {
+  color: color("helper");
+  font-size: $font-size-xlarge * 2;
+}
+
 // Blank state - primary
 //----------------------------------------------------------------------
 
