@@ -13,7 +13,7 @@
 //----------------------------------------------------------------------
 
 .dl-title {
-  border-bottom: 1px solid color("divider");
+  // border-bottom: 1px solid color("divider");
   font-weight: bold;
   margin-bottom: $spacing-xsmall;
   padding-bottom: $spacing-xsmall;
@@ -37,6 +37,8 @@
 
 .dl-dt {
   color: color("helper");
+  padding-right: $spacing-normal;
+  text-align: right;
   width: 150px;
 
   &:after {
@@ -63,6 +65,7 @@
     .dl-dt {
       display: table-cell;
       padding: $spacing-xsmall 0;
+      text-align: right;
       width: 150px;
     }
 
