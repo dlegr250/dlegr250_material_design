@@ -12,6 +12,7 @@
   min-width: 18px;
   padding: $spacing-small;
   text-align: center;
+  text-transform: uppercase;
   @include rounded-corners;
 }
 
@@ -20,6 +21,7 @@
 }
 
 .badge-small {
+  font-size: $font-size-small;
   min-width: 14px;
   padding: $spacing-xsmall;
 }
