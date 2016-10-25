@@ -315,6 +315,26 @@ $buttons: ".button";
   padding-right: $spacing-small;
 }
 
+// Buttons - with normal icons + text
+//----------------------------------------------------------------------
+
+.button-icon-left,
+.button-icon-right {
+  display: inline-flex;
+}
+
+.button-icon-left {
+  .material-icons {
+    padding-right: $spacing-small;
+  }
+}
+
+.button-icon-right {
+  .material-icons {
+    padding-left: $spacing-small;
+  }
+}
+
 // Buttons - responsive
 //----------------------------------------------------------------------
 
