@@ -41,6 +41,18 @@
   border-bottom: none;
 }
 
+.card-header-icon {
+  color: color("icon");
+  padding-left: $spacing-normal;
+  text-align: left;
+  width: 30px;
+}
+
+.card-header-primary,
+.card-header-secondary {
+  box-sizing: border-box;
+}
+
 .card-header-primary {
   color: color("text");
   font-size: $font-size-large;
