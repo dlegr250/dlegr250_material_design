@@ -83,14 +83,14 @@ ol {
   text-align: right;
 }
 
-.list-header .button-icon {
-  &:hover {
+@media(hover: hover) {
+  .list-header .button-icon:hover {
     background-color: darken(color("hover"), 10%);
   }
+}
 
-  &:active {
-    background-color: darken(color("hover"), 20%);
-  }
+.list-header .button-icon:active {
+  background-color: darken(color("hover"), 20%);
 }
 
 // Lists - base
