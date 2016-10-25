@@ -302,6 +302,21 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
   border-top: 0 !important;
 }
 
+// Rotation
+//----------------------------------------------------------------------
+
+.rotate-90 {
+  @include transform(rotate(90deg));
+}
+
+.rotate-180 {
+  @include transform(rotate(180deg));
+}
+
+.rotate-270 {
+  @include transform(rotate(270deg));
+}
+
 // disabled
 //----------------------------------------------------------------------
 
