@@ -47,6 +47,7 @@
 // Media queries for responsive lists
 //----------------------------------------------------------------------
 
+// Mobile
 .dl-responsive {
   .dl-dt {
     font-size: $font-size-small;
@@ -66,13 +67,14 @@
   }
 }
 
+// Larger devices
 @media (min-width: $small-width) {
   .dl-responsive {
     .dl-dt {
       display: table-cell;
       font-size: $font-size-normal;
       text-align: right;
-      width: 150px;
+      width: 130px;
 
       &:after {
         content: ": ";
