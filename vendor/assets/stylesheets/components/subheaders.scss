@@ -1,0 +1,13 @@
+//======================================================================
+// EXAMPLE:
+// <div class="subheader">Text...</div>
+//======================================================================
+
+.subheader {
+  color: color("helper");
+  font-weight: bold;
+  font-size: $font-size-normal;
+  line-height: 48px;
+  min-height: 48px;
+  padding: 0 $spacing-normal;
+}

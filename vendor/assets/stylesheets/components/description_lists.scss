@@ -62,7 +62,7 @@
 
   .dl-dd {
     display: block;
-    padding-bottom: $spacing-small;
+    padding-bottom: $spacing-normal;
   }
 }
 
@@ -70,6 +70,8 @@
   .dl-responsive {
     .dl-dt {
       display: table-cell;
+      font-size: $font-size-normal;
+      text-align: right;
 
       &:after {
         content: ": ";
