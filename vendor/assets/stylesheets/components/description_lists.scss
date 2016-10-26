@@ -72,6 +72,7 @@
       display: table-cell;
       font-size: $font-size-normal;
       text-align: right;
+      width: 150px;
 
       &:after {
         content: ": ";
@@ -80,6 +81,7 @@
 
     .dl-dd {
       display: table-cell;
+      padding-bottom: $spacing-xsmall;
     }
   }
 }
