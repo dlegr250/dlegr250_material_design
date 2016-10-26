@@ -24,13 +24,12 @@
 
 .dl-row {
   display: table-row;
-  padding: $spacing-xsmall 0;
 }
 
 .dl-dt,
 .dl-dd {
   display: table-cell;
-  padding-bottom: $spacing-xsmall;
+  padding: $spacing-xsmall 0;
 }
 
 .dl-dt {
