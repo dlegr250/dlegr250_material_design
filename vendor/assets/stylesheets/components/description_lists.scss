@@ -62,10 +62,11 @@
   .dl-dd {
     display: block;
     padding-bottom: $spacing-normal;
+    padding-top: 0;
   }
 }
 
-@media (min-width: $medium-width) {
+@media (min-width: $small-width) {
   .dl-responsive {
     .dl-dt {
       display: table-cell;
@@ -81,6 +82,7 @@
     .dl-dd {
       display: table-cell;
       padding-bottom: $spacing-xsmall;
+      padding-top: $spacing-xsmall;
     }
   }
 }
