@@ -293,3 +293,15 @@ ol {
 .list-item-nested-6 {
   padding-left: $spacing-normal * 6;
 }
+
+// Lists - DRYing up HTML classes
+//----------------------------------------------------------------------
+
+.list-standard {
+  @extend .list-two-lines;
+  @extend .list-bordered;
+  @extend .list-divided;
+  @extend .list-hoverable;
+  @extend .rounded-corners;
+  @extend .background-color-white;
+}
