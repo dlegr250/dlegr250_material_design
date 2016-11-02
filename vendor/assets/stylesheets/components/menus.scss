@@ -77,7 +77,7 @@
 }
 
 .menu-item {
-  @include list-item()
+  @include list-item();
 
   &:active {
     background-color: darken(color("hover"), 5%);
