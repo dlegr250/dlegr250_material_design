@@ -128,9 +128,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item {
-  min-height: 48px;
-  @include flex-parent-row();
-  @include transition(background-color 0.30s ease);
+  @include list-item();
 }
 
 .list-item.one-lines {
@@ -149,10 +147,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-icon {
-  color: color("icon");
-  padding-left: $spacing-normal;
-  text-align: left;
-  width: 30px;
+  @include list-item-icon();
 }
 
 .list-item-icon-circle {
@@ -169,16 +164,11 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-primary {
-  color: color("text");
-  flex: 1;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
+  @include list-item-primary();
 }
 
 .list-item-primary-subtext {
-  color: color("helper");
-  font-size: $font-size-small;
-  padding-top: $spacing-xsmall;
+  @include list-item-primary-subtext();
 }
 
 // Force list-item to wrap text
@@ -194,9 +184,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list-item-secondary {
-  color: color("icon");
-  padding-right: $spacing-normal;
-  text-align: right;
+  @include list-item-secondary();
 }
 
 .list-item-misc {
@@ -218,33 +206,30 @@ ol {
 //----------------------------------------------------------------------
 
 @media(hover: hover) {
-  .list-hoverable {
-    .list-item:hover {
-      background-color: color("hover");
-    }
+  .list-hoverable .list-item:hover {
+    background-color: color("hover");
   }
 }
 
 .list-hoverable {
-  .list-item:active {
-    background-color: darken(color("hover"), 5%);
-  }
+  .list-item {
+    @include no-touch-highlight-color(); // Remove blue background on touch
 
-  // Slightly darker than list-item:hover
-  .button-icon {
-    &:hover {
+    &:active {
       background-color: darken(color("hover"), 5%);
     }
 
-    &:active {
-      background-color: darken(color("hover"), 15%);
+    // Slightly darker than list-item:hover
+    .button-icon {
+      &:hover {
+        background-color: darken(color("hover"), 5%);
+      }
+
+      &:active {
+        background-color: darken(color("hover"), 15%);
+      }
     }
   }
-}
-
-// Remove blue background on touch
-.list-hoverable .list-item {
-  @include no-touch-highlight-color();
 }
 
 // Links in list items
@@ -304,4 +289,8 @@ ol {
   @extend .list-hoverable;
   @extend .rounded-corners;
   @extend .background-color-white;
+
+  .list-item-primary {
+    @include truncate-text();
+  }
 }

@@ -243,3 +243,40 @@ $default-rounded-corners-radius: 3px;
   white-space: normal;
   word-wrap: break-word;
 }
+
+// Shared lists styles
+//----------------------------------------------------------------------
+
+@mixin list-item() {
+  font-size: $font-size-normal;
+  min-height: 48px;
+  @include flex-parent-row();
+  @include no-touch-highlight-color();
+  @include transition(background-color 0.30s ease);
+}
+
+@mixin list-item-icon() {
+  color: color("icon");
+  padding-left: $spacing-normal;
+  text-align: left;
+  width: 30px;
+}
+
+@mixin list-item-primary() {
+  color: color("text");
+  flex: 1;
+  padding-left: $spacing-normal;
+  padding-right: $spacing-normal;
+}
+
+@mixin list-item-primary-subtext() {
+  color: color("helper");
+  font-size: $font-size-small;
+  padding-top: $spacing-xsmall;
+}
+
+@mixin list-item-secondary() {
+  color: color("icon");
+  margin-right: $spacing-normal;
+  text-align: right;
+}
