@@ -68,7 +68,11 @@ ol {
 }
 
 .list-header-secondary {
-  text-align: right;
+  @include list-item-secondary();
+}
+
+.list-header-secondary-actions {
+  @include list-item-secondary-actions();
 }
 
 @media(hover: hover) {
