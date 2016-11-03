@@ -55,6 +55,7 @@
 }
 
 .dialog-header-primary {
+  font-size: $font-size-large;
   font-weight: bold;
   @include list-item-primary();
 }
