@@ -32,9 +32,8 @@
 //----------------------------------------------------------------------
 
 .card-header {
+  @include list-tem();
   border-bottom: 1px solid color("divider");
-  padding: $spacing-normal;
-  @include flex-parent-row();
 }
 
 .card-header-no-border {
@@ -42,10 +41,7 @@
 }
 
 .card-header-icon {
-  color: color("icon");
-  padding-left: $spacing-normal;
-  text-align: left;
-  width: 30px;
+  @include list-item-icon();
 }
 
 .card-header-primary,
@@ -54,22 +50,17 @@
 }
 
 .card-header-primary {
-  color: color("text");
+  @include list-item-primary();
   font-size: $font-size-large;
   font-weight: bold;
-  flex: 1;
 }
 
 .card-header-primary-subtext {
-  color: color("helper");
-  font-size: $font-size-normal;
-  font-weight: normal;
-  padding-top: $spacing-xsmall;
+  @include list-item-primary-subtext();
 }
 
 .card-header-secondary {
-  color: color("icon");
-  text-align: right;
+  @include list-item-secondary();
 }
 
 // Card - content

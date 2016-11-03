@@ -30,18 +30,13 @@
 // Dialogs - header
 //----------------------------------------------------------------------
 
-.dialog header {
-  padding: $spacing-large;
-  padding-bottom: 20px;
-
-  .dialog-title {
-    font-size: $font-size-large;
-    font-weight: bold;
-  }
-}
-
 .dialog-header {
   @include list-item();
+  border-bottom: 1px solid color("divider");
+}
+
+.dialog-header-no-border {
+  border-bottom: none;
 }
 
 .dialog-header-icon {
@@ -51,13 +46,12 @@
 .dialog-header-primary,
 .dialog-header-secondary {
   box-sizing: border-box;
-  padding: $spacing-small $spacing-normal;
 }
 
 .dialog-header-primary {
+  @include list-item-primary();
   font-size: $font-size-large;
   font-weight: bold;
-  @include list-item-primary();
 }
 
 .dialog-header-primary-subtext {
@@ -65,21 +59,25 @@
 }
 
 .dialog-header-secondary {
-  text-align: right;
+  @include list-item-secondary();
 }
 
 // Dialogs - content
 //----------------------------------------------------------------------
 
 .dialog-content {
-  padding: $spacing-large;
-  padding-top: 0;
+  padding: $spacing-normal;
+  @include force-text-wrap()
 }
 
 // Dialogs - actions
 //----------------------------------------------------------------------
 
 .dialog-actions {
+  border-top: 1px solid color("divider");
   padding: $spacing-normal;
-  padding-top: 0;
+}
+
+.dialog-actions-no-border {
+  border-top: none;
 }
