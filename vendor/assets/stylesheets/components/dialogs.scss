@@ -32,11 +32,8 @@
 
 .dialog-header {
   @include list-item();
-  border-bottom: 1px solid color("divider");
-}
-
-.dialog-header-no-border {
-  border-bottom: none;
+  padding: 24px;
+  padding-bottom: 20px;
 }
 
 .dialog-header-icon {
@@ -52,6 +49,7 @@
   @include list-item-primary();
   font-size: $font-size-large;
   font-weight: bold;
+  padding: 0;
 }
 
 .dialog-header-primary-subtext {
@@ -66,7 +64,8 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
-  padding: $spacing-normal;
+  padding: $spacing-large;
+  padding-top: 0;
   @include force-text-wrap()
 }
 
@@ -74,10 +73,5 @@
 //----------------------------------------------------------------------
 
 .dialog-actions {
-  border-top: 1px solid color("divider");
-  padding: $spacing-normal;
-}
-
-.dialog-actions-no-border {
-  border-top: none;
+  padding: $spacing-small;
 }
