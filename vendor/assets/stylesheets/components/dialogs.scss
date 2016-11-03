@@ -32,7 +32,8 @@
 
 .dialog-header {
   @include list-item();
-  padding: 24px;
+  min-height: 0;
+  padding: $spacing-large;
   padding-bottom: 20px;
 }
 
