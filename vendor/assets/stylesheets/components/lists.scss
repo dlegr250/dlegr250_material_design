@@ -56,7 +56,6 @@ ol {
 .list-header-primary,
 .list-header-secondary {
   box-sizing: border-box;
-  padding: $spacing-small $spacing-normal;
 }
 
 .list-header-primary {
@@ -174,6 +173,10 @@ ol {
 
 .list-item-secondary {
   @include list-item-secondary();
+}
+
+.list-item-seconday-actions {
+  @include list-item-seconday-actions();
 }
 
 .list-item-misc {

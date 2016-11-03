@@ -64,6 +64,11 @@
   @include list-item-secondary();
 }
 
+.card-header-seconday-actions {
+  @include list-item-seconday-actions();
+}
+
+
 // Card - content
 //----------------------------------------------------------------------
 

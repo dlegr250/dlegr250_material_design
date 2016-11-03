@@ -61,6 +61,11 @@
   @include list-item-secondary();
 }
 
+.dialog-header-seconday-actions {
+  @include list-item-seconday-actions();
+}
+
+
 // Dialogs - content
 //----------------------------------------------------------------------
 
