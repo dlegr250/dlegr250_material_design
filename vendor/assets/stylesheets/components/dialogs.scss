@@ -65,8 +65,7 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
-  padding: $spacing-large;
-  padding-top: 0;
+  padding: 0 $spacing-large $spacing-normal $spacing-large;
   @include force-text-wrap()
 }
 
@@ -74,5 +73,5 @@
 //----------------------------------------------------------------------
 
 .dialog-actions {
-  padding: $spacing-small;
+  padding: $spacing-normal;
 }

@@ -53,6 +53,7 @@
   @include list-item-primary();
   font-size: $font-size-large;
   font-weight: bold;
+  padding: $spacing-normal;
 }
 
 .card-header-primary-subtext {

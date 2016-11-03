@@ -280,6 +280,6 @@ $default-rounded-corners-radius: 3px;
 
 @mixin list-item-secondary() {
   color: color("icon");
-  padding-right: $spacing-normal;
+  padding-right: $spacing-small;
   text-align: right;
 }
