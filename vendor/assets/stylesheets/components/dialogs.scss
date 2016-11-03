@@ -41,8 +41,6 @@
 }
 
 .dialog-header {
-  padding: $spacing-large;
-  padding-bottom: 20px; // Per MD spec
   @include list-item();
 }
 
@@ -53,8 +51,7 @@
 .dialog-header-primary,
 .dialog-header-secondary {
   box-sizing: border-box;
-  // padding: $spacing-large;
-  // padding-bottom: 20px; // Per MD spec
+  padding: $spacing-small $spacing-normal;
 }
 
 .dialog-header-primary {
