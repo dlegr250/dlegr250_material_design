@@ -32,7 +32,7 @@
 //----------------------------------------------------------------------
 
 .card-header {
-  @include list-tem();
+  @include list-item();
   border-bottom: 1px solid color("divider");
 }
 
