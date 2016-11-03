@@ -40,6 +40,36 @@
   }
 }
 
+.dialog-header {
+  padding: $spacing-large;
+  padding-bottom: 20px; // Per MD spec
+  @include list-item();
+}
+
+.dialog-header-icon {
+  @include list-item-icon();
+}
+
+.dialog-header-primary,
+.dialog-header-secondary {
+  box-sizing: border-box;
+  // padding: $spacing-large;
+  // padding-bottom: 20px; // Per MD spec
+}
+
+.dialog-header-primary {
+  font-weight: bold;
+  @include list-item-primary();
+}
+
+.dialog-header-primary-subtext {
+  @include list-item-primary-subtext();
+}
+
+.dialog-header-secondary {
+  text-align: right;
+}
+
 // Dialogs - content
 //----------------------------------------------------------------------
 

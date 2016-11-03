@@ -94,6 +94,7 @@ $buttons: ".button";
 .button-icon {
   border: none;
   color: color("icon");
+  cursor: pointer;
   height: $button-icon-height;
   line-height: $button-icon-height;
   text-align: center;

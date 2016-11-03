@@ -46,15 +46,11 @@ ol {
 
 .list-header {
   background-color: #f2f2f2;
-  min-height: 48px;
-  @include flex-parent-row();
+  @include list-item();
 }
 
 .list-header-icon {
-  color: color("icon");
-  padding-left: $spacing-normal;
-  text-align: left;
-  width: 30px;
+  @include list-item-icon();
 }
 
 .list-header-primary,
@@ -64,19 +60,12 @@ ol {
 }
 
 .list-header-primary {
-  flex: 1;
-  font-size: $font-size-normal;
   font-weight: bold;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @include list-item-primary();
 }
 
 .list-header-primary-subtext {
-  color: color("helper");
-  font-size: $font-size-small;
-  font-weight: normal;
-  padding-top: $spacing-xsmall;
+  @include list-item-primary-subtext();
 }
 
 .list-header-secondary {

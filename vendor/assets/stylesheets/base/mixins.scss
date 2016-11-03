@@ -265,13 +265,16 @@ $default-rounded-corners-radius: 3px;
 @mixin list-item-primary() {
   color: color("text");
   flex: 1;
+  font-size: $font-size-normal;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
+  @include truncate-text();
 }
 
 @mixin list-item-primary-subtext() {
   color: color("helper");
   font-size: $font-size-small;
+  font-weight: normal;
   padding-top: $spacing-xsmall;
 }
 
