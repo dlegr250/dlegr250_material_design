@@ -88,3 +88,25 @@
     }
   }
 }
+
+// Force labels on top
+//----------------------------------------------------------------------
+
+.dl-top-align {
+  .dl-dt {
+    font-size: $font-size-small;
+    display: block;
+    text-align: left;
+    width: auto;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  .dl-dd {
+    display: block;
+    padding-bottom: $spacing-normal;
+    padding-top: 0;
+  }
+}
