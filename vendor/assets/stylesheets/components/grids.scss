@@ -28,10 +28,10 @@
     justify-content: space-around;
   }
 
-  .grid-row-2 { max-width: 50%; }
-  .grid-row-3 { max-width: 33.33%; }
-  .grid-row-4 { max-width: 25%; }
-  .grid-row-5 { max-width: 20%; }
+  .grid-row-2 .grid-row-element { max-width: 50%; }
+  .grid-row-3 .grid-row-element { max-width: 33.33%; }
+  .grid-row-4 .grid-row-element { max-width: 25%; }
+  .grid-row-5 .grid-row-element { max-width: 20%; }
 
   .grid-row-element {
     flex: 1;
