@@ -6,6 +6,7 @@
 //----------------------------------------------------------------------
 
 .box {
+  background-color: color("white");
   border: 1px solid color("divider");
   color: color("text");
   min-height: 0;
@@ -46,15 +47,11 @@
 //----------------------------------------------------------------------
 
 .box-primary {
-  flex: 1;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
+  @include list-item-primary();
 }
 
 .box-primary-subtext {
-  color: color("helper");
-  font-size: $font-size-small;
-  padding-top: $spacing-xsmall;
+  @include list-item-primary-subtext();
 }
 
 // Box - flat

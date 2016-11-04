@@ -88,6 +88,10 @@ ol {
 // Lists - base
 //----------------------------------------------------------------------
 
+.list {
+  background-color: color("white");
+}
+
 .list-bordered {
   border: 1px solid color("divider");
 }
