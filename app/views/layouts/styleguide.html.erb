@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= page_title_helper %></title>
+  <%= charset_meta_tag %>
+  <%= viewport_meta_tag %>
+  <%= mobile_fullscreen_tags %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag "favicon-32x32.png" %>
+</head>
+<body class="has-left-sidebar controller-<%= controller_path.parameterize %> action-<%= action_name %>" data-snackbar="<%= flash[:notice] %>" data-snackbar-error="<%= flash[:error] %>">
+  <div id="container">
+    <header class="appbar" id="appbar">
+      <div class="appbar-nav-icon" id="appbar-nav-icon">
+        <% if content_for?(:appbar_nav_icon) %>
+          <%= yield :appbar_nav_icon %>
+        <% else %>
+          <i class="material-icons appbar-button small-and-medium-only" role="left-sidebar-toggle">menu</i>
+        <% end %>
+      </div>
+      <div class="appbar-title truncate-text" id="appbar-title">
+        <%= yield :appbar_title %>
+      </div>
+      <div class="appbar-actions" id="appbar-actions">
+        <%= yield :appbar_actions %>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="left-sidebar">
+      <div class="sidebar-header">Styleguide</div>
+      <%= yield :left_sidebar %>
+    </aside>
+
+    <main id="main">
+      <div class="constrained constrained-large">
+        <%= yield %>
+      </div>
+    </main>
+  </div>
+
+  <div id="overlay">
+    <div class="dialog" id="dialog"></div>
+  </div>
+
+  <div id="snackbar"></div>
+</body>
+</html>
