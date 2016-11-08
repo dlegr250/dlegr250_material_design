@@ -238,7 +238,7 @@ $default-rounded-corners-radius: 3px;
 }
 
 @mixin force-text-wrap() {
-  overflow: inherit;
+  overflow: visible;
   text-overflow: inherit;
   white-space: normal;
   word-wrap: break-word;
