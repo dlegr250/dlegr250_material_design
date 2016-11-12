@@ -30,6 +30,7 @@
 .dl-dd {
   display: table-cell;
   padding: $spacing-xsmall 0;
+  @include force-text-wrap();
 }
 
 .dl-dt {
