@@ -91,7 +91,6 @@
   width: $appbar-button-height;
   text-align: center;
   text-decoration: none;
-
   @include no-touch-highlight-color();
   @include rounded-corners(250px);
   @include transition(background 0.2s ease-in-out);
@@ -101,9 +100,16 @@
   }
 }
 
+// Devices with pointers
 @media (hover: hover) {
-  .appbar-button:hover {
-    background-color: darken($primary-color, 7%);
+  .appbar-button {
+    &:hover {
+      background-color: darken($primary-color, 7%);
+    }
+
+    &:active {
+      background-color: darken($primary-color, 12%);
+    }
   }
 }
 

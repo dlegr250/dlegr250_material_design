@@ -103,15 +103,21 @@ $buttons: ".button";
   @include rounded-corners(50%);
   @include transition(background-color 0.30s ease, color 0.30s ease);
 
-  &:hover,
-  &.hover {
-    background-color: color("hover");
-    color: color("black");
-  }
-
-  &:active,
-  &.active {
+  &:active {
     background-color: darken(color("hover"), 5%);
+  }
+}
+
+// Devices with pointers
+@media (hover: hover) {
+  .button-icon {
+    &:hover {
+      background-color: color("hover");
+    }
+
+    &:active {
+      background-color: darken(color("hover"), 5%);
+    }
   }
 }
 
@@ -138,15 +144,21 @@ $buttons: ".button";
     background-color: $color;
     color: color("white");
 
-    &:hover,
-    &.hover {
-      background-color: lighten($color, 10%);
+    &:active {
+      background-color: darken($color, 10%);
     }
+  }
 
-    &:active,
-    &.active {
-      background: darken($color, 10%);
-      color: color("white");
+  // Devices with pointers
+  @media (hover: hover) {
+    .button-icon-#{$color-name} {
+      &:hover {
+        background-color: lighten($color, 10%);
+      }
+
+      &:active {
+        background-color: darken($color, 10%);
+      }
     }
   }
 }
@@ -164,13 +176,11 @@ $buttons: ".button";
     }
     @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.4));
 
-    &:hover,
-    &.hover {
+    &:hover {
       background-color: lighten($color, 10%);
     }
 
-    &:active,
-    &.active {
+    &:active {
       background-color: darken($color, 5%);
       @include box-shadow(0 3px 12px 0 rgba(0, 0, 0, 0.5));
     }
@@ -185,8 +195,7 @@ $buttons: ".button";
     background-color: transparent;
     color: $color;
 
-    &:hover,
-    &.hover {
+    &:hover {
       @if $color-name == "grey" {
         background-color: rgba(0, 0, 0, 0.1);
       } @else {
@@ -194,8 +203,7 @@ $buttons: ".button";
       }
     }
 
-    &:active,
-    &.active {
+    &:active {
       @if $color-name == "grey" {
         background-color: rgba(0, 0, 0, 0.18);
       } @else {
@@ -260,20 +268,26 @@ $buttons: ".button";
     @include rounded-corners(250px);
     @include text-shadow(0 -1px 0 color("helper"));
 
-    &:hover,
-    &.hover {
-      background-color: lighten($color, 5%);
-      @include box-shadow(0 6px 12px 0 rgba(0, 0, 0, 0.5));
-    }
-
-    &:active,
-    &.active {
+    &:active {
       background: darken($color, 10%);
     }
 
     &.mini {
       height: $button-fab-mini-height;
       width: $button-fab-mini-height;
+    }
+  }
+
+  @media (hover: hover) {
+    .fab-#{$color-name} {
+      &:hover {
+        background-color: lighten($color, 5%);
+        @include box-shadow(0 6px 12px 0 rgba(0, 0, 0, 0.5));
+      }
+
+      &:active {
+        background: darken($color, 10%);
+      }
     }
   }
 }
