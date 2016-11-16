@@ -48,6 +48,7 @@
 
 .dialog-header-primary {
   @include list-item-primary();
+  @include force-text-wrap();
   font-size: $font-size-large;
   font-weight: bold;
   padding: 0;
