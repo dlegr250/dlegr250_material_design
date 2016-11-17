@@ -147,6 +147,13 @@
   background-color: color("highlight");
 }
 
+// Hover
+//----------------------------------------------------------------------
+
+.no-hover:hover {
+  background-color: transparent !important;
+}
+
 // Decorate text
 //----------------------------------------------------------------------
 
