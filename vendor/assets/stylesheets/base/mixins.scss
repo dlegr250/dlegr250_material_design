@@ -276,6 +276,7 @@ $default-rounded-corners-radius: 3px;
   font-size: $font-size-small;
   font-weight: normal;
   padding-top: $spacing-xsmall;
+  @include flex-parent-row();
 }
 
 @mixin list-item-secondary() {
