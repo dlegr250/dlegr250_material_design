@@ -8,7 +8,7 @@
 //----------------------------------------------------------------------
 
 hr {
-  height: 1px;
+  height: 0;
   margin: $spacing-small 0;
 
   // Has a line
@@ -21,6 +21,11 @@ hr {
   &.spacer {
     border: none;
     margin: $spacing-normal 0;
+  }
+
+  // No margins, totally flush against other containers
+  &.flush {
+    margin: 0;
   }
 
   &.xsmall {
