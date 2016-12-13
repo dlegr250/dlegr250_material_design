@@ -92,8 +92,7 @@
 .field.has-errors {
   background-color: transparent;
 
-  input.invalid,
-  select.invalid {
+  input.invalid {
     background-color: color("light-red");
     border: 1px solid color("red");
   }
