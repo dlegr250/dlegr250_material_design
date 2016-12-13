@@ -10,6 +10,7 @@
   pointer-events: none;
   position: relative;
   visibility: hidden;
+  width: 500px; // max-width above caps this
   will-change: scale, transparency;
   z-index: $dialog-depth;
   @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
