@@ -1,0 +1,32 @@
+//======================================================================
+// EXAMPLE:
+// <div class="breadcrumbs">
+//   <%= link_to "Text", url %>
+//   <em class="material-icons font-size-small">chevron_right</em>
+//   Text
+// </div>
+//======================================================================
+
+.breadcrumbs {
+  color: color("helper");
+  font-size: $font-size-small;
+  font-weight: normal;
+  @include flex-parent-row();
+  @include truncate-text();
+  overflow-x: scroll;
+  padding: $spacing-normal;
+
+  a {
+    color: color("text");
+    font-size: $font-size-small;
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .material-icons {
+    padding: 0 $spacing-xsmall;
+  }
+}
