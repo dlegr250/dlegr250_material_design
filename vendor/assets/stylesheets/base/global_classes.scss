@@ -75,41 +75,40 @@
 // Padding
 //----------------------------------------------------------------------
 
-.padding-xsmall {
-  padding: $spacing-xsmall;
-}
+.padding-xsmall { padding: $spacing-xsmall; }
+.padding-small { padding: $spacing-small;
+.padding-normal { padding: $spacing-normal; }
+.padding-large { padding: $spacing-large; }
+.padding-xlarge { padding: $spacing-xlarge; }
 
-.padding-small {
-  padding: $spacing-small;
-}
+.padding-top-xsmall { padding-bottom: $spacing-xsmall; }
+.padding-top-small { padding-bottom: $spacing-small; }
+.padding-top-normal { padding-bottom: $spacing-normal; }
+.padding-top-large { padding-bottom: $spacing-large; }
+.padding-top-xlarge { padding-bottom: $spacing-xlarge; }
 
-.padding-normal {
-  padding: $spacing-normal;
-}
+.padding-right-xsmall { padding-bottom: $spacing-xsmall; }
+.padding-right-small { padding-bottom: $spacing-small; }
+.padding-right-normal { padding-bottom: $spacing-normal; }
+.padding-right-large { padding-bottom: $spacing-large; }
+.padding-right-xlarge { padding-bottom: $spacing-xlarge; }
 
-.padding-large {
-  padding: $spacing-large;
-}
+.padding-bottom-xsmall { padding-bottom: $spacing-xsmall; }
+.padding-bottom-small { padding-bottom: $spacing-small; }
+.padding-bottom-normal { padding-bottom: $spacing-normal; }
+.padding-bottom-large { padding-bottom: $spacing-large; }
+.padding-bottom-xlarge { padding-bottom: $spacing-xlarge; }
 
-.padding-xlarge {
-  padding: $spacing-xlarge;
-}
+.padding-left-xsmall { padding-bottom: $spacing-xsmall; }
+.padding-left-small { padding-bottom: $spacing-small; }
+.padding-left-normal { padding-bottom: $spacing-normal; }
+.padding-left-large { padding-bottom: $spacing-large; }
+.padding-left-xlarge { padding-bottom: $spacing-xlarge; }
 
-.no-padding-top {
-  padding-top: 0 !important;
-}
-
-.no-padding-right {
-  padding-right: 0 !important;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0 !important;
-}
-
-.no-padding-left {
-  padding-left: 0 !important;
-}
+.no-padding-top { padding-top: 0 !important; }
+.no-padding-right { padding-right: 0 !important; }
+.no-padding-bottom { padding-bottom: 0 !important; }
+.no-padding-left { padding-left: 0 !important; }
 
 // Margins
 //----------------------------------------------------------------------

@@ -40,6 +40,8 @@ textarea {
 // Underline text fields
 //----------------------------------------------------------------------
 
+// DEPRECATED: 2016-12-14 / dan.legrand@gmail.com
+// Use updated .text-field-underline class below.
 .text-field-underline-container {
   #{$text-fields} {
     border: none;
@@ -50,6 +52,31 @@ textarea {
     &:focus {
       border-color: color("primary");
       @include box-shadow(0 1px 0 color("primary"));
+    }
+  }
+}
+
+#{$text-fields} {
+  &.text-field-underline,
+  &.text-field-underline-full-width {
+    border: none;
+    border-bottom: 1px solid color("divider");
+    padding: $spacing-small 0;
+    @include rounded-corners(0);
+
+    &:focus {
+      border-color: color("primary");
+      @include box-shadow(0 1px 0 color("primary"));
+    }
+  }
+
+  // Full bleed from edge to edge
+  &.text-field-underline-full-width {
+    padding: $spacing-normal;
+
+    &:focus {
+      border-color: color("divider");
+      @include box-shadow(none);
     }
   }
 }
