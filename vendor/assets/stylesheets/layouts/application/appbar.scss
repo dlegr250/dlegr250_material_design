@@ -44,11 +44,6 @@
   flex: 1; // To fill empty gaps
   font-size: $font-size-normal * 1.2;
   margin-right: $spacing-small;
-  // Note: Use class "truncate-text" instead in app to force truncation (...)
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
-  @include flex-parent-row();
 
   a {
     color: $appbar-text-color;
