@@ -3,7 +3,7 @@
 #======================================================================
 
 window.App ||= {}
-window.App.MD || = {}
+window.App.MD ||= {}
 
 $(document).on "ready page:load", ->
   App.MD.Layout.init()
