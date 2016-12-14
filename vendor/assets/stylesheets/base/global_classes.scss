@@ -34,21 +34,12 @@
 // Flex sizes for rows with items of different widths
 //----------------------------------------------------------------------
 
-.flex-1 {
-  flex: 1 !important;
-}
+.flex-1 { flex: 1 !important; }
+.flex-2 { flex: 2 !important; }
+.flex-3 { flex: 3 !important; }
+.flex-4 { flex: 4 !important; }
 
-.flex-2 {
-  flex: 2 !important;
-}
-
-.flex-3 {
-  flex: 3 !important;
-}
-
-.flex-parent-row {
-  @include flex-parent-row();
-}
+.flex-parent-row { @include flex-parent-row(); }
 
 // Constrained to max size to center content
 //----------------------------------------------------------------------
