@@ -59,6 +59,7 @@
 
 .card-header-primary-subtext {
   @include list-item-primary-subtext();
+  @include force-text-wrap();
 }
 
 .card-header-secondary {

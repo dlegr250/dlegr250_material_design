@@ -104,25 +104,11 @@
 // Margins
 //----------------------------------------------------------------------
 
-.margin-xsmall {
-  margin: $spacing-xsmall 0;
-}
-
-.margin-small {
-  margin: $spacing-small 0;
-}
-
-.margin-normal {
-  margin: $spacing-normal 0;
-}
-
-.margin-large {
-  margin: $spacing-large 0;
-}
-
-.margin-xlarge {
-  margin: $spacing-xlarge 0;
-}
+.margin-xsmall { margin: $spacing-xsmall 0; }
+.margin-small { margin: $spacing-small 0; }
+.margin-normal { margin: $spacing-normal 0; }
+.margin-large { margin: $spacing-large 0; }
+.margin-xlarge { margin: $spacing-xlarge 0; }
 
 // If lists or other elements need extra room at bottom
 // or else the FAB overlaps them.
@@ -173,25 +159,11 @@
 // Rounded corners
 //----------------------------------------------------------------------
 
-.rounded-corners {
-  @include rounded-corners;
-}
-
-.rounded-top-corners {
-  @include rounded-top-corners;
-}
-
-.rounded-right-corners {
-  @include rounded-right-corners;
-}
-
-.rounded-bottom-corners {
-  @include rounded-bottom-corners;
-}
-
-.rounded-left-corners {
-  @include rounded-left-corners;
-}
+.rounded-corners { @include rounded-corners; }
+.rounded-top-corners { @include rounded-top-corners; }
+.rounded-right-corners { @include rounded-right-corners; }
+.rounded-bottom-corners { @include rounded-bottom-corners; }
+.rounded-left-corners { @include rounded-left-corners; }
 
 // Visibility
 //----------------------------------------------------------------------
@@ -226,25 +198,11 @@
 // Font sizes
 //----------------------------------------------------------------------
 
-.font-size-xsmall {
-  font-size: $font-size-xsmall !important;
-}
-
-.font-size-small {
-  font-size: $font-size-small !important;
-}
-
-.font-size-normal {
-  font-size: $font-size-normal !important;
-}
-
-.font-size-large {
-  font-size: $font-size-large !important;
-}
-
-.font-size-xlarge {
-  font-size: $font-size-xlarge !important;
-}
+.font-size-xsmall { font-size: $font-size-xsmall !important; }
+.font-size-small { font-size: $font-size-small !important; }
+.font-size-normal { font-size: $font-size-normal !important; }
+.font-size-large { font-size: $font-size-large !important; }
+.font-size-xlarge { font-size: $font-size-xlarge !important; }
 
 $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 @each $size in $font-sizes {
@@ -333,78 +291,36 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 // Media query classes for various device sizes
 //----------------------------------------------------------------------
 
-.small-only {
-  display: block;
-}
-
-.small-only-inline {
-  display: inline-block;
-}
-
+.small-only,
 .small-and-medium-only {
-  display: block;
-}
-
-.small-and-medium-only-inline {
-  display: inline-block;
+  display: auto;
 }
 
 .medium-only,
-.medium-only-inline {
-  display: none;
-}
-
 .medium-and-large-only,
-.medium-and-large-only-inline {
-  display: none;
-}
-
-.large-only,
-.large-only-inline {
+.large-only {
   display: none;
 }
 
 @media (min-width: $medium-width) {
-  .small-only,
-  .small-only-inline {
-    display: none !important;
-  }
+  .small-only { display: none !important; }
 
-  .medium-only {
-    display: block !important;
-  }
-
-  .medium-only-inline {
-    display: inline-block !important;
-  }
-
+  .medium-only,
   .medium-and-large-only {
-    display: block !important;
-  }
-
-  .medium-and-large-only-inline {
-    display: inline-block !important;
+    display: auto !important;
   }
 }
 
 @media (min-width: $large-width) {
   .small-only,
-  .small-only-inline,
   .small-and-medium-only,
-  .small-and-medium-only-inline,
-  .medium-only,
-  .medium-only-inline {
+  .medium-only {
     display: none !important;
   }
 
   .medium-and-large-only,
   .large-only {
-    display: block !important;
-  }
-
-  .medium-and-large-only-inline,
-  .large-only-inline {
-    display: inline-block !important;
+    display: auto !important;
   }
 }
 
