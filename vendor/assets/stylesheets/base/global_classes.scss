@@ -293,7 +293,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 
 .small-only,
 .small-and-medium-only {
-  display: auto;
+  // NOOP
 }
 
 .medium-only,
@@ -307,7 +307,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 
   .medium-only,
   .medium-and-large-only {
-    display: auto !important;
+    @include flex-parent-row();
   }
 }
 
@@ -320,7 +320,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 
   .medium-and-large-only,
   .large-only {
-    display: auto !important;
+    @include flex-parent-row();
   }
 }
 
