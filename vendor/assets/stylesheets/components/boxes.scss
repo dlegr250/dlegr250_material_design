@@ -55,6 +55,13 @@
   @include list-item-primary-subtext();
 }
 
+// Box - secondary
+//----------------------------------------------------------------------
+
+.box-secondary {
+  @include list-item-secondary();
+}
+
 // Box - flat
 //----------------------------------------------------------------------
 
