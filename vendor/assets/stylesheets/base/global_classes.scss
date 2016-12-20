@@ -6,25 +6,12 @@
 // Alignments
 //----------------------------------------------------------------------
 
-.align-left {
-  text-align: left;
-}
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
 
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
+.float-left { float: left; }
+.float-right { float: right; }
 
 // Expand entire width and take element padding into consideration.
 .full-width {
@@ -46,22 +33,16 @@
 
 .constrained-small,
 .constrained-medium,
-.constrained-large {
+.constrained-large,
+.constrained-xlarge {
   margin: auto;
   @include full-width;
 }
 
-.constrained-small {
-  max-width: $small-width;
-}
-
-.constrained-medium {
-  max-width: $medium-width;
-}
-
-.constrained-large {
-  max-width: $large-width;
-}
+.constrained-small { max-width: $small-width; }
+.constrained-medium { max-width: $medium-width; }
+.constrained-large { max-width: $large-width; }
+.constrained-xlarge { max-width: $xlarge-width; }
 
 // Padding
 //----------------------------------------------------------------------
@@ -225,52 +206,22 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 // Borders
 //----------------------------------------------------------------------
 
-.border-bottom {
-  border-bottom: 1px solid color("divider") !important;
-}
+.border-bottom { border-bottom: 1px solid color("divider") !important; }
+.border-left { border-left: 1px solid color("divider") !important; }
+.border-right { border-right: 1px solid color("divider") !important; }
+.border-top { border-top: 1px solid color("divider") !important; }
 
-.border-left {
-  border-left: 1px solid color("divider") !important;
-}
-
-.border-right {
-  border-right: 1px solid color("divider") !important;
-}
-
-.border-top {
-  border-top: 1px solid color("divider") !important;
-}
-
-.no-border-bottom {
-  border-bottom: 0 !important;
-}
-
-.no-border-left {
-  border-left: 0 !important;
-}
-
-.no-border-right {
-  border-right: 0 !important;
-}
-
-.no-border-top {
-  border-top: 0 !important;
-}
+.no-border-bottom { border-bottom: 0 !important; }
+.no-border-left { border-left: 0 !important; }
+.no-border-right { border-right: 0 !important; }
+.no-border-top { border-top: 0 !important; }
 
 // Rotation
 //----------------------------------------------------------------------
 
-.rotate-90 {
-  @include transform(rotate(90deg));
-}
-
-.rotate-180 {
-  @include transform(rotate(180deg));
-}
-
-.rotate-270 {
-  @include transform(rotate(270deg));
-}
+.rotate-90 { @include transform(rotate(90deg)); }
+.rotate-180 { @include transform(rotate(180deg)); }
+.rotate-270 { @include transform(rotate(270deg)); }
 
 // disabled
 //----------------------------------------------------------------------

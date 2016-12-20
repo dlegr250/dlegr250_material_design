@@ -19,19 +19,20 @@
 //----------------------------------------------------------------------
 
 .box-icon {
-  color: color("icon");
-  font-size: $font-size-icon;
-  height: $list-item-icon-width;
-  line-height: $list-item-icon-width;
-  margin-left: $spacing-normal;
-  padding: 0;
-  text-align: center;
-  width: $list-item-icon-width;
-
-  .icon {
-    color: color("icon");
-    font-size: $font-size-icon;
-  }
+  @include list-item-icon();
+  // color: color("icon");
+  // font-size: $font-size-icon;
+  // height: $list-item-icon-width;
+  // line-height: $list-item-icon-width;
+  // margin-left: $spacing-normal;
+  // padding: 0;
+  // text-align: center;
+  // width: $list-item-icon-width;
+  //
+  // .icon {
+  //   color: color("icon");
+  //   font-size: $font-size-icon;
+  // }
 }
 
 .box-icon-circle {
