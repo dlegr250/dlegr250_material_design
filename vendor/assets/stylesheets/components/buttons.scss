@@ -171,6 +171,8 @@ $buttons: ".button";
     background-color: $color;
     @if $color-name == "white" {
       color: color("black");
+    } @else if $color-name == "offwhite" {
+      color: color("text");
     } @else {
       color: color("white");
     }
