@@ -54,6 +54,7 @@
 
 .box-primary-subtext {
   @include list-item-primary-subtext();
+  @include force-text-wrap();
 }
 
 // Box - secondary
