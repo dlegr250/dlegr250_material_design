@@ -258,7 +258,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 
   .medium-only,
   .medium-and-large-only {
-    @include flex-parent-row();
+    // @include flex-parent-row();
   }
 }
 
@@ -271,7 +271,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 
   .medium-and-large-only,
   .large-only {
-    @include flex-parent-row();
+    // @include flex-parent-row();
   }
 }
 
