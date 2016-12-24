@@ -2,10 +2,6 @@
 //----------------------------------------------------------------------
 
 .tabs {
-  // display: table;
-  // height: $tab-height;
-  // table-layout: fixed;
-  // width: 100%;
   height: $tab-height;
   @include flex-parent-row();
 }
@@ -14,9 +10,9 @@
   @include box-shadow(0 1px color("divider"));
 }
 
-.tabs-full-width {
+.tabs-fixed {
   .tab {
-    flex: 1
+    flex: 1;
   }
 }
 
