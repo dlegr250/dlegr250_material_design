@@ -2,14 +2,22 @@
 //----------------------------------------------------------------------
 
 .tabs {
-  display: table;
+  // display: table;
+  // height: $tab-height;
+  // table-layout: fixed;
+  // width: 100%;
   height: $tab-height;
-  table-layout: fixed;
-  width: 100%;
+  @include flex-parent-row();
 }
 
 .tabs-bordered {
   @include box-shadow(0 1px color("divider"));
+}
+
+.tabs-full-width {
+  .tab {
+    flex: 1
+  }
 }
 
 // Tabs - tab
@@ -19,13 +27,13 @@
   border-bottom: 2px solid transparent;
   color: color("helper");
   cursor: pointer;
-  display: table-cell;
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
+  line-height: $tab-height - 2px;
   // max-width: 264px;
   // min-width: 72px;
-  padding: 0 $spacing-small;
+  padding: 0 $spacing-normal;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,11 +50,8 @@
   }
 }
 
-// Tabs - colored
-//----------------------------------------------------------------------
-
 @each $color-name, $color in $colors {
-  .tabs-color-#{$color-name} {
+  .tabs-#{$color-name} {
     .tab {
       // Hover and click tab
       &:hover,
@@ -64,7 +69,7 @@
         border-color: $color;
         color: $color;
 
-        .tab-icon {
+        &.tab-icon {
           color: $color;
         }
       }
