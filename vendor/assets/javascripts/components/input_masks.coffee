@@ -65,3 +65,10 @@ class App.MD.InputMasks
       vMax: "99.999",
       aPad: true
     })
+
+    # Format: "123,456"
+    $(":input[data-format='numerical']").autoNumeric("init", {
+      vMin: "0",
+      vMax: "999999999",
+      aPad: false
+    })
