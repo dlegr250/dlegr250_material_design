@@ -60,11 +60,21 @@ class App.MD.InputMasks
     $(":input[data-format='currency']").not("[placeholder]").attr("placeholder", "$")
 
     # Format: "1.234"
+    # $(":input[data-format='percentage']").autoNumeric("init", {
+    #   vMin: "0",
+    #   vMax: "99.999",
+    #   aPad: true
+    # })
     $(":input[data-format='percentage']").autoNumeric("init", {
-      vMin: "0",
-      vMax: "99.999",
-      aPad: true
-    })
+        aSign: " %",
+        pSign: "s",
+        vMin: "0",
+        vMax: "99.999",
+        aPad: true
+      })
+
+    # Default "%" placeholder for percentage fields if no placeholder specified
+    $(":input[data-format='percentage']").not("[placeholder]").attr("placeholder", "%")
 
     # Format: "123,456"
     $(":input[data-format='numerical']").autoNumeric("init", {
