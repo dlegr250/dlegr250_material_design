@@ -74,6 +74,10 @@
   }
 }
 
+.radio-group-align-top .radio-group-item {
+  @include flex-parent-row-align-top();
+}
+
 // Radios - colored
 //----------------------------------------------------------------------
 

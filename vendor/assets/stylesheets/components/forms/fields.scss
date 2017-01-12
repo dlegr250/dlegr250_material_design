@@ -24,9 +24,11 @@
 //----------------------------------------------------------------------
 
 .field-title {
-  font-size: $font-size-large * 0.8;
+  border-bottom: 1px solid color("divider");
+  font-size: $font-size-normal;
   font-weight: bold;
-  margin-bottom: $spacing-small;
+  margin-bottom: $spacing-normal;
+  padding-bottom: $spacing-normal;
 }
 
 .field-subtitle {
@@ -34,6 +36,11 @@
   font-size: $font-size-normal;
   font-weight: normal;
   padding-top: $spacing-xsmall;
+}
+
+.field-title-no-border {
+  border-bottom: 0;
+  margin-bottom: 0;
 }
 
 // Fields - base
