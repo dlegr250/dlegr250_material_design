@@ -79,6 +79,17 @@
   @include force-text-wrap();
 }
 
+// Card - content - subheader
+//----------------------------------------------------------------------
+
+.card-content-subheader {
+  border-bottom: 1px solid color("divider");
+  font-size: $font-size-normal;
+  font-weight: bold;
+  margin-bottom: $spacing-normal;
+  padding-bottom: $spacing-normal;
+}
+
 // Card - actions
 //----------------------------------------------------------------------
 
