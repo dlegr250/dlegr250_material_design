@@ -252,7 +252,7 @@ ol {
 //----------------------------------------------------------------------
 
 .list-standard {
-  @extend .list-two-lines;
+  min-height: 72px;
   @extend .list-bordered;
   @extend .list-divided;
   @extend .list-hoverable;
