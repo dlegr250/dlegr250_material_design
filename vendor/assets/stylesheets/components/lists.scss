@@ -108,35 +108,11 @@ ol {
   border-bottom: none;
 }
 
-.list-one-lines .list-item {
-  min-height: 48px;
-}
-
-.list-two-lines .list-item {
-  min-height: 72px;
-}
-
-.list-three-lines .list-item {
-  min-height: 88px;
-}
-
 // Lists - list item
 //----------------------------------------------------------------------
 
 .list-item {
   @include list-item();
-}
-
-.list-item.one-lines {
-  min-height: 48px;
-}
-
-.list-item.two-lines {
-  min-height: 72px;
-}
-
-.list-item.three-lines {
-  min-height: 88px;
 }
 
 // Lists - list item icon
@@ -200,6 +176,21 @@ ol {
 
 .list-header-dense {
   min-height: 32px;
+}
+
+.list-one-lines .list-item,
+.list-item-one-lines {
+  min-height: 48px !important;
+}
+
+.list-two-lines .list-item,
+.list-item-two-lines {
+  min-height: 72px !important;
+}
+
+.list-three-lines .list-item,
+.list-item-three-lines {
+  min-height: 88px !important;
 }
 
 // Lists - hoverable
