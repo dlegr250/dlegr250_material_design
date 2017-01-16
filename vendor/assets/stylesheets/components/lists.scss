@@ -252,12 +252,15 @@ ol {
 //----------------------------------------------------------------------
 
 .list-standard {
-  min-height: 72px;
   @extend .list-bordered;
   @extend .list-divided;
   @extend .list-hoverable;
   @extend .rounded-corners;
   @extend .background-color-white;
+
+  .list-item {
+    min-height: 72px;
+  }
 
   .list-item-primary {
     @include truncate-text();
