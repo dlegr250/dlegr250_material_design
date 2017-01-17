@@ -26,7 +26,7 @@
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
-  line-height: $tab-height - 2px;
+  // line-height: $tab-height - 2px;
   // max-width: 264px;
   // min-width: 72px;
   text-align: center;
@@ -42,6 +42,7 @@
 
 .tab-icon {
   @include list-item-icon();
+  width: auto;
 }
 
 .tab-primary {
