@@ -29,16 +29,12 @@
   line-height: $tab-height - 2px;
   // max-width: 264px;
   // min-width: 72px;
-  padding: 0 $spacing-normal;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
+  @include list-item();
   @include transition(all 0.30s ease);
-
-  &:active {
-    background-color: color("hover");
-  }
 }
 
 // Tabs - tab - icon
@@ -50,6 +46,7 @@
 
 .tab-primary {
   @include list-item-primary();
+  color: color("helper");
 }
 
 @each $color-name, $color in $colors {
