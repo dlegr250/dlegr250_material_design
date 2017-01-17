@@ -3,7 +3,7 @@
 
 .tabs {
   height: $tab-height;
-  @include flex-parent-row();
+  @include list-item();
 }
 
 .tabs-bordered {
@@ -34,7 +34,6 @@
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
-  @include list-item();
   @include transition(all 0.30s ease);
 }
 
