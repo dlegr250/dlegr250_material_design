@@ -160,6 +160,12 @@ $default-rounded-corners-radius: 3px;
   justify-content: flex-start;
 }
 
+@mixin flex-parent-row-align-center() {
+  @include flex-parent-row();
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
 @mixin flex-parent-row-align-top() {
   @include flex-parent-row();
   align-items: flex-start;

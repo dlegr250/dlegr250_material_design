@@ -1,45 +1,40 @@
-// Tabs - base
+// Updated tabs
 //----------------------------------------------------------------------
 
 .tabs {
-  height: $tab-height;
   @include flex-parent-row();
+  height: $tab-height;
+  position: relative;
 }
-
-.tabs-bordered {
-  @include box-shadow(0 1px color("divider"));
-}
-
-.tabs-fixed {
-  .tab {
-    flex: 1;
-  }
-}
-
-// Tabs - tab
-//----------------------------------------------------------------------
 
 .tab {
+  @include flex-parent-row();
   border-bottom: 2px solid transparent;
   color: color("helper");
   cursor: pointer;
   display: inline-flex;
-  font-size: $font-size-normal;
+  flex: 1 1 auto;
   font-weight: 600;
-  height: $tab-height - 2px; // Account for 2px bottom border on tab
-  // line-height: $tab-height - 2px;
-  // max-width: 264px;
-  // min-width: 72px;
+  height: 100%;
+  max-width: 150px;
   padding: 0 $spacing-normal;
+  position: relative;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
   @include transition(all 0.30s ease);
 }
 
-// Tabs - colored
-//----------------------------------------------------------------------
+.tab-primary {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.tabs-fixed .tab {
+  max-width: none;
+}
 
 @each $color-name, $color in $colors {
   .tabs-#{$color-name} {
@@ -54,6 +49,61 @@
     }
   }
 }
+
+// Tabs - base
+//----------------------------------------------------------------------
+
+// .tabs {
+//   height: $tab-height;
+//   @include flex-parent-row();
+// }
+
+.tabs-bordered {
+  @include box-shadow(0 1px color("divider"));
+}
+
+// .tabs-fixed {
+//   .tab {
+//     flex: 1;
+//   }
+// }
+
+// Tabs - tab
+//----------------------------------------------------------------------
+
+// .tab {
+//   border-bottom: 2px solid transparent;
+//   color: color("helper");
+//   cursor: pointer;
+//   font-size: $font-size-normal;
+//   font-weight: 600;
+//   height: $tab-height - 2px; // Account for 2px bottom border on tab
+//   // max-width: 264px;
+//   // min-width: 72px;
+//   padding: 0 $spacing-normal;
+//   text-align: center;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   vertical-align: middle;
+//   @include transition(all 0.30s ease);
+// }
+
+// Tabs - colored
+//----------------------------------------------------------------------
+
+// @each $color-name, $color in $colors {
+//   .tabs-#{$color-name} {
+//     .tab {
+//       &:hover {
+//         border-color: lighten($color, 30%);
+//       }
+//
+//       &:active {
+//         background-color: lighten($color, 40%);
+//       }
+//     }
+//   }
+// }
 
 // Tabs - disabled
 //----------------------------------------------------------------------
