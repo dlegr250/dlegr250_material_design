@@ -29,6 +29,7 @@
   // line-height: $tab-height - 2px;
   // max-width: 264px;
   // min-width: 72px;
+  padding: 0 $spacing-normal;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -37,18 +38,8 @@
   @include transition(all 0.30s ease);
 }
 
-// Tabs - tab - icon
+// Tabs - colored
 //----------------------------------------------------------------------
-
-.tab-icon {
-  @include list-item-icon();
-  width: auto;
-}
-
-.tab-primary {
-  @include list-item-primary();
-  color: color("helper");
-}
 
 @each $color-name, $color in $colors {
   .tabs-#{$color-name} {
