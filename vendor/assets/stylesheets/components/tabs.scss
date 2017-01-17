@@ -3,7 +3,7 @@
 
 .tabs {
   height: $tab-height;
-  @include list-item();
+  @include flex-parent-row();
 }
 
 .tabs-bordered {
@@ -23,6 +23,7 @@
   border-bottom: 2px solid transparent;
   color: color("helper");
   cursor: pointer;
+  display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 600;
   height: $tab-height - 2px; // Account for 2px bottom border on tab
