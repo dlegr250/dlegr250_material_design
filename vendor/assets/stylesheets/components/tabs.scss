@@ -36,38 +36,31 @@
   vertical-align: middle;
   @include transition(all 0.30s ease);
 
-  .tab-icon {
-    color: color("helper");
-    font-size: $font-size-icon;
-  }
-
   &:active {
     background-color: color("hover");
   }
 }
 
+// Tabs - tab - icon
+//----------------------------------------------------------------------
+
+.tab-icon {
+  @include list-item-icon();
+}
+
+.tab-primary {
+  @include list-item-primary();
+}
+
 @each $color-name, $color in $colors {
   .tabs-#{$color-name} {
     .tab {
-      // Hover and click tab
-      &:hover,
-      &:active {
+      &:hover {
         border-color: lighten($color, 30%);
       }
 
-      // Clicking tab
       &:active {
         background-color: lighten($color, 40%);
-      }
-
-      // Persistent active tab
-      &.active {
-        border-color: $color;
-        color: $color;
-
-        &.tab-icon {
-          color: $color;
-        }
       }
     }
   }
