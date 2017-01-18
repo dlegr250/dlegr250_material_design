@@ -45,19 +45,6 @@ $buttons: ".button";
   &:hover {
     text-decoration: none !important;
   }
-
-  &.button-dense {
-    font-size: $font-size-small;
-    height: $button-height-dense !important;
-    line-height: $button-height-dense !important;
-    min-width: $button-height * 0.8;
-    padding: 0 $spacing-small;
-  }
-
-  &.button-large {
-    height: $button-height-large !important;
-    line-height: $button-height-large !important;
-  }
 }
 
 // Icons inside button
@@ -80,6 +67,34 @@ $buttons: ".button";
     padding-left: 4px;
   }
 }
+
+// Buttons - sizes
+//----------------------------------------------------------------------
+
+.button-xsmall {
+  font-size: $font-size-small;
+  height: 28px;
+  line-height: 28px;
+  min-width: $button-height * 0.6;
+  padding: 0 $spacing-xsmall;
+}
+
+// Using dense name to be consistent with MD spec
+.button-small,
+.button-dense {
+  font-size: $font-size-small;
+  height: $button-height-dense !important;
+  line-height: $button-height-dense !important;
+  min-width: $button-height * 0.8;
+  padding: 0 $spacing-small;
+}
+
+.button-large {
+  height: $button-height-large !important;
+  line-height: $button-height-large !important;
+}
+
+.button-normal {}
 
 // Special case: submit.button with display: inline-flex would align left.
 // input[type="submit"].button,
