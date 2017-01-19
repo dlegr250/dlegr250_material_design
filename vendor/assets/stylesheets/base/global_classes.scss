@@ -97,6 +97,17 @@
   margin-bottom: $button-fab-height * 2;
 }
 
+// Cursors
+//----------------------------------------------------------------------
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.cursor-disabled {
+  cursor: not-allowed !important;
+}
+
 // Highlight (yellowish background)
 //----------------------------------------------------------------------
 

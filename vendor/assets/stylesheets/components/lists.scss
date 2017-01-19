@@ -63,6 +63,12 @@ ol {
   @include list-item-primary();
 }
 
+.list-header-primary-supertext {
+  @include list-item-primary-subtext();
+  padding-top: 0;
+  padding-bottom: $spacing-xsmall;
+}
+
 .list-header-primary-subtext {
   @include list-item-primary-subtext();
 }
