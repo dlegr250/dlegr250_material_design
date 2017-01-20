@@ -105,6 +105,20 @@
   @include list-item-secondary();
 }
 
+// Menus - disabled
+//----------------------------------------------------------------------
+
+.menu-item-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  .menu-item-icon,
+  .menu-item-primary,
+  .menu-item-secondary {
+    color: color("disabled") !important;
+  }
+}
+
 // Menus - sizes
 //----------------------------------------------------------------------
 

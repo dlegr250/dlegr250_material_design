@@ -207,6 +207,13 @@ ol {
   }
 }
 
+.list-no-hover .list-item {
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+  }
+}
+
 // Links in list items
 //----------------------------------------------------------------------
 

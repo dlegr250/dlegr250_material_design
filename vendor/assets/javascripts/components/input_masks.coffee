@@ -56,6 +56,17 @@ class App.MD.InputMasks
       aPad: true # Pad decimals with 0's
     })
 
+    # Format (allow negatives): "$ 999,999,999.99"
+    $(":input[data-format='currency-allow-negative']").autoNumeric("init", {
+      aSign: "$ ",
+      aSep: ",",
+      aDec: ".",
+      vMin: "-999999999.99",
+      vMax: "999999999.99",
+      dGroup: "3",
+      aPad: true # Pad decimals with 0's
+    })
+
     # Default "$" placeholder for currency fields if no placeholder specified
     $(":input[data-format='currency']").not("[placeholder]").attr("placeholder", "$")
 
@@ -66,12 +77,20 @@ class App.MD.InputMasks
     #   aPad: true
     # })
     $(":input[data-format='percentage']").autoNumeric("init", {
-        aSign: " %",
-        pSign: "s",
-        vMin: "0",
-        vMax: "99.999",
-        aPad: true
-      })
+      aSign: " %",
+      pSign: "s",
+      vMin: "0",
+      vMax: "99.999",
+      aPad: true
+    })
+
+    $(":input[data-format='percentage-allow-negative']").autoNumeric("init", {
+      aSign: " %",
+      pSign: "s",
+      vMin: "-99.999",
+      vMax: "99.999",
+      aPad: true
+    })
 
     # Default "%" placeholder for percentage fields if no placeholder specified
     $(":input[data-format='percentage']").not("[placeholder]").attr("placeholder", "%")
