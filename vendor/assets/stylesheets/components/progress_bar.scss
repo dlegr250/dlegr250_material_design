@@ -1,0 +1,9 @@
+//======================================================================
+// Turbolinks adds a progress bar; at very top of application.
+//======================================================================
+
+.turbolinks-progress-bar {
+  background-color: darken(color("primary"), 20%) !important;
+  height: 5px !important;
+  visibility: visible;
+}

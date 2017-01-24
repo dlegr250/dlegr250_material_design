@@ -50,9 +50,12 @@
   }
 }
 
+// Above and below main text
+.appbar-supertitle,
 .appbar-subtitle {
   color: $appbar-subtitle-color;
   font-size: $font-size-normal;
+  @include flex-parent-row;
 }
 
 // appbar - actions
