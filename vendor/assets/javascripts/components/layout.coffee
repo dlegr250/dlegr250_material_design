@@ -55,7 +55,7 @@ class App.MD.Layout
   @hideOverlay: () ->
     @$sidebars.removeClass("visible")
     @$overlay.removeClass("visible")
-    App.MD.Dialog.hideDialog()
+    # App.MD.Dialog.hideDialog()
 
   @isOverlayVisible: () ->
     @$overlay.hasClass("visible")
