@@ -5,7 +5,7 @@
 window.App ||= {}
 window.App.MD ||= {}
 
-$(document).on "ready turbolinks:load", ->
+$(document).on "turbolinks:load", ->
   App.MD.Layout.init()
   App.MD.Menus.init()
   App.MD.Dialog.init()
