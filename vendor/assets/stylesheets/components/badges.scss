@@ -1,6 +1,6 @@
 //======================================================================
 // EXAMPLE:
-// <div class="badge badge-blue">10</div>
+// <div class="badge badge-blue badge-small">10</div>
 //======================================================================
 
 // Badges - base
@@ -9,6 +9,7 @@
 .badge {
   display: inline-block;
   font-size: $font-size-normal;
+  letter-spacing: 0.5px;
   min-width: 18px;
   padding: $spacing-small;
   text-align: center;
@@ -16,25 +17,14 @@
   @include rounded-corners;
 }
 
-.badge-round {
-  @include rounded-corners(50%);
+.badge-xsmall {
+  font-size: $font-size-small;
+  height: 28px;
+  line-height: 28px;
+  min-width: $button-height * 0.6;
+  padding: 0 $spacing-xsmall;
 }
 
-// .badge-small {
-//   font-size: $font-size-small;
-//   min-width: 14px;
-//   padding: $spacing-xsmall;
-// }
-//
-// .button-xsmall {
-//   font-size: $font-size-small;
-//   height: 28px;
-//   line-height: 28px;
-//   min-width: $button-height * 0.6;
-//   padding: 0 $spacing-xsmall;
-// }
-
-// Using dense name to be consistent with MD spec
 .badge-small {
   font-size: $font-size-small;
   height: $button-height-dense !important;
