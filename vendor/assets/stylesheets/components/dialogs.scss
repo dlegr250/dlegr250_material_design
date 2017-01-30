@@ -45,7 +45,6 @@
   cursor: default;
   max-height: 100%;
   max-width: 90%;
-  // overflow-y: scroll; // For tall dialogs that go off-screen
   overflow: hidden;
   z-index: $dialog-depth;
   @include rounded-corners;
@@ -130,15 +129,15 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
-  max-height: calc(100vh - $appbar-height); // For dialog-header
-  overflow: auto;
+  max-height: calc(100vh - #{$appbar-height}); // For dialog-header
+  overflow: scroll;
   padding: $spacing-normal;
   @include force-text-wrap()
 }
 
 @media (min-width: $small-width) {
   .dialog-content {
-    max-height: calc(90vh - $appbar-height * 2); // For dialog-header and dialog-actions
+    max-height: calc(90vh - #{$appbar-height * 2}); // For dialog-header and dialog-actions
   }
 }
 
@@ -148,98 +147,9 @@
 .dialog-actions {
   height: $appbar-height;
   padding: 0 $spacing-normal;
-  @include flex-parent-row();
-  // padding: $spacing-normal;
-  // padding-top: 0;
+  // @include flex-parent-row();
 }
 
 .dialog-actions-bordered {
   border-top: 1px solid color("divider");
-  // padding-top: $spacing-normal;
 }
-
-
-// // Dialogs - base
-// //----------------------------------------------------------------------
-//
-// .dialog {
-//   background: color("white");
-//   cursor: default;
-//   display: inline-block;
-//   margin: auto;
-//   max-width: 90%;
-//   pointer-events: none;
-//   position: relative;
-//   visibility: hidden;
-//   width: 500px; // max-width above caps this
-//   will-change: scale, transparency;
-//   z-index: $dialog-depth;
-//   @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
-//   @include rounded-corners;
-//   @include transition(all 0.10s ease);
-//   @include transform(scale(1.15));
-//   @include transparency(0);
-//
-//   &.visible {
-//     pointer-events: auto;
-//     visibility: visible;
-//     @include transform(scale(1.0));
-//     @include transparency(1);
-//     @include transition(all 0.30s ease);
-//   }
-// }
-//
-// // Dialogs - header
-// //----------------------------------------------------------------------
-//
-// .dialog-header {
-//   @include list-item();
-//   min-height: 0;
-//   padding: $spacing-large;
-//   padding-bottom: 20px;
-// }
-//
-// .dialog-header-icon {
-//   @include list-item-icon();
-// }
-//
-// .dialog-header-primary,
-// .dialog-header-secondary {
-//   box-sizing: border-box;
-// }
-//
-// .dialog-header-primary {
-//   @include list-item-primary();
-//   @include force-text-wrap();
-//   font-size: $font-size-large;
-//   font-weight: bold;
-//   padding: 0;
-// }
-//
-// .dialog-header-primary-subtext {
-//   @include list-item-primary-subtext();
-// }
-//
-// .dialog-header-secondary {
-//   @include list-item-secondary();
-// }
-//
-// .dialog-header-secondary-actions {
-//   @include list-item-secondary-actions();
-// }
-//
-//
-// // Dialogs - content
-// //----------------------------------------------------------------------
-//
-// .dialog-content {
-//   padding: 0 $spacing-large $spacing-normal $spacing-large;
-//   @include force-text-wrap()
-// }
-//
-// // Dialogs - actions
-// //----------------------------------------------------------------------
-//
-// .dialog-actions {
-//   padding: $spacing-normal;
-// }
