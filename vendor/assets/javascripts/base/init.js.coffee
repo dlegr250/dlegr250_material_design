@@ -15,3 +15,4 @@ $(document).on "turbolinks:load", ->
   App.MD.InputMasks.init()
   App.MD.Toggles.init()
   App.MD.Snackbar.init()
+  App.MD.ScrollScope.init()
