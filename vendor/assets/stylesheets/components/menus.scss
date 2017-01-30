@@ -36,7 +36,8 @@
 .menu {
   background: color("white");
   line-height: normal;
-  overflow: hidden;
+  max-height: $menu-max-height;
+  overflow: auto;
   padding: 0;
   position: absolute;
   right: 0;
