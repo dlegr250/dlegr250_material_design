@@ -11,7 +11,11 @@ class App.MD.Menus
   @setEvents: () ->
     $("body").on "click", "[role='menu-trigger']", (event) =>
       @.hideMenus()
-      $trigger = $(event.target)
+      # $trigger = $(event.target)
+      if $(event.target).get(0).hasAttribute("data-menu-id")
+        $trigger = $(event.target)
+      else
+        $trigger = $(event.target).parents("[role='menu-trigger']")
 
       # Assume menu comes right after target if not specified
       if $trigger.data("menu-id")
