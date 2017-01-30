@@ -43,6 +43,7 @@
 .dialog {
   background: color("white");
   cursor: default;
+  max-height: 100%;
   max-width: 90%;
   // overflow-y: scroll; // For tall dialogs that go off-screen
   overflow: hidden;
@@ -64,6 +65,7 @@
 @media (min-width: $small-width) {
   .dialog {
     height: auto;
+    max-height: 90%;
     max-width: 90%;
     width: 500px;
     position: relative;
@@ -87,9 +89,6 @@
 
 .dialog-header-icon {
   width: $appbar-button-height;
-  margin-right: $spacing-small;
-  // @include list-item-icon();
-  // margin-right: $spacing-normal;
 
   // To match up with .appbar-button
   .button-icon {
@@ -105,8 +104,8 @@
   flex: 1;
   font-size: $font-size-normal + 2px;
   font-weight: bold;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
 }
 
 @media (min-width: $small-width) {
