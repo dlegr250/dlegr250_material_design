@@ -132,7 +132,7 @@
   max-height: calc(100vh - #{$appbar-height}); // For dialog-header
   overflow: scroll;
   padding: $spacing-normal;
-  @include force-text-wrap()
+  // @include force-text-wrap();
 }
 
 @media (min-width: $small-width) {
@@ -146,6 +146,7 @@
 
 .dialog-actions {
   height: $appbar-height;
+  line-height: $appbar-height;
   padding: 0 $spacing-normal;
   // @include flex-parent-row();
 }
