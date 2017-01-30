@@ -26,6 +26,17 @@
   }
 }
 
+// Dialogs - shared
+//----------------------------------------------------------------------
+
+.dialog-header,
+.dialog-header-primary,
+.dialog-header-primary-subtext,
+.dialog-content,
+.dialog-actions {
+  box-sizing: border-box;
+}
+
 // Dialogs - base
 //----------------------------------------------------------------------
 
@@ -33,6 +44,8 @@
   background: color("white");
   cursor: default;
   max-width: 90%;
+  // overflow-y: scroll; // For tall dialogs that go off-screen
+  overflow: hidden;
   z-index: $dialog-depth;
   @include rounded-corners;
 }
@@ -63,19 +76,20 @@
 //----------------------------------------------------------------------
 
 .dialog-header {
-  @include list-item();
-  min-height: $appbar-height;
-  // padding: 0 $spacing-normal;
+  @include flex-parent-row();
+  height: $appbar-height;
+  padding: 0 $spacing-small;
 }
 
 .dialog-header-bordered {
   border-bottom: 1px solid color("divider");
-  margin-bottom: $spacing-normal;
 }
 
 .dialog-header-icon {
-  @include list-item-icon();
-  margin-right: $spacing-normal;
+  width: $appbar-button-height;
+  margin-right: $spacing-small;
+  // @include list-item-icon();
+  // margin-right: $spacing-normal;
 
   // To match up with .appbar-button
   .button-icon {
@@ -86,13 +100,9 @@
   }
 }
 
-.dialog-header-primary,
-.dialog-header-secondary {
-  box-sizing: border-box;
-}
-
 .dialog-header-primary {
   @include list-item-primary();
+  flex: 1;
   font-size: $font-size-normal + 2px;
   font-weight: bold;
   padding-left: $spacing-normal;
@@ -121,22 +131,32 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
+  max-height: calc(100vh - $appbar-height); // For dialog-header
+  overflow: auto;
   padding: $spacing-normal;
-  padding-top: 0;
   @include force-text-wrap()
+}
+
+@media (min-width: $small-width) {
+  .dialog-content {
+    max-height: calc(90vh - $appbar-height * 2); // For dialog-header and dialog-actions
+  }
 }
 
 // Dialogs - actions
 //----------------------------------------------------------------------
 
 .dialog-actions {
-  padding: $spacing-normal;
-  padding-top: 0;
+  height: $appbar-height;
+  padding: 0 $spacing-normal;
+  @include flex-parent-row();
+  // padding: $spacing-normal;
+  // padding-top: 0;
 }
 
 .dialog-actions-bordered {
   border-top: 1px solid color("divider");
-  padding-top: $spacing-normal;
+  // padding-top: $spacing-normal;
 }
 
 
