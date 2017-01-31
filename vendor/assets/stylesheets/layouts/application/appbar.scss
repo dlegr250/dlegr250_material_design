@@ -93,6 +93,7 @@
   line-height: 1;
   margin: 0 $spacing-small;
   pointer-events: none;
+  -webkit-font-smoothing: antialiased;
   // @include truncate-text(); // Make optional via class
 
   a {
@@ -102,13 +103,13 @@
 
 @media (min-width: $small-width) {
   .appbar-title {
-    max-width: $sidebar-depth - 80px;
+    max-width: $sidebar-width - 64px;
   }
 }
 
 // Above and below main text
-.appbar-supertitle,
-.appbar-subtitle {
+.appbar-title-supertitle,
+.appbar-title-subtitle {
   color: $appbar-subtitle-color;
   font-size: $font-size-normal;
   @include flex-parent-row;
