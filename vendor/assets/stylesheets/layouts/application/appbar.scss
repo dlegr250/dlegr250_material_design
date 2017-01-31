@@ -23,52 +23,11 @@
   color: $appbar-text-color;
   height: $appbar-height;
   padding: 0 $spacing-small;
+  position: relative;
   width: 100%;
   z-index: $layout-depth + 1;
   @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.30));
   @include flex-parent-row();
-}
-
-// appbar - nav icon
-//----------------------------------------------------------------------
-
-.appbar-nav-icon {
-  width: $appbar-button-height;
-  margin-right: $spacing-small;
-}
-
-// appbar - title
-//----------------------------------------------------------------------
-
-.appbar-title {
-  flex: 1; // To fill empty gaps
-  font-size: $font-size-large;
-  margin-right: $spacing-small;
-
-  a {
-    color: $appbar-subtitle-color;
-  }
-}
-
-// Above and below main text
-.appbar-supertitle,
-.appbar-subtitle {
-  color: $appbar-subtitle-color;
-  font-size: $font-size-normal;
-  @include flex-parent-row;
-}
-
-// appbar - actions
-//----------------------------------------------------------------------
-
-.appbar-actions {
-  @include flex-parent-row(); // To line up dividers and buttons properly
-  padding-left: $spacing-small;
-  text-align: right;
-
-  .button {
-    margin-right: $spacing-small;
-  }
 }
 
 // appbar - buttons
@@ -82,7 +41,10 @@
   display: inline-block;
   font-size: $font-size-icon;
   height: $appbar-button-height;
-  line-height: $appbar-button-height;
+  line-height: 1;
+  outline: none;
+  padding: 10px;
+  position: relative;
   width: $appbar-button-height;
   text-align: center;
   text-decoration: none;
@@ -108,17 +70,74 @@
   }
 }
 
+// appbar - nav icon (special button in top-left for menu toggle)
+//----------------------------------------------------------------------
+
+#appbar-nav-button[role="left-sidebar-toggle"] {
+  visibility: visible;
+}
+
+@media (min-width: $large-width) {
+  #appbar-nav-button[role="left-sidebar-toggle"] {
+    visibility: hidden;
+  }
+}
+
+// appbar - title
+//----------------------------------------------------------------------
+
+.appbar-title {
+  flex: 1; // To fill empty gaps
+  font-size: $font-size-large;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 $spacing-small;
+  pointer-events: none;
+  // @include truncate-text(); // Make optional via class
+
+  a {
+    color: $appbar-subtitle-color;
+  }
+}
+
+@media (min-width: $small-width) {
+  .appbar-title {
+    max-width: $sidebar-depth - 80px;
+  }
+}
+
+// Above and below main text
+.appbar-supertitle,
+.appbar-subtitle {
+  color: $appbar-subtitle-color;
+  font-size: $font-size-normal;
+  @include flex-parent-row;
+}
+
+// appbar - actions
+//----------------------------------------------------------------------
+
+// .appbar-actions {
+//   @include flex-parent-row(); // To line up dividers and buttons properly
+//   padding-left: $spacing-small;
+//   text-align: right;
+//
+//   .button {
+//     margin-right: $spacing-small;
+//   }
+// }
+
 // appbar - dividers
 //----------------------------------------------------------------------
 
 .appbar-divider,
 .appbar-spacer {
+  background-color: darken($primary-color, 10%);
   content: "";
   display: inline-block;
   height: $appbar-button-height - $spacing-normal;
-  line-height: $appbar-button-height - $spacing-normal;
+  line-height: 1;
   margin: 0 $spacing-small;
-  background-color: darken($primary-color, 10%);
   width: 1px;
 }
 
