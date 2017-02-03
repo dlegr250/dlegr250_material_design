@@ -17,7 +17,7 @@
 //----------------------------------------------------------------------
 
 .appbar {
-  background-color: $primary-color;
+  background-color: $color-primary;
   bottom: auto;
   box-sizing: border-box;
   color: $appbar-text-color;
@@ -34,7 +34,7 @@
 //----------------------------------------------------------------------
 
 .appbar-button {
-  background-color: $primary-color;
+  background-color: $color-primary;
   box-sizing: border-box;
   color: $appbar-button-color;
   cursor: pointer;
@@ -53,7 +53,7 @@
   @include transition(background 0.2s ease-in-out);
 
   &:active {
-    background-color: darken($primary-color, 12%);
+    background-color: darken($color-primary, 12%);
   }
 }
 
@@ -61,11 +61,11 @@
 @media (hover: hover) {
   .appbar-button {
     &:hover {
-      background-color: darken($primary-color, 7%);
+      background-color: darken($color-primary, 7%);
     }
 
     &:active {
-      background-color: darken($primary-color, 12%);
+      background-color: darken($color-primary, 12%);
     }
   }
 }
@@ -134,7 +134,7 @@
 
 .appbar-divider,
 .appbar-spacer {
-  background-color: darken($primary-color, 10%);
+  background-color: darken($color-primary, 10%);
   content: "";
   display: inline-block;
   height: $appbar-button-height - $spacing-normal;

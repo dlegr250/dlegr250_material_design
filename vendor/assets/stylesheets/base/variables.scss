@@ -195,7 +195,7 @@ $colors: (
 $body-background-color: #fafafa !default;
 
 // appbar and any colored component
-// $primary-color: color("blue") !default;
+// $color-primary: color("blue") !default;
 // $secondary-color: color("red") !default;
 
 // Hover color for lists, menus, etc...
@@ -212,7 +212,7 @@ $appbar-button-color: color("helper") !default;
 //----------------------------------------------------------------------
 
 // $app-config: (
-//   "primary": $primary-color,
+//   "primary": $color-primary,
 //   "secondary": $secondary-color,
 //   "hover": $hover-color
 // );
