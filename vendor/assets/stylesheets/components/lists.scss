@@ -113,7 +113,7 @@ ol {
 // Dividers between items
 .list-divided {
   .list-item:not(:last-child) {
-    border-bottom: 1px solid $color-divider;
+    border-bottom: 1px solid color("divider");
   }
 }
 
@@ -217,7 +217,7 @@ ol {
 // }
 //
 // .list-item-icon-circle {
-//   background-color: $color-divider;
+//   background-color: color("divider");
 //   font-size: 16px;
 //   height: 30px;
 //   line-height: 30px;
@@ -399,13 +399,13 @@ ol {
 // //----------------------------------------------------------------------
 //
 // .list-bordered {
-//   border: 1px solid $color-divider;
+//   border: 1px solid color("divider");
 // }
 //
 // .list-divided {
 //   .list-header,
 //   .list-item {
-//     border-bottom: 1px solid $color-divider;
+//     border-bottom: 1px solid color("divider");
 //   }
 // }
 //
