@@ -3,6 +3,15 @@
 // Default element styles are defined in the base.scss file.
 //======================================================================
 
+// Generate color classes (from base/variables/colors.scss map)
+// Assume if you're specifying this you want it to override (hence !important)
+//----------------------------------------------------------------------
+
+@each $color-name, $hex-value in $colors {
+  .background-color-#{$color-name} { background-color: #{$hex-value} !important; }
+  .color-#{$color-name} { color: #{$hex-value} !important; }
+}
+
 // Alignments
 //----------------------------------------------------------------------
 
@@ -14,9 +23,7 @@
 .float-right { float: right; }
 
 // Expand entire width and take element padding into consideration.
-.full-width {
-  @include full-width;
-}
+.full-width { @include full-width; }
 
 // Flex sizes for rows with items of different widths
 //----------------------------------------------------------------------
@@ -27,6 +34,7 @@
 .flex-4 { flex: 4 !important; }
 
 .flex-parent-row { @include flex-parent-row(); }
+.flex-parent-row-align-top { @include flex-parent-row-align-top(); }
 
 // Constrained to max size to center content
 //----------------------------------------------------------------------
@@ -36,13 +44,13 @@
 .constrained-large,
 .constrained-xlarge {
   margin: auto;
-  @include full-width;
+  @include full-width();
 }
 
-.constrained-small { max-width: $small-width; }
-.constrained-medium { max-width: $medium-width; }
-.constrained-large { max-width: $large-width; }
-.constrained-xlarge { max-width: $xlarge-width; }
+.constrained-small { max-width: $width-small; }
+.constrained-medium { max-width: $width-medium; }
+.constrained-large { max-width: $width-large; }
+.constrained-xlarge { max-width: $width-xlarge; }
 
 // Padding
 //----------------------------------------------------------------------
@@ -93,60 +101,30 @@
 
 // If lists or other elements need extra room at bottom
 // or else the FAB overlaps them.
-.allow-room-for-fab-at-bottom {
+.allow-room-for-fab-at-bottom,
+.fab-at-bottom {
   margin-bottom: $button-fab-height * 2;
 }
 
 // Cursors
 //----------------------------------------------------------------------
 
-.cursor-default {
-  cursor: default !important;
-}
-
-.cursor-disabled {
-  cursor: not-allowed !important;
-}
-
-// Highlight (yellowish background)
-//----------------------------------------------------------------------
-
-.highlight {
-  background-color: color("highlight");
-}
+.cursor-default { cursor: default !important; }
+.cursor-disabled { cursor: not-allowed !important; }
 
 // Hover
 //----------------------------------------------------------------------
 
-.no-hover:hover {
-  background-color: transparent !important;
-}
+.no-hover:hover { background-color: transparent !important; }
 
 // Decorate text
 //----------------------------------------------------------------------
 
-.bold,
-.strong {
-  font-weight: 700;
-}
-
-// Used to override labels or other elements that use bold
-// but may not want to in all cases.
-.unbold {
-  font-weight: normal !important;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
+.bold { font-weight: 700; }
+.unbold { font-weight: normal !important; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
 
 // Rounded corners
 //----------------------------------------------------------------------
@@ -161,31 +139,10 @@
 //----------------------------------------------------------------------
 
 // Remove from DOM rendering completely
-.hidden {
-  display: none !important;
-}
+.hidden { display: none !important; }
 
 // Remain in DOM flow but make invisible
-.invisible {
-  visibility: hidden !important;
-}
-
-// Colored background or text
-//----------------------------------------------------------------------
-
-@each $color-name, $color in $colors {
-  .color-#{$color-name} {
-    color: $color !important; // Assume if you're specifying this you want it to override
-  }
-
-  .background-color-#{$color-name} {
-    background-color: $color !important;
-  }
-
-  .border-color-#{$color-name} {
-    border-color: $color !important;
-  }
-}
+.invisible { visibility: hidden !important; }
 
 // Font sizes
 //----------------------------------------------------------------------
@@ -196,23 +153,11 @@
 .font-size-large { font-size: $font-size-large !important; }
 .font-size-xlarge { font-size: $font-size-xlarge !important; }
 
-$font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
-@each $size in $font-sizes {
-  .font-size-#{$size} {
-    font-size: #{$size}px !important;
-  }
-}
-
 // Truncating text
 //----------------------------------------------------------------------
 
-.truncate-text {
-  @include truncate-text();
-}
-
-.force-text-wrap {
-  @include force-text-wrap();
-}
+.truncate-text { @include truncate-text(); }
+.force-text-wrap { @include force-text-wrap(); }
 
 // Borders
 //----------------------------------------------------------------------
@@ -246,9 +191,10 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 // Widths
 //----------------------------------------------------------------------
 
-.width-small { width: $small-width; }
-.width-medium { width: $medium-width; }
-.width-large { width: $large-width; }
+.width-small { width: $width-small; }
+.width-medium { width: $width-medium; }
+.width-large { width: $width-large; }
+.width-xlarge { width: $width-xlarge; }
 
 // Media query classes for various device sizes
 //----------------------------------------------------------------------
@@ -264,8 +210,10 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
   display: none;
 }
 
-@media (min-width: $medium-width) {
-  .small-only { display: none !important; }
+@media (min-width: $width-medium) {
+  .small-only {
+    display: none;
+  }
 
   .medium-only,
   .medium-and-large-only {
@@ -273,11 +221,11 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
   }
 }
 
-@media (min-width: $large-width) {
+@media (min-width: $width-large) {
   .small-only,
   .small-and-medium-only,
   .medium-only {
-    display: none !important;
+    display: none;
   }
 
   .medium-and-large-only,
@@ -293,11 +241,7 @@ $font-sizes: 8, 10, 12, 14, 16, 18, 20, 22, 24;
 // there.
 //----------------------------------------------------------------------
 
-// Larger than mobile
-@media (min-width: $small-width) {}
-
-// Larger than medium
-@media (min-width: $medium-width) {}
-
-// Larger than large
-@media (min-width: $large-width) {}
+@media (min-width: $width-small) {}
+@media (min-width: $width-medium) {}
+@media (min-width: $width-large) {}
+@media (min-width: $width-xlarge) {}

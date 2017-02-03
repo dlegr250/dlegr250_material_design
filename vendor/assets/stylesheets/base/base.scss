@@ -4,15 +4,19 @@
 //======================================================================
 
 // Typography
+// Note: Material Design Iconic Font is hosted locally
 //----------------------------------------------------------------------
 
-// Note: Material Design Iconic Font is hosted locally
-
-// @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,600,700");
 
 // HTML/body
 //----------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
 html,
 body {
@@ -68,6 +72,10 @@ hr {
 a {
   color: color("blue");
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // Images

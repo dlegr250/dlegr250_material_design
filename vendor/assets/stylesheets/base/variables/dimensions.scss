@@ -111,109 +111,12 @@ $dialog-depth: 50;
 // Device breakpoints
 //----------------------------------------------------------------------
 
-$size-small: 400px;
-$size-medium: 760px;
-$size-large: 1000px;
-$size-xlarge: 1200px;
+$width-small: 400px;
+$width-medium: 760px;
+$width-large: 1000px;
+$width-xlarge: 1200px;
 
 $small-width: $size-small;
 $medium-width: $size-medium;
 $large-width: $size-large;
 $xlarge-width: $size-xlarge;
-
-// Convenience variables
-//----------------------------------------------------------------------
-
-
-
-// Color variables
-// See: http://www.google.com/design/spec/style/color.html
-//----------------------------------------------------------------------
-
-$color-primary: #2196f3 !default;
-$color-secondary: #db4437 !default;
-
-// Hover color for lists, menus, etc...
-$color-hover: #f3f3f3 !default;
-
-$color-table-hover: #eee;
-$color-table-selected: #f5f5f5;
-
-$colors: (
-  "red"           : #db4437,
-  "light-red"     : #ffebee,
-  "blue"          : #2196f3,
-  "google-blue"   : #4285f4,
-  "dark-blue"     : darken(#2196f3, 10%),
-  "disabled"      : rgba(0, 0, 0, 0.26),
-  "grey"          : #9e9e9e,
-  "black"         : #000000,
-  "white"         : #ffffff,
-  "pink"          : #e91e63,
-  "purple"        : #9c27b0,
-  "deep-purple"   : #673ab7,
-  "light-purple"  : lighten(#673ab7, 47%),
-  "indigo"        : #3f51b5,
-  "light-blue"    : #03a9f4,
-  "github-light-blue" : #f2f8fa,
-  "cyan"          : #00bcd4,
-  "teal"          : #009688,
-  "green"         : #4caf50,
-  "light-green"   : #8bc34a,
-  "lime"          : #cddc39,
-  "yellow"        : #ffeb3b,
-  "highlight"     : #fef5d8,
-  "dark-highlight": #ffe79f,
-  "amber"         : #ffc107,
-  "orange"        : #ff9800,
-  "dark-orange"   : #ef6c00,
-  "deep-orange"   : #ff5722,
-  "brown"         : #795548,
-  "blue-grey"     : #607d8b,
-  "icon"          : #737373,
-  "offwhite"      : rgba(255, 255, 255, 0.6),
-  "helper"        : rgba(0, 0, 0, 0.54),
-  "placeholder"   : rgba(0, 0, 0, 0.38),
-  "text"          : rgba(0, 0, 0, 0.87), // rgb(51, 51, 51),
-  "divider"       : rgba(0, 0, 0, 0.12),
-  "hover"         : $color-hover,
-  "light-hover"   : lighten($color-hover, 2%),
-  "snackbar"      : #323232,
-  "primary"       : $color-primary,
-  "secondary"     : $color-secondary,
-);
-
-// Easier way to reference $colors map
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
-// Defaults - Application colors (user can override)
-//----------------------------------------------------------------------
-
-// Body
-$body-background-color: #fafafa !default;
-
-// appbar and any colored component
-// $color-primary: color("blue") !default;
-// $secondary-color: color("red") !default;
-
-// Hover color for lists, menus, etc...
-// $hover-color: color("hover") !default;
-
-// Appbar only
-$appbar-text-color: color("white") !default;
-$appbar-subtitle-color: color("offwhite") !default;
-$appbar-button-color: color("helper") !default;
-
-// Merge defaults back into globals to use in colored components.
-// Having this here allows access to the color helpers already created
-// in the $colors global so you can do color("primary") instead of #fff.
-//----------------------------------------------------------------------
-
-// $app-config: (
-//   "primary": $color-primary,
-//   "secondary": $secondary-color,
-//   "hover": $hover-color
-// );
-// $colors: map-merge(($colors), ($app-config));

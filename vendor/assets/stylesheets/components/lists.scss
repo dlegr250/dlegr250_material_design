@@ -19,6 +19,11 @@
 // </div>
 //======================================================================
 
+$list-one-line-height: 48px;
+$list-one-line-with-avatar-height: 56px;
+$list-two-lines-height: 72px;
+$list-three-lines-height: 88px;
+
 // UL and OL lists
 //----------------------------------------------------------------------
 
@@ -40,12 +45,15 @@ ol {
 }
 
 .list-item {
-  @include flex-parent-row-align-top();
+  box-sizing: border-box;
+  color: color("text");
+  min-height: $list-one-line-height;
+  @include flex-parent-row();
 }
 
 .list-item-icon {
-  padding: $spacing-normal;
-  padding-left: 0;
+  color: color("icon");
+  padding-left: $spacing-normal;
   text-align: left;
   width: 30px;
 }
@@ -55,23 +63,25 @@ ol {
 }
 
 .list-item-primary {
+  flex: 1; // Fill space
   font-size: $font-size-normal;
   padding: $spacing-normal;
 }
 
 .list-item-primary-subtext {
+  color: color("helper");
   font-size: $font-size-small;
 }
 
 .list-item-secondary {
-  padding: $spacing-normal;
-  padding-left: 0;
+  color: color("helper");
+  padding-right: $spacing-normal;
   text-align: right;
 }
 
 .list-item-secondary-actions {
-  padding: $spacing-small;
-  padding-left: 0;
+  color: color("helper");
+  padding-right: $spacing-small;
   text-align: right;
 }
 
@@ -81,34 +91,47 @@ ol {
 // Sizes
 .list-one-line .list-item,
 .list-item-one-line {
-  min-height: 48px;
+  min-height: $list-one-line-height;
 }
 
 .list-one-line-with-avatar .list-item,
 .list-item-one-line-with-avatar {
-  min-height: 56px;
+  min-height: $list-one-line-with-avatar-height;
 }
 
 .list-two-lines .list-item,
 .list-item-two-lines {
-  min-height: 72px;
+  min-height: $list-two-lines-height;
 }
 
 .list-three-lines .list-item,
 .list-item-three-lines {
-  min-height: 88px;
+  min-height: $list-three-lines-height;
 }
 
 // Dividers between items
 .list-divided {
   .list-item:not(:last-child) {
-    border-bottom: 1px solid color("divider");
+    border-bottom: 1px solid $color-divider;
   }
 }
 
 // Hoverable
 .list-hoverable {
 
+}
+
+// Aligned top instead of centered
+.list-align-top {
+  .list-item {
+    @include flex-parent-row-align-top();
+  }
+
+  .list-item-icon,
+  .list-item-secondary,
+  .list-item-secondary-actions {
+    padding-top: $spacing-normal;
+  }
 }
 
 
@@ -193,7 +216,7 @@ ol {
 // }
 //
 // .list-item-icon-circle {
-//   background-color: color("divider");
+//   background-color: $color-divider;
 //   font-size: 16px;
 //   height: 30px;
 //   line-height: 30px;
@@ -375,13 +398,13 @@ ol {
 // //----------------------------------------------------------------------
 //
 // .list-bordered {
-//   border: 1px solid color("divider");
+//   border: 1px solid $color-divider;
 // }
 //
 // .list-divided {
 //   .list-header,
 //   .list-item {
-//     border-bottom: 1px solid color("divider");
+//     border-bottom: 1px solid $color-divider;
 //   }
 // }
 //
