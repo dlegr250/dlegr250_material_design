@@ -72,7 +72,9 @@ hr {
 a {
   color: color("blue");
   text-decoration: none;
+}
 
+a.link {
   &:hover {
     text-decoration: underline;
   }
