@@ -2,7 +2,8 @@
 //----------------------------------------------------------------------
 
 $body-background-color: #fafafa !default;
-$color-hover: #f3fefe !default;
+$color-hover: #f2f2f2 !default;
+$color-hover-blue: #f0f7fe !default;
 $color-primary: #2196f3 !default;
 $color-secondary: #db4437 !default;
 
@@ -312,6 +313,7 @@ $colors: (
   "primary": $color-primary,
   "secondary": $color-secondary,
   "hover": $color-hover,
+  "hover-blue": $color-hover-blue,
   "icon": #737373,
   "offwhite": rgba(255, 255, 255, 0.6),
   "disabled": rgba(0, 0, 0, 0.26),

@@ -49,6 +49,8 @@ ol {
   color: color("text");
   min-height: $list-one-line-height;
   @include flex-parent-row();
+  @include no-touch-highlight-color();
+  @include transition(background-color 0.30s ease);
 }
 
 .list-item-icon {
@@ -119,7 +121,13 @@ ol {
 
 // Hoverable
 .list-hoverable {
+  .list-item:hover {
+    background-color: color("hover");
+  }
 
+  .list-item:active {
+    background-color: darken(color("hover"), 3%);
+  }
 }
 
 // Aligned top instead of centered
