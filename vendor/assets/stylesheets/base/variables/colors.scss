@@ -1,3 +1,15 @@
+// Defaults variables that applications can override
+//----------------------------------------------------------------------
+
+$body-background-color: #fafafa !default;
+$color-hover: #f3fefe !default;
+$color-primary: #2196f3 !default;
+$color-secondary: #db4437 !default;
+
+$appbar-title-color: #fff !default;
+$appbar-subtitle-color: rgba(255, 255, 255, 0.6) !default;
+$appbar-button-color: #737373 !default;
+
 // SCSS maps of all colors
 //----------------------------------------------------------------------
 
@@ -321,15 +333,3 @@ $colors: (
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
-
-// Defaults variables that applications can override
-//----------------------------------------------------------------------
-
-$body-background-color: #fafafa !default;
-$color-hover: #f3fefe !default;
-$color-primary: #2196f3 !default;
-$color-secondary: #db4437 !default;
-
-$appbar-title-color: color("white") !default;
-$appbar-subtitle-color: color("offwhite") !default;
-$appbar-button-color: color("icon") !default;
