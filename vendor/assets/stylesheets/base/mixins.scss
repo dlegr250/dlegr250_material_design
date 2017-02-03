@@ -274,7 +274,16 @@ $default-rounded-corners-radius: 3px;
   font-size: $font-size-normal;
   padding-left: $spacing-normal;
   padding-right: $spacing-normal;
-  @include truncate-text();
+  // @include truncate-text();
+}
+
+@mixin list-item-primary-supertext() {
+  color: color("helper");
+  font-size: $font-size-small;
+  font-weight: normal;
+  padding-bottom: $spacing-xsmall;
+  @include flex-parent-row();
+  // @include truncate-text();
 }
 
 @mixin list-item-primary-subtext() {
@@ -282,7 +291,8 @@ $default-rounded-corners-radius: 3px;
   font-size: $font-size-small;
   font-weight: normal;
   padding-top: $spacing-xsmall;
-  @include truncate-text();
+  @include flex-parent-row();
+  // @include truncate-text();
 }
 
 @mixin list-item-secondary() {

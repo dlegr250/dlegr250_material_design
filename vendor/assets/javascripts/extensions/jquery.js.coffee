@@ -31,7 +31,7 @@ jQuery.extend jQuery.fn,
 #----------------------------------------------------------------------
 
 jQuery.extend jQuery.fn,
-  replaceWithSpinner: (options) ->
+  replaceWithSpinner: (options = {}) ->
     color = options["color"] || "primary"
     size = options["size"] || "normal"
 

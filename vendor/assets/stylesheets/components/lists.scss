@@ -1,9 +1,10 @@
 //======================================================================
+// See: https://material.io/guidelines/components/lists.html#lists-actions
 // EXAMPLE:
 // <div class="list list-bordered list-divided list-hoverable rounded-corners">
 //   <div class="list-item" id="list-item-ID">
 //     <div class="list-item-icon">
-//       <i class="zmdi zmdi-star"></i>
+//       <em class="material-icons">icon_name</em>
 //     </div>
 //     <div class="list-item-primary">
 //       Primary text
@@ -31,274 +32,376 @@ ol {
   }
 }
 
-// Lists - subheader
-//----------------------------------------------------------------------
-
-.list-subheader {
-  color: color("helper");
-  height: 48px;
-  padding: 0 $spacing-normal;
-  @include flex-parent-row();
-}
-
-// Lists - header
-//----------------------------------------------------------------------
-
-.list-header {
-  background-color: #f2f2f2;
-  @include list-item();
-}
-
-.list-header-icon {
-  @include list-item-icon();
-}
-
-.list-header-primary,
-.list-header-secondary {
-  box-sizing: border-box;
-}
-
-.list-header-primary {
-  font-weight: bold;
-  @include list-item-primary();
-}
-
-.list-header-primary-supertext {
-  @include list-item-primary-subtext();
-  padding-top: 0;
-  padding-bottom: $spacing-xsmall;
-}
-
-.list-header-primary-subtext {
-  @include list-item-primary-subtext();
-}
-
-.list-header-secondary {
-  @include list-item-secondary();
-}
-
-.list-header-secondary-actions {
-  @include list-item-secondary-actions();
-}
-
-@media(hover: hover) {
-  .list-header .button-icon:hover {
-    background-color: darken(color("hover"), 10%);
-  }
-}
-
-.list-header .button-icon:active {
-  background-color: darken(color("hover"), 20%);
-}
-
 // Lists - base
 //----------------------------------------------------------------------
 
 .list {
-  background-color: color("white");
-}
 
-.list-bordered {
-  border: 1px solid color("divider");
 }
-
-.list-divided {
-  .list-header,
-  .list-item {
-    border-bottom: 1px solid color("divider");
-  }
-}
-
-// Don't have double lines on last item for bordered and divided
-.list-bordered .list-item:last-child {
-  border-bottom: none;
-}
-
-// Lists - list item
-//----------------------------------------------------------------------
 
 .list-item {
-  @include list-item();
+  @include flex-parent-row-align-top();
 }
-
-// Lists - list item icon
-//----------------------------------------------------------------------
 
 .list-item-icon {
-  @include list-item-icon();
-}
-
-.list-item-icon-circle {
-  background-color: color("divider");
-  font-size: 16px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
+  padding: $spacing-normal;
+  padding-left: 0;
+  text-align: left;
   width: 30px;
-  @include rounded-corners(50%);
 }
 
-// Lists - list item primary
-//----------------------------------------------------------------------
+.list-item-icon-primary-action {
+
+}
 
 .list-item-primary {
-  @include list-item-primary();
+  font-size: $font-size-normal;
+  padding: $spacing-normal;
 }
 
 .list-item-primary-subtext {
-  @include list-item-primary-subtext();
+  font-size: $font-size-small;
 }
-
-// Force list-item to wrap text
-.list.force-text-wrap .list-item-primary {
-  @include force-text-wrap();
-}
-
-.list.truncate-overflow-text .list-item-primary {
-  @include truncate-text();
-}
-
-// Lists - list item secondary
-//----------------------------------------------------------------------
 
 .list-item-secondary {
-  @include list-item-secondary();
-}
-
-.list-item-secondary-actions {
-  @include list-item-secondary-actions();
-}
-
-.list-item-misc {
-  color: color("helper");
-  font-size: $font-size-small;
-  align-self: flex-start;
   padding: $spacing-normal;
+  padding-left: 0;
   text-align: right;
 }
 
-// Lists - hoverable
+.list-item-secondary-actions {
+  padding: $spacing-small;
+  padding-left: 0;
+  text-align: right;
+}
+
+// Lists - modifiers
 //----------------------------------------------------------------------
 
-@media(hover: hover) {
-  .list-hoverable .list-item:hover {
-    background-color: color("hover");
-  }
+// Sizes
+.list-one-line .list-item,
+.list-item-one-line {
+  min-height: 48px;
 }
 
-.list-hoverable {
-  .list-item {
-    @include no-touch-highlight-color(); // Remove blue background on touch
-
-    &:active {
-      background-color: darken(color("hover"), 5%);
-    }
-
-    // Slightly darker than list-item:hover
-    .button-icon {
-      &:hover {
-        background-color: darken(color("hover"), 5%);
-      }
-
-      &:active {
-        background-color: darken(color("hover"), 15%);
-      }
-    }
-  }
-}
-
-.list-no-hover .list-item {
-  &:hover,
-  &:active {
-    background-color: transparent !important;
-  }
-}
-
-// Links in list items
-//----------------------------------------------------------------------
-
-.list-item-primary-link {
-  color: color("text");
-  font-weight: bold;
-
-  &:hover {
-    color: color("primary");
-  }
-}
-
-.list-item-primary-subtext-link {
-  color: color("text");
-
-  &:hover {
-    color: color("primary");
-  }
-}
-
-// Nested list items
-//----------------------------------------------------------------------
-
-.list-item-nested-1 {
-  padding-left: $spacing-normal;
-}
-
-.list-item-nested-2 {
-  padding-left: $spacing-normal * 2;
-}
-
-.list-item-nested-3 {
-  padding-left: $spacing-normal * 3;
-}
-
-.list-item-nested-4 {
-  padding-left: $spacing-normal * 4;
-}
-
-.list-item-nested-5 {
-  padding-left: $spacing-normal * 5;
-}
-
-.list-item-nested-6 {
-  padding-left: $spacing-normal * 6;
-}
-
-// Lists - DRYing up HTML classes
-//----------------------------------------------------------------------
-
-.list-standard {
-  @extend .list-bordered;
-  @extend .list-divided;
-  @extend .list-hoverable;
-  @extend .rounded-corners;
-  @extend .background-color-white;
-
-  .list-item {
-    min-height: 72px;
-  }
-
-  .list-item-primary {
-    @include truncate-text();
-  }
-}
-
-// Lists - sizes
-// Put after .list-standard to overwrite any defaults
-//----------------------------------------------------------------------
-
-.list-header-dense {
-  min-height: 32px;
-}
-
-.list-one-lines .list-item,
-.list-item-one-lines {
-  min-height: 48px !important;
+.list-one-line-with-avatar .list-item,
+.list-item-one-line-with-avatar {
+  min-height: 56px;
 }
 
 .list-two-lines .list-item,
 .list-item-two-lines {
-  min-height: 72px !important;
+  min-height: 72px;
 }
 
 .list-three-lines .list-item,
 .list-item-three-lines {
-  min-height: 88px !important;
+  min-height: 88px;
 }
+
+// Dividers between items
+.list-divided {
+  .list-item:not(:last-child) {
+    border-bottom: 1px solid color("divider");
+  }
+}
+
+// Hoverable
+.list-hoverable {
+
+}
+
+
+// // Lists - header
+// //----------------------------------------------------------------------
+//
+// .list-header {
+//   background-color: #f2f2f2;
+//   @include list-item();
+// }
+//
+// .list-header-icon {
+//   @include list-item-icon();
+// }
+//
+// .list-header-primary,
+// .list-header-secondary {
+//   box-sizing: border-box;
+// }
+//
+// .list-header-primary {
+//   font-weight: bold;
+//   @include list-item-primary();
+// }
+//
+// .list-header-primary-supertext {
+//   @include list-item-primary-subtext();
+//   padding-top: 0;
+//   padding-bottom: $spacing-xsmall;
+// }
+//
+// .list-header-primary-subtext {
+//   @include list-item-primary-subtext();
+// }
+//
+// .list-header-secondary {
+//   @include list-item-secondary();
+// }
+//
+// .list-header-secondary-actions {
+//   @include list-item-secondary-actions();
+// }
+//
+// @media(hover: hover) {
+//   .list-header .button-icon:hover {
+//     background-color: darken(color("hover"), 10%);
+//   }
+// }
+//
+// .list-header .button-icon:active {
+//   background-color: darken(color("hover"), 20%);
+// }
+//
+// // Lists - base
+// //----------------------------------------------------------------------
+//
+// .list {
+//   background-color: color("white");
+// }
+//
+// // Lists - list item
+// //----------------------------------------------------------------------
+//
+// .list-item {
+//   @include list-item();
+// }
+//
+// // Shared among list-item children
+// .list-item-icon,
+// .list-item-primary,
+// .list-item-secondary,
+// .list-item-secondary-actions {
+//   padding-bottom: $spacing-normal;
+//   padding-top: $spacing-normal;
+// }
+//
+// // Lists - list item icon
+// //----------------------------------------------------------------------
+//
+// .list-item-icon {
+//   @include list-item-icon();
+// }
+//
+// .list-item-icon-circle {
+//   background-color: color("divider");
+//   font-size: 16px;
+//   height: 30px;
+//   line-height: 30px;
+//   text-align: center;
+//   width: 30px;
+//   @include rounded-corners(50%);
+// }
+//
+// // Lists - list item primary
+// //----------------------------------------------------------------------
+//
+// .list-item-primary {
+//   @include list-item-primary();
+//   padding: $spacing-normal;
+// }
+//
+// .list-item-primary-supertext {
+//   @include list-item-primary-supertext();
+// }
+//
+// .list-item-primary-subtext {
+//   @include list-item-primary-subtext();
+// }
+//
+// .list-item-primary-subtext .link {
+//   color: color("text");
+//
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+//
+// // Force list-item to wrap text
+// .list.force-text-wrap .list-item-primary {
+//   @include force-text-wrap();
+// }
+//
+// .list.truncate-overflow-text .list-item-primary {
+//   @include truncate-text();
+// }
+//
+// // Lists - list item secondary
+// //----------------------------------------------------------------------
+//
+// .list-item-secondary {
+//   @include list-item-secondary();
+// }
+//
+// .list-item-secondary-actions {
+//   @include list-item-secondary-actions();
+// }
+//
+// .list-item-misc {
+//   color: color("helper");
+//   font-size: $font-size-small;
+//   align-self: flex-start;
+//   padding: $spacing-normal;
+//   text-align: right;
+// }
+//
+// // Lists - hoverable
+// //----------------------------------------------------------------------
+//
+// @media(hover: hover) {
+//   .list-hoverable .list-item:hover {
+//     background-color: color("hover");
+//   }
+// }
+//
+// .list-hoverable {
+//   .list-item {
+//     @include no-touch-highlight-color(); // Remove blue background on touch
+//
+//     &:active {
+//       background-color: darken(color("hover"), 5%);
+//     }
+//
+//     // Slightly darker than list-item:hover
+//     .button-icon {
+//       &:hover {
+//         background-color: darken(color("hover"), 5%);
+//       }
+//
+//       &:active {
+//         background-color: darken(color("hover"), 15%);
+//       }
+//     }
+//   }
+// }
+//
+// .list-no-hover .list-item {
+//   &:hover,
+//   &:active {
+//     background-color: transparent !important;
+//   }
+// }
+//
+// // Links in list items
+// //----------------------------------------------------------------------
+//
+// .list-item-primary-subtext-link {
+//   color: color("text");
+//
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+//
+// // Nested list items
+// //----------------------------------------------------------------------
+//
+// .list-item-nested-1 {
+//   padding-left: $spacing-normal;
+// }
+//
+// .list-item-nested-2 {
+//   padding-left: $spacing-normal * 2;
+// }
+//
+// .list-item-nested-3 {
+//   padding-left: $spacing-normal * 3;
+// }
+//
+// .list-item-nested-4 {
+//   padding-left: $spacing-normal * 4;
+// }
+//
+// .list-item-nested-5 {
+//   padding-left: $spacing-normal * 5;
+// }
+//
+// .list-item-nested-6 {
+//   padding-left: $spacing-normal * 6;
+// }
+//
+// // Lists - DRYing up HTML classes
+// //----------------------------------------------------------------------
+//
+// .list-standard {
+//   @extend .list-bordered;
+//   @extend .list-divided;
+//   @extend .list-hoverable;
+//   @extend .rounded-corners;
+//   @extend .background-color-white;
+//
+//   .list-item {
+//     min-height: 72px;
+//   }
+//
+//   .list-item-primary {
+//     @include truncate-text();
+//   }
+// }
+//
+// // Lists - sizes
+// // Put after .list-standard to overwrite any defaults
+// //----------------------------------------------------------------------
+//
+// .list-header-dense {
+//   min-height: 32px;
+// }
+//
+// .list-one-lines .list-item,
+// .list-item-one-lines {
+//   min-height: 48px !important;
+// }
+//
+// .list-two-lines .list-item,
+// .list-item-two-lines {
+//   min-height: 72px !important;
+// }
+//
+// .list-three-lines .list-item,
+// .list-item-three-lines {
+//   min-height: 88px !important;
+// }
+//
+// // Lists - modifiers
+// //----------------------------------------------------------------------
+//
+// .list-bordered {
+//   border: 1px solid color("divider");
+// }
+//
+// .list-divided {
+//   .list-header,
+//   .list-item {
+//     border-bottom: 1px solid color("divider");
+//   }
+// }
+//
+// // Don't have double lines on last item for bordered and divided
+// .list-bordered .list-item:last-child {
+//   border-bottom: none;
+// }
+//
+// .list-align-top .list-item {
+//   @include flex-parent-row-align-top();
+// }
+//
+// .list-truncate-text {
+//   .list-item > * {
+//     @include truncate-text();
+//   }
+// }
+//
+// .list-force-text-wrap {
+//   .list-item > * {
+//     @include force-text-wrap();
+//   }
+// }

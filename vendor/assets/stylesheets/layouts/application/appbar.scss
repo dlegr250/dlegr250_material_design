@@ -92,6 +92,7 @@
   font-weight: 400;
   line-height: 1;
   margin: 0 $spacing-small;
+  max-width: auto;
   pointer-events: none;
   -webkit-font-smoothing: antialiased;
   // @include truncate-text(); // Make optional via class

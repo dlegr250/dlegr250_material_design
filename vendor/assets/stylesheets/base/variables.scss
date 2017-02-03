@@ -78,6 +78,14 @@ $font-size-normal: 14px;
 $font-size-large: 20px;
 $font-size-xlarge: 34px;
 
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-34: 34px;
+
 $font-size-text-field: 16px;
 
 $font-size-icon: 24px;
@@ -103,10 +111,15 @@ $dialog-depth: 50;
 // Device breakpoints
 //----------------------------------------------------------------------
 
-$small-width: 400px;
-$medium-width: 760px;
-$large-width: 1000px;
-$xlarge-width: 1200px;
+$size-small: 400px;
+$size-medium: 760px;
+$size-large: 1000px;
+$size-xlarge: 1200px;
+
+$small-width: $size-small;
+$medium-width: $size-medium;
+$large-width: $size-large;
+$xlarge-width: $size-xlarge;
 
 // Convenience variables
 //----------------------------------------------------------------------
@@ -116,6 +129,15 @@ $xlarge-width: 1200px;
 // Color variables
 // See: http://www.google.com/design/spec/style/color.html
 //----------------------------------------------------------------------
+
+$color-primary: #2196f3 !default;
+$color-secondary: #db4437 !default;
+
+// Hover color for lists, menus, etc...
+$color-hover: #f3f3f3 !default;
+
+$color-table-hover: #eee;
+$color-table-selected: #f5f5f5;
 
 $colors: (
   "red"           : #db4437,
@@ -151,11 +173,14 @@ $colors: (
   "icon"          : #737373,
   "offwhite"      : rgba(255, 255, 255, 0.6),
   "helper"        : rgba(0, 0, 0, 0.54),
-  "text"          : rgb(51, 51, 51),
+  "placeholder"   : rgba(0, 0, 0, 0.38),
+  "text"          : rgba(0, 0, 0, 0.87), // rgb(51, 51, 51),
   "divider"       : rgba(0, 0, 0, 0.12),
-  "hover"         : #f3f3f3,
-  "light-hover"   : lighten(#f3f3f3, 2%),
-  "snackbar"      : #323232
+  "hover"         : $color-hover,
+  "light-hover"   : lighten($hover-color, 2%),
+  "snackbar"      : #323232,
+  "primary"       : $color-primary,
+  "secondary"     : $color-secondary,
 );
 
 // Easier way to reference $colors map
@@ -170,11 +195,11 @@ $colors: (
 $body-background-color: #fafafa !default;
 
 // appbar and any colored component
-$primary-color: color("blue") !default;
-$secondary-color: color("red") !default;
+// $primary-color: color("blue") !default;
+// $secondary-color: color("red") !default;
 
 // Hover color for lists, menus, etc...
-$hover-color: color("hover") !default;
+// $hover-color: color("hover") !default;
 
 // Appbar only
 $appbar-text-color: color("white") !default;
@@ -186,9 +211,9 @@ $appbar-button-color: color("helper") !default;
 // in the $colors global so you can do color("primary") instead of #fff.
 //----------------------------------------------------------------------
 
-$app-config: (
-  "primary": $primary-color,
-  "secondary": $secondary-color,
-  "hover": $hover-color
-);
-$colors: map-merge(($colors), ($app-config));
+// $app-config: (
+//   "primary": $primary-color,
+//   "secondary": $secondary-color,
+//   "hover": $hover-color
+// );
+// $colors: map-merge(($colors), ($app-config));
