@@ -368,7 +368,7 @@ $buttons: ".button";
   width: 100%;
 }
 
-@media (min-width: $small-width) {
+@media (min-width: $width-small) {
   .button.responsive {
     width: inherit;
   }

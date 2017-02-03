@@ -69,7 +69,7 @@
 }
 
 // Larger devices
-@media (min-width: $medium-width) {
+@media (min-width: $width-medium) {
   .dl-responsive {
     .dl-dt {
       display: table-cell;

@@ -77,7 +77,7 @@
   visibility: visible;
 }
 
-@media (min-width: $large-width) {
+@media (min-width: $width-large) {
   #appbar-nav-button[role="left-sidebar-toggle"] {
     visibility: hidden;
   }
@@ -102,7 +102,7 @@
   }
 }
 
-@media (min-width: $small-width) {
+@media (min-width: $width-small) {
   .appbar-title {
     max-width: $sidebar-width - 64px;
   }
@@ -113,7 +113,7 @@
 .appbar-title-subtitle {
   color: $appbar-subtitle-color;
   font-size: $font-size-normal;
-  @include flex-parent-row;
+  @include flex-parent-row();
 }
 
 // appbar - actions

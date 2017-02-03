@@ -70,7 +70,7 @@
 // Sidebars - media queries
 //----------------------------------------------------------------------
 
-@media (min-width: $large-width) {
+@media (min-width: $width-large) {
   #left-sidebar {
     border-right: 1px solid color("divider");
     pointer-events: auto;
