@@ -63,6 +63,7 @@ ol {
 }
 
 .list-item-primary {
+  color: color("text");
   flex: 1; // Fill space
   font-size: $font-size-normal;
   padding: $spacing-normal;
