@@ -177,7 +177,7 @@ $colors: (
   "text"          : rgba(0, 0, 0, 0.87), // rgb(51, 51, 51),
   "divider"       : rgba(0, 0, 0, 0.12),
   "hover"         : $color-hover,
-  "light-hover"   : lighten($hover-color, 2%),
+  "light-hover"   : lighten($color-hover, 2%),
   "snackbar"      : #323232,
   "primary"       : $color-primary,
   "secondary"     : $color-secondary,
