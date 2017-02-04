@@ -55,6 +55,7 @@ ol {
 
 .list-item-icon {
   color: color("icon");
+  max-width: 56px;
   padding-left: $spacing-normal;
   text-align: center;
   width: 56px;
@@ -74,6 +75,7 @@ ol {
 .list-item-primary-subtext {
   color: color("helper");
   font-size: $font-size-small;
+  padding-top: $spacing-small;
 }
 
 .list-item-secondary {
@@ -120,14 +122,14 @@ ol {
 }
 
 // Hoverable
-.list-hoverable {
-  .list-item:hover {
-    background-color: color("hover");
-  }
+.list-hoverable .list-item {
+  &:hover { background-color: color("hover"); }
+  &:active { background-color: darken(color("hover"), 3%); }
+}
 
-  .list-item:active {
-    background-color: darken(color("hover"), 3%);
-  }
+.list-hoverable-blue .list-item {
+  &:hover { background-color: color("hover-blue"); }
+  &:active { background-color: darken(color("hover-blue"), 3%); }
 }
 
 // Aligned top instead of centered
@@ -142,7 +144,6 @@ ol {
     padding-top: $spacing-normal;
   }
 }
-
 
 // // Lists - header
 // //----------------------------------------------------------------------
