@@ -159,6 +159,25 @@ ol {
   }
 }
 
+// Components to save typing classes
+//----------------------------------------------------------------------
+
+.component-list {
+  background-color: color("white");
+  border: 1px solid color("divider");
+  @include rounded-corners();
+
+  .list-item {
+    min-height: $list-two-lines-height;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid color("divider");
+    }
+  }
+}
+
+// background-color-white bordered-rounded list-divided
+
 // // Lists - header
 // //----------------------------------------------------------------------
 //
