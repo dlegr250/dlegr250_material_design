@@ -45,20 +45,11 @@ ol {
 }
 
 .list-item {
-  box-sizing: border-box;
-  color: color("text");
-  min-height: $list-one-line-height;
-  @include flex-parent-row();
-  @include no-touch-highlight-color();
-  @include transition(background-color 0.30s ease);
+  @include list-item();
 }
 
 .list-item-icon {
-  color: color("icon");
-  max-width: 56px;
-  padding-left: $spacing-normal;
-  text-align: center;
-  width: 56px;
+  @include list-item-icon();
 }
 
 .list-item-icon-primary-action {
@@ -66,28 +57,23 @@ ol {
 }
 
 .list-item-primary {
-  color: color("text");
-  flex: 1; // Fill space
-  font-size: $font-size-normal;
-  padding: $spacing-normal;
+  @include list-item-primary();
+}
+
+.list-item-primary-supertext {
+  @include list-item-primary-supertext();
 }
 
 .list-item-primary-subtext {
-  color: color("helper");
-  font-size: $font-size-small;
-  padding-top: $spacing-xsmall;
+  @include list-item-primary-subtext();
 }
 
 .list-item-secondary {
-  color: color("helper");
-  padding-right: $spacing-normal;
-  text-align: right;
+  @include list-item-secondary();
 }
 
 .list-item-secondary-actions {
-  color: color("helper");
-  padding-right: $spacing-small;
-  text-align: right;
+  @include list-item-secondary-actions();
 }
 
 // Lists - modifiers

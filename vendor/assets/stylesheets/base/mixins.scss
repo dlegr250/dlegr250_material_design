@@ -254,8 +254,9 @@ $default-rounded-corners-radius: 3px;
 //----------------------------------------------------------------------
 
 @mixin list-item() {
+  color: color("text");
   font-size: $font-size-normal;
-  min-height: 48px;
+  min-height: $list-one-line-height;
   @include flex-parent-row();
   @include no-touch-highlight-color();
   @include transition(background-color 0.30s ease);
@@ -263,18 +264,17 @@ $default-rounded-corners-radius: 3px;
 
 @mixin list-item-icon() {
   color: color("icon");
+  max-width: 56px;
   padding-left: $spacing-normal;
-  text-align: left;
-  width: 30px;
+  text-align: center;
+  width: 56px;
 }
 
 @mixin list-item-primary() {
   color: color("text");
-  flex: 1;
+  flex: 1; // Fill space
   font-size: $font-size-normal;
-  padding-left: $spacing-normal;
-  padding-right: $spacing-normal;
-  // @include truncate-text();
+  padding: $spacing-normal;
 }
 
 @mixin list-item-primary-supertext() {
@@ -283,20 +283,16 @@ $default-rounded-corners-radius: 3px;
   font-weight: normal;
   padding-bottom: $spacing-xsmall;
   @include flex-parent-row();
-  // @include truncate-text();
 }
 
 @mixin list-item-primary-subtext() {
-  color: color("helper");
-  font-size: $font-size-small;
-  font-weight: normal;
+  @include list-item-primary-supertext();
+  padding-bottom: 0;
   padding-top: $spacing-xsmall;
-  @include flex-parent-row();
-  // @include truncate-text();
 }
 
 @mixin list-item-secondary() {
-  color: color("icon");
+  color: color("helper");
   padding-right: $spacing-normal;
   text-align: right;
 }

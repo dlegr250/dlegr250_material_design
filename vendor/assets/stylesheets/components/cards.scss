@@ -44,22 +44,19 @@
   @include list-item-icon();
 }
 
-.card-header-primary,
-.card-header-secondary {
-  box-sizing: border-box;
-}
+// .card-header-primary,
+// .card-header-secondary {
+//   box-sizing: border-box;
+// }
 
 .card-header-primary {
   @include list-item-primary();
-  @include force-text-wrap();
   font-size: $font-size-large;
   font-weight: bold;
-  padding: $spacing-normal;
 }
 
 .card-header-primary-subtext {
   @include list-item-primary-subtext();
-  @include force-text-wrap();
 }
 
 .card-header-secondary {
@@ -76,7 +73,6 @@
 
 .card-content {
   padding: $spacing-normal;
-  @include force-text-wrap();
 }
 
 // Card - content - subheader
@@ -118,6 +114,7 @@
 // Inner cards - cards inside cards
 //----------------------------------------------------------------------
 
+// TODO do we even use this???
 .card-inner {
   @include box-shadow(none);
   @include full-width();
