@@ -37,6 +37,11 @@ $card-width-xlarge: 420px;
 // Dimensions - lists
 //----------------------------------------------------------------------
 
+$list-one-line-height: 48px;
+$list-one-line-with-avatar-height: 56px;
+$list-two-lines-height: 72px;
+$list-three-lines-height: 88px;
+
 // 72px is the specification, but minus 32px for 16px left/right padding.
 $list-item-icon-width: 40px;
 
