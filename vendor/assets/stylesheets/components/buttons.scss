@@ -19,12 +19,12 @@ $buttons: ".button";
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-block;
+  // display: inline-block;
   // display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 500;
-  height: $button-height;
-  line-height: $button-height;
+  min-height: $button-height;
+  // line-height: $button-height;
   letter-spacing: 0.5px;
   min-width: 88px;
   outline: none;
@@ -34,13 +34,15 @@ $buttons: ".button";
   text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
+  @include flex-parent-row-align-center();
+  display: inline-flex;
   @include no-touch-highlight;
   @include rounded-corners;
   @include transition(all 0.2s ease-in-out);
 
-  .material-icons {
-    line-height: $button-height;
-  }
+  // .material-icons {
+  //   line-height: $button-height;
+  // }
 
   &:hover {
     text-decoration: none !important;
@@ -48,9 +50,9 @@ $buttons: ".button";
 }
 
 // Icons inside button
-.button .material-icons {
-  line-height: 40px;
-}
+// .button .material-icons {
+//   line-height: 40px;
+// }
 
 .button.icon-left {
   padding-left: $spacing-normal - 8px;
@@ -73,8 +75,9 @@ $buttons: ".button";
 
 .button-xsmall {
   font-size: $font-size-small;
-  height: 28px;
-  line-height: 28px;
+  // height: 28px;
+  // line-height: 28px;
+  min-height: 28px !important;
   min-width: $button-height * 0.6;
   padding: 0 $spacing-xsmall;
 }
@@ -83,18 +86,22 @@ $buttons: ".button";
 .button-small,
 .button-dense {
   font-size: $font-size-small;
-  height: $button-height-dense !important;
-  line-height: $button-height-dense !important;
+  // height: $button-height-dense !important;
+  // line-height: $button-height-dense !important;
+  min-height: $button-height-dense !important;
   min-width: $button-height * 0.8;
   padding: 0 $spacing-small;
 }
 
 .button-large {
-  height: $button-height-large !important;
-  line-height: $button-height-large !important;
+  // height: $button-height-large !important;
+  // line-height: $button-height-large !important;
+  min-height: $button-height-large !important;
 }
 
-.button-normal {}
+.button-normal {
+  min-height: $button-height;
+}
 
 // Buttons - icon buttons
 //----------------------------------------------------------------------
@@ -105,9 +112,12 @@ $buttons: ".button";
   color: color("icon");
   cursor: pointer;
   height: $button-icon-height;
-  line-height: $button-icon-height;
+  // line-height: $button-icon-height;
+  // min-height: $button-icon-height;
   text-align: center;
   width: $button-icon-height;
+  @include flex-parent-row-align-center();
+  display: inline-flex;
   @include no-touch-highlight;
   @include rounded-corners(50%);
   @include transition(background-color 0.30s ease, color 0.30s ease);
@@ -135,7 +145,7 @@ $buttons: ".button";
 
 .button-icon-small {
   height: $button-icon-height * 0.8;
-  line-height: $button-icon-height * 0.8;
+  // line-height: $button-icon-height * 0.8;
   width: $button-icon-height * 0.8;
 }
 

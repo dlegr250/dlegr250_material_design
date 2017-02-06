@@ -67,6 +67,20 @@
   @include list-item-secondary-actions();
 }
 
+// Card - modifications to header
+//----------------------------------------------------------------------
+
+.card-align-top {
+  .card-header {
+    @include flex-parent-row-align-top();
+  }
+
+  .card-header-icon,
+  .card-header-secondary,
+  .card-header-secondary-actions {
+    padding-top: $spacing-small;
+  }
+}
 
 // Card - content
 //----------------------------------------------------------------------

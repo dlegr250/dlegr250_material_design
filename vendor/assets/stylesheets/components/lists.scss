@@ -71,6 +71,18 @@ ol {
   @include list-item-secondary-actions();
 }
 
+// Lists - links in text
+//----------------------------------------------------------------------
+
+.list-item .link {
+  color: color("text");
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // Lists - modifiers
 //----------------------------------------------------------------------
 
@@ -136,7 +148,7 @@ ol {
   .list-item-icon,
   .list-item-secondary,
   .list-item-secondary-actions {
-    padding-top: $spacing-normal;
+    padding-top: $spacing-small;
   }
 }
 
