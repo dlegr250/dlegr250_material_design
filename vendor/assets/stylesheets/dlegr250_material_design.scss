@@ -9,7 +9,6 @@
 @import "base/variables/colors";
 @import "base/mixins";
 @import "base/base";
-@import "base/global_classes";
 
 // Layouts
 //----------------------------------------------------------------------
@@ -57,3 +56,8 @@
 @import "components/tables";
 @import "components/expansion_panels";
 @import "components/spinners";
+
+// Global classes have modifiers that should override defaults
+//----------------------------------------------------------------------
+
+@import "base/global_classes";
