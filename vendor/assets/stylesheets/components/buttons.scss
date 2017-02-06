@@ -23,7 +23,7 @@ $buttons: ".button";
   // display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 500;
-  min-height: $button-height;
+  height: $button-height;
   // line-height: $button-height;
   letter-spacing: 0.5px;
   min-width: 88px;
@@ -75,10 +75,9 @@ $buttons: ".button";
 
 .button-xsmall {
   font-size: $font-size-small;
-  // height: 28px;
+  height: 28px !important;
   // line-height: 28px;
-  min-height: 28px !important;
-  min-width: $button-height * 0.6;
+  // min-width: $button-height * 0.6;
   padding: 0 $spacing-xsmall;
 }
 
@@ -86,17 +85,17 @@ $buttons: ".button";
 .button-small,
 .button-dense {
   font-size: $font-size-small;
-  // height: $button-height-dense !important;
+  height: $button-height-dense !important;
   // line-height: $button-height-dense !important;
-  min-height: $button-height-dense !important;
+  // min-height: $button-height-dense !important;
   min-width: $button-height * 0.8;
   padding: 0 $spacing-small;
 }
 
 .button-large {
-  // height: $button-height-large !important;
+  height: $button-height-large !important;
   // line-height: $button-height-large !important;
-  min-height: $button-height-large !important;
+  // min-height: $button-height-large !important;
 }
 
 .button-normal {
@@ -151,7 +150,7 @@ $buttons: ".button";
 
 .button-icon-large {
   height: $button-icon-height * 1.2;
-  line-height: $button-icon-height * 1.2;
+  // line-height: $button-icon-height * 1.2;
   width: $button-icon-height * 1.2;
 }
 
@@ -269,6 +268,21 @@ $buttons: ".button";
 // Buttons - Colored Floating Action Buttons (FAB)
 //----------------------------------------------------------------------
 
+.fab {
+  bottom: $spacing-large;
+  font-size: $font-size-icon;
+  height: $button-fab-height;
+  position: fixed !important;
+  right: $spacing-large;
+  width: $button-fab-height;
+  z-index: $layout-depth + 1;
+  @include box-shadow(0 3px 7px 0 rgba(0, 0, 0, 0.4));
+  @include rounded-corners(250px);
+  @include text-shadow(0 -1px 0 color("helper"));
+  @include flex-parent-row-align-center();
+  display: inline-flex;
+}
+
 @each $color-name, $color in $colors {
   .fab-#{$color-name} {
     background-color: $color;
@@ -277,17 +291,6 @@ $buttons: ".button";
     } @else {
       color: color("white");
     }
-
-    font-size: $font-size-icon;
-    height: $button-fab-height;
-    line-height: $button-fab-height;
-    min-width: 0;
-    padding: 0;
-    width: $button-fab-height;
-
-    @include box-shadow(0 3px 7px 0 rgba(0, 0, 0, 0.4));
-    @include rounded-corners(250px);
-    @include text-shadow(0 -1px 0 color("helper"));
 
     &:active {
       background: darken($color, 10%);
@@ -322,9 +325,10 @@ $buttons: ".button";
 }
 
 // If using Google Material Design icon font
-[role="fab"] .material-icons {
-  line-height: 56px;
-}
+// [role="fab"] .material-icons {
+//   height: 56px;
+//   // line-height: 56px;
+// }
 
 // Buttons - disabled
 //----------------------------------------------------------------------
