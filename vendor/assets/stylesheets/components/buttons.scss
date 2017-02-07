@@ -24,9 +24,10 @@ $buttons: ".button";
   font-size: $font-size-normal;
   font-weight: 500;
   height: $button-height;
-  // line-height: $button-height;
+  line-height: 1.2;
   letter-spacing: 0.5px;
-  min-width: 88px;
+  // min-width: 88px;
+  min-width: 0;
   outline: none;
   padding: 0 $spacing-normal;
   text-align: center;
@@ -319,6 +320,7 @@ $buttons: ".button";
 // Position FAB buttons in bottom-right corner
 [role="fab"] {
   bottom: $spacing-large;
+  height: $button-fab-height;
   position: fixed !important;
   right: $spacing-large;
   z-index: $layout-depth + 1;

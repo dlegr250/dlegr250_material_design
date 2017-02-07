@@ -1,0 +1,7 @@
+.underline-color {
+  border-bottom: 2px solid transparent;
+}
+
+@each $color-name, $color in $colors {
+  .underline-color-#{$color-name} { border-color: $color; }
+}

@@ -1,0 +1,31 @@
+.comment {
+  background-color: color("white");
+  border: 1px solid color("divider");
+  margin-bottom: $spacing-normal;
+  @include rounded-corners();
+}
+
+.comment-header {
+  background-color: color("grey-100");
+  border-bottom: 1px solid color("divider");
+  color: color("helper");
+  @include flex-parent-row();
+}
+
+.comment-header-primary {
+  flex: 1;
+  padding: $spacing-normal;
+}
+
+.comment-header-secondary-actions {
+  padding-right: $spacing-small;
+  text-align: right;
+}
+
+.comment-content {
+  padding: $spacing-normal;
+}
+
+.comment.highlighted .comment-content {
+  background-color: color("highlight");
+}

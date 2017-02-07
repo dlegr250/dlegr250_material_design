@@ -76,7 +76,10 @@
   }
 
   .card-header-icon,
-  .card-header-secondary,
+  .card-header-secondary {
+    padding-top: $spacing-normal;
+  }
+
   .card-header-secondary-actions {
     padding-top: $spacing-small;
   }
