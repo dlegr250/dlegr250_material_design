@@ -115,6 +115,19 @@
   border-top: none;
 }
 
+// Cards - links in card
+//----------------------------------------------------------------------
+
+.card .link {
+  color: color("text");
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
 // Card - image header
 // Using an image at top instead of header text
 //----------------------------------------------------------------------

@@ -2,75 +2,104 @@
 // Extends .list and .list-item in order to keep code DRY.
 //======================================================================
 
-// Box  - base
-//----------------------------------------------------------------------
-
 .box {
   background-color: color("white");
   border: 1px solid color("divider");
-  color: color("text");
-  min-height: 0;
-  padding: $spacing-normal 0; // box-primary has padding on L/R already
-  @include flex-parent-row();
-  @include rounded-corners;
+  @include rounded-corners();
 }
+
+.box-header {
+  background-color: color("grey-100");
+  border-bottom: 1px solid color("divider");
+  @include list-item();
+}
+
+.box-header-icon {
+  @include list-item-icon();
+}
+
+.box-header-primary {
+  font-weight: bold;
+  @include list-item-primary();
+}
+
+.box-icon {
+  @include list-item-icon();
+}
+
+.box-content {
+  @include list-item-primary();
+}
+
+// Box  - base
+//----------------------------------------------------------------------
+
+// .box {
+//   background-color: color("white");
+//   border: 1px solid color("divider");
+//   color: color("text");
+//   min-height: 0;
+//   padding: $spacing-normal 0; // box-primary has padding on L/R already
+//   @include flex-parent-row();
+//   @include rounded-corners;
+// }
 
 // Box - icon
 //----------------------------------------------------------------------
 
-.box-icon {
-  @include list-item-icon();
-  // color: color("icon");
-  // font-size: $font-size-icon;
-  // height: $list-item-icon-width;
-  // line-height: $list-item-icon-width;
-  // margin-left: $spacing-normal;
-  // padding: 0;
-  // text-align: center;
-  // width: $list-item-icon-width;
-  //
-  // .icon {
-  //   color: color("icon");
-  //   font-size: $font-size-icon;
-  // }
-}
-
-.box-icon-circle {
-  background-color: color("icon");
-  @include rounded-corners(50%);
-
-  .icon {
-    color: color("white");
-  }
-}
-
-// Box - primary
-//----------------------------------------------------------------------
-
-.box-primary {
-  @include list-item-primary();
-  @include force-text-wrap();
-}
-
-.box-primary-subtext {
-  @include list-item-primary-subtext();
-  @include force-text-wrap();
-}
-
-// Box - secondary
-//----------------------------------------------------------------------
-
-.box-secondary {
-  @include list-item-secondary();
-}
-
-// Box - flat
-//----------------------------------------------------------------------
-
-.box-flat {
-  border: none;
-  @include rounded-corners(0);
-}
+// .box-icon {
+//   @include list-item-icon();
+//   // color: color("icon");
+//   // font-size: $font-size-icon;
+//   // height: $list-item-icon-width;
+//   // line-height: $list-item-icon-width;
+//   // margin-left: $spacing-normal;
+//   // padding: 0;
+//   // text-align: center;
+//   // width: $list-item-icon-width;
+//   //
+//   // .icon {
+//   //   color: color("icon");
+//   //   font-size: $font-size-icon;
+//   // }
+// }
+//
+// .box-icon-circle {
+//   background-color: color("icon");
+//   @include rounded-corners(50%);
+//
+//   .icon {
+//     color: color("white");
+//   }
+// }
+//
+// // Box - primary
+// //----------------------------------------------------------------------
+//
+// .box-primary {
+//   @include list-item-primary();
+//   @include force-text-wrap();
+// }
+//
+// .box-primary-subtext {
+//   @include list-item-primary-subtext();
+//   @include force-text-wrap();
+// }
+//
+// // Box - secondary
+// //----------------------------------------------------------------------
+//
+// .box-secondary {
+//   @include list-item-secondary();
+// }
+//
+// // Box - flat
+// //----------------------------------------------------------------------
+//
+// .box-flat {
+//   border: none;
+//   @include rounded-corners(0);
+// }
 
 // Box - custom boxes
 //----------------------------------------------------------------------

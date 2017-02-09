@@ -74,7 +74,7 @@ ol {
 // Lists - links in text
 //----------------------------------------------------------------------
 
-.list-item .link {
+.list .link {
   color: color("text");
   text-decoration: none;
 
@@ -173,6 +173,40 @@ ol {
 }
 
 // background-color-white bordered-rounded list-divided
+
+// List headers
+//----------------------------------------------------------------------
+
+.list-header {
+  background-color: color("grey-100");
+  border-bottom: 1px solid color("divider");
+  @include list-item();
+}
+
+.list-header-icon {
+  @include list-item-icon();
+}
+
+.list-header-primary {
+  font-weight: bold;
+  @include list-item-primary();
+}
+
+.list-header-primary-supertext {
+  @include list-item-primary-supertext();
+}
+
+.list-header-primary-subtext {
+  @include list-item-primary-subtext();
+}
+
+.list-header-secondary {
+  @include list-item-secondary();
+}
+
+.list-header-secondary-actions {
+  @include list-item-secondary-actions();
+}
 
 // // Lists - header
 // //----------------------------------------------------------------------

@@ -257,6 +257,8 @@ $default-rounded-corners-radius: 3px;
   color: color("text");
   font-size: $font-size-normal;
   min-height: $list-one-line-height;
+  padding-left: $spacing-small;
+  padding-right: $spacing-right;
   @include flex-parent-row();
   @include no-touch-highlight-color();
   @include transition(background-color 0.30s ease);
@@ -264,17 +266,17 @@ $default-rounded-corners-radius: 3px;
 
 @mixin list-item-icon() {
   color: color("icon");
-  max-width: 56px;
-  padding-left: $spacing-normal;
+  max-width: 64px;
+  padding-left: $spacing-small;
   text-align: center;
-  width: 56px;
+  width: 64px;
 }
 
 @mixin list-item-primary() {
   color: color("text");
   flex: 1; // Fill space
   font-size: $font-size-normal;
-  padding: $spacing-normal;
+  padding: $spacing-normal $spacing-small;
 }
 
 @mixin list-item-primary-supertext() {
@@ -293,8 +295,9 @@ $default-rounded-corners-radius: 3px;
 
 @mixin list-item-secondary() {
   color: color("helper");
-  padding-right: $spacing-normal;
-  text-align: right;
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+  // text-align: right;
 }
 
 @mixin list-item-secondary-actions() {

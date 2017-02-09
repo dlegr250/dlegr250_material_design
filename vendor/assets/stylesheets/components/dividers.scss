@@ -4,12 +4,9 @@
 // <hr class="spacer large" />
 //======================================================================
 
-// Dividers - base
-//----------------------------------------------------------------------
-
 hr {
-  height: 0;
-  margin: $spacing-small 0;
+  height: 1px;
+  margin: ($spacing-normal / 2) 0;
 
   // Has a line
   &.divider {
@@ -23,51 +20,39 @@ hr {
     margin: $spacing-normal 0;
   }
 
+  &.xsmall { margin: ($spacing-xsmall / 2) 0; }
+  &.small { margin: ($spacing-small / 2) 0; }
+  &.large { margin: ($spacing-large / 2) 0; }
+  &.xlarge { margin: ($spacing-xlarge / 2) 0; }
+
   // No margins, totally flush against other containers
-  &.flush {
-    margin: 0;
-  }
-
-  &.xsmall {
-    margin: $spacing-xsmall 0;
-  }
-
-  &.small {
-    margin: $spacing-small 0;
-  }
-
-  &.large {
-    margin: $spacing-large 0;
-  }
-
-  &.xlarge {
-    margin: $spacing-xlarge 0;
-  }
+  &.flush { margin: 0; }
 }
 
+// WHAT ARE THESE USED FOR???
 // Label dividers
 //----------------------------------------------------------------------
 
-.label-divider {
-  border-top: 1px solid #ccc;
-  height: 0;
-  margin: $spacing-large 0;
-  position: relative;
-  text-align: center;
-}
-
-.label-divider-text {
-  $label-divider-text-width: 30px;
-
-  background-color: #fff;
-  color: #999;
-  display: inline-block;
-  height: $label-divider-text-width;
-  line-height: $label-divider-text-width;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  top: -16px;
-  width: $label-divider-text-width;
-  @include rounded-corners(50%);
-}
+// .label-divider {
+//   border-top: 1px solid #ccc;
+//   height: 0;
+//   margin: $spacing-large 0;
+//   position: relative;
+//   text-align: center;
+// }
+//
+// .label-divider-text {
+//   $label-divider-text-width: 30px;
+//
+//   background-color: #fff;
+//   color: #999;
+//   display: inline-block;
+//   height: $label-divider-text-width;
+//   line-height: $label-divider-text-width;
+//   padding: 0;
+//   position: relative;
+//   text-align: center;
+//   top: -16px;
+//   width: $label-divider-text-width;
+//   @include rounded-corners(50%);
+// }
