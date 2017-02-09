@@ -107,11 +107,14 @@ ol {
   min-height: $list-three-lines-height;
 }
 
+.list-bordered {
+  border: 1px solid color("divider");
+  @include rounded-corners();
+}
+
 // Dividers between items
-.list-divided {
-  .list-item:not(:last-child) {
-    border-bottom: 1px solid color("divider");
-  }
+.list-divided .list-item {
+  border-bottom: 1px solid color("divider");
 }
 
 // Hoverable
