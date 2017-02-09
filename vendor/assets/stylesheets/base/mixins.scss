@@ -258,7 +258,7 @@ $default-rounded-corners-radius: 3px;
   font-size: $font-size-normal;
   min-height: $list-one-line-height;
   padding-left: $spacing-small;
-  padding-right: $spacing-right;
+  padding-right: $spacing-small;
   @include flex-parent-row();
   @include no-touch-highlight-color();
   @include transition(background-color 0.30s ease);
