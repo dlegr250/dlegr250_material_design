@@ -148,7 +148,10 @@ ol {
     @include flex-parent-row-align-top();
   }
 
-  .list-item-icon,
+  .list-item-icon {
+    padding-top: $spacing-small;
+  }
+
   .list-item-secondary {
     padding-top: $spacing-normal;
   }

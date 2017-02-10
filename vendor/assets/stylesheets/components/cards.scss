@@ -75,7 +75,10 @@
     @include flex-parent-row-align-top();
   }
 
-  .card-header-icon,
+  .card-header-icon {
+    padding-top: $spacing-small;
+  }
+
   .card-header-secondary {
     padding-top: $spacing-normal;
   }
