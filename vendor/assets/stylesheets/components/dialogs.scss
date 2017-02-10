@@ -26,17 +26,6 @@
   }
 }
 
-// Dialogs - shared
-//----------------------------------------------------------------------
-
-.dialog-header,
-.dialog-header-primary,
-.dialog-header-primary-subtext,
-.dialog-content,
-.dialog-actions {
-  box-sizing: border-box;
-}
-
 // Dialogs - base
 //----------------------------------------------------------------------
 
@@ -137,14 +126,17 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
+  padding: $spacing-normal;
+}
+
+.dialog-scrollable {
   max-height: calc(100vh - #{$appbar-height}); // For dialog-header
   overflow: scroll;
-  padding: $spacing-normal;
   // @include force-text-wrap();
 }
 
 @media (min-width: $width-small) {
-  .dialog-content {
+  .dialog-scrollable {
     max-height: calc(90vh - #{$appbar-height * 2}); // For dialog-header and dialog-actions
   }
 }
