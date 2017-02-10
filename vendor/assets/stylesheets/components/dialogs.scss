@@ -73,6 +73,14 @@
   }
 }
 
+// Sizes
+@media (min-width: $width-small) {
+  .dialog-small { width: $width-small; }
+  .dialog-medium { width: $width-medium; }
+  .dialog-large { width: $width-large; }
+  .dialog-xlarge { width: $width-xlarge; }
+}
+
 // Dialogs - header
 //----------------------------------------------------------------------
 

@@ -29,6 +29,7 @@
 
 .box-content {
   @include list-item-primary();
+  padding: $spacing-normal;
 }
 
 // Box  - base
