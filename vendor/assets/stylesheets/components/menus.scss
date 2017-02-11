@@ -124,7 +124,7 @@
 //----------------------------------------------------------------------
 
 @each $factor in $menu-width-factors {
-  .menu-width-#{$factor} .menu-item-primary {
+  .menu.menu-width-#{$factor} {
     min-width: $menu-width * $factor;
   }
 }
