@@ -27,7 +27,7 @@
   @include list-item-icon();
 }
 
-.box-content {
+.box-primary {
   @include list-item-primary();
   padding: $spacing-normal;
 }
