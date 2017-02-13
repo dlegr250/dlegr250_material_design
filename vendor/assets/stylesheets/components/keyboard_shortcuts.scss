@@ -1,0 +1,13 @@
+//======================================================================
+// Resemble keyboard keys to notify user of keyboard shortcuts.
+//======================================================================
+.keyboard-shortcut {
+  background-color: color("white");
+  border: 1px solid color("divider");
+  color: color("text");
+  display: inline-block;
+  font-size: $font-size-small;
+  margin-left: 2px;
+  padding: $spacing-xsmall $spacing-small;
+  @include rounded-corners();
+}

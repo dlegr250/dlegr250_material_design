@@ -85,22 +85,13 @@
   }
 }
 
-// Menus - menu item - icon
-//----------------------------------------------------------------------
-
 .menu-item-icon {
   @include list-item-icon();
 }
 
-// Menus - menu item - primary
-//----------------------------------------------------------------------
-
 .menu-item-primary {
   @include list-item-primary();
 }
-
-// Menus - menu item - secondary
-//----------------------------------------------------------------------
 
 .menu-item-secondary {
   @include list-item-secondary();

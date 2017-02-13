@@ -23,12 +23,22 @@ class App.MD.Dialog
 
     $("body").on "click", "[role='dialog-close']", (e) ->
       $dialog = $(this).parents(".dialog-container")
-      App.MD.Dialog.hideDialog($dialog)
+      App.MD.Dialog.closeDialog($dialog)
 
     $("body").on "click", "[role='dialog-confirm']", (e) ->
       $dialog = $(this).parents(".dialog-container")
       $dialog.find("#dialog-trigger-original-link").click()
-      App.MD.Dialog.hideDialog($dialog)
+      App.MD.Dialog.closeDialog($dialog)
+
+    $(document).on "click", ".dialog-container", (e) ->
+      $target = $(e.target)
+      # If explicitely told not to close
+      if ($target.attr("data-closable") == "false")
+        return false
+
+      # If clicking ONLY on parent element (not inner dialog)
+      if $target.hasClass("dialog-container")
+        App.MD.Dialog.closeDialog($target)
 
   @call: (html) ->
     $dialog = $(html)
@@ -43,9 +53,14 @@ class App.MD.Dialog
     element.find("input[autofocus]").focus()
     false
 
-  @hideDialog: (element) ->
-    element.removeClass("visible")
+  @closeDialog: (element) ->
+    $element = $(element)
+    $element.removeClass("visible")
     window.setTimeout =>
-      element.remove()
+      $element.remove()
     , 500
     false
+
+  # DEPRECATED: convert code to use @closeDialog() method
+  @hideDialog: (element) ->
+    App.MD.Dialog.closeDialog(element)

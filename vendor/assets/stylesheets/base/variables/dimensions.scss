@@ -45,6 +45,15 @@ $list-three-lines-height: 88px;
 // 72px is the specification, but minus 32px for 16px left/right padding.
 $list-item-icon-width: 40px;
 
+// Dimensions - dialogs
+//----------------------------------------------------------------------
+
+$dialog-width-xsmall: 280px; // From Google Material Design spec, min size
+$dialog-width-small: 360px;
+$dialog-width-normal: 500px;
+$dialog-width-large: 760px;
+$dialog-width-xlarge: 1000px;
+
 // Dimensions - menus
 //----------------------------------------------------------------------
 

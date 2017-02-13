@@ -178,6 +178,12 @@ ol {
   }
 }
 
+// Sizes for component lists
+.component-list.list-one-line .list-item { min-height: $list-one-line-height; }
+.component-list.list-two-lines .list-item { min-height: $list-two-lines-height; }
+.component-list.list-three-lines .list-item { min-height: $list-three-lines-height; }
+
+
 // List headers
 //----------------------------------------------------------------------
 
