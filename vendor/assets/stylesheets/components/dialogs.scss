@@ -54,10 +54,14 @@
 }
 
 @media (min-width: $width-small) {
-  .dialog {
+  .dialog,
+  .dialog-full-screen,
+  .dialog[data-fullscreen="true"] {
     height: auto;
     max-height: 90%;
+    max-width: 90%;
     position: relative;
+    width: auto;
     @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
     @include rounded-corners();
   }
@@ -65,11 +69,11 @@
 
 // Sizes
 @media (min-width: $width-small) {
-  .dialog-xsmall { width: $dialog-width-xsmall; }
-  .dialog-small { width: $dialog-width-small; }
-  .dialog-normal { width: $dialog-width-normal; }
-  .dialog-large { width: $dialog-width-large; }
-  .dialog-xlarge { width: $dialog-width-xlarge; }
+  .dialog-xsmall { width: $dialog-width-xsmall !important; }
+  .dialog-small { width: $dialog-width-small !important; }
+  .dialog-normal { width: $dialog-width-normal !important; }
+  .dialog-large { width: $dialog-width-large !important; }
+  .dialog-xlarge { width: $dialog-width-xlarge !important; }
 }
 
 // Dialogs - header
