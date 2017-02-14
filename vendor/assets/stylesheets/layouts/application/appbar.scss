@@ -94,8 +94,7 @@
   margin: 0 $spacing-small;
   max-width: auto;
   pointer-events: none;
-  -webkit-font-smoothing: antialiased;
-  // @include truncate-text(); // Make optional via class
+  @include font-smoothing();
 
   a {
     color: $appbar-subtitle-color;

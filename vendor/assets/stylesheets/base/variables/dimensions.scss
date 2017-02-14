@@ -34,6 +34,11 @@ $card-width-normal: $card-width; // For consistency
 $card-width-large: 360px;
 $card-width-xlarge: 420px;
 
+// Text fields
+//----------------------------------------------------------------------
+
+$text-fields: "input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea";
+
 // Dimensions - lists
 //----------------------------------------------------------------------
 

@@ -102,9 +102,10 @@
   @include list-item-primary();
   flex: 1;
   font-size: $font-size-normal + 2px;
-  font-weight: bold;
+  font-weight: 400;
   padding-left: $spacing-small;
   padding-right: $spacing-small;
+  @include font-smoothing();
 }
 
 @media (min-width: $width-small) {
