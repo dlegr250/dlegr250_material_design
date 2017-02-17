@@ -218,13 +218,13 @@ $default-rounded-corners-radius: 3px;
 //----------------------------------------------------------------------
 
 // By default, touch devices highlight elements when selected
-@mixin no-touch-highlight() {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+@mixin no-touch-highlight($value: auto) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }

@@ -13,7 +13,7 @@
   will-change: scale, opacity;
   z-index: $overlay-depth;
   @include flex-center();
-  @include no-touch-highlight;
+  // @include no-touch-highlight();
   @include transform(scale(1.15));
   @include transition(all 0.10s cubic-bezier(0, 0, 0.3, 1));
   @include transparency(0);
