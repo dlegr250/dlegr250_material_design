@@ -133,7 +133,8 @@
   padding: $spacing-normal;
 }
 
-.dialog-scrollable {
+.dialog-scrollable,
+.dialog-scrollable-no-actions {
   max-height: calc(100vh - #{$appbar-height}); // For dialog-header
   overflow: scroll;
 }
@@ -141,6 +142,10 @@
 @media (min-width: $width-small) {
   .dialog-scrollable {
     max-height: calc(90vh - #{$appbar-height * 2}); // For dialog-header and dialog-actions
+  }
+
+  .dialog-scrollable-no-actions {
+    max-height: calc(90vh - #{$appbar-height}); // For dialog-header and dialog-actions
   }
 }
 
