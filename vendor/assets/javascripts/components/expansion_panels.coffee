@@ -1,7 +1,7 @@
 #======================================================================
-# Add triggers to show/hide expansion panels.
+# Add triggers to show/hide toggle panels.
 #======================================================================
-class App.MD.ExpansionPanels
+class App.MD.TogglePanels
   @init: () ->
     @setVariables()
     @setEvents()
@@ -9,5 +9,10 @@ class App.MD.ExpansionPanels
   @setVariables: () ->
 
   @setEvents: () ->
-    $("body").on "click", ".expansion-panel-summary", (event) =>
-      $(event.target).closest(".expansion-panel").toggleClass("open")
+    $("body").on "click", ".toggle-panel-summary", (event) =>
+      # $(event.target).closest(".toggle-panel").toggleClass("open")
+      $panel = $(event.target).closest(".toggle-panel")
+      if $panel.attr("data-expanded") == "true"
+        $panel.attr("data-expanded", "false")
+      else
+        $panel.attr("data-expanded", "true")

@@ -1,0 +1,28 @@
+//======================================================================
+// EXAMPLE:
+//======================================================================
+.toggle-panel {
+  .toggle-panel-summary-more { display: block; }
+  .toggle-panel-summary-less { display: none; }
+
+  .toggle-panel-summary {
+    cursor: pointer;
+  }
+
+  .toggle-panel-details {
+    display: none;
+  }
+}
+
+.toggle-panel[data-expanded="true"] {
+  .toggle-panel-summary {
+    background-color: color("hover");
+  }
+
+  .toggle-panel-summary-more { display: none !important; }
+  .toggle-panel-summary-less { display: block !important; }
+
+  .toggle-panel-details {
+    display: block !important;
+  }
+}
