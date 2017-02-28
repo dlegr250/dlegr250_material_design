@@ -10,9 +10,10 @@ class App.MD.TogglePanels
 
   @setEvents: () ->
     $("body").on "click", ".toggle-panel-summary", (event) =>
-      # $(event.target).closest(".toggle-panel").toggleClass("open")
+      $container = $(event.target).closest(".toggle-panels-container")
       $panel = $(event.target).closest(".toggle-panel")
+
       if $panel.attr("data-expanded") == "true"
-        $panel.attr("data-expanded", "false")
+        $container.find(".toggle-panel").attr("data-expanded", "false")
       else
         $panel.attr("data-expanded", "true")
