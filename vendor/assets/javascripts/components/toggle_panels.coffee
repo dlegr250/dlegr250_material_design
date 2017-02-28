@@ -16,4 +16,5 @@ class App.MD.TogglePanels
       if $panel.attr("data-expanded") == "true"
         $container.find(".toggle-panel").attr("data-expanded", "false")
       else
+        $container.find(".toggle-panel").attr("data-expanded", "false")
         $panel.attr("data-expanded", "true")
