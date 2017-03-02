@@ -76,17 +76,17 @@
   .dialog-xlarge { width: $dialog-width-xlarge !important; }
 }
 
-// Dialogs - header
+// Dialogs - appbar
 //----------------------------------------------------------------------
 
-.dialog-header {
+.dialog-appbar {
   @include flex-parent-row();
   border-bottom: 1px solid color("divider");
   height: $appbar-height;
   padding: 0 $spacing-small;
 }
 
-.dialog-header-icon {
+.dialog-appbar-icon {
   width: $appbar-button-height;
 
   // To match up with .appbar-button
@@ -98,7 +98,7 @@
   }
 }
 
-.dialog-header-primary {
+.dialog-appbar-title {
   @include list-item-primary();
   flex: 1;
   font-size: $font-size-normal + 2px;
@@ -109,9 +109,38 @@
 }
 
 @media (min-width: $width-small) {
-  .dialog-header-primary {
+  .dialog-appbar-title {
     font-size: $font-size-large;
   }
+}
+
+.dialog-appbar-title-subtext {
+  @include list-item-primary-subtext();
+}
+
+.dialog-appbar-secondary {
+  @include list-item-secondary();
+}
+
+.dialog-appbar-secondary-actions {
+  @include list-item-secondary-actions();
+}
+
+// Dialogs - header
+//----------------------------------------------------------------------
+
+.dialog-header {
+  // @include flex-parent-row();
+  border-bottom: 1px solid color("divider");
+  padding: $spacing-normal;
+}
+
+.dialog-header-primary {
+  flex: 1;
+  font-size: $font-size-large;
+  font-weight: 400;
+  @include font-smoothing();
+  @include list-item-primary();
 }
 
 .dialog-header-primary-subtext {
