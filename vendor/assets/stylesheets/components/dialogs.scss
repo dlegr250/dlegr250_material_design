@@ -130,9 +130,22 @@
 //----------------------------------------------------------------------
 
 .dialog-header {
-  // @include flex-parent-row();
+  @include flex-parent-row-align-top();
   border-bottom: 1px solid color("divider");
-  padding: $spacing-normal;
+  padding: 0 $spacing-normal;
+}
+
+.dialog-header-icon {
+  padding-top: $spacing-small;
+  width: $appbar-button-height;
+
+  // To match up with .appbar-button
+  .button-icon {
+    font-size: $font-size-icon;
+    height: $appbar-button-height;
+    line-height: $appbar-button-height;
+    width: $appbar-button-height;
+  }
 }
 
 .dialog-header-primary {
@@ -149,6 +162,7 @@
 
 .dialog-header-secondary {
   @include list-item-secondary();
+  padding-top: $spacing-normal;
 }
 
 .dialog-header-secondary-actions {
