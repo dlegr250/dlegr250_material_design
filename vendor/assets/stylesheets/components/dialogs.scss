@@ -132,7 +132,7 @@
 .dialog-header {
   @include flex-parent-row-align-top();
   border-bottom: 1px solid color("divider");
-  padding: 0 $spacing-normal;
+  padding: 0 $spacing-small;
 }
 
 .dialog-header-icon {
@@ -149,11 +149,11 @@
 }
 
 .dialog-header-primary {
+  @include font-smoothing();
+  @include list-item-primary();
   flex: 1;
   font-size: $font-size-large;
   font-weight: 400;
-  @include font-smoothing();
-  @include list-item-primary();
 }
 
 .dialog-header-primary-subtext {
