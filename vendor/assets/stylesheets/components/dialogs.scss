@@ -106,6 +106,7 @@
   padding-left: $spacing-small;
   padding-right: $spacing-small;
   @include font-smoothing();
+  @include truncate-text();
 }
 
 @media (min-width: $width-small) {
@@ -213,8 +214,8 @@
 //----------------------------------------------------------------------
 
 .dialog-simple {
-  .dialog-header {
-    border-bottom: 0;
+  .dialog-appbar {
+    border-bottom: none;
   }
 
   .dialog-content {

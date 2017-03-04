@@ -8,10 +8,6 @@
   padding-top: 0;
 }
 
-.comment:last-child {
-  padding-bottom: 0;
-}
-
 .comment:not(:last-child) {
   border-bottom: 1px solid color("divider");
 }
