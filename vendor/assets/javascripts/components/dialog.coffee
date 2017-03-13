@@ -53,7 +53,7 @@ class App.MD.Dialog
     element.find("input[autofocus]").focus()
 
     # Add shadow on dialog appbar when scrolling contents
-    $("[data-scroll-shadow]").on "scroll", (e) ->
+    $(".dialog-scrollable, .dialog-scrollable-no-actions").on "scroll", (e) ->
       $this = $(this)
       $dialogAppbar = $this.parents(".dialog").find(".dialog-appbar")
 
