@@ -391,3 +391,22 @@ $buttons: ".button";
     width: inherit;
   }
 }
+
+// Buttons - button group
+//----------------------------------------------------------------------
+
+.button-group {
+  @include flex-parent-row();
+
+  .button {
+    @include rounded-corners(0);
+  }
+
+  .button:first-child {
+    @include rounded-left-corners();
+  }
+
+  .button:last-child {
+    @include rounded-right-corners();
+  }
+}

@@ -40,3 +40,26 @@ jQuery.extend jQuery.fn,
       spinner = $("<div class='spinner-container'><div class='spinner spinner-#{color} spinner-#{size}'></div></div>")
       element.html(spinner)
       element
+
+# Increment / decrement integer values
+#----------------------------------------------------------------------
+
+jQuery.extend jQuery.fn,
+  increment: ->
+    @each ->
+      $element = $(this)
+      $value = parseInt($element.text())
+      if $value != NaN
+        $element.text($value + 1)
+      $element
+
+  decrement: ->
+    @each ->
+      $element = $(this)
+      $value = parseInt($element.text())
+      if $value != NaN
+        if $value <= 0
+          $element.text(0)
+        else
+          $element.text($value - 1)
+      $element

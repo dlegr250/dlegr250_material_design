@@ -12,6 +12,21 @@
   .color-#{$color-name} { color: #{$hex-value} !important; }
 }
 
+// Scroll shadow
+//----------------------------------------------------------------------
+
+.scroll-shadow {
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.30));
+}
+
+// Simple dot divider
+//----------------------------------------------------------------------
+
+.dot-divider {
+  padding: 0 $spacing-xsmall;
+  text-align: center;
+}
+
 // Alignments
 //----------------------------------------------------------------------
 

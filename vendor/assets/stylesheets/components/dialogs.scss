@@ -84,6 +84,7 @@
   border-bottom: 1px solid color("divider");
   height: $appbar-height;
   padding: 0 $spacing-small;
+  position: relative;
 }
 
 .dialog-appbar-icon {
@@ -125,6 +126,8 @@
 
 .dialog-appbar-secondary-actions {
   @include list-item-secondary-actions();
+  text-align: right;
+  @include flex-parent-row();
 }
 
 // Dialogs - header
@@ -138,6 +141,7 @@
 
 .dialog-header-icon {
   padding-top: $spacing-small;
+  text-align: center;
   width: $appbar-button-height;
 
   // To match up with .appbar-button

@@ -27,7 +27,8 @@
 
 .tab-primary {
   align-items: center;
-  display: flex;
+  // display: flex;
+  display: inline-block;
   flex: 1 1 auto;
   justify-content: center;
 }
