@@ -9,8 +9,8 @@ class App.MD.Dialog
     @setEvents()
 
   @setEvents: () ->
-    $("body").on "click", "a[data-custom-confirm]", (e) =>
-      $trigger = $(e.target).closest("a[data-custom-confirm]")
+    $("body").on "click", "[data-custom-confirm]", (e) =>
+      $trigger = $(e.target).closest("[data-custom-confirm]")
       $triggerTemplateId = $trigger.data("custom-confirm")["template"]
       $triggerLinkClone = $trigger.clone().removeAttr("data-custom-confirm")
       $triggerLinkClone.attr("id", "dialog-trigger-original-link")
