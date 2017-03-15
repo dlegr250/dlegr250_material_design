@@ -53,6 +53,14 @@
   }
 }
 
+[data-tooltip-position="top-right"] {
+  &:after {
+    left: 100%;
+    top: -100%;
+    @include transform(translateX(-50%) translateY(-15%));
+  }
+}
+
 [data-tooltip-position="right"] {
   &:after {
     left: 100%;
@@ -63,8 +71,8 @@
 
 [data-tooltip-position="bottom-right"] {
   &:after {
-    left: 0;
-    top: 110%;
+    left: 100%;
+    top: 100%;
     @include transform(translateX(0) translateY(15%));
   }
 }
@@ -92,5 +100,14 @@
     left: 0;
     top: 25%;
     @include transform(translateX(-110%));
+  }
+}
+
+[data-tooltip-position="top-left"] {
+  &:after {
+    left: inherit;
+    right: 0;
+    top: -100%;
+    @include transform(translateX(0) translateY(-15%));
   }
 }
