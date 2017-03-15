@@ -36,6 +36,7 @@
     &:after {
       display: block;
       visibility: visible;
+      transition-delay: 1s;
       @include transparency(1);
     }
   }
