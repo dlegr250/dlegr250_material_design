@@ -1,7 +1,7 @@
 //======================================================================
 // Gem manifest file required by apps using the gem.
 //======================================================================
-//= require jquery2
+//= require jquery3
 //= require jquery_ujs
 //= require turbolinks
 //= require extensions/jquery

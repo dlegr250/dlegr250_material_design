@@ -3,14 +3,11 @@
 #======================================================================
 class App.MD.Toggles
   @init: () ->
-    @setVariables()
     @setEvents()
-
-  @setVariables: () ->
 
   @setEvents: () ->
     # Toggle to show/hide elements
-    $("body").on "click select", "[data-show-element]", (e) ->
+    $(document).on "click select", "[data-show-element]", (e) ->
       $($(this).attr("data-show-element")).show()
 
     $(document).on "click", "[data-remove-element]", (e) ->
@@ -19,5 +16,13 @@ class App.MD.Toggles
     $(document).on "click", "[role='remove-element']", (e) ->
       $($(this).attr("data-element")).remove()
 
-    $("body").on "click select", "[data-hide-element]", (e) ->
+    $(document).on "click select", "[data-hide-element]", (e) ->
       $($(this).attr("data-hide-element")).hide()
+
+    $(document).on "click", "[data-toggle-element-if-checked]", (e) ->
+      domId = $(e.target).data("toggle-element-if-checked")
+
+      if this.checked
+        $("#{domId}").removeClass("hidden")
+      else
+        $("#{domId}").addClass("hidden")
