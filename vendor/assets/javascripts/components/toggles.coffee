@@ -8,7 +8,7 @@ class App.MD.Toggles
   @setEvents: () ->
     # Toggle to show/hide elements
     $(document).on "click select", "[data-show-element]", (e) ->
-      $($(this).attr("data-show-element")).show()
+      $($(this).attr("data-show-element")).removeClass("hidden") #.show()
 
     $(document).on "click", "[data-remove-element]", (e) ->
       $($(this).attr("data-remove-element")).remove()
@@ -17,7 +17,7 @@ class App.MD.Toggles
       $($(this).attr("data-element")).remove()
 
     $(document).on "click select", "[data-hide-element]", (e) ->
-      $($(this).attr("data-hide-element")).hide()
+      $($(this).attr("data-hide-element")).addClass("hidden") #.hide()
 
     $(document).on "click", "[data-toggle-element-if-checked]", (e) ->
       domId = $(e.target).data("toggle-element-if-checked")
