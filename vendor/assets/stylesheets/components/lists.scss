@@ -128,27 +128,71 @@ ol {
 }
 
 // Hoverable
+// .list-hoverable {
+//   .list-item {
+//     &:hover { background-color: color("hover"); }
+//     &:active { background-color: darken(color("hover"), 3%); }
+//   }
+//
+//   .button-icon {
+//     &:hover { background-color: darken(color("hover"), 7%); }
+//     &:active { background-color: darken(color("hover"), 12%); }
+//   }
+// }
+//
+// .list-hoverable-blue {
+//   .list-item {
+//     &:hover { background-color: color("hover-blue"); }
+//     &:active { background-color: darken(color("hover-blue"), 3%); }
+//   }
+//
+//   .button-icon {
+//     &:hover { background-color: darken(color("hover-blue"), 7%); }
+//     &:active { background-color: darken(color("hover-blue"), 12%); }
+//   }
+// }
+
+// Hoverable
 .list-hoverable {
   .list-item {
-    &:hover { background-color: color("hover"); }
     &:active { background-color: darken(color("hover"), 3%); }
   }
 
   .button-icon {
-    &:hover { background-color: darken(color("hover"), 7%); }
     &:active { background-color: darken(color("hover"), 12%); }
   }
 }
 
 .list-hoverable-blue {
   .list-item {
-    &:hover { background-color: color("hover-blue"); }
     &:active { background-color: darken(color("hover-blue"), 3%); }
   }
 
   .button-icon {
-    &:hover { background-color: darken(color("hover-blue"), 7%); }
     &:active { background-color: darken(color("hover-blue"), 12%); }
+  }
+}
+
+// Devices with pointers
+@media (hover: hover) {
+  .list-hoverable {
+    .list-item {
+      &:hover { background-color: color("hover"); }
+    }
+
+    .button-icon {
+      &:hover { background-color: darken(color("hover"), 7%); }
+    }
+  }
+
+  .list-hoverable-blue {
+    .list-item {
+      &:hover { background-color: color("hover-blue"); }
+    }
+
+    .button-icon {
+      &:hover { background-color: darken(color("hover-blue"), 7%); }
+    }
   }
 }
 

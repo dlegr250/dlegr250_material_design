@@ -1,15 +1,40 @@
+// Comment
+//----------------------------------------------------------------------
+
 .comment {
+  border: none;
   margin: 0;
   padding: $spacing-normal 0;
   @include rounded-corners(0);
 }
 
-.comment:first-child {
-  padding-top: 0;
+.comment:not(:last-child) {
+  border-bottom: none;
 }
 
-.comment:not(:last-child) {
-  border-bottom: 1px solid color("divider");
+.comment:first-child {
+  padding-top: $spacing-normal;
+}
+
+.comment:last-child {
+  padding-bottom: 0;
+}
+
+// Comment form container
+//----------------------------------------------------------------------
+
+.comment-form {
+  background-color: color("grey-100");
+  border: 1px solid color("divider");
+  // margin-bottom: $spacing-normal;
+  padding: $spacing-normal;
+  @include rounded-corners();
+}
+
+.comment-form-edit {
+  background-color: color("highlight");
+  margin-top: $spacing-normal;
+  // margin-bottom: 0;
 }
 
 // Comment header
@@ -67,5 +92,19 @@
 .comment-form-actions,
 .new-comment-actions {
   padding-top: $spacing-small;
-  text-align: right;
+  text-align: left;
+}
+
+// Comment form trigger
+//----------------------------------------------------------------------
+
+.comment-form-trigger {
+  background-color: color("white");
+  border: 1px solid color("divider");
+  color: color("helper");
+  font-size: $font-size-text-field;
+  padding: $spacing-small;
+  text-align: left;
+  width: 100%;
+  @include rounded-corners();
 }

@@ -158,7 +158,9 @@
   @include list-item-primary();
   flex: 1;
   font-size: $font-size-large;
-  font-weight: 400;
+  // font-weight: 400;
+  font-weight: bold;
+  padding: $spacing-normal;
 }
 
 .dialog-header-primary-subtext {
@@ -178,7 +180,8 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
-  padding: $spacing-normal;
+  // padding: $spacing-normal;
+  padding: $spacing-large;
 }
 
 .dialog-scrollable,

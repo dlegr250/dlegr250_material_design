@@ -1,0 +1,19 @@
+[data-behavior="expansion-panel"] {
+  [data-behavior="expansion-panel-summary"] {
+    display: block;
+  }
+
+  [data-behavior="expansion-panel-details"] {
+    display: none;
+  }
+}
+
+[data-behavior="expansion-panel"][data-state="expanded"] {
+  [data-behavior="expansion-panel-summary"] {
+    display: none;
+  }
+
+  [data-behavior="expansion-panel-details"] {
+    display: block;
+  }
+}
