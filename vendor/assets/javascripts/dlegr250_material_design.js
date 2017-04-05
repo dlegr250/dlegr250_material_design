@@ -4,7 +4,7 @@
 //= require jquery3
 //= require jquery_ujs
 //= require turbolinks
-//= require ./extensions
+//= require_tree ./extensions
 //= require base/init
 //= require_tree ./third_party
 //= require_tree ./components
