@@ -30,7 +30,7 @@ jQuery.extend jQuery.fn,
         return
 
       # New element does not have a sortable value, add to the bottom
-      if elementValue == null || elementValue == "" || isNaN(elementValue)
+      if elementValue == null || elementValue == "" # || isNaN(elementValue)
         $list.append($element)
         return
 
