@@ -63,7 +63,7 @@
     &:hover {
       background-color: darken($color-primary, 7%);
     }
-    // 
+    //
     // &:active {
     //   background-color: darken($color-primary, 12%);
     // }
@@ -88,7 +88,7 @@
 
 .appbar-title {
   flex: 1; // To fill empty gaps
-  font-size: $font-size-large;
+  font-size: $font-size-normal + 2px;
   font-weight: 400;
   line-height: 1;
   margin: 0 $spacing-small;
@@ -103,6 +103,7 @@
 
 @media (min-width: $width-small) {
   .appbar-title {
+    font-size: $font-size-large;
     max-width: $sidebar-width - 64px;
   }
 }
