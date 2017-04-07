@@ -110,12 +110,6 @@
   @include truncate-text();
 }
 
-@media (min-width: $width-small) {
-  .dialog-appbar-title {
-    font-size: $font-size-large;
-  }
-}
-
 .dialog-appbar-title-subtext {
   @include list-item-primary-subtext();
 }
@@ -186,8 +180,7 @@
 //----------------------------------------------------------------------
 
 .dialog-content {
-  // padding: $spacing-normal;
-  padding: $spacing-large;
+  padding: $spacing-normal;
 }
 
 .dialog-scrollable,
