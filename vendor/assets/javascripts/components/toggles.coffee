@@ -26,3 +26,7 @@ class App.MD.Toggles
         $("#{domId}").removeClass("hidden")
       else
         $("#{domId}").addClass("hidden")
+
+    $(document).on "click", "[data-remove-parent-element]", (e) ->
+      domid = $(this).attr("data-remove-parent-element")
+      $(this).closest(domid).remove()

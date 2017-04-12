@@ -266,10 +266,10 @@ $default-rounded-corners-radius: 3px;
 
 @mixin list-item-icon() {
   color: color("icon");
-  max-width: 56px;
-  padding-left: $spacing-small;
+  max-width: 44px; // 56px
+  padding-left: 0; // $spacing-small
   text-align: center;
-  width: 56px;
+  width: 44px; // 56px
 }
 
 @mixin list-item-primary() {

@@ -21,7 +21,7 @@ class App.MD.Combobox
 
   defaultOptions: () ->
     {
-      placeholder: null,
+      placeholder: "Select...",
       allowClear: true,
       minimumResultsForSearch: Infinity,
       maximumSelectionLength: 1

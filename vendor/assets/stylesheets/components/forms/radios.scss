@@ -61,7 +61,7 @@
   color: color("text");
   cursor: pointer;
   font-weight: normal;
-  padding: $spacing-normal $spacing-normal;
+  padding: 0; // $spacing-normal
   @include flex-parent-row();
   @include transition(background-color 0.30s ease);
 
