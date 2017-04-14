@@ -85,6 +85,7 @@
   height: $appbar-height;
   padding: 0 $spacing-small;
   position: relative;
+  z-index: $dialog-depth + 1;
 }
 
 .dialog-appbar-icon {
@@ -101,6 +102,7 @@
 
 .dialog-appbar-title {
   @include list-item-primary();
+  color: color("icon");
   flex: 1;
   font-size: $font-size-normal + 2px;
   font-weight: 400;

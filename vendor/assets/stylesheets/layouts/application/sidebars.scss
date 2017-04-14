@@ -29,13 +29,21 @@
 
 .sidebar-header {
   border-bottom: 1px solid color("divider");
-  color: color("helper");
-  font-size: $font-size-large;
-  height: $appbar-height;
-  line-height: $appbar-height;
+  cursor: pointer;
   margin-bottom: $spacing-normal;
   padding: 0 $spacing-normal;
+  @include list-item();
   @include truncate-text();
+}
+
+.sidebar-header-primary {
+  @include list-item-primary();
+  color: color("helper");
+  font-size: $font-size-large;
+}
+
+.sidebar-header-secondary {
+  @include list-item-secondary();
 }
 
 // Sidebars - left sidebar

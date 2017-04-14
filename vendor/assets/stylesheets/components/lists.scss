@@ -245,6 +245,7 @@ ol {
   background-color: color("grey-100");
   border-bottom: 1px solid color("divider");
   @include list-item();
+  min-height: 56px;
 }
 
 .list-header-icon {
