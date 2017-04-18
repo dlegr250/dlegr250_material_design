@@ -20,14 +20,11 @@ $buttons: ".button";
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  // display: inline-block;
-  // display: inline-flex;
   font-size: $font-size-normal;
   font-weight: 500;
   height: $button-height;
   line-height: 1.2;
   letter-spacing: 0.5px;
-  // min-width: 88px;
   min-width: 0;
   outline: none;
   padding: 0 $spacing-normal;
@@ -42,19 +39,10 @@ $buttons: ".button";
   @include rounded-corners;
   @include transition(all 0.2s ease-in-out);
 
-  // .material-icons {
-  //   line-height: $button-height;
-  // }
-
   &:hover {
     text-decoration: none !important;
   }
 }
-
-// Icons inside button
-// .button .material-icons {
-//   line-height: 40px;
-// }
 
 .button.icon-left {
   padding-left: $spacing-normal - 8px;
@@ -78,8 +66,6 @@ $buttons: ".button";
 .button-xsmall {
   font-size: $font-size-small;
   height: 28px !important;
-  // line-height: 28px;
-  // min-width: $button-height * 0.6;
   padding: 0 $spacing-xsmall;
 }
 
@@ -88,16 +74,12 @@ $buttons: ".button";
 .button-dense {
   font-size: $font-size-small;
   height: $button-height-dense !important;
-  // line-height: $button-height-dense !important;
-  // min-height: $button-height-dense !important;
   min-width: $button-height * 0.8;
   padding: 0 $spacing-small;
 }
 
 .button-large {
   height: $button-height-large !important;
-  // line-height: $button-height-large !important;
-  // min-height: $button-height-large !important;
 }
 
 .button-normal {
@@ -114,8 +96,6 @@ $buttons: ".button";
   color: color("icon");
   cursor: pointer;
   height: $button-icon-height;
-  // line-height: $button-icon-height;
-  // min-height: $button-icon-height;
   text-align: center;
   width: $button-icon-height;
   @include flex-parent-row-align-center();
@@ -327,12 +307,6 @@ $buttons: ".button";
   right: $spacing-large;
   z-index: $layout-depth + 1;
 }
-
-// If using Google Material Design icon font
-// [role="fab"] .material-icons {
-//   height: 56px;
-//   // line-height: 56px;
-// }
 
 // Buttons - disabled
 //----------------------------------------------------------------------
