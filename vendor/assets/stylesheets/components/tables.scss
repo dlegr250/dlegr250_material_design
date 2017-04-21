@@ -1,64 +1,64 @@
-//======================================================================
-// Note: Uses DIVs styled as table instead of TABLE element because
-// you cannot make a LINK a TABLE ROW, and it is easier to re-style
-// DIVs if you want to make responsive tables.
-// EXAMPLE:
-//======================================================================
-
-.table {
-  background-color: color("white");
-  border: 1px solid color("divider");
-  display: table;
-  width: 100%;
-
-  a {
-    color: color("text");
-  }
-}
-
-.thead {
-  border-bottom: 2px solid color("hover");
-  display: table-row;
-  height: 56px;
-}
-
-.th {
-  border-bottom: 2px solid color("hover");
-  color: lighten(color("text"), 10%);
-  display: table-cell;
-  font-size: $font-size-normal;
-  font-weight: bold;
-  padding: 0 $spacing-normal;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.tr {
-  border-bottom: 1px solid color("hover");
-  display: table-row;
-  height: 48px;
-}
-
-.td {
-  border-bottom: 1px solid color("hover");
-  display: table-cell;
-  padding: 0 $spacing-normal;
-  vertical-align: middle;
-}
-
-.table-hoverable .tr {
-  @include transition(background-color 0.2s);
-
-  &:hover {
-    background-color: color("hover");
-  }
-}
-
-// Striped rows
-//----------------------------------------------------------------------
-
-.table-striped-rows {
-  tr:nth-child(even) {
-    background-color: lighten(color("hover"), 3%);
-  }
-}
+// //======================================================================
+// // Note: Uses DIVs styled as table instead of TABLE element because
+// // you cannot make a LINK a TABLE ROW, and it is easier to re-style
+// // DIVs if you want to make responsive tables.
+// // EXAMPLE:
+// //======================================================================
+//
+// .table {
+//   background-color: color("white");
+//   border: 1px solid color("divider");
+//   display: table;
+//   width: 100%;
+//
+//   a {
+//     color: color("text");
+//   }
+// }
+//
+// .thead {
+//   border-bottom: 2px solid color("hover");
+//   display: table-row;
+//   height: 56px;
+// }
+//
+// .th {
+//   border-bottom: 2px solid color("hover");
+//   color: lighten(color("text"), 10%);
+//   display: table-cell;
+//   font-size: $font-size-normal;
+//   font-weight: bold;
+//   padding: 0 $spacing-normal;
+//   text-transform: uppercase;
+//   vertical-align: middle;
+// }
+//
+// .tr {
+//   border-bottom: 1px solid color("hover");
+//   display: table-row;
+//   height: 48px;
+// }
+//
+// .td {
+//   border-bottom: 1px solid color("hover");
+//   display: table-cell;
+//   padding: 0 $spacing-normal;
+//   vertical-align: middle;
+// }
+//
+// .table-hoverable .tr {
+//   @include transition(background-color 0.2s);
+//
+//   &:hover {
+//     background-color: color("hover");
+//   }
+// }
+//
+// // Striped rows
+// //----------------------------------------------------------------------
+//
+// .table-striped-rows {
+//   tr:nth-child(even) {
+//     background-color: lighten(color("hover"), 3%);
+//   }
+// }
