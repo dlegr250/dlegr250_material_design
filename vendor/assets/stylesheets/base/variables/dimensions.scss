@@ -10,8 +10,11 @@ $application-container-min-width: 300px;
 // Dimensions - appbar
 //----------------------------------------------------------------------
 
-$appbar-height: 64px;
-$appbar-button-height: 48px;
+$appbar-height-small: 56px !default; // Small devices
+$appbar-height-medium: 64px !default; // Medium to large devices
+$appbar-height: $appbar-height-medium !default;
+
+$appbar-button-height: 48px !default;
 
 // Dimensions - sidebars
 //----------------------------------------------------------------------
@@ -80,8 +83,7 @@ $button-height-large: 56px;
 
 $button-icon-height: $button-height;
 
-$button-fab-mini-height: $button-icon-height;
-$button-fab-height: $button-height-large;
+$button-fab-height: 56px;
 
 // Dimensions - inputs (text-fields, etc...)
 //----------------------------------------------------------------------
@@ -118,9 +120,22 @@ $spacing-normal: 16px;
 $spacing-large: 24px;
 $spacing-xlarge: 32px;
 
-// Depth (z-index)
+// Elevation (z-index)
+// See: https://material.io/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android
 //----------------------------------------------------------------------
 
+$elevation-1: 1;
+$elevation-2: 2;
+$elevation-3: 3;
+$elevation-4: 4;
+$elevation-6: 6;
+$elevation-8: 8;
+$elevation-9: 9;
+$elevation-12: 12;
+$elevation-16: 16;
+$elevation-24: 24;
+
+// DEPRECATED: USE ELEVATION VARIABLES
 $layout-depth: 10;
 $menu-depth: 20;
 $overlay-depth: 30;
@@ -130,7 +145,13 @@ $dialog-depth: 50;
 // Device breakpoints
 //----------------------------------------------------------------------
 
-$width-small: 400px;
-$width-medium: 760px;
-$width-large: 1000px;
-$width-xlarge: 1200px;
+$device-small: 400px;
+$device-medium: 760px;
+$device-large: 1000px;
+$device-xlarge: 1200px;
+
+// DEPRECATED: USE DEVICE VARIABLES
+$width-small: $device-small;
+$width-medium: $device-medium;
+$width-large: $device-large;
+$width-xlarge: $device-xlarge;

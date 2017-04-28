@@ -15,7 +15,8 @@
     color: color("white");
     content: attr(data-tooltip);
     font-family: "Roboto", sans-serif;
-    font-size: $font-size-small;
+    font-size: $font-size-small !important;
+    font-weight: bold !important;
     left: 50%;
     line-height: normal;
     padding: $spacing-small;
@@ -26,6 +27,7 @@
     visibility: hidden;
     white-space: nowrap;
     z-index: 2;
+    @include font-smoothing();
     @include rounded-corners;
     @include transform(translateX(-50%) translateY(10%));
     @include transition(opacity 0.2s ease, transform 0.2s ease);

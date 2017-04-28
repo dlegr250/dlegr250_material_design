@@ -146,15 +146,19 @@ $default-rounded-corners-radius: 3px;
 // Flexbox
 //----------------------------------------------------------------------
 
+@mixin flex-parent() {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
 // For a row of flex elements, such as the appbar.
 @mixin flex-parent-row() {
+  @include flex-parent();
   align-items: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -182,13 +186,11 @@ $default-rounded-corners-radius: 3px;
 
 // Center elements vertically and horizontally
 @mixin flex-center() {
+  @include flex-parent();
   align-items: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
@@ -198,13 +200,11 @@ $default-rounded-corners-radius: 3px;
 
 // Grid list
 @mixin flex-grid-list() {
+  @include flex-parent();
   align-items: flex-start;
   -ms-flex-align: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   flex-direction: row;
   flex-wrap: wrap;
 }

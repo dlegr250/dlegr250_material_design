@@ -1,7 +1,11 @@
-// Base (load order is important)
+//======================================================================
+// Manifest file for stylesheets.
+// Load order is IMPORTANT!
+//======================================================================
+
+// Base
 //----------------------------------------------------------------------
 
-@import "fonts/material_design_iconic_font";
 @import "fonts/google_material_design_icons";
 
 @import "base/normalize";
@@ -13,10 +17,7 @@
 // Layouts
 //----------------------------------------------------------------------
 
-@import "layouts/application/base";
-@import "layouts/application/appbar";
-@import "layouts/application/sidebars";
-@import "layouts/application/main";
+// TODO: currently in Rails app
 
 // Components
 //----------------------------------------------------------------------
