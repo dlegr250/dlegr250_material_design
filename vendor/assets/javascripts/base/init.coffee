@@ -6,7 +6,7 @@ window.App ||= {}
 window.App.MD ||= {}
 
 $(document).on "turbolinks:load", ->
-  App.MD.Layout.init()
+  # App.MD.Layout.init()
   App.MD.Menus.init()
   App.MD.Dialog.init()
   App.MD.TogglePanels.init()
