@@ -1,4 +1,4 @@
-class App.MD.HtmlEditor
+class App.MD.DEPRECATED.HtmlEditor
   constructor: (element, options = {}) ->
     @$element = $(element)
     @format = options["format"] || "simple"

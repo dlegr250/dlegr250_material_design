@@ -317,3 +317,10 @@ $default-rounded-corners-radius: 3px;
 @mixin font-smoothing() {
   -webkit-font-smoothing: antialiased;
 }
+
+// DRY borders
+//----------------------------------------------------------------------
+
+@mixin border($color: #aaa) {
+  @include box-shadow(0 0 1px $color);
+}

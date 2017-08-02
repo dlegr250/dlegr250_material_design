@@ -66,6 +66,13 @@ ol {
   }
 }
 
+// Lists - shadows
+//----------------------------------------------------------------------
+
+.list-shadowed {
+  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.2));
+}
+
 // Lists - modifiers
 //----------------------------------------------------------------------
 
@@ -101,39 +108,13 @@ ol {
 }
 
 .list-bordered {
-  border: 1px solid color("divider");
-  @include rounded-corners();
+  @include box-shadow(0 0 1px color("divider"));
 }
 
 // Dividers between items
 .list-divided .list-item {
   border-bottom: 1px solid color("divider");
 }
-
-// Hoverable
-// .list-hoverable {
-//   .list-item {
-//     &:hover { background-color: color("hover"); }
-//     &:active { background-color: darken(color("hover"), 3%); }
-//   }
-//
-//   .button-icon {
-//     &:hover { background-color: darken(color("hover"), 7%); }
-//     &:active { background-color: darken(color("hover"), 12%); }
-//   }
-// }
-//
-// .list-hoverable-blue {
-//   .list-item {
-//     &:hover { background-color: color("hover-blue"); }
-//     &:active { background-color: darken(color("hover-blue"), 3%); }
-//   }
-//
-//   .button-icon {
-//     &:hover { background-color: darken(color("hover-blue"), 7%); }
-//     &:active { background-color: darken(color("hover-blue"), 12%); }
-//   }
-// }
 
 // Hoverable
 .list-hoverable {
@@ -203,7 +184,7 @@ ol {
 
 .component-list {
   background-color: color("white");
-  border: 1px solid color("divider");
+  @include box-shadow(0 0 1px color("divider"));
   @include rounded-corners();
 
   .list-item {

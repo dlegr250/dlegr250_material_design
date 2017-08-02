@@ -188,7 +188,8 @@
 .dialog-scrollable,
 .dialog-scrollable-no-actions {
   max-height: calc(100vh - #{$appbar-height}); // For dialog-header
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 @media (min-width: $width-small) {
@@ -216,13 +217,25 @@
 
 .dialog-full-height {
   height: 100% !important;
+
+  .dialog-scrollable-no-actions {
+    height: calc(100vh - 64px);
+  }
+}
+
+@media (min-width: $width-medium) {
+  .dialog-full-height {
+    .dialog-scrollable-no-actions {
+      height: calc(90vh - 64px);
+    }
+  }
 }
 
 // Dialogs - simple
 //----------------------------------------------------------------------
 
 .dialog-simple {
-  .dialog-appbar {
+  .dialog-header {
     border-bottom: none;
   }
 
@@ -232,5 +245,6 @@
 
   .dialog-actions {
     border-top: 0;
+    text-align: right;
   }
 }

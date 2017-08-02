@@ -54,6 +54,8 @@
 // Constrained to max size to center content
 //----------------------------------------------------------------------
 
+.constrained,
+.constrained-xsmall,
 .constrained-small,
 .constrained-medium,
 .constrained-large,
@@ -62,10 +64,11 @@
   @include full-width();
 }
 
-.constrained-small { max-width: $width-small; }
-.constrained-medium { max-width: $width-medium; }
-.constrained-large { max-width: $width-large; }
-.constrained-xlarge { max-width: $width-xlarge; }
+.constrained-xsmall { max-width: $device-xsmall; }
+.constrained-small { max-width: $device-small; }
+.constrained-medium { max-width: $device-medium; }
+.constrained-large { max-width: $device-large; }
+.constrained-xlarge { max-width: $device-xlarge; }
 
 // Padding
 //----------------------------------------------------------------------
@@ -133,6 +136,7 @@
 .unbold { font-weight: normal !important; }
 .italic { font-style: italic; }
 .uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
 .lowercase { text-transform: lowercase; }
 
 // Rounded corners
@@ -201,10 +205,11 @@
 // Widths
 //----------------------------------------------------------------------
 
-.width-small { width: $width-small; }
-.width-medium { width: $width-medium; }
-.width-large { width: $width-large; }
-.width-xlarge { width: $width-xlarge; }
+.width-xsmall { width: $device-xsmall; }
+.width-small { width: $device-small; }
+.width-medium { width: $device-medium; }
+.width-large { width: $device-large; }
+.width-xlarge { width: $device-xlarge; }
 
 // Media query classes for various device sizes
 //----------------------------------------------------------------------
@@ -220,7 +225,7 @@
   display: none;
 }
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   .small-only {
     display: none;
   }
@@ -231,7 +236,7 @@
   }
 }
 
-@media (min-width: $width-large) {
+@media (min-width: $device-large) {
   .small-only,
   .small-and-medium-only,
   .medium-only {
@@ -251,7 +256,8 @@
 // there.
 //----------------------------------------------------------------------
 
-@media (min-width: $width-small) {}
-@media (min-width: $width-medium) {}
-@media (min-width: $width-large) {}
-@media (min-width: $width-xlarge) {}
+@media (min-width: $device-xsmall) {}
+@media (min-width: $device-small) {}
+@media (min-width: $device-medium) {}
+@media (min-width: $device-large) {}
+@media (min-width: $device-xlarge) {}

@@ -19,7 +19,7 @@
 .card {
   background-color: color("white");
   border: 1px solid color("divider");
-  width: $card-width;
+  width: auto;
   @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.2));
   @include rounded-corners;
 }

@@ -8,29 +8,65 @@
 }
 
 .tab {
-  @include flex-parent-row-align-center();
   border-bottom: 2px solid transparent;
   color: color("helper");
   cursor: pointer;
+  font-weight: bold;
+
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: 1 1 auto;
-  font-size: $font-size-small;
-  font-weight: 600;
-  height: 100%;
-  max-width: 150px;
-  padding: 0 $spacing-normal;
   position: relative;
+  height: 100%;
+  @include font-smoothing();
+
+  max-width: 264px;
+  min-height: 48px;
+  min-width: 72px;
+  padding-left: 12px;
+  padding-right: 12px;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-  @include transition(all 0.30s ease);
+  @include transition(border-color 0.30s ease, background-color 0.30s ease);
 }
 
-@media (min-width: $width-medium) {
-  .tab {
-    font-size: $font-size-normal;
+@each $color-name, $color in $colors {
+  .tabs-#{$color-name} {
+    .tab {
+      &:hover { border-color: lighten($color, 30%); }
+      &:active { background-color: lighten($color, 40%); }
+    }
   }
 }
+
+// .tab {
+//   @include flex-parent-row-align-center();
+//   border-bottom: 2px solid transparent;
+//   color: color("helper");
+//   cursor: pointer;
+//   display: inline-flex;
+//   flex: 1 1 auto;
+//   font-size: $font-size-small;
+//   font-weight: 600;
+//   height: 100%;
+//   max-width: 150px;
+//   overflow-x: auto;
+//   overflow-y: hidden;
+//   padding: 0 $spacing-normal;
+//   position: relative;
+//   text-align: center;
+//   text-transform: uppercase;
+//   vertical-align: middle;
+//   @include transition(all 0.30s ease);
+// }
+//
+// @media (min-width: $width-medium) {
+//   .tab {
+//     font-size: $font-size-normal;
+//   }
+// }
 
 .tab-primary {
   align-items: center;
@@ -40,9 +76,21 @@
   justify-content: center;
 }
 
-.tabs-fixed .tab {
-  max-width: none;
+.tab-primary-subtext {
+  font-size: $font-size-small;
+  text-transform: none;
 }
+
+.tabs-fixed {
+  width: 100%;
+
+  .tab {
+    flex: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
 
 @each $color-name, $color in $colors {
   .tabs-#{$color-name} {
@@ -74,5 +122,10 @@
 .tab.disabled .tab-icon {
   color: color("disabled");
   cursor: default;
+  pointer-events: none;
+}
+
+.tab-disabled {
+  color: color("disabled");
   pointer-events: none;
 }

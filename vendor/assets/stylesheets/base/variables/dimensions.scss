@@ -6,6 +6,7 @@
 //----------------------------------------------------------------------
 
 $application-container-min-width: 300px;
+$body-background-color: #eee !default;
 
 // Dimensions - appbar
 //----------------------------------------------------------------------
@@ -15,6 +16,11 @@ $appbar-height-medium: 64px !default; // Medium to large devices
 $appbar-height: $appbar-height-medium !default;
 
 $appbar-button-height: 48px !default;
+
+// Dimensions - toolbar
+//----------------------------------------------------------------------
+
+$toolbar-height: $appbar-height !default;
 
 // Dimensions - sidebars
 //----------------------------------------------------------------------
@@ -85,6 +91,8 @@ $button-icon-height: $button-height;
 
 $button-fab-height: 56px;
 
+$button-fab-min-height: 40px;
+
 // Dimensions - inputs (text-fields, etc...)
 //----------------------------------------------------------------------
 
@@ -124,16 +132,17 @@ $spacing-xlarge: 32px;
 // See: https://material.io/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android
 //----------------------------------------------------------------------
 
-$elevation-1: 1;
-$elevation-2: 2;
-$elevation-3: 3;
-$elevation-4: 4;
-$elevation-6: 6;
-$elevation-8: 8;
-$elevation-9: 9;
-$elevation-12: 12;
-$elevation-16: 16;
-$elevation-24: 24;
+$elevation-1: 1;   // Switch
+$elevation-2: 2;   // Card, button
+$elevation-3: 3;   // Refresh indicator,
+$elevation-4: 4;   // Appbar
+$elevation-6: 6;   // FAB (resting), snackbar
+$elevation-8: 8;   // Bottom nav, menu, raised button
+$elevation-9: 9;   // Submenu
+$elevation-12: 12; // FAB (pressed)
+$elevation-16: 16; // Sidebar, modal bottom sheet
+$elevation-24: 24; // Dialog, pickers
+$elevation-26: 26; // Popups on top of dialogs
 
 // DEPRECATED: USE ELEVATION VARIABLES
 $layout-depth: 10;
@@ -145,12 +154,14 @@ $dialog-depth: 50;
 // Device breakpoints
 //----------------------------------------------------------------------
 
+$device-xsmall: 320px;
 $device-small: 400px;
 $device-medium: 760px;
 $device-large: 1000px;
 $device-xlarge: 1200px;
 
 // DEPRECATED: USE DEVICE VARIABLES
+$width-xsmall: $device-xsmall;
 $width-small: $device-small;
 $width-medium: $device-medium;
 $width-large: $device-large;
