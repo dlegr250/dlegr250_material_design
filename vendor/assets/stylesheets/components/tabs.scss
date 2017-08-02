@@ -3,7 +3,8 @@
 
 .tabs {
   @include flex-parent-row();
-  height: $tab-height;
+  // height: $tab-height;
+  height: 100%;
   position: relative;
 }
 
