@@ -277,10 +277,10 @@ $buttons: ".button";
       background: darken($color, 10%);
     }
 
-    &.mini {
-      height: $button-fab-mini-height;
-      width: $button-fab-mini-height;
-    }
+    // &.mini {
+    //   height: $button-fab-mini-height;
+    //   width: $button-fab-mini-height;
+    // }
   }
 
   @media (hover: hover) {
