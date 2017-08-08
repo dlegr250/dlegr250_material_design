@@ -18,9 +18,8 @@
 
 .card {
   background-color: color("white");
-  border: 1px solid color("divider");
   width: auto;
-  @include box-shadow(0 1px 0 rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 0 1px #aaa);
   @include rounded-corners;
 }
 
@@ -131,7 +130,6 @@
   }
 }
 
-
 // Card - image header
 // Using an image at top instead of header text
 //----------------------------------------------------------------------
@@ -145,19 +143,15 @@
   }
 }
 
-// Inner cards - cards inside cards
+// Card - responsive on small devices
 //----------------------------------------------------------------------
 
-// TODO do we even use this???
-.card-inner {
-  @include box-shadow(none);
-  @include full-width();
+.card-responsive {
+  @include rounded-corners(0);
+}
 
-  .card-header {
-    background-color: color("hover");
-  }
-
-  .card-header-primary {
-    font-size: $font-size-normal;
+@media (min-width: $device-medium) {
+  .card-responsive {
+    @include rounded-corners();
   }
 }

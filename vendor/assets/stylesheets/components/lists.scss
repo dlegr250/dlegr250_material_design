@@ -108,7 +108,12 @@ ol {
 }
 
 .list-bordered {
-  @include box-shadow(0 0 1px color("divider"));
+  @include box-shadow(0 0 1px #aaa);
+}
+
+// Remove duplicate border on last item in list
+.list-bordered.list-divided .list-item:last-child {
+  border-bottom: none;
 }
 
 // Dividers between items

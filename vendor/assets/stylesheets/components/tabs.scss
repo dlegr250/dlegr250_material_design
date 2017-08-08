@@ -1,9 +1,8 @@
-// Updated tabs
+// Tabs
 //----------------------------------------------------------------------
 
 .tabs {
   @include flex-parent-row();
-  // height: $tab-height;
   height: 100%;
   position: relative;
 }
@@ -13,23 +12,21 @@
   color: color("helper");
   cursor: pointer;
   font-weight: bold;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex: 1 1 auto;
   position: relative;
   height: 100%;
-  @include font-smoothing();
-
   max-width: 264px;
   min-height: 48px;
-  min-width: 72px;
+  min-width: auto;
   padding-left: 12px;
   padding-right: 12px;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
+  @include font-smoothing();
   @include transition(border-color 0.30s ease, background-color 0.30s ease);
 }
 
@@ -42,36 +39,8 @@
   }
 }
 
-// .tab {
-//   @include flex-parent-row-align-center();
-//   border-bottom: 2px solid transparent;
-//   color: color("helper");
-//   cursor: pointer;
-//   display: inline-flex;
-//   flex: 1 1 auto;
-//   font-size: $font-size-small;
-//   font-weight: 600;
-//   height: 100%;
-//   max-width: 150px;
-//   overflow-x: auto;
-//   overflow-y: hidden;
-//   padding: 0 $spacing-normal;
-//   position: relative;
-//   text-align: center;
-//   text-transform: uppercase;
-//   vertical-align: middle;
-//   @include transition(all 0.30s ease);
-// }
-//
-// @media (min-width: $width-medium) {
-//   .tab {
-//     font-size: $font-size-normal;
-//   }
-// }
-
 .tab-primary {
   align-items: center;
-  // display: flex;
   display: inline-block;
   flex: 1 1 auto;
   justify-content: center;

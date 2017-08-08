@@ -5,7 +5,7 @@ class App.MD.ExpansionPanel
     $(document).off("click", "[data-behavior='expansion-panel-toggle']").on "click", "[data-behavior='expansion-panel-toggle']", (e) ->
       $panel = $(this).closest("[data-behavior='expansion-panel']")
       $details = $panel.find("[data-behavior='expansion-panel-details']")
-      $editor = $details.find("[data-behavior~='html-editor']")
+      $editor = $details.find("[role~='html-editor']")
 
       if $panel.attr("data-state") == "expanded"
         $panel.attr("data-state", "collapsed")
