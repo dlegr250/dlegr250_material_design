@@ -1,6 +1,5 @@
 class App.MD.Datepicker
   @init: () ->
-    # TODO DEPRECATE: use data-behavior below
     $.map $("[role='datepicker']"), (element, index) ->
       new App.MD.Datepicker(element)
 

@@ -23,13 +23,13 @@
     position: absolute;
     text-transform: none;
     top: 100%;
-    transition-delay: 0.8s;
+    // transition-delay: 0.8s;
     visibility: hidden;
     white-space: nowrap;
     z-index: 2;
     @include font-smoothing();
     @include rounded-corners;
-    @include transform(translateX(-50%) translateY(10%));
+    @include transform(translateX(-50%) translateY(15%));
     @include transition(opacity 0.2s ease, transform 0.2s ease);
     @include transparency(0);
   }
@@ -38,7 +38,7 @@
     &:after {
       display: block;
       visibility: visible;
-      transition-delay: 1s;
+      transition-delay: 0.25s;
       @include transparency(1);
     }
   }
