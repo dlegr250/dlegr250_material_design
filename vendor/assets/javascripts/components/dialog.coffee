@@ -66,7 +66,8 @@ class App.MD.Dialog
 
   @closeDialog: (element) ->
     $element = $(element)
-    hideButNotDestroy = ($element.data("permanent") == "true")
+    hideButNotDestroy = ($element.attr("data-permanent") == "true")
+    console.log "Hide: #{hideButNotDestroy}"
     $element.removeClass("visible")
     window.setTimeout =>
       if hideButNotDestroy
