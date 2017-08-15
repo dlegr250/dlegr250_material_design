@@ -66,9 +66,13 @@ class App.MD.Dialog
 
   @closeDialog: (element) ->
     $element = $(element)
+    hideButNotDestroy = ($element.data("permanent") == "true")
     $element.removeClass("visible")
     window.setTimeout =>
-      $element.remove()
+      if hideButNotDestroy
+        # NOOP
+      else
+        $element.remove()
     , 500
     false
 
