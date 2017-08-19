@@ -11,9 +11,20 @@ $body-background-color: #eee !default;
 // Dimensions - appbar
 //----------------------------------------------------------------------
 
+// DEPRECATE
 $appbar-height-small: 56px !default; // Small devices
 $appbar-height-medium: 64px !default; // Medium to large devices
 $appbar-height: $appbar-height-medium !default;
+
+// Use
+$appbar-height-device-small: 56px !default;
+$toolbar-height-device-small: 56px !default;
+
+$appbar-height-device-medium: 64px !default;
+$toolbar-height-device-medium: 56px !default;
+
+$appbar-height-device-large: 64px !default;
+$toolbar-height-device-large: 56px !default;
 
 $appbar-button-height: 48px !default;
 
@@ -140,6 +151,7 @@ $elevation-6: 6;   // FAB (resting), snackbar
 $elevation-8: 8;   // Bottom nav, menu, raised button
 $elevation-9: 9;   // Submenu
 $elevation-12: 12; // FAB (pressed)
+$elevation-14: 14; // Overlay
 $elevation-16: 16; // Sidebar, modal bottom sheet
 $elevation-24: 24; // Dialog, pickers
 $elevation-26: 26; // Popups on top of dialogs
