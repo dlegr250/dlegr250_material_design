@@ -129,12 +129,6 @@ $spacing-xlarge: 32px;
 // $elevation-24: 24; // Dialog, pickers
 // $elevation-26: 26; // Popups on top of dialogs
 
-@for $z-value from 0 through 24 {
-  .elevation-#{$z-value} {
-    @include elevation($z-value);
-  }
-}
-
 // Device breakpoints
 //----------------------------------------------------------------------
 
