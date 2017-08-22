@@ -72,7 +72,8 @@
 
 .card-align-top {
   .card-header {
-    @include flex-parent-row-align-top();
+    @include flex-parent();
+    @include flex-vertical-align-top();
   }
 
   .card-header-icon {

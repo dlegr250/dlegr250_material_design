@@ -2,7 +2,7 @@
 //----------------------------------------------------------------------
 
 .tabs {
-  @include flex-parent-row();
+  @include flex-parent();
   height: 100%;
   position: relative;
 }

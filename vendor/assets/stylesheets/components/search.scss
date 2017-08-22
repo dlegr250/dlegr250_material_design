@@ -40,7 +40,7 @@
   padding-right: $spacing-small;
   position: relative;
   width: 100%;
-  @include flex-parent-row();
+  @include flex-parent();
 }
 
 .search-search-icon {
@@ -92,7 +92,7 @@
     max-width: 300px;
     pointer-events: auto;
     position: relative;
-    @include flex-parent-row();
+    @include flex-parent();
     @include transparency(1);
   }
 

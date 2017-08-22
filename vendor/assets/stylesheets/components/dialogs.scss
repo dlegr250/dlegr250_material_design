@@ -80,7 +80,7 @@
 //----------------------------------------------------------------------
 
 .dialog-appbar {
-  @include flex-parent-row();
+  @include flex-parent();
   border-bottom: 1px solid color("divider");
   height: $dialog-header-height;
   padding: 0 $spacing-small;
@@ -123,14 +123,15 @@
 .dialog-appbar-secondary-actions {
   @include list-item-secondary-actions();
   text-align: right;
-  @include flex-parent-row();
+  @include flex-parent();
 }
 
 // Dialogs - header
 //----------------------------------------------------------------------
 
 .dialog-header {
-  @include flex-parent-row-align-top();
+  @include flex-parent();
+  @include flex-vertical-align-top();
   border-bottom: 1px solid color("divider");
   padding: 0 $spacing-small;
 }

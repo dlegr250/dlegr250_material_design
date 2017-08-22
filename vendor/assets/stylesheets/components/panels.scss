@@ -15,7 +15,8 @@
   display: block;
   text-align: left;
   width: 100%;
-  @include flex-parent-row-align-top();
+  @include flex-parent();
+  @include flex-vertical-align-top();
 }
 
 .panel-description,

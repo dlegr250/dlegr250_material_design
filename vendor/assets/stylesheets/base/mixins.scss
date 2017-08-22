@@ -171,7 +171,7 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
 }
 
 // // For a row of flex elements, such as the appbar.
-// @mixin flex-parent-row() {
+// @mixin flex-parent() {
 //   @include flex-parent();
 //   align-items: center;
 //   -ms-flex-align: center;
@@ -182,20 +182,20 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
 //   justify-content: flex-start;
 // }
 //
-// @mixin flex-parent-row-align-center() {
-//   @include flex-parent-row();
+// @mixin flex-parent() {
+//   @include flex-parent();
 //   flex: 1 1 auto;
 //   justify-content: center;
 // }
 //
 // @mixin flex-parent-row-align-right() {
-//   @include flex-parent-row();
+//   @include flex-parent();
 //   flex: 1;
 //   justify-content: flex-end;
 // }
 //
 // @mixin flex-parent-row-align-top() {
-//   @include flex-parent-row();
+//   @include flex-parent();
 //   align-items: flex-start;
 //   -ms-flex-align: flex-start;
 //   -webkit-align-items: flex-start;

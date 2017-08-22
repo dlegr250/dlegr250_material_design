@@ -168,7 +168,8 @@ ol {
 // Aligned top instead of centered
 .list-align-top {
   .list-item {
-    @include flex-parent-row-align-top();
+    @include flex-parent();
+    @include flex-vertical-align-top();
   }
 
   .list-item-icon {

@@ -24,7 +24,8 @@
 
 @media (min-width: $device-medium) {
   .grid-row {
-    @include flex-parent-row-align-top();
+    @include flex-parent();
+    @include flex-vertical-align-top();
     justify-content: space-around;
   }
 

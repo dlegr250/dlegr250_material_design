@@ -62,7 +62,7 @@
   cursor: pointer;
   font-weight: normal;
   padding: 0; // $spacing-normal
-  @include flex-parent-row();
+  @include flex-parent();
   @include transition(background-color 0.30s ease);
 
   &:hover {
@@ -75,7 +75,8 @@
 }
 
 .radio-group-align-top .radio-group-item {
-  @include flex-parent-row-align-top();
+  @include flex-parent();
+  @include flex-vertical-align-top();
 }
 
 // Radios - colored
