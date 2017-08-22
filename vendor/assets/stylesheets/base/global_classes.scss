@@ -12,13 +12,6 @@
   .color-#{$color-name} { color: #{$hex-value} !important; }
 }
 
-// Scroll shadow
-//----------------------------------------------------------------------
-
-.scroll-shadow {
-  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.30));
-}
-
 // Simple dot divider
 //----------------------------------------------------------------------
 
@@ -30,17 +23,17 @@
 // Alignments
 //----------------------------------------------------------------------
 
-.align-left { text-align: left; }
+.align-left   { text-align:   left; }
 .align-center { text-align: center; }
-.align-right { text-align: right; }
+.align-right  { text-align:  right; }
 
-.float-left { float: left; }
+.float-left  { float:  left; }
 .float-right { float: right; }
 
 // Expand entire width and take element padding into consideration.
 .full-width { @include full-width; }
 
-// Flex sizes for rows with items of different widths
+// Flexbox
 //----------------------------------------------------------------------
 
 .flex-1 { flex: 1 !important; }
@@ -48,8 +41,16 @@
 .flex-3 { flex: 3 !important; }
 .flex-4 { flex: 4 !important; }
 
-.flex-parent-row { @include flex-parent-row(); }
-.flex-parent-row-align-top { @include flex-parent-row-align-top(); }
+.flex-parent           { @include flex-parent(); }
+.flex-parent-align-top { @include flex-parent-align-top(); }
+
+.flex-align-left   { @include flex-align-left(); }
+.flex-align-center { @include flex-align-center(); }
+.flex-align-right  { @include flex-align-right(); }
+
+.flex-vertical-align-top    { @include flex-vertical-align-top(); }
+.flex-vertical-align-center { @include flex-vertical-align-center(); }
+.flex-vertical-align-bottom { @include flex-vertical-align-bottom(); }
 
 // Constrained to max size to center content
 //----------------------------------------------------------------------
@@ -65,61 +66,60 @@
 }
 
 .constrained-xsmall { max-width: $device-xsmall; }
-.constrained-small { max-width: $device-small; }
+.constrained-small  { max-width: $device-small; }
 .constrained-medium { max-width: $device-medium; }
-.constrained-large { max-width: $device-large; }
+.constrained-large  { max-width: $device-large; }
 .constrained-xlarge { max-width: $device-xlarge; }
 
 // Padding
 //----------------------------------------------------------------------
 
 .padding-xsmall { padding: $spacing-xsmall; }
-.padding-small { padding: $spacing-small; }
+.padding-small  { padding: $spacing-small; }
 .padding-normal { padding: $spacing-normal; }
-.padding-large { padding: $spacing-large; }
+.padding-large  { padding: $spacing-large; }
 .padding-xlarge { padding: $spacing-xlarge; }
 
 .padding-top-xsmall { padding-bottom: $spacing-xsmall; }
-.padding-top-small { padding-bottom: $spacing-small; }
+.padding-top-small  { padding-bottom: $spacing-small; }
 .padding-top-normal { padding-bottom: $spacing-normal; }
-.padding-top-large { padding-bottom: $spacing-large; }
+.padding-top-large  { padding-bottom: $spacing-large; }
 .padding-top-xlarge { padding-bottom: $spacing-xlarge; }
 
 .padding-right-xsmall { padding-bottom: $spacing-xsmall; }
-.padding-right-small { padding-bottom: $spacing-small; }
+.padding-right-small  { padding-bottom: $spacing-small; }
 .padding-right-normal { padding-bottom: $spacing-normal; }
-.padding-right-large { padding-bottom: $spacing-large; }
+.padding-right-large  { padding-bottom: $spacing-large; }
 .padding-right-xlarge { padding-bottom: $spacing-xlarge; }
 
 .padding-bottom-xsmall { padding-bottom: $spacing-xsmall; }
-.padding-bottom-small { padding-bottom: $spacing-small; }
+.padding-bottom-small  { padding-bottom: $spacing-small; }
 .padding-bottom-normal { padding-bottom: $spacing-normal; }
-.padding-bottom-large { padding-bottom: $spacing-large; }
+.padding-bottom-large  { padding-bottom: $spacing-large; }
 .padding-bottom-xlarge { padding-bottom: $spacing-xlarge; }
 
 .padding-left-xsmall { padding-bottom: $spacing-xsmall; }
-.padding-left-small { padding-bottom: $spacing-small; }
+.padding-left-small  { padding-bottom: $spacing-small; }
 .padding-left-normal { padding-bottom: $spacing-normal; }
-.padding-left-large { padding-bottom: $spacing-large; }
+.padding-left-large  { padding-bottom: $spacing-large; }
 .padding-left-xlarge { padding-bottom: $spacing-xlarge; }
 
-.no-padding-top { padding-top: 0 !important; }
-.no-padding-right { padding-right: 0 !important; }
+.no-padding-top    { padding-top: 0 !important; }
+.no-padding-right  { padding-right: 0 !important; }
 .no-padding-bottom { padding-bottom: 0 !important; }
-.no-padding-left { padding-left: 0 !important; }
+.no-padding-left   { padding-left: 0 !important; }
 
 // Margins
 //----------------------------------------------------------------------
 
 .margin-xsmall { margin: $spacing-xsmall 0; }
-.margin-small { margin: $spacing-small 0; }
+.margin-small  { margin: $spacing-small 0; }
 .margin-normal { margin: $spacing-normal 0; }
-.margin-large { margin: $spacing-large 0; }
+.margin-large  { margin: $spacing-large 0; }
 .margin-xlarge { margin: $spacing-xlarge 0; }
 
 // If lists or other elements need extra room at bottom
 // or else the FAB overlaps them.
-.allow-room-for-fab-at-bottom,
 .fab-at-bottom {
   margin-bottom: $button-fab-height * 2;
 }
@@ -132,21 +132,22 @@
 // Decorate text
 //----------------------------------------------------------------------
 
-.bold { font-weight: 700; }
+.bold   { font-weight: 700; }
 .unbold { font-weight: normal !important; }
 .italic { font-style: italic; }
-.uppercase { text-transform: uppercase; }
+
+.uppercase  { text-transform: uppercase; }
 .capitalize { text-transform: capitalize; }
-.lowercase { text-transform: lowercase; }
+.lowercase  { text-transform: lowercase; }
 
 // Rounded corners
 //----------------------------------------------------------------------
 
-.rounded-corners { @include rounded-corners; }
-.rounded-top-corners { @include rounded-top-corners; }
-.rounded-right-corners { @include rounded-right-corners; }
+.rounded-corners        { @include rounded-corners; }
+.rounded-top-corners    { @include rounded-top-corners; }
+.rounded-right-corners  { @include rounded-right-corners; }
 .rounded-bottom-corners { @include rounded-bottom-corners; }
-.rounded-left-corners { @include rounded-left-corners; }
+.rounded-left-corners   { @include rounded-left-corners; }
 
 // Visibility
 //----------------------------------------------------------------------
@@ -161,35 +162,35 @@
 //----------------------------------------------------------------------
 
 .font-size-xsmall { font-size: $font-size-xsmall !important; }
-.font-size-small { font-size: $font-size-small !important; }
+.font-size-small  { font-size: $font-size-small !important; }
 .font-size-normal { font-size: $font-size-normal !important; }
-.font-size-16 { font-size: 16px !important; }
-.font-size-large { font-size: $font-size-large !important; }
+.font-size-16     { font-size: 16px !important; }
+.font-size-large  { font-size: $font-size-large !important; }
 .font-size-xlarge { font-size: $font-size-xlarge !important; }
 
 // Truncating text
 //----------------------------------------------------------------------
 
-.truncate-text { @include truncate-text(); }
+.truncate-text   { @include truncate-text(); }
 .force-text-wrap { @include force-text-wrap(); }
 
 // Borders
 //----------------------------------------------------------------------
 
 .border-bottom { border-bottom: 1px solid color("divider") !important; }
-.border-left { border-left: 1px solid color("divider") !important; }
-.border-right { border-right: 1px solid color("divider") !important; }
-.border-top { border-top: 1px solid color("divider") !important; }
+.border-left   { border-left: 1px solid color("divider") !important; }
+.border-right  { border-right: 1px solid color("divider") !important; }
+.border-top    { border-top: 1px solid color("divider") !important; }
 
 .no-border-bottom { border-bottom: 0 !important; }
-.no-border-left { border-left: 0 !important; }
-.no-border-right { border-right: 0 !important; }
-.no-border-top { border-top: 0 !important; }
+.no-border-left   { border-left: 0 !important; }
+.no-border-right  { border-right: 0 !important; }
+.no-border-top    { border-top: 0 !important; }
 
 // Rotation
 //----------------------------------------------------------------------
 
-.rotate-90 { @include transform(rotate(90deg)); }
+.rotate-90  { @include transform(rotate(90deg)); }
 .rotate-180 { @include transform(rotate(180deg)); }
 .rotate-270 { @include transform(rotate(270deg)); }
 
@@ -202,13 +203,20 @@
   pointer-events: none;
 }
 
+// Cursors
+//----------------------------------------------------------------------
+
+.cursor-default  { cursor: default !important; }
+.cursor-disabled { cursor: not-allowed !important; }
+.cursor-drag     { cursor: move !important; }
+
 // Widths
 //----------------------------------------------------------------------
 
 .width-xsmall { width: $device-xsmall; }
-.width-small { width: $device-small; }
+.width-small  { width: $device-small; }
 .width-medium { width: $device-medium; }
-.width-large { width: $device-large; }
+.width-large  { width: $device-large; }
 .width-xlarge { width: $device-xlarge; }
 
 // Media query classes for various device sizes

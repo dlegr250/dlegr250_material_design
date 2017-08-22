@@ -1,0 +1,17 @@
+// Sidebar - base
+//----------------------------------------------------------------------
+
+.sidebar {
+  background-color: color("white");
+  bottom: 0;
+  left: 0;
+  max-width: 98%;
+  overflow-y: auto;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: $sidebar-width;
+  will-change: transform;
+  @include elevation(16);
+  @include transition(transform 0.2s cubic-bezier(0, 0, 0.3, 1));
+}

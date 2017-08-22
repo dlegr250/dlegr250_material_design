@@ -2,70 +2,42 @@
 // SCSS variables accessible in every SCSS file imported after this one.
 //======================================================================
 
-// Dimensions - application
+// Dimensions - toolbars
 //----------------------------------------------------------------------
 
-$application-container-min-width: 300px;
-$body-background-color: #eee !default;
+$toolbar-height-device-small:   56px !default;
+$toolbar-height-device-medium:  64px !default;
+$toolbar-height-device-large:   72px !default;
+$toolbar-height-device-xlarge:  72px !default;
 
-// Dimensions - appbar
-//----------------------------------------------------------------------
-
-// DEPRECATE
-$appbar-height-small: 56px !default; // Small devices
-$appbar-height-medium: 64px !default; // Medium to large devices
-$appbar-height: $appbar-height-medium !default;
-
-// Use
-$appbar-height-device-small: 56px !default;
-$toolbar-height-device-small: 56px !default;
-
-$appbar-height-device-medium: 64px !default;
-$toolbar-height-device-medium: 56px !default;
-
-$appbar-height-device-large: 64px !default;
-$toolbar-height-device-large: 56px !default;
-
-$appbar-button-height: 48px !default;
-
-// Dimensions - toolbar
-//----------------------------------------------------------------------
-
-$toolbar-height: $appbar-height !default;
+$toolbar-button-height: 48px !default;
 
 // Dimensions - sidebars
 //----------------------------------------------------------------------
 
-$sidebar-width: 280px !default;
-
-// Dimensions - main
-//----------------------------------------------------------------------
-
-$main-top: $appbar-height;
-$main-left: $sidebar-width + 1; // Allows for 1px border
-
-// Dimensions - cards
-//----------------------------------------------------------------------
-
-$card-width-xsmall: 180px;
-$card-width-small: 220px;
-$card-width: 280px;
-$card-width-normal: $card-width; // For consistency
-$card-width-large: 360px;
-$card-width-xlarge: 420px;
+$sidebar-width: 250px !default;
 
 // Text fields
 //----------------------------------------------------------------------
 
-$text-fields: "input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea";
+$text-fields: "
+  input[type='email'],
+  input[type='number'],
+  input[type='search'],
+  input[type='text'],
+  input[type='tel'],
+  input[type='url'],
+  input[type='password'],
+  textarea
+";
 
 // Dimensions - lists
 //----------------------------------------------------------------------
 
-$list-one-line-height: 48px;
+$list-one-line-height:             48px;
 $list-one-line-with-avatar-height: 56px;
-$list-two-lines-height: 72px;
-$list-three-lines-height: 88px;
+$list-two-lines-height:            72px;
+$list-three-lines-height:          88px;
 
 // 72px is the specification, but minus 32px for 16px left/right padding.
 $list-item-icon-width: 40px;
@@ -73,17 +45,19 @@ $list-item-icon-width: 40px;
 // Dimensions - dialogs
 //----------------------------------------------------------------------
 
-$dialog-width-xsmall: 280px; // From Google Material Design spec, min size
-$dialog-width-small: 360px;
-$dialog-width-normal: 500px;
-$dialog-width-large: 760px;
+$dialog-header-height: $toolbar-height-device-large !default;
+
+$dialog-width-xsmall:  280px; // From Google Material Design spec, min size
+$dialog-width-small:   360px;
+$dialog-width-normal:  500px;
+$dialog-width-large:   760px;
 $dialog-width-xlarge: 1000px;
 
 // Dimensions - menus
 //----------------------------------------------------------------------
 
 $menu-max-height: 500px;
-$menu-width: 56px;
+$menu-width:       56px;
 $menu-width-factors: 1, 2, 3, 4, 5, 6, 7;
 
 // Dimensions - tabs
@@ -95,13 +69,12 @@ $tab-height: 50px;
 //----------------------------------------------------------------------
 
 $button-height-dense: 32px;
-$button-height: 40px;
+$button-height:       40px;
 $button-height-large: 56px;
 
 $button-icon-height: $button-height;
 
-$button-fab-height: 56px;
-
+$button-fab-height:     56px;
 $button-fab-min-height: 40px;
 
 // Dimensions - inputs (text-fields, etc...)
@@ -113,9 +86,9 @@ $input-height: 40px;
 //----------------------------------------------------------------------
 
 $font-size-xsmall: 10px;
-$font-size-small: 12px;
+$font-size-small:  12px;
 $font-size-normal: 14px;
-$font-size-large: 20px;
+$font-size-large:  20px;
 $font-size-xlarge: 34px;
 
 $font-size-10: 10px;
@@ -133,48 +106,40 @@ $font-size-icon: 24px;
 // Spacing
 //----------------------------------------------------------------------
 
-$spacing-xsmall: 4px;
-$spacing-small: 8px;
+$spacing-xsmall:  4px;
+$spacing-small:   8px;
 $spacing-normal: 16px;
-$spacing-large: 24px;
+$spacing-large:  24px;
 $spacing-xlarge: 32px;
 
 // Elevation (z-index)
 // See: https://material.io/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android
 //----------------------------------------------------------------------
 
-$elevation-1: 1;   // Switch
-$elevation-2: 2;   // Card, button
-$elevation-3: 3;   // Refresh indicator,
-$elevation-4: 4;   // Appbar
-$elevation-6: 6;   // FAB (resting), snackbar
-$elevation-8: 8;   // Bottom nav, menu, raised button
-$elevation-9: 9;   // Submenu
-$elevation-12: 12; // FAB (pressed)
-$elevation-14: 14; // Overlay
-$elevation-16: 16; // Sidebar, modal bottom sheet
-$elevation-24: 24; // Dialog, pickers
-$elevation-26: 26; // Popups on top of dialogs
+// $elevation-1: 1;   // Switch
+// $elevation-2: 2;   // Card, button
+// $elevation-3: 3;   // Refresh indicator,
+// $elevation-4: 4;   // Appbar
+// $elevation-6: 6;   // FAB (resting), snackbar
+// $elevation-8: 8;   // Bottom nav, menu, raised button
+// $elevation-9: 9;   // Submenu
+// $elevation-12: 12; // FAB (pressed)
+// $elevation-14: 14; // Overlay
+// $elevation-16: 16; // Sidebar, modal bottom sheet
+// $elevation-24: 24; // Dialog, pickers
+// $elevation-26: 26; // Popups on top of dialogs
 
-// DEPRECATED: USE ELEVATION VARIABLES
-$layout-depth: 10;
-$menu-depth: 20;
-$overlay-depth: 30;
-$sidebar-depth: 40;
-$dialog-depth: 50;
+@for $z-value from 0 through 24 {
+  .elevation-#{$z-value} {
+    @include elevation($z-value);
+  }
+}
 
 // Device breakpoints
 //----------------------------------------------------------------------
 
-$device-xsmall: 320px;
-$device-small: 400px;
-$device-medium: 760px;
-$device-large: 1000px;
-$device-xlarge: 1200px;
-
-// DEPRECATED: USE DEVICE VARIABLES
-$width-xsmall: $device-xsmall;
-$width-small: $device-small;
-$width-medium: $device-medium;
-$width-large: $device-large;
-$width-xlarge: $device-xlarge;
+$device-xsmall:  320px;  // Small phone
+$device-small:   400px;  // Larger phone
+$device-medium:  760px;  // Tablet
+$device-large:  1000px; // Desktop
+$device-xlarge: 1200px; // Large desktop

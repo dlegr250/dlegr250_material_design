@@ -17,18 +17,21 @@
 // Layouts
 //----------------------------------------------------------------------
 
-// TODO: currently in Rails app
+@import "components/layout/application_container";
+@import "components/layout/toolbar";
+@import "components/layout/sidebar";
+@import "components/layout/main";
+@import "components/layout/overlay";
+@import "components/layout/grid";
 
 // Components
 //----------------------------------------------------------------------
 
+@import "components/search";
 @import "components/snackbars";
 @import "components/badges";
 @import "components/tabs";
 @import "components/blank_states";
-@import "components/borders";
-@import "components/breadcrumbs";
-@import "components/circles";
 @import "components/comments";
 @import "components/keyboard_shortcuts";
 @import "components/menus";
@@ -51,7 +54,6 @@
 @import "components/forms/helper_texts";
 @import "components/cards";
 @import "components/dialogs";
-@import "components/overlay";
 @import "components/panels";
 @import "components/progress_bar";
 @import "components/lists";
@@ -61,7 +63,6 @@
 @import "components/tables";
 @import "components/toggle_panels";
 @import "components/spinners";
-@import "components/underlines";
 
 // Global classes have modifiers that should override defaults
 //----------------------------------------------------------------------

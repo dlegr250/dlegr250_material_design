@@ -1,0 +1,102 @@
+// Grid
+//----------------------------------------------------------------------
+
+$flex-grid-width: 100%;
+$flex-grid-gutter: 16px;
+$flex-grid-columns-count: 12;
+
+.grid {
+  display: block;
+  margin: auto;
+  padding: 0;
+  width: $flex-grid-width;
+}
+
+.grid-small-padded { padding: $flex-grid-gutter / 2; }
+
+@media (min-width: $device-medium) {
+  .grid-medium-padded { padding: $flex-grid-gutter / 2; }
+}
+
+@media (min-width: $device-large) {
+  .grid-large-padded { padding: $flex-grid-gutter / 2; }
+}
+
+// Container
+//----------------------------------------------------------------------
+
+.row-container {
+  display: block;
+  margin: auto;
+  padding: $flex-grid-gutter / 2;
+  width: $flex-grid-width;
+}
+
+// Rows
+//----------------------------------------------------------------------
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+// Generate classes
+//----------------------------------------------------------------------
+
+[class^="col-"] {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: $flex-grid-gutter / 2;
+}
+
+// Small devices
+@for $i from 1 through $flex-grid-columns-count {
+  $width: (100% / $flex-grid-columns-count * $i);
+  .col-small-#{$i} {
+    flex-basis: $width;
+    max-width: $width;
+  }
+}
+
+// Medium devices
+@media (min-width: $width-medium) {
+  @for $i from 1 through $flex-grid-columns-count {
+    $width: (100% / $flex-grid-columns-count * $i);
+    .col-med-#{$i},
+    .col-medium-#{$i} {
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
+// Large devices
+@media (min-width: $width-large) {
+  @for $i from 1 through $flex-grid-columns-count {
+    $width: (100% / $flex-grid-columns-count * $i);
+    .col-large-#{$i},
+    .col-#{$i} {
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
+// On small devices, remove extra padding
+//----------------------------------------------------------------------
+
+// .grid .row .col-small-12 {
+//   padding: 0;
+// }
+//
+// @media (min-width: $device-medium) {
+//   .grid-small-padded .row .col-small-12,
+//   .grid-medium-padded .row .col-small-12,
+//   .grid-large-padded .row .col-small-12 {
+//     padding: $flex-grid-gutter / 2;
+//   }
+// }

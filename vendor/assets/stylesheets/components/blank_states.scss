@@ -19,7 +19,8 @@
 .blank-state-container {
   height: 100%;
   width: 100%;
-  @include flex-center();
+  @include flex-parent();
+  @include flex-vertical-align-center();
 }
 
 // Blank state - base

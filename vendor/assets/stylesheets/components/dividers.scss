@@ -1,59 +1,45 @@
 //======================================================================
 // EXAMPLE:
-// <hr class="divider large" />
-// <hr class="spacer large" />
+// <hr class="divider divider-normal" />
+// <hr class="spacer spacer-large" />
 //======================================================================
 
-hr {
-  height: 1px;
-  margin: ($spacing-normal / 2) 0;
-
-  // Has a line
-  &.divider {
-    border-color: color("divider");
-    margin: $spacing-normal 0;
-  }
-
-  // Does not have a line
-  &.spacer {
-    border: none;
-    margin: $spacing-normal 0;
-  }
-
-  &.xsmall { margin: ($spacing-xsmall / 2) 0; }
-  &.small { margin: ($spacing-small / 2) 0; }
-  &.normal { margin: ($spacing-normal / 2) 0; }
-  &.large { margin: ($spacing-large / 2) 0; }
-  &.xlarge { margin: ($spacing-xlarge / 2) 0; }
-
-  // No margins, totally flush against other containers
-  &.flush { margin: 0; }
-}
-
-// WHAT ARE THESE USED FOR???
-// Label dividers
+// Shared
 //----------------------------------------------------------------------
 
-// .label-divider {
-//   border-top: 1px solid #ccc;
-//   height: 0;
-//   margin: $spacing-large 0;
-//   position: relative;
-//   text-align: center;
-// }
-//
-// .label-divider-text {
-//   $label-divider-text-width: 30px;
-//
-//   background-color: #fff;
-//   color: #999;
-//   display: inline-block;
-//   height: $label-divider-text-width;
-//   line-height: $label-divider-text-width;
-//   padding: 0;
-//   position: relative;
-//   text-align: center;
-//   top: -16px;
-//   width: $label-divider-text-width;
-//   @include rounded-corners(50%);
-// }
+// To use on other elements besides HR
+.divider,
+.spacer {
+  display: block;
+}
+
+// Divider with line
+//----------------------------------------------------------------------
+
+.divider {
+  border: none;
+  border-bottom: 1px solid color("divider");
+  height: 0;
+  margin: 0;
+}
+
+.divider-xsmall { margin: ($spacing-xsmall / 2) 0; }
+.divider-small { margin:  ($spacing-small / 2) 0; }
+.divider-normal { margin: ($spacing-normal / 2) 0; }
+.divider-large { margin:  ($spacing-large / 2) 0; }
+.divider-xlarge { margin: ($spacing-xlarge / 2) 0; }
+
+// Spacer without line
+//----------------------------------------------------------------------
+
+.spacer {
+  border: none;
+  height: 0;
+  margin: 0;
+}
+
+.spacer-xsmall { margin: ($spacing-xsmall / 2) 0; }
+.spacer-small { margin:  ($spacing-small / 2) 0; }
+.spacer-normal { margin: ($spacing-normal / 2) 0; }
+.spacer-large { margin:  ($spacing-large / 2) 0; }
+.spacer-xlarge { margin: ($spacing-xlarge / 2) 0; }

@@ -1,64 +1,106 @@
-// //======================================================================
-// // Note: Uses DIVs styled as table instead of TABLE element because
-// // you cannot make a LINK a TABLE ROW, and it is easier to re-style
-// // DIVs if you want to make responsive tables.
-// // EXAMPLE:
-// //======================================================================
-//
-// .table {
-//   background-color: color("white");
-//   border: 1px solid color("divider");
-//   display: table;
-//   width: 100%;
-//
-//   a {
-//     color: color("text");
-//   }
-// }
-//
-// .thead {
-//   border-bottom: 2px solid color("hover");
-//   display: table-row;
-//   height: 56px;
-// }
-//
-// .th {
-//   border-bottom: 2px solid color("hover");
-//   color: lighten(color("text"), 10%);
-//   display: table-cell;
-//   font-size: $font-size-normal;
-//   font-weight: bold;
-//   padding: 0 $spacing-normal;
-//   text-transform: uppercase;
-//   vertical-align: middle;
-// }
-//
-// .tr {
-//   border-bottom: 1px solid color("hover");
-//   display: table-row;
-//   height: 48px;
-// }
-//
-// .td {
-//   border-bottom: 1px solid color("hover");
-//   display: table-cell;
-//   padding: 0 $spacing-normal;
-//   vertical-align: middle;
-// }
-//
-// .table-hoverable .tr {
-//   @include transition(background-color 0.2s);
-//
-//   &:hover {
-//     background-color: color("hover");
-//   }
-// }
-//
-// // Striped rows
-// //----------------------------------------------------------------------
-//
-// .table-striped-rows {
-//   tr:nth-child(even) {
-//     background-color: lighten(color("hover"), 3%);
-//   }
-// }
+//======================================================================
+// Emulate HTML tables with flexbox DIVs. Useful for responsive design.
+//======================================================================
+
+.table {
+  border: none;
+  color: color("text");
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.thead {
+  display: table-header-group;
+}
+
+.tbody {
+  display: table-row-group;
+}
+
+.tr {
+  background-color: color("white");
+  border-bottom: none;
+  width: 100%;
+  display: table-row;
+  @include no-touch-highlight-color();
+  @include transition(background-color 0.30s ease);
+}
+
+.th {
+  border-bottom: 1px solid color("divider");
+  color: rgba(0, 0, 0, 0.54);
+  display: table-cell;
+  font-size: $font-size-normal;
+  font-weight: bold;
+  padding: $spacing-normal;
+  vertical-align: middle;
+}
+
+.td {
+  border-bottom: none;
+  color: color("text");
+  display: table-cell;
+  min-width: 0px;
+  padding: $spacing-normal;
+  vertical-align: middle;
+  word-break: break-word;
+  width: auto;
+}
+
+.td-icon {
+  color: color("icon");
+  max-width: 48px;
+  text-align: center;
+  width: 48px;
+  vertical-align: top;
+}
+
+.td-secondary {
+  color: color("helper");
+}
+
+.td-secondary-actions {
+  padding: $spacing-small;
+  text-align: right;
+  width: 64px;
+}
+
+.td-supertext,
+.td-subtext {
+  color: color("helper");
+  font-size: $font-size-small;
+}
+
+.td-supertext {
+  padding-bottom: $spacing-xsmall;
+}
+
+.td-subtext {
+  padding-top: $spacing-xsmall;
+}
+
+// Flex table - modifications
+//----------------------------------------------------------------------
+
+.table-align-top .td { vertical-align: top; }
+
+.table-bordered {
+  @include box-shadow(0 0 1px #aaa);
+}
+
+.table-divided {
+  .tr .td { border-bottom: 1px solid color("divider"); }
+}
+
+.table-bordered.table-divided .tbody .tr:last-child .td {
+  border-bottom: none;
+}
+
+.table-hoverable .tbody .tr:active { background-color: darken(color("grey-200"), 3%); }
+.table-hoverable .tbody .tr .button-icon:active { background-color: darken(color("grey-200"), 12%); }
+
+@media (hover: hover) {
+  .table-hoverable .tbody .tr:hover { background-color: color("grey-200"); }
+  .table-hoverable .tbody .tr .button-icon:hover { background-color: darken(color("grey-200"), 7%); }
+}

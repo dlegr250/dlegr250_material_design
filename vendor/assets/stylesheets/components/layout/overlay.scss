@@ -1,0 +1,31 @@
+//======================================================================
+// Only used on sidebars since dialogs have their own container.
+//======================================================================
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+  will-change: opacity;
+  @include elevation(14);
+  @include flex-parent();
+  @include no-touch-highlight;
+  @include transparency(0);
+  @include transition(opacity 0.3s cubic-bezier(0, 0, 0.3, 1));
+
+  &.is-active {
+    pointer-events: auto;
+    @include transparency(1);
+  }
+
+  // DEPRECATE
+  &[data-state="active"] {
+    pointer-events: auto;
+    @include transparency(1);
+  }
+}

@@ -32,13 +32,6 @@ body {
   font-size: $font-size-normal;
   font-weight: normal;
   line-height: 1.2;
-
-  // Elements animated via transform instead of display will
-  // still be rendered on the page and cause horizontal scroll.
-  // This stops that scrolling on smaller devices.
-  // &.has-right-sidebar {
-  //   overflow-x: hidden;
-  // }
 }
 
 // Bold
@@ -56,17 +49,6 @@ p {
   margin: $spacing-normal 0;
 }
 
-// HRs used as spacers with lines
-//----------------------------------------------------------------------
-
-hr {
-  border: none;
-  border-bottom: 1px solid color("divider");
-  height: 1px;
-  margin: $spacing-xsmall 0;
-  padding: 0;
-}
-
 // Links
 //----------------------------------------------------------------------
 
@@ -75,16 +57,7 @@ a {
   text-decoration: none;
 }
 
-a.link {
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 // Images
 //----------------------------------------------------------------------
 
-// img {
-//   width: 100%;
-//   height: auto;
-// }
+// NOOP

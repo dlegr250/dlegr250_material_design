@@ -11,9 +11,9 @@
   top: 0;
   width: 100%;
   will-change: scale, opacity;
-  z-index: $overlay-depth;
-  @include flex-center();
-  // @include no-touch-highlight();
+  z-index: $elevation-overlay;
+  @include flex-parent();
+  @include flex-vertical-align-center();
   @include transform(scale(1.15));
   @include transition(all 0.10s cubic-bezier(0, 0, 0.3, 1));
   @include transparency(0);
@@ -26,7 +26,7 @@
   }
 }
 
-// Dialogs - base
+// Dialogs - base card
 //----------------------------------------------------------------------
 
 .dialog {
@@ -34,10 +34,10 @@
   cursor: default;
   max-height: 100%;
   max-width: 90%;
-  min-width: $dialog-width-xsmall;
+  min-width: 280px;
   overflow: hidden;
   width: $dialog-width-xsmall;
-  z-index: $dialog-depth;
+  @include elevation(24);
   @include rounded-corners();
 }
 
@@ -53,7 +53,7 @@
   @include rounded-corners(0);
 }
 
-@media (min-width: $width-small) {
+@media (min-width: $device-small) {
   .dialog,
   .dialog-full-screen,
   .dialog[data-fullscreen="true"] {
@@ -82,7 +82,7 @@
 .dialog-appbar {
   @include flex-parent-row();
   border-bottom: 1px solid color("divider");
-  height: $appbar-height;
+  height: $dialog-header-height;
   padding: 0 $spacing-small;
   position: relative;
   z-index: $dialog-depth + 1;
@@ -187,18 +187,18 @@
 
 .dialog-scrollable,
 .dialog-scrollable-no-actions {
-  max-height: calc(100vh - #{$appbar-height}); // For dialog-header
+  max-height: calc(100vh - #{$dialog-header-height}); // For dialog-header
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 @media (min-width: $width-small) {
   .dialog-scrollable {
-    max-height: calc(90vh - #{$appbar-height * 2}); // For dialog-header and dialog-actions
+    max-height: calc(90vh - #{$dialog-header-height * 2}); // For dialog-header and dialog-actions
   }
 
   .dialog-scrollable-no-actions {
-    max-height: calc(90vh - #{$appbar-height}); // For dialog-header and dialog-actions
+    max-height: calc(90vh - #{$dialog-header-height}); // For dialog-header and dialog-actions
   }
 }
 
@@ -207,8 +207,8 @@
 
 .dialog-actions {
   border-top: 1px solid color("divider");
-  height: $appbar-height;
-  line-height: $appbar-height;
+  height: $dialog-header-height;
+  line-height: $dialog-header-height;
   padding: 0 $spacing-normal;
 }
 

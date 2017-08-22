@@ -1,0 +1,146 @@
+//======================================================================
+// EXAMPLE:
+// <div class="search" data-state="inactive">
+//   <div class="search-header">
+//     <button role="button" class="appbar-button-icon" data-behavior="close-search">arrow_back</button>
+//     <input type="search" value="..." class="search-header-field" />
+//     <button role="button" class="appbar-button-icon" data-behavior="clear-search">close</button>
+//   </div>
+//   <div class="search-results">...</div>
+// </div>
+//======================================================================
+
+// Search - small devices
+//----------------------------------------------------------------------
+
+.search {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  pointer-events: none;
+  right: 0;
+  top: 0;
+  width: 100%;
+  will-change: opacity;
+  @include elevation(24);
+  @include transparency(0);
+}
+
+.search-header,
+.search-results {
+  @include transition(all 0.30s cubic-bezier(0, 0, 0.3, 1));
+}
+
+.search-header {
+  background-color: color("white");
+  border-bottom: 1px solid color("divider");
+  height: $toolbar-height-device-small;
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+  position: relative;
+  width: 100%;
+  @include flex-parent-row();
+}
+
+.search-search-icon {
+  color: color("helper");
+  display: none;
+}
+
+.search-header-field {
+  background-color: transparent;
+  border: 0 !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  flex: 1;
+  width: 100%;
+  @include box-shadow(none !important);
+  @include rounded-corners(0 !important);
+}
+
+.search-results {
+  background-color: color("white");
+  border: 0;
+  color: color("text");
+  max-height: 80vh;
+  overflow: scroll;
+  z-index: $elevation-24;
+  @include transparency(0);
+}
+
+// Search - small devices - active
+//----------------------------------------------------------------------
+
+.search[data-state="active"] {
+  &,
+  .search-results {
+    pointer-events: auto;
+    @include transparency(1);
+  }
+
+  .search-results {
+    .list-item[data-state="selected"] { background-color: color("hover"); }
+  }
+}
+
+// Search - medium devices
+//----------------------------------------------------------------------
+
+@media (min-width: $device-medium) {
+  .search {
+    background-color: transparent;
+    max-width: 300px;
+    pointer-events: auto;
+    position: relative;
+    @include flex-parent-row();
+    @include transparency(1);
+  }
+
+  .search-header {
+    background-color: rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+    height: $appbar-button-height;
+    @include rounded-corners(4px);
+  }
+
+  .search-close-button,
+  .search-clear-button {
+    display: none;
+  }
+
+  .search-search-icon {
+    display: block;
+  }
+
+  .search-results {
+    border: 1px solid color("divider");
+    border-top: none;
+    border-bottom: none;
+    pointer-events: none;
+    position: absolute;
+    top: $appbar-height-device-medium - 8px;
+    width: 100%;
+    z-index: $elevation-24;
+    @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
+    @include rounded-bottom-corners(4px);
+  }
+
+  .search[data-state="active"] .search-header {
+    background-color: color("white");
+    border-color: color("divider");
+    @include rounded-top-corners(4px);
+  }
+
+  .search[data-state="active"] {
+    max-width: 600px;
+  }
+}
+
+// Search - large devices
+//----------------------------------------------------------------------
+
+@media (min-width: $device-large) {
+  // .search {
+  //   max-width: 300px;
+  // }
+}

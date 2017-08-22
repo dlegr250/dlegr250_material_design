@@ -1,0 +1,129 @@
+// Toolbars - base
+//----------------------------------------------------------------------
+
+.toolbar {
+  border-bottom: 1px solid color("divider");
+  height: $toolbar-height-device-small;
+  left: 0;
+  padding: 0 $spacing-small;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  @include elevation(4);
+  @include transition(box-shadow 0.2s ease);
+  @include flex-parent();
+}
+
+// Toolbar - section
+// Allow CSS classes to override default center
+//----------------------------------------------------------------------
+
+.toolbar-section {
+  @include flex-parent();
+}
+
+// Toolbar - title
+//----------------------------------------------------------------------
+
+.toolbar-title {
+  flex: 1; // Fill up empty space
+  font-size: $font-size-normal;
+  @include flex-align-left();
+  @include font-smoothing();
+  @include truncate-text();
+}
+
+.toolbar-title-supertext,
+.toolbar-title-subtext {
+  font-size: $font-size-small;
+  @include truncate-text();
+}
+
+.toolbar-title-supertext {
+  padding-bottom: $spacing-xsmall;
+}
+
+.toolbar-title-subtext {
+  padding-top: $spacing-xsmall;
+}
+
+// Toolbar - button icon
+//----------------------------------------------------------------------
+
+.toolbar-button-icon {
+  background-color: transparent;
+  border: none;
+  color: color("helper");
+  cursor: pointer;
+  height: 48px;
+  outline: none;
+  text-align: center;
+  width: 48px;
+  @include material-icons();
+  @include no-touch-highlight-color();
+  @include rounded-corners(50%);
+  @include transition(background-color 0.2s ease-in-out);
+  @include flex-parent();
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.20);
+  }
+}
+
+@media (hover: hover) {
+  .toolbar-button-icon:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Toolbar - medium device
+//----------------------------------------------------------------------
+
+@media (min-width: $device-medium) {
+  .toolbar {
+    height: $toolbar-height-device-medium;
+  }
+
+  .toolbar-title {
+    font-size: $font-size-normal + 2px;
+  }
+}
+
+// Toolbar - large device
+//----------------------------------------------------------------------
+
+@media (min-width: $device-large) {
+  .toolbar {
+    height: $toolbar-height-device-large;
+  }
+
+  .toolbar-title {
+    font-size: $font-size-large;
+  }
+}
+
+// Toolbar - xlarge device
+//----------------------------------------------------------------------
+
+@media (min-width: $device-xlarge) {
+  .toolbar {
+    height: $toolbar-height-device-large;
+  }
+}
+
+// Toolbar - spacer/divider
+//----------------------------------------------------------------------
+
+.toolbar-spacer,
+.toolbar-divider {
+  border: 0;
+  display: inline-block;
+  height: 80%;
+  margin: 0 $spacing-xsmall;
+  width: 0;
+}
+
+.toolbar-divider {
+  border-left: 1px solid color("divider");
+}

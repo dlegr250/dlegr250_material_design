@@ -1,0 +1,12 @@
+// Wrap entire application
+//----------------------------------------------------------------------
+
+#application-container {
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  min-width: 300px;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+}
