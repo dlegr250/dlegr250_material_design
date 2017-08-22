@@ -85,7 +85,7 @@ textarea {
   width: 100%;
 }
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   .input-responsive {
     width: inherit;
   }

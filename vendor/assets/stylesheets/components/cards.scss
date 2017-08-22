@@ -61,7 +61,7 @@
   @include list-item-secondary-actions();
 }
 
-@media (min-width: $width-small) {
+@media (min-width: $device-small) {
   .card-header-primary {
     font-size: $font-size-large;
   }

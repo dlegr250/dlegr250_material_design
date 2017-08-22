@@ -22,7 +22,7 @@
   max-width: 100%;
 }
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   .grid-row {
     @include flex-parent-row-align-top();
     justify-content: space-around;

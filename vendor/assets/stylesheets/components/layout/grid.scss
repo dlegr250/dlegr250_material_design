@@ -63,7 +63,7 @@ $flex-grid-columns-count: 12;
 }
 
 // Medium devices
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   @for $i from 1 through $flex-grid-columns-count {
     $width: (100% / $flex-grid-columns-count * $i);
     .col-med-#{$i},
@@ -75,7 +75,7 @@ $flex-grid-columns-count: 12;
 }
 
 // Large devices
-@media (min-width: $width-large) {
+@media (min-width: $device-large) {
   @for $i from 1 through $flex-grid-columns-count {
     $width: (100% / $flex-grid-columns-count * $i);
     .col-large-#{$i},

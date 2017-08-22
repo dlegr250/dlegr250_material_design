@@ -42,7 +42,7 @@
 }
 
 // Add padding at top/bottom on large
-@media (min-width: $width-large) {
+@media (min-width: $device-large) {
   .menu {
     padding: $spacing-small 0;
   }

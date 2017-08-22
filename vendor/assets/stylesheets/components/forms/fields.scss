@@ -158,7 +158,7 @@
   }
 }
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   .field-responsive {
     margin-bottom: $spacing-xsmall;
     width: 100%;

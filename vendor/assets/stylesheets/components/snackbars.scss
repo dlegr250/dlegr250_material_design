@@ -45,7 +45,7 @@
 // Snackbar - media queries
 //----------------------------------------------------------------------
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   #snackbar {
     left: 24px !important;
     margin-bottom: 24px !important;

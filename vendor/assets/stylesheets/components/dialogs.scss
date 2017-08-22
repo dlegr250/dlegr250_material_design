@@ -68,7 +68,7 @@
 }
 
 // Sizes
-@media (min-width: $width-small) {
+@media (min-width: $device-small) {
   .dialog-xsmall { width: $dialog-width-xsmall !important; }
   .dialog-small { width: $dialog-width-small !important; }
   .dialog-normal { width: $dialog-width-normal !important; }
@@ -172,7 +172,7 @@
   @include list-item-secondary-actions();
 }
 
-@media (min-width: $width-small) {
+@media (min-width: $device-small) {
   .dialog-header-primary {
     font-size: $font-size-large;
   }
@@ -192,7 +192,7 @@
   overflow-y: auto;
 }
 
-@media (min-width: $width-small) {
+@media (min-width: $device-small) {
   .dialog-scrollable {
     max-height: calc(90vh - #{$dialog-header-height * 2}); // For dialog-header and dialog-actions
   }
@@ -223,7 +223,7 @@
   }
 }
 
-@media (min-width: $width-medium) {
+@media (min-width: $device-medium) {
   .dialog-full-height {
     .dialog-scrollable-no-actions {
       height: calc(90vh - 64px);

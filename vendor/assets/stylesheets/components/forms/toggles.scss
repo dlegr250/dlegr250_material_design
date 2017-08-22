@@ -51,7 +51,7 @@
     @include transition(background-color 0.30s ease);
   }
 
-  @media (min-width: $width-medium) {
+  @media (min-width: $device-medium) {
     label {
       padding: 0 $spacing-normal;
     }
