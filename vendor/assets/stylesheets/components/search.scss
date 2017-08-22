@@ -64,7 +64,7 @@
   color: color("text");
   max-height: 80vh;
   overflow: scroll;
-  z-index: $elevation-24;
+  @include elevation(24);
   @include transparency(0);
 }
 
@@ -120,7 +120,7 @@
     position: absolute;
     top: $appbar-height-device-medium - 8px;
     width: 100%;
-    z-index: $elevation-24;
+    @include elevation(24);
     @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
     @include rounded-bottom-corners(4px);
   }
