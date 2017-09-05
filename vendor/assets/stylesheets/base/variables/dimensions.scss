@@ -6,9 +6,9 @@
 //----------------------------------------------------------------------
 
 $toolbar-height-device-small:   56px !default;
-$toolbar-height-device-medium:  64px !default;
-$toolbar-height-device-large:   72px !default;
-$toolbar-height-device-xlarge:  72px !default;
+$toolbar-height-device-medium:  56px !default;
+$toolbar-height-device-large:   64px !default;
+$toolbar-height-device-xlarge:  64px !default;
 
 $toolbar-button-height: 48px !default;
 
@@ -20,16 +20,7 @@ $sidebar-width: 250px !default;
 // Text fields
 //----------------------------------------------------------------------
 
-$text-fields: "
-  input[type='email'],
-  input[type='number'],
-  input[type='search'],
-  input[type='text'],
-  input[type='tel'],
-  input[type='url'],
-  input[type='password'],
-  textarea
-";
+$text-fields: "input[type='email'], input[type='number'], input[type='search'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea";
 
 // Dimensions - lists
 //----------------------------------------------------------------------

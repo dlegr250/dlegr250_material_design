@@ -9,7 +9,6 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 100%;
   @include elevation(4);
   @include transition(box-shadow 0.2s ease);
   @include flex-parent();
@@ -21,6 +20,8 @@
 
 .toolbar-section {
   @include flex-parent();
+  display: inline-flex;
+  flex: 1;
 }
 
 // Toolbar - title
@@ -28,7 +29,8 @@
 
 .toolbar-title {
   flex: 1; // Fill up empty space
-  font-size: $font-size-normal;
+  font-size: $font-size-normal + 2px;
+  margin-left: $spacing-small;
   @include flex-align-left();
   @include font-smoothing();
   @include truncate-text();
@@ -46,6 +48,13 @@
 
 .toolbar-title-subtext {
   padding-top: $spacing-xsmall;
+}
+
+@media (min-width: $device-medium) {
+  .toolbar-title-supertext,
+  .toolbar-title-subtext {
+    font-size: $font-size-normal;
+  }
 }
 
 // Toolbar - button icon
@@ -74,6 +83,14 @@
 @media (hover: hover) {
   .toolbar-button-icon:hover {
     background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Special menu button
+@media (min-width: $device-large) {
+  .toolbar-button-icon[data-behavior="show-left-sidebar"] {
+    color: color("disabled");
+    pointer-events: none;
   }
 }
 
@@ -119,7 +136,7 @@
 .toolbar-divider {
   border: 0;
   display: inline-block;
-  height: 80%;
+  height: 60%;
   margin: 0 $spacing-xsmall;
   width: 0;
 }

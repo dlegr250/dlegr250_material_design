@@ -11,7 +11,7 @@
   top: 0;
   width: 100%;
   will-change: scale, opacity;
-  z-index: $elevation-overlay;
+  @include elevation(24);
   @include flex-parent();
   @include flex-vertical-align-center();
   @include transform(scale(1.15));
@@ -85,18 +85,18 @@
   height: $dialog-header-height;
   padding: 0 $spacing-small;
   position: relative;
-  z-index: $dialog-depth + 1;
+  @include elevation(24);
 }
 
 .dialog-appbar-icon {
-  width: $appbar-button-height;
+  width: $toolbar-button-height;
 
   // To match up with .appbar-button
   .button-icon {
     font-size: $font-size-icon;
-    height: $appbar-button-height;
-    line-height: $appbar-button-height;
-    width: $appbar-button-height;
+    height: $toolbar-button-height;
+    line-height: $toolbar-button-height;
+    width: $toolbar-button-height;
   }
 }
 
@@ -121,7 +121,7 @@
 }
 
 .dialog-appbar-secondary-actions {
-  @include list-item-secondary-actions();
+  @include list-item-secondary();
   text-align: right;
   @include flex-parent();
 }
@@ -139,14 +139,14 @@
 .dialog-header-icon {
   padding-top: $spacing-normal;
   text-align: center;
-  width: $appbar-button-height;
+  width: $toolbar-button-height;
 
   // To match up with .appbar-button
   .button-icon {
     font-size: $font-size-icon;
-    height: $appbar-button-height;
-    line-height: $appbar-button-height;
-    width: $appbar-button-height;
+    height: $toolbar-button-height;
+    line-height: $toolbar-button-height;
+    width: $toolbar-button-height;
   }
 }
 
@@ -170,7 +170,7 @@
 }
 
 .dialog-header-secondary-actions {
-  @include list-item-secondary-actions();
+  @include list-item-secondary();
 }
 
 @media (min-width: $device-small) {

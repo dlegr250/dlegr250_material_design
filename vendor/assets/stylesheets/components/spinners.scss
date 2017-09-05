@@ -2,7 +2,7 @@
 //----------------------------------------------------------------------
 
 .page-loader-container {
-  @include flex-center();
+  @include flex-parent();
 }
 
 // Variables
@@ -14,7 +14,7 @@ $spinner-height: 24px;
 //----------------------------------------------------------------------
 
 .spinner-container {
-  @include flex-center();
+  @include flex-parent();
 }
 
 // Spinners - base

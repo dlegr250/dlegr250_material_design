@@ -58,7 +58,7 @@
 }
 
 .card-header-secondary-actions {
-  @include list-item-secondary-actions();
+  @include list-item-secondary();
 }
 
 @media (min-width: $device-small) {

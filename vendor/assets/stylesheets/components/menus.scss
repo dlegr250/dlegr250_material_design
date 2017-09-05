@@ -27,7 +27,7 @@
   transform-origin: 100% 0;
   visibility: hidden;
   will-change: scale;
-  z-index: $menu-depth;
+  @include elevation(8);
   @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.26));
   @include rounded-corners;
   @include transition(all 0.10s ease);

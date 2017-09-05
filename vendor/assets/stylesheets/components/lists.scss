@@ -51,7 +51,7 @@ ol {
 }
 
 .list-item-secondary-actions {
-  @include list-item-secondary-actions();
+  @include list-item-secondary();
 }
 
 // Lists - links in text
@@ -240,5 +240,5 @@ ol {
 }
 
 .list-header-secondary-actions {
-  @include list-item-secondary-actions();
+  @include list-item-secondary();
 }

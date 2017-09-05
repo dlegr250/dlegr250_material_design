@@ -92,6 +92,7 @@
     max-width: 300px;
     pointer-events: auto;
     position: relative;
+    @include elevation(6);
     @include flex-parent();
     @include transparency(1);
   }
@@ -99,7 +100,7 @@
   .search-header {
     background-color: rgba(0, 0, 0, 0.08);
     border: 1px solid transparent;
-    height: $appbar-button-height;
+    height: $toolbar-button-height;
     @include rounded-corners(4px);
   }
 
@@ -114,11 +115,11 @@
 
   .search-results {
     border: 1px solid color("divider");
-    border-top: none;
     border-bottom: none;
+    border-top: none;
     pointer-events: none;
     position: absolute;
-    top: $appbar-height-device-medium - 8px;
+    top: $toolbar-height-device-medium - 4px;
     width: 100%;
     @include elevation(24);
     @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
@@ -133,6 +134,7 @@
 
   .search[data-state="active"] {
     max-width: 600px;
+    @include elevation(24);
   }
 }
 
@@ -140,7 +142,11 @@
 //----------------------------------------------------------------------
 
 @media (min-width: $device-large) {
-  // .search {
-  //   max-width: 300px;
-  // }
+  .search-header {
+    height: $toolbar-button-height;
+  }
+
+  .search-results {
+    top: $toolbar-height-device-large - 8px;
+  }
 }

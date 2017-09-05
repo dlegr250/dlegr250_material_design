@@ -20,7 +20,7 @@
   pointer-events: none;
   right: 0;
   will-change: transform;
-  z-index: $dialog-depth + 1;
+  @include elevation(24);
   @include transform(translateY(200%));
   @include transition(transform 0.10s cubic-bezier(0, 0, 0.3, 1));
 
