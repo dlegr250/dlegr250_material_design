@@ -157,75 +157,24 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
   justify-content: center;
 }
 
-@mixin flex-align-left() { justify-content: flex-start; }
-@mixin flex-align-center() { justify-content: center; }
-@mixin flex-align-right() { justify-content: flex-end; }
+@mixin flex-align-left() { justify-content: flex-start !important; }
+@mixin flex-align-center() { justify-content: center !important; }
+@mixin flex-align-right() { justify-content: flex-end !important; }
 
-@mixin flex-vertical-align-top() { align-items: flex-start; }
-@mixin flex-vertical-align-center() { align-items: center; }
-@mixin flex-vertical-align-bottom() { align-items: flex-end; }
+@mixin flex-vertical-align-top() { align-items: flex-start !important; }
+@mixin flex-vertical-align-center() { align-items: center !important; }
+@mixin flex-vertical-align-bottom() { align-items: flex-end !important; }
 
 @mixin flex-parent-align-top() {
   @include flex-parent();
   @include flex-vertical-align-top();
 }
 
-// // For a row of flex elements, such as the appbar.
-// @mixin flex-parent() {
-//   @include flex-parent();
-//   align-items: center;
-//   -ms-flex-align: center;
-//   -webkit-align-items: center;
-//   -webkit-box-align: center;
-//   flex-direction: row;
-//   flex-wrap: nowrap;
-//   justify-content: flex-start;
-// }
-//
-// @mixin flex-parent() {
-//   @include flex-parent();
-//   flex: 1 1 auto;
-//   justify-content: center;
-// }
-//
-// @mixin flex-parent-row-align-right() {
-//   @include flex-parent();
-//   flex: 1;
-//   justify-content: flex-end;
-// }
-//
-// @mixin flex-parent-row-align-top() {
-//   @include flex-parent();
-//   align-items: flex-start;
-//   -ms-flex-align: flex-start;
-//   -webkit-align-items: flex-start;
-//   -webkit-box-align: flex-start;
-// }
-
-// // Center elements vertically and horizontally
-// @mixin flex-center() {
-//   @include flex-parent();
-//   align-items: center;
-//   -ms-flex-align: center;
-//   -webkit-align-items: center;
-//   -webkit-box-align: center;
-//   flex-direction: column;
-//   flex-wrap: nowrap;
-//   justify-content: center;
-//   height: 100%;
-//   width: 100%;
-// }
-
-// Grid list
-// @mixin flex-grid-list() {
-//   @include flex-parent();
-//   align-items: flex-start;
-//   -ms-flex-align: flex-start;
-//   -webkit-align-items: flex-start;
-//   -webkit-box-align: flex-start;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-// }
+@mixin flex-section() {
+  @include flex-parent();
+  display: inline-flex;
+  flex: 1;
+}
 
 // Boxes
 //----------------------------------------------------------------------
@@ -374,3 +323,40 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
   -moz-osx-font-smoothing: grayscale; // Firefox
   font-feature-settings: "liga"; // IE
 }
+
+// // Toolbars
+// //----------------------------------------------------------------------
+//
+// @mixin toolbar() {
+//   border-bottom: 1px solid color("divider");
+//   height: $toolbar-height-device-small;
+//   left: 0;
+//   padding: 0 $spacing-small;
+//   right: 0;
+//   @include elevation(4);
+//   @include transition(box-shadow 0.2s ease);
+//   @include flex-parent();
+//
+//   @media (min-width: $device-medium) {
+//     & {
+//       height: $toolbar-height-device-medium;
+//       padding: 0 $spacing-normal;
+//     }
+//   }
+//
+//   @media (min-width: $device-large) {
+//     & {
+//       height: $toolbar-height-device-large;
+//     }
+//   }
+//
+//   @media (min-width: $device-xlarge) {
+//     & {
+//       height: $toolbar-height-device-xlarge;
+//     }
+//   }
+// }
+//
+// @mixin toolbar-title() {
+//
+// }

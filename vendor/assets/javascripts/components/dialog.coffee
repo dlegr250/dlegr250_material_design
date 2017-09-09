@@ -52,22 +52,20 @@ class App.MD.Dialog
     element.addClass("visible")
     element.find("input[autofocus]").focus()
 
-    # # Add shadow on dialog appbar when scrolling contents
-    # $(".dialog-scrollable, .dialog-scrollable-no-actions").on "scroll", (e) ->
-    #   $this = $(this)
-    #   $dialogAppbar = $this.parents(".dialog").find(".dialog-appbar")
-    #
-    #   if $this.scrollTop()
-    #     $dialogAppbar.addClass("scroll-shadow")
-    #   else
-    #     $dialogAppbar.removeClass("scroll-shadow")
+    # Add shadow on scroll
+    element.find(".dialog-scrollable").on "scroll", (e) ->
+      $scrollContainer = $(this)
+      $header = element.find(".dialog-toolbar")
+      if $scrollContainer.scrollTop()
+        $header.addClass("scroll-shadow-active")
+      else
+        $header.removeClass("scroll-shadow-active")
 
     false
 
   @closeDialog: (element) ->
     $element = $(element)
     hideButNotDestroy = ($element.attr("data-permanent") == "true")
-    console.log "Hide: #{hideButNotDestroy}"
     $element.removeClass("visible")
     window.setTimeout =>
       if hideButNotDestroy

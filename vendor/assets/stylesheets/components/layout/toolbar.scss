@@ -4,27 +4,17 @@
 .toolbar {
   border-bottom: 1px solid color("divider");
   height: $toolbar-height-device-small;
-  left: 0;
+  // left: 0;
   padding: 0 $spacing-small;
-  position: absolute;
-  right: 0;
-  top: 0;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
   @include elevation(4);
   @include transition(box-shadow 0.2s ease);
   @include flex-parent();
 }
 
-// Toolbar - section
-// Allow CSS classes to override default center
-//----------------------------------------------------------------------
-
-.toolbar-section {
-  @include flex-parent();
-  display: inline-flex;
-  flex: 1;
-}
-
-// Toolbar - title
+// .toolbar-title
 //----------------------------------------------------------------------
 
 .toolbar-title {
@@ -40,14 +30,7 @@
 .toolbar-title-subtext {
   font-size: $font-size-small;
   @include truncate-text();
-}
-
-.toolbar-title-supertext {
-  padding-bottom: $spacing-xsmall;
-}
-
-.toolbar-title-subtext {
-  padding-top: $spacing-xsmall;
+  @include transparency(0.8);
 }
 
 @media (min-width: $device-medium) {
@@ -57,7 +40,7 @@
   }
 }
 
-// Toolbar - button icon
+// .toolbar-button-icon
 //----------------------------------------------------------------------
 
 .toolbar-button-icon {
@@ -65,10 +48,10 @@
   border: none;
   color: color("helper");
   cursor: pointer;
-  height: 48px;
+  height: $toolbar-button-height;
   outline: none;
   text-align: center;
-  width: 48px;
+  width: $toolbar-button-height;
   @include material-icons();
   @include no-touch-highlight-color();
   @include rounded-corners(50%);
@@ -81,8 +64,14 @@
 }
 
 @media (hover: hover) {
-  .toolbar-button-icon:hover {
-    background-color: rgba(0, 0, 0, 0.12);
+  .toolbar-button-icon {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.20);
+    }
   }
 }
 
@@ -100,6 +89,7 @@
 @media (min-width: $device-medium) {
   .toolbar {
     height: $toolbar-height-device-medium;
+    padding: 0 $spacing-normal;
   }
 
   .toolbar-title {
@@ -125,8 +115,19 @@
 
 @media (min-width: $device-xlarge) {
   .toolbar {
-    height: $toolbar-height-device-large;
+    height: $toolbar-height-device-xlarge;
   }
+}
+
+// Toolbar - section
+// Allow CSS classes to override default center
+//----------------------------------------------------------------------
+
+.toolbar-section,
+.flex-section {
+  @include flex-parent();
+  display: inline-flex;
+  flex: 1;
 }
 
 // Toolbar - spacer/divider

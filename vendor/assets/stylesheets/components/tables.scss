@@ -60,7 +60,8 @@
   color: color("helper");
 }
 
-.td-secondary-actions {
+.td-secondary-actions,
+.td-actions {
   padding: $spacing-small;
   text-align: right;
   width: 64px;

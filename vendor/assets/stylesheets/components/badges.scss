@@ -17,25 +17,41 @@
 }
 
 .badge-xsmall {
-  font-size: $font-size-small;
-  height: 28px;
-  line-height: 28px;
-  min-width: $button-height * 0.6;
-  padding: 0 $spacing-xsmall;
+  font-size: $font-size-xsmall;
 }
 
 .badge-small {
   font-size: $font-size-small;
-  height: $button-height-dense !important;
-  line-height: $button-height-dense !important;
-  min-width: $button-height * 0.8;
-  padding: 0 $spacing-small;
+}
+
+.badge-normal {
+  font-size: $font-size-normal;
 }
 
 .badge-large {
-  height: $button-height-large !important;
-  line-height: $button-height-large !important;
+  font-size: $font-size-large;
 }
+
+// .badge-xsmall {
+//   font-size: $font-size-small;
+//   height: 28px;
+//   line-height: 28px;
+//   min-width: $button-height * 0.6;
+//   padding: 0 $spacing-xsmall;
+// }
+//
+// .badge-small {
+//   font-size: $font-size-small;
+//   height: $button-height-dense !important;
+//   line-height: $button-height-dense !important;
+//   min-width: $button-height * 0.8;
+//   padding: 0 $spacing-small;
+// }
+//
+// .badge-large {
+//   height: $button-height-large !important;
+//   line-height: $button-height-large !important;
+// }
 
 // Badges - colors
 //----------------------------------------------------------------------
