@@ -76,6 +76,16 @@
   .dialog-xlarge { width: $dialog-width-xlarge !important; }
 }
 
+// Dialog - title (header without toolbar actions)
+//----------------------------------------------------------------------
+
+.dialog-title {
+  font-size: $font-size-large;
+  font-weight: bold;
+  padding: $spacing-normal;
+  padding-bottom: 0;
+}
+
 // .dialog-toolbar
 //----------------------------------------------------------------------
 
@@ -83,6 +93,7 @@
   border-bottom: 1px solid color("divider");
   height: $toolbar-height-device-small;
   padding: 0 $spacing-small;
+  position: relative; // Allow box-shadow to cover children
   @include elevation(4);
   @include flex-parent();
   @include transition(box-shadow 0.2s ease);
@@ -167,7 +178,7 @@
   flex: 0;
 }
 
-// Dialogs - content
+// Dialogs - scrollable
 //----------------------------------------------------------------------
 
 .dialog-scrollable {
@@ -193,36 +204,63 @@
   }
 }
 
-.dialog-content {
-  // height: 1000px;
+// Dialogs - scrollable with actions
+//----------------------------------------------------------------------
+
+.dialog-scrollable-with-actions {
+  max-height: calc(100vh - #{$toolbar-height-device-small * 1});
+  overflow-y: auto;
 }
 
+@media (min-width: $device-medium) {
+  .dialog-scrollable-with-actions {
+    max-height: calc(90vh - #{$toolbar-height-device-medium * 2});
+  }
+}
 
-// .dialog-scrollable,
-// .dialog-scrollable-no-actions {
-//   max-height: calc(100vh - #{$dialog-header-height}); // For dialog-header
-//   overflow-x: hidden;
-//   overflow-y: auto;
-// }
-//
-// @media (min-width: $device-small) {
-//   .dialog-scrollable {
-//     max-height: calc(90vh - #{$dialog-header-height * 2}); // For dialog-header and dialog-actions
-//   }
-//
-//   .dialog-scrollable-no-actions {
-//     max-height: calc(90vh - #{$dialog-header-height}); // For dialog-header and dialog-actions
-//   }
-// }
+@media (min-width: $device-large) {
+  .dialog-scrollable-with-actions {
+    max-height: calc(90vh - #{$toolbar-height-device-large * 2});
+  }
+}
+
+@media (min-width: $device-xlarge) {
+  .dialog-scrollable-with-actions {
+    max-height: calc(90vh - #{$toolbar-height-device-xlarge * 2});
+  }
+}
 
 // Dialogs - actions
 //----------------------------------------------------------------------
 
 .dialog-actions {
-  border-top: 1px solid color("divider");
-  height: $dialog-header-height;
-  line-height: $dialog-header-height;
+  border-top: none;
+  height: $toolbar-height-device-small;
   padding: 0 $spacing-normal;
+  @include flex-parent();
+  @include flex-align-right();
+}
+
+@media (min-width: $device-medium) {
+  .dialog-actions {
+    height: $toolbar-height-device-medium;
+  }
+}
+
+@media (min-width: $device-large) {
+  .dialog-actions {
+    height: $toolbar-height-device-large;
+  }
+}
+
+@media (min-width: $device-xlarge) {
+  .dialog-actions {
+    height: $toolbar-height-device-xlarge;
+  }
+}
+
+.dialog-actions-bordered {
+  border-top: 1px solid color("divider");
 }
 
 // Dialog - full height

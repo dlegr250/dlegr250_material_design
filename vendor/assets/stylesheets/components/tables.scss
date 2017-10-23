@@ -94,9 +94,9 @@
   .tr .td { border-bottom: 1px solid color("divider"); }
 }
 
-.table-bordered.table-divided .tbody .tr:last-child .td {
-  border-bottom: none;
-}
+// .table-bordered.table-divided .tbody .tr:last-child .td {
+//   border-bottom: none;
+// }
 
 .table-hoverable .tbody .tr:active { background-color: darken(color("grey-200"), 3%); }
 .table-hoverable .tbody .tr .button-icon:active { background-color: darken(color("grey-200"), 12%); }

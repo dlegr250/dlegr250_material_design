@@ -23,7 +23,6 @@
     position: absolute;
     text-transform: none;
     top: 100%;
-    // transition-delay: 0.8s;
     visibility: hidden;
     white-space: nowrap;
     z-index: 2;
@@ -38,7 +37,7 @@
     &:after {
       display: block;
       visibility: visible;
-      transition-delay: 0.25s;
+      transition-delay: 0.8s;
       @include transparency(1);
     }
   }
