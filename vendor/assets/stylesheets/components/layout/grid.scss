@@ -66,7 +66,6 @@ $flex-grid-columns-count: 12;
 @media (min-width: $device-medium) {
   @for $i from 1 through $flex-grid-columns-count {
     $width: (100% / $flex-grid-columns-count * $i);
-    .col-med-#{$i},
     .col-medium-#{$i} {
       flex-basis: $width;
       max-width: $width;
@@ -78,8 +77,18 @@ $flex-grid-columns-count: 12;
 @media (min-width: $device-large) {
   @for $i from 1 through $flex-grid-columns-count {
     $width: (100% / $flex-grid-columns-count * $i);
-    .col-large-#{$i},
-    .col-#{$i} {
+    .col-large-#{$i} {
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
+// X-large devices
+@media (min-width: $device-xlarge) {
+  @for $i from 1 through $flex-grid-columns-count {
+    $width: (100% / $flex-grid-columns-count * $i);
+    .col-xlarge-#{$i} {
       flex-basis: $width;
       max-width: $width;
     }
