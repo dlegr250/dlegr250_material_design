@@ -112,9 +112,9 @@ ol {
 }
 
 // Remove duplicate border on last item in list
-// .list-bordered.list-divided .list-item:last-child {
-//   border-bottom: none;
-// }
+.list-divided .list-item:last-child {
+  border-bottom: none;
+}
 
 // Dividers between items
 .list-divided .list-item {

@@ -20,7 +20,8 @@ $default-button-rounded-corners: 4px;
   border: 1px solid transparent;
   box-sizing: border-box;
   cursor: pointer;
-  font-size: $font-size-normal;
+  // font-size: $font-size-normal;
+  font-size: 16px;
   font-weight: 500;
   height: $button-height;
   line-height: 1.2;
@@ -34,6 +35,7 @@ $default-button-rounded-corners: 4px;
   white-space: nowrap;
   @include flex-parent();
   display: inline-flex;
+  @include font-smoothing();
   @include no-touch-highlight;
   @include rounded-corners($default-button-rounded-corners);
   @include transition(all 0.2s ease-in-out);
@@ -184,7 +186,7 @@ $default-button-rounded-corners: 4px;
     }
 
     // @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.4));
-    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
+    // @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.24));
 
     &:hover {
       background-color: lighten($color, 10%);
@@ -389,5 +391,9 @@ $default-button-rounded-corners: 4px;
 
   .button:last-child {
     @include rounded-right-corners();
+  }
+
+  .button:not(:first-child) {
+    border-left: none;
   }
 }

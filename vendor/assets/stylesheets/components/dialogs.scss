@@ -37,6 +37,7 @@
   min-width: 280px;
   overflow: hidden;
   width: $dialog-width-xsmall;
+  @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
   @include elevation(24);
   @include rounded-corners();
 }
@@ -62,7 +63,6 @@
     max-width: 90%;
     position: relative;
     width: auto;
-    @include box-shadow(0 12px 15px 0 rgba(0,0,0,0.24));
     @include rounded-corners();
   }
 }
@@ -81,9 +81,9 @@
 
 .dialog-title {
   font-size: $font-size-large;
-  font-weight: bold;
+  font-weight: normal;
   padding: $spacing-normal;
-  padding-bottom: 0;
+  @include font-smoothing();
 }
 
 // .dialog-toolbar
@@ -97,6 +97,10 @@
   @include elevation(4);
   @include flex-parent();
   @include transition(box-shadow 0.2s ease);
+}
+
+.dialog-toolbar-title-subtext {
+  @include list-item-primary-subtext();
 }
 
 @media (min-width: $device-medium) {
@@ -126,10 +130,10 @@
 //----------------------------------------------------------------------
 
 .dialog-toolbar-title {
-  color: color("icon");
+  color: color("text");
   flex: 1;
-  font-size: $font-size-normal + 2px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: normal;
   margin-left: $spacing-small;
   @include font-smoothing();
   @include truncate-text();

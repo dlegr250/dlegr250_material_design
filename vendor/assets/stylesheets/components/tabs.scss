@@ -14,7 +14,7 @@
   display: inline-flex;
   flex: none;
   font-size: $font-size-small;
-  font-weight: 500;
+  font-weight: 600;
   justify-content: center;
   height: 100%;
   letter-spacing: 0;
@@ -24,9 +24,9 @@
   padding: 0 12px;
   position: relative;
   text-align: center;
-  // text-transform: uppercase;
+  text-transform: uppercase;
   vertical-align: middle;
-  // @include font-smoothing();
+  @include font-smoothing();
   @include transition(color 0.30s ease, border-color 0.30s ease, background-color 0.30s ease);
 
   &:hover {

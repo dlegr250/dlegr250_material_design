@@ -128,6 +128,7 @@
   @include flex-parent();
   display: inline-flex;
   flex: 1;
+  height: 100%;
 }
 
 // Toolbar - spacer/divider

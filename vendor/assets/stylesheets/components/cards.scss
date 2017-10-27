@@ -32,6 +32,7 @@
 
 .card-header {
   @include list-item();
+  @include rounded-top-corners();
   border-bottom: 1px solid color("divider");
 }
 
@@ -46,7 +47,8 @@
 .card-header-primary {
   @include list-item-primary();
   font-size: $font-size-normal + 2px;
-  font-weight: bold;
+  font-weight: normal;
+  @include font-smoothing();
 }
 
 .card-header-primary-subtext {
