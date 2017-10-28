@@ -137,6 +137,10 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
   -webkit-box-shadow: $shadow;
 }
 
+@mixin box-shadow-border($color) {
+  @include box-shadow(0 -1px 0 $color, 1px 0 0 $color, 0 1px 0 $color, -1px 0 0 $color);
+}
+
 @mixin text-shadow($shadow) {
   text-shadow: $shadow;
   -moz-text-shadow: $shadow;
