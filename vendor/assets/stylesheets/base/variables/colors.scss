@@ -5,6 +5,8 @@ $body-background-color: #ebebeb !default;
 $color-primary: #2196f3 !default;
 $color-primary: #4285f4 !default;
 $color-secondary: #db4437 !default;
+$color-hover: #f1f3f7 !default;
+$color-hover-blue: #f0f7fe !default;
 
 // SCSS maps of all colors
 //----------------------------------------------------------------------
@@ -307,8 +309,8 @@ $colors: (
   // Custom colors
   "primary":        $color-primary,
   "secondary":      $color-secondary,
-  "hover":          #f2f2f2,
-  "hover-blue":     #f0f7fe,
+  "hover":          $color-hover,
+  "hover-blue":     $color-hover-blue,
   "icon":           #737373,
   "disabled":       rgba(0, 0, 0, 0.26),
   "text":           rgba(0, 0, 0, 0.87),

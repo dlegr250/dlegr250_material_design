@@ -85,7 +85,9 @@
 // Flex table - modifications
 //----------------------------------------------------------------------
 
-.table-align-top .td { vertical-align: top; }
+.table-align-top .td { vertical-align: top !important; }
+
+.table-align-middle .td { vertical-align: middle !important; }
 
 .table-bordered {
   @include box-shadow-border(color("divider"));
