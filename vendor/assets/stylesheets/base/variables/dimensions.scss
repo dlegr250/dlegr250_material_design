@@ -2,6 +2,15 @@
 // SCSS variables accessible in every SCSS file imported after this one.
 //======================================================================
 
+// Device breakpoints
+//----------------------------------------------------------------------
+
+$device-xsmall:  320px !default;  // Small phone
+$device-small:   460px !default;  // Larger phone
+$device-medium:  800px !default;  // Tablet
+$device-large:  1200px !default; // Desktop
+$device-xlarge: 1200px !default; // Large desktop
+
 // Dimensions - toolbars
 //----------------------------------------------------------------------
 
@@ -119,12 +128,3 @@ $spacing-xlarge: 32px;
 // $elevation-16: 16; // Sidebar, modal bottom sheet
 // $elevation-24: 24; // Dialog, pickers
 // $elevation-26: 26; // Popups on top of dialogs
-
-// Device breakpoints
-//----------------------------------------------------------------------
-
-$device-xsmall:  320px;  // Small phone
-$device-small:   460px;  // Larger phone
-$device-medium:  760px;  // Tablet
-$device-large:  1000px; // Desktop
-$device-xlarge: 1200px; // Large desktop

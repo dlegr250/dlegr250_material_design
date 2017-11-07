@@ -63,6 +63,7 @@
 .td-secondary-actions,
 .td-actions {
   padding: $spacing-small;
+  padding-top: 12px;
   text-align: right;
   vertical-align: top;
   width: 64px;
@@ -72,6 +73,8 @@
 .td-subtext {
   color: color("helper");
   font-size: $font-size-small;
+  @include flex-parent();
+  @include flex-align-left();
 }
 
 .td-supertext {
