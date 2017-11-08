@@ -234,8 +234,8 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
 
 @mixin list() {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
+  // overflow-x: hidden;
+  // overflow-y: auto;
   flex: 1 1 auto;
 }
 
@@ -263,6 +263,7 @@ $list-item-icon-width: 48px;
   color: color("icon");
   flex-shrink: 0;
   height: $list-item-icon-width;
+  justify-content: center;
   max-height: $list-item-icon-width;
   text-align: center;
   width: $list-item-icon-width;
@@ -274,7 +275,6 @@ $list-item-icon-width: 48px;
 }
 
 @mixin list-item-primary() {
-  color: red !important;
   padding: 8px;
   line-height: 16px;
   box-flex: 1;
