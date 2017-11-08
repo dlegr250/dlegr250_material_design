@@ -159,8 +159,6 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
   display: -webkit-flex;
   flex-direction: row;
   justify-content: center;
-
-  position: relative;
 }
 
 @mixin flex-align-left() { justify-content: flex-start !important; }
@@ -234,8 +232,6 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
 
 @mixin list() {
   position: relative;
-  // overflow-x: hidden;
-  // overflow-y: auto;
   flex: 1 1 auto;
 }
 
@@ -248,8 +244,6 @@ $default-rounded-corners-radius: 2px; // As per Material Design spec
   position: relative;
   width: 100%;
   @include flex-parent();
-  // @include flex-parent();
-  // @include flex-align-left();
   @include no-touch-highlight-color();
   @include transition(background-color 0.30s ease);
 }
@@ -267,24 +261,16 @@ $list-item-icon-width: 48px;
   max-height: $list-item-icon-width;
   text-align: center;
   width: $list-item-icon-width;
-
-  // max-width: 44px; // 56px
-  // padding-left: 0; // $spacing-small
-  // text-align: center;
-  // width: 44px; // 56px
 }
 
 @mixin list-item-primary() {
+  color: color("text");
   padding: 8px;
   line-height: 16px;
   box-flex: 1;
   flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
-  // color: color("text");
-  // flex: 1; // Fill space
-  // font-size: $font-size-normal;
-  // padding: $spacing-normal $spacing-small;
 }
 
 @mixin list-item-primary-supertext() {
@@ -292,8 +278,6 @@ $list-item-icon-width: 48px;
   font-size: $font-size-small;
   font-weight: normal;
   padding-bottom: $spacing-xsmall;
-  // @include flex-parent();
-  // @include flex-align-left();
 }
 
 @mixin list-item-primary-subtext() {
