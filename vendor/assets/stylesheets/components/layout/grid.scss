@@ -22,16 +22,6 @@ $flex-grid-columns-count: 12;
   .grid-large-padded { padding: $flex-grid-gutter / 2; }
 }
 
-// Container
-//----------------------------------------------------------------------
-
-.row-container {
-  display: block;
-  margin: auto;
-  padding: $flex-grid-gutter / 2;
-  width: $flex-grid-width;
-}
-
 // Rows
 //----------------------------------------------------------------------
 
@@ -46,12 +36,20 @@ $flex-grid-columns-count: 12;
 // Generate classes
 //----------------------------------------------------------------------
 
-[class^="col-"] {
+// Shared across all "col-*" classes.
+@mixin grid-column() {
   box-sizing: border-box;
   flex-grow: 0;
   flex-shrink: 0;
   padding: $flex-grid-gutter / 2;
 }
+
+// [class^="col-"] {
+//   box-sizing: border-box;
+//   flex-grow: 0;
+//   flex-shrink: 0;
+//   padding: $flex-grid-gutter / 2;
+// }
 
 // Small devices
 @for $i from 1 through $flex-grid-columns-count {
@@ -59,6 +57,7 @@ $flex-grid-columns-count: 12;
   .col-small-#{$i} {
     flex-basis: $width;
     max-width: $width;
+    @include grid-column();
   }
 }
 
@@ -69,6 +68,7 @@ $flex-grid-columns-count: 12;
     .col-medium-#{$i} {
       flex-basis: $width;
       max-width: $width;
+      @include grid-column();
     }
   }
 }
@@ -80,6 +80,7 @@ $flex-grid-columns-count: 12;
     .col-large-#{$i} {
       flex-basis: $width;
       max-width: $width;
+      @include grid-column();
     }
   }
 }
@@ -91,21 +92,7 @@ $flex-grid-columns-count: 12;
     .col-xlarge-#{$i} {
       flex-basis: $width;
       max-width: $width;
+      @include grid-column();
     }
   }
 }
-
-// On small devices, remove extra padding
-//----------------------------------------------------------------------
-
-// .grid .row .col-small-12 {
-//   padding: 0;
-// }
-//
-// @media (min-width: $device-medium) {
-//   .grid-small-padded .row .col-small-12,
-//   .grid-medium-padded .row .col-small-12,
-//   .grid-large-padded .row .col-small-12 {
-//     padding: $flex-grid-gutter / 2;
-//   }
-// }

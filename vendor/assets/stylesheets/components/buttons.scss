@@ -22,14 +22,16 @@ $default-button-rounded-corners: 4px;
   cursor: pointer;
   // font-size: $font-size-normal;
   font-size: $font-size-normal;
-  font-weight: 500;
+  font-weight: 600;
   height: $button-height;
+  letter-spacing: 0.5px;
   line-height: 1.2;
   min-width: 0;
   outline: none;
   padding: 0 $spacing-normal;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
   @include flex-parent();
@@ -96,6 +98,8 @@ $default-button-rounded-corners: 4px;
 // Buttons - icon buttons
 //----------------------------------------------------------------------
 
+$button-icon-height: 40px;
+
 // Basic icon without any coloring
 .button-icon {
   background-color: transparent;
@@ -103,34 +107,36 @@ $default-button-rounded-corners: 4px;
   color: color("icon");
   cursor: pointer;
   height: $button-icon-height;
+  outline: none;
   text-align: center;
   width: $button-icon-height;
-  @include flex-parent();
-  display: inline-flex;
-  @include no-touch-highlight;
+  @include material-icons();
+  @include no-touch-highlight-color();
   @include rounded-corners(50%);
-  @include transition(background-color 0.30s ease, color 0.30s ease);
+  @include transition(background-color 0.2s ease-in-out);
+  @include flex-parent();
 
-  // &:active {
-  //   background-color: darken(color("hover"), 5%);
-  // }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.20);
+  }
 }
 
-// Devices with pointers
 @media (hover: hover) {
-  // .button-icon {
-  //   &:hover {
-  //     background-color: color("hover");
-  //   }
-  //
-  //   &:active {
-  //     background-color: darken(color("hover"), 5%);
-  //   }
-  // }
+  .button-icon {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.20);
+    }
+  }
 }
 
 // Button icon - sizes
 //----------------------------------------------------------------------
+
+// TODO make a standard size for small/large, not relative to normal
 
 .button-icon-small {
   height: $button-icon-height * 0.8;
