@@ -63,7 +63,7 @@
   border: 0;
   color: color("text");
   max-height: 80vh;
-  overflow: scroll;
+  overflow: auto;
   @include elevation(24);
   @include transparency(0);
 }

@@ -13,9 +13,6 @@
 // </div>
 //======================================================================
 
-// Blank state - container (for flex wrapper)
-//----------------------------------------------------------------------
-
 .blank-state-container {
   height: 100%;
   width: 100%;
@@ -23,26 +20,38 @@
   @include flex-vertical-align-center();
 }
 
-// Blank state - base
-//----------------------------------------------------------------------
-
 .blank-state {
-  margin: $spacing-large auto;
-  max-width: $device-small - ($spacing-normal * 2);
+  margin: inherit;
+  margin-top: 64px;
+  max-width: 100%;
+  padding: 16px;
+  @include flex-parent();
+  flex-direction: column;
   text-align: center;
 }
 
-// Blank state - icon
-//----------------------------------------------------------------------
+.blank-state-icon {
+  background-color: color("grey-200");
+  padding: 16px;
+  width: 140px;
+  height: 140px;
+  @include flex-parent();
+  @include flex-vertical-align-center();
+  @include rounded-corners(50%);
 
-.blank-state-icon .material-icons {
-  color: color("helper");
-  font-size: $font-size-xlarge * 2;
+  .material-icons {
+    color: color("helper");
+    font-size: $font-size-xlarge * 2;
+  }
 }
 
-// Blank state - primary
-//----------------------------------------------------------------------
+.blank-state-text {
+  color: color("helper");
+  font-size: 16px;
+  padding-top: $spacing-xlarge;
+}
 
+// Used???
 .blank-state-primary {
   color: color("text");
   font-size: $font-size-large;
@@ -50,18 +59,12 @@
   line-height: 1.5;
 }
 
-// Blank state - primary - subtext
-//----------------------------------------------------------------------
-
 .blank-state-primary-subtext {
   color: color("helper");
   font-size: $font-size-normal;
   font-weight: normal;
   padding-top: $spacing-xsmall;
 }
-
-// Blank state - actions
-//----------------------------------------------------------------------
 
 .blank-state-actions {
   margin: $spacing-normal 0;

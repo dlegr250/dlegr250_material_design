@@ -76,6 +76,12 @@
   .dialog-xlarge { width: $dialog-width-xlarge !important; }
 }
 
+.dialog-xsmall { width: $dialog-width-xsmall; }
+.dialog-small { width: $dialog-width-small; }
+.dialog-normal { width: $dialog-width-normal; }
+.dialog-large { width: $dialog-width-large; }
+.dialog-xlarge { width: $dialog-width-xlarge; }
+
 // Dialog - title (header without toolbar actions)
 //----------------------------------------------------------------------
 
@@ -337,6 +343,8 @@
 
   .dialog-actions {
     border-top: 0;
+    height: auto;
+    padding: $spacing-normal;
     text-align: right;
   }
 }
