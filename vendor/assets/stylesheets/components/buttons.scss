@@ -98,7 +98,7 @@ $default-button-rounded-corners: 4px;
 // Buttons - icon buttons
 //----------------------------------------------------------------------
 
-$button-icon-height: 40px;
+$button-icon-height: 48px;
 
 // Basic icon without any coloring
 .button-icon {
@@ -273,9 +273,11 @@ $button-icon-height: 40px;
   width: $button-fab-height;
   @include elevation(12);
   @include box-shadow(0 3px 7px 0 rgba(0, 0, 0, 0.4));
+  @include material-icons();
   @include rounded-corners(250px);
   @include text-shadow(0 -1px 0 color("helper"));
   @include flex-parent();
+  @include flex-vertical-align-center();
   display: inline-flex;
 }
 

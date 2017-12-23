@@ -34,6 +34,7 @@
   @include list-item();
   @include rounded-top-corners();
   border-bottom: 1px solid color("divider");
+  padding: $spacing-small;
 }
 
 .card-header-no-border {
@@ -47,7 +48,7 @@
 .card-header-primary {
   @include list-item-primary();
   font-size: $font-size-normal + 2px;
-  font-weight: normal;
+  font-weight: 600;
   @include font-smoothing();
 }
 

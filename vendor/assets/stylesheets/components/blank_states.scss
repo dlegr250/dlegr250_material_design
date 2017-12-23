@@ -22,7 +22,6 @@
 
 .blank-state {
   margin: inherit;
-  margin-top: 64px;
   max-width: 100%;
   padding: 16px;
   @include flex-parent();
@@ -31,7 +30,7 @@
 }
 
 .blank-state-icon {
-  background-color: color("grey-200");
+    background-color: darken($body-background-color, 7%);
   padding: 16px;
   width: 140px;
   height: 140px;
@@ -67,5 +66,6 @@
 }
 
 .blank-state-actions {
-  margin: $spacing-normal 0;
+  padding: $spacing-normal 0;
+  margin: 0;
 }

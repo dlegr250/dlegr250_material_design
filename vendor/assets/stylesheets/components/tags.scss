@@ -1,0 +1,22 @@
+.tag {
+  border: 1px solid transparent;
+  display: inline-block;
+  padding: 1px 4px;
+  @include rounded-corners();
+}
+
+@each $color-name, $color in $colors {
+  .tag-#{$color-name} {
+    background-color: $color;
+    @if ($color-name == "white") {
+      color: color("black");
+    } @else {
+      color: color("white");
+    }
+  }
+
+  .tag-outline-#{$color-name} {
+    border-color: $color;
+    color: $color;
+  }
+}

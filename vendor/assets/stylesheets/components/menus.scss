@@ -27,7 +27,7 @@
   transform-origin: 100% 0;
   visibility: hidden;
   will-change: scale;
-  @include elevation(8);
+  @include elevation(6);
   @include box-shadow(0 2px 5px 1px rgba(0, 0, 0, 0.26));
   @include rounded-corners;
   @include transition(all 0.10s ease);
@@ -59,6 +59,7 @@
 
 .menu-item {
   @include list-item();
+  min-height: 48px;
 
   &:active {
     background-color: darken(color("hover"), 5%);

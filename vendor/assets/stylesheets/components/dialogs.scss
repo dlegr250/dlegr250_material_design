@@ -15,15 +15,18 @@
   @include flex-parent();
   @include flex-vertical-align-center();
   @include transform(scale(1.15));
-  @include transition(all 0.10s cubic-bezier(0, 0, 0.3, 1));
   @include transparency(0);
 
   &.visible {
     pointer-events: auto;
     @include transform(scale(1.0));
-    @include transition(all 0.10s cubic-bezier(0, 0, 0.3, 1));
     @include transparency(1.0);
   }
+}
+
+.dialog-container,
+.dialog-container.visible {
+  @include transition(all 0.15s cubic-bezier(0, 0, 0.3, 1));
 }
 
 // Dialogs - base card
@@ -161,10 +164,9 @@
   border-bottom: 1px solid color("divider");
   font-size: $font-size-normal + 2px;
   font-weight: bold;
-  padding: $spacing-normal;
+  padding: $spacing-small $spacing-normal;
   @include flex-parent();
-  // @include flex-align-left();
-  // @include flex-vertical-align-top();
+  @include list-item();
   @include font-smoothing();
 }
 
@@ -173,8 +175,7 @@
 }
 
 .dialog-header-primary {
-  // @include flex-section();
-  // @include flex-align-left();
+  @include list-item-primary();
   flex: 1;
 }
 

@@ -19,23 +19,26 @@ ol {
 //----------------------------------------------------------------------
 
 .list {
+  background-color: color("white");
   @include list();
 }
 
 .list-item {
   @include list-item();
+  min-height: 48px;
+  padding: 8px;
 }
 
 .list-item-icon {
   @include list-item-icon();
-}
-
-.list-item-icon-primary-action {
-
+  height: 40px;
+  max-height: 40px;
+  width: 40px;
 }
 
 .list-item-primary {
   @include list-item-primary();
+  line-height: normal;
 }
 
 .list-item-primary-supertext {
@@ -44,6 +47,17 @@ ol {
 
 .list-item-primary-subtext {
   @include list-item-primary-subtext();
+  color: color("helper");
+  font-size: $font-size-small;
+  @include flex-parent();
+  @include flex-align-left();
+}
+
+.list-item-action {
+  @include list-item-icon();
+  height: 40px;
+  max-height: 40px;
+  width: 40px;
 }
 
 .list-item-secondary {
@@ -52,6 +66,11 @@ ol {
 
 .list-item-secondary-actions {
   @include list-item-secondary();
+}
+
+.list-item-icon,
+.list-item-action {
+  align-self: auto;
 }
 
 // Lists - links in text
@@ -75,37 +94,6 @@ ol {
 
 // Lists - modifiers
 //----------------------------------------------------------------------
-
-// Sizes
-// .list-one-line .list-item,
-// .list-item-one-line {
-//   min-height: $list-one-line-height;
-//
-//   .list-item-primary {
-//     padding-bottom: $spacing-small;
-//     padding-top: $spacing-small;
-//   }
-// }
-//
-// .list-one-line-with-avatar .list-item,
-// .list-item-one-line-with-avatar {
-//   min-height: $list-one-line-with-avatar-height;
-//
-//   .list-item-primary {
-//     padding-bottom: $spacing-small;
-//     padding-top: $spacing-small;
-//   }
-// }
-//
-// .list-two-lines .list-item,
-// .list-item-two-lines {
-//   min-height: $list-two-lines-height;
-// }
-//
-// .list-three-lines .list-item,
-// .list-item-three-lines {
-//   min-height: $list-three-lines-height;
-// }
 
 .list-bordered {
   @include box-shadow(0 0 1px #aaa);
@@ -165,48 +153,44 @@ ol {
   }
 }
 
-// Aligned top instead of centered
-// .list-align-top {
-//   .list-item {
-//     @include flex-parent();
-//     @include flex-vertical-align-top();
-//   }
-//
-//   .list-item-icon {
-//     // padding-top: $spacing-normal;
-//   }
-//
-//   .list-item-secondary {
-//     padding-top: $spacing-normal;
-//   }
-//
-//   .list-item-secondary-actions {
-//     padding-top: $spacing-small;
-//   }
-// }
+.list-vertical-align-top .list-item-icon,
+.list-vertical-align-top .list-item-action {
+  padding-top: 12px;
+}
 
-// Components to save typing classes
-//----------------------------------------------------------------------
+.list-vertical-align-top {
+  .list-item-icon,
+  .list-item-action {
+    align-self: stretch;
+  }
+}
 
-// .component-list {
-//   background-color: color("white");
-//   @include box-shadow(0 0 1px color("divider"));
-//   @include rounded-corners();
-//
-//   .list-item {
-//     min-height: $list-two-lines-height;
-//
-//     &:not(:last-child) {
-//       border-bottom: 1px solid color("divider");
-//     }
-//   }
-// }
+.list-one-line .list-item,
+.list-item-one-line {
+  min-height: 40px;
+  padding: 4px 8px;
+}
 
-// Sizes for component lists
-// .component-list.list-one-line .list-item { min-height: $list-one-line-height; }
-// .component-list.list-two-lines .list-item { min-height: $list-two-lines-height; }
-// .component-list.list-three-lines .list-item { min-height: $list-three-lines-height; }
+.list-two-lines {
+  .list-item {
+    min-height: 56px;
+  }
 
+  .list-item-icon {
+    padding-top: 12px;
+    // min-height: 56px;
+  }
+}
+
+.list-dense {
+  .list-item-icon {
+    max-height: 32px;
+    height: 32px;
+  }
+  .list-item {
+    min-height: 40px;
+  }
+}
 
 // List headers
 //----------------------------------------------------------------------
