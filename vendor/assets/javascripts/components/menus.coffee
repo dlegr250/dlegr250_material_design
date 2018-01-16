@@ -26,8 +26,15 @@ class App.MD.Menus
       @.showMenu($menu)
       false
 
-    $("body").on "click", =>
+    $("body").on "click", (e) =>
       @.hideMenus()
+      # $target = $(e.target)
+      # if $target.parents(".menu-item").length > 0
+      #   @.hideMenus()
+      # else if $target.parents(".menu").length > 0
+      #   e.preventDefault()
+      # else
+      #   @.hideMenus()
 
   @hideMenus: () ->
     $(".menu").removeClass("visible")

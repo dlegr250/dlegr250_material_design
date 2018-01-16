@@ -11,4 +11,5 @@ class App.MD.ExpansionPanel
         $panel.attr("data-state", "collapsed")
       else
         $panel.attr("data-state", "expanded")
-        $editor.froalaEditor("events.focus") if $editor.length > 0
+        $details.find("input[autofocus]").focus()
+        # $editor.froalaEditor("events.focus") if $editor.length > 0
