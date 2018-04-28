@@ -53,7 +53,7 @@ class App.MD.Dialog
     element.find("input[autofocus]").focus()
 
     # Add shadow on scroll
-    element.find(".dialog-scrollable").on "scroll", (e) ->
+    element.find(".dialog-content, .dialog-scrollable").on "scroll", (e) ->
       $scrollContainer = $(this)
       $header = element.find(".dialog-toolbar")
       if $scrollContainer.scrollTop()

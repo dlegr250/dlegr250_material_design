@@ -72,20 +72,6 @@
   }
 }
 
-@each $color-name, $color in $colors {
-  .tabs-#{$color-name} {
-    .tab {
-      &:hover {
-        border-color: lighten($color, 30%);
-      }
-
-      &:active {
-        background-color: lighten($color, 40%);
-      }
-    }
-  }
-}
-
 // Tabs - bordered
 //----------------------------------------------------------------------
 

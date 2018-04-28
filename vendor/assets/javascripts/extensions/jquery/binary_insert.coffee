@@ -1,5 +1,5 @@
 jQuery.extend jQuery.fn,
-  binaryInsert: (element) ->
+  binaryInsert: (element, options = {}) ->
     @each ->
       $list = $(this)
 
@@ -10,6 +10,9 @@ jQuery.extend jQuery.fn,
 
       $childrenValues = $childrenWithValues.map (i, e) ->
         $(e).attr("data-sort")
+
+      if options["reverse"] == true
+        $childrenValues = $childrenValues.reverse()
 
       listLength = $children.length
 
