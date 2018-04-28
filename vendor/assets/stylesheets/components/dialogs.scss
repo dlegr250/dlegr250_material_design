@@ -37,6 +37,7 @@
   cursor: default;
   display: flex;
   flex-direction: column;
+  height: auto;
   max-height: 100%;
   max-width: 90%;
   min-width: 280px;
@@ -73,19 +74,19 @@
 }
 
 // Sizes
-// @media (min-width: $device-small) {
-//   .dialog-xsmall { width: $dialog-width-xsmall !important; }
-//   .dialog-small { width: $dialog-width-small !important; }
-//   .dialog-normal { width: $dialog-width-normal !important; }
-//   .dialog-large { width: $dialog-width-large !important; }
-//   .dialog-xlarge { width: $dialog-width-xlarge !important; }
-// }
+@media (min-width: $device-small) {
+  .dialog-xsmall { width: $dialog-width-xsmall !important; }
+  .dialog-small { width: $dialog-width-small !important; }
+  .dialog-normal { width: $dialog-width-normal !important; }
+  .dialog-large { width: $dialog-width-large !important; }
+  .dialog-xlarge { width: $dialog-width-xlarge !important; }
+}
 
-.dialog-xsmall { width: $dialog-width-xsmall !important; }
-.dialog-small { width: $dialog-width-small !important; }
-.dialog-normal { width: $dialog-width-normal !important; }
-.dialog-large { width: $dialog-width-large !important; }
-.dialog-xlarge { width: $dialog-width-xlarge !important; }
+.dialog-xsmall { width: $dialog-width-xsmall; }
+.dialog-small { width: $dialog-width-small; }
+.dialog-normal { width: $dialog-width-normal; }
+.dialog-large { width: $dialog-width-large; }
+.dialog-xlarge { width: $dialog-width-xlarge; }
 
 // Dialog - title (header without toolbar actions)
 //----------------------------------------------------------------------
