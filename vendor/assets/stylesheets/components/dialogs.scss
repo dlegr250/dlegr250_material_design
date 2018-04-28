@@ -64,7 +64,7 @@
   .dialog,
   .dialog-full-screen,
   .dialog[data-fullscreen="true"] {
-    // height: auto;
+    height: auto;
     max-height: 90%;
     max-width: 90%;
     position: relative;
