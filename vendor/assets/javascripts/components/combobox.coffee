@@ -24,13 +24,5 @@ class App.MD.Combobox
       placeholder: "Select...",
       allowClear: true,
       minimumResultsForSearch: Infinity,
-      maximumSelectionLength: 1,
-      templateResult: (option) ->
-        if option.loading == true
-          return option.text
-        else
-          return $(option.text)
-      ,
-      templateSelection: (option) ->
-        return $(option.text)
+      maximumSelectionLength: 1
     }
