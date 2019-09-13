@@ -326,14 +326,14 @@ $button-icon-height: 48px;
 // Buttons - disabled
 //----------------------------------------------------------------------
 
-.button:disabled,
-.button.disabled {
-  background-color: rgba(0, 0, 0, 0.12);
-  color: color("disabled");
-  cursor: not-allowed;
-  pointer-events: none;
-  @include box-shadow(none);
-}
+// .button:disabled,
+// .button.disabled {
+//   background-color: rgba(0, 0, 0, 0.12);
+//   color: color("disabled");
+//   cursor: not-allowed;
+//   pointer-events: none;
+//   @include box-shadow(none);
+// }
 
 // Buttons - with chevron icons
 //----------------------------------------------------------------------
